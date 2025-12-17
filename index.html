@@ -46,116 +46,178 @@
 
   <style>
     :root{
-      --ink:#0f172a;
-      --muted:#475569;
+      --ink:#0b1220;
+      --muted:#526071;
       --brand:#0b4aa2;
       --brandHover:#083c84;
       --ring: rgba(11, 74, 162, 0.18);
       --gold:#d4af37;
-      --border:#e2e8f0;
+      --border:#e7edf5;
+      --overlay: 0.92; /* 0.90 = se ve más fondo, 0.95 = más blanco */
     }
+
     *{ box-sizing:border-box; }
+
     body{
       margin:0;
-      background:#ffffff;
       color:var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+
+      /* Fondo blanco + imagen muy sutil */
+      background:
+        linear-gradient(
+          rgba(255,255,255,var(--overlay)),
+          rgba(255,255,255,var(--overlay))
+        ),
+        url("/juravia_banner_road.png") center / cover no-repeat fixed;
+
+      /* evita “saltos” en móviles */
+      min-height:100vh;
     }
+
     .wrap{
       min-height:100vh;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:64px 20px;
+      padding:72px 20px;
+
+      /* blur suave para que el fondo quede premium */
+      backdrop-filter: blur(2px);
     }
+
     .card{
       width:100%;
-      max-width:920px;
+      max-width:980px;
       text-align:center;
     }
+
     .logo{
-      width: 240px;     /* logo más grande */
-      height: auto;
-      margin: 0 auto 22px;
+      width: 260px;
+      height:auto;
       display:block;
+      margin: 0 auto 18px;
     }
+
+    .kicker{
+      margin: 0 auto 14px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      color:#223046;
+      font-size:14px;
+      background:#fff;
+    }
+    .kicker .dot{
+      width:8px; height:8px; border-radius:999px;
+      background:var(--gold);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.16);
+    }
+
     h1{
-      margin: 0 0 14px;
-      font-size: clamp(34px, 4vw, 52px);
-      letter-spacing:-0.02em;
-      line-height:1.08;
+      margin: 0 0 16px;
+      font-size: clamp(34px, 4.1vw, 56px);
+      letter-spacing:-0.03em;
+      line-height:1.06;
     }
+
     .subtitle{
       margin: 0 auto 26px;
-      max-width: 740px;
-      font-size: clamp(16px, 1.4vw, 20px);
-      line-height: 1.55;
+      max-width: 780px;
+      font-size: clamp(16px, 1.35vw, 20px);
+      line-height: 1.6;
       color: var(--muted);
     }
-    .ctaRow{
-      margin-top: 22px;
+
+    .cta{
+      margin-top: 10px;
       display:flex;
-      gap:14px;
       justify-content:center;
-      flex-wrap:wrap;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
     }
+
     .btn{
       appearance:none;
       border:0;
       background: var(--brand);
       color:#fff;
       padding: 14px 22px;
-      border-radius: 12px;
-      font-weight: 700;
+      border-radius: 14px;
+      font-weight: 750;
       font-size: 16px;
       text-decoration:none;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      min-width: 230px;
-      box-shadow: 0 10px 24px rgba(2, 6, 23, 0.10);
+      min-width: 240px;
+      box-shadow: 0 12px 28px rgba(2, 6, 23, 0.12);
       transition: transform .06s ease, background .15s ease, box-shadow .15s ease;
     }
     .btn:hover{ background: var(--brandHover); }
     .btn:active{ transform: translateY(1px); }
     .btn:focus{
       outline: none;
-      box-shadow: 0 0 0 6px var(--ring), 0 10px 24px rgba(2, 6, 23, 0.10);
+      box-shadow: 0 0 0 6px var(--ring), 0 12px 28px rgba(2, 6, 23, 0.12);
     }
 
+    .link{
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .link:hover{ text-decoration: underline; }
+
     .trust{
-      margin: 22px auto 0;
+      margin: 28px auto 0;
       display:flex;
       gap:10px;
       justify-content:center;
       flex-wrap:wrap;
-      color:#334155;
-      font-size:14px;
       padding:0;
       list-style:none;
+      color:#2a3a55;
+      font-size:14px;
     }
+
     .pill{
       border:1px solid var(--border);
-      padding:8px 12px;
+      padding:10px 14px;
       border-radius:999px;
       background:#fff;
       display:inline-flex;
       align-items:center;
       gap:10px;
     }
-    .dot{
-      width:8px;
-      height:8px;
-      border-radius:999px;
+
+    .pill .dot{
+      width:8px; height:8px; border-radius:999px;
       background:var(--gold);
-      box-shadow: 0 0 0 3px rgba(212,175,55,0.18);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.16);
     }
 
     .fine{
-      margin-top: 26px;
-      color: #64748b;
+      margin-top: 28px;
+      color: #6b7a8f;
       font-size: 13px;
-      line-height: 1.45;
+      line-height: 1.55;
+    }
+
+    /* Mejoras móviles */
+    @media (max-width: 480px){
+      .logo{ width: 220px; }
+      .btn{ min-width: 220px; }
+      .wrap{ padding: 56px 16px; }
+    }
+
+    /* Si el usuario prefiere menos efectos */
+    @media (prefers-reduced-motion: reduce){
+      .btn{ transition: none; }
     }
   </style>
 </head>
@@ -163,17 +225,22 @@
 <body>
   <main class="wrap">
     <div class="card">
-      <!-- Asegúrate de que logo.png existe en la raíz del repo -->
       <img class="logo" src="/logo.png" alt="Juravia" />
+
+      <div class="kicker" aria-label="Propuesta de valor">
+        <span class="dot" aria-hidden="true"></span>
+        Documentos claros, listos para presentar
+      </div>
 
       <h1>Alegaciones y recursos de multas online</h1>
 
       <p class="subtitle">
-        Juravia es una herramienta legal online para preparar alegaciones y recursos de forma rápida, clara y profesional.
+        Prepara escritos de forma rápida y profesional, con un enfoque claro y orientado a la presentación.
       </p>
 
-      <div class="ctaRow">
+      <div class="cta">
         <a class="btn" href="https://app.juravia.app">Crear alegaciones</a>
+        <a class="link" href="https://app.juravia.app">Área de trabajo</a>
       </div>
 
       <ul class="trust" aria-label="Ventajas">
