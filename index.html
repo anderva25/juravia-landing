@@ -1,69 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Juravia | Alegaciones y recursos de multas online</title>
-  <meta name="description" content="Juravia te ayuda a recurrir multas de tráfico online de forma sencilla, rápida y legal. Genera tus alegaciones y recursos en minutos.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Juravia te ayuda a recurrir multas de tráfico online de forma sencilla, rápida y profesional. Genera tus alegaciones y recursos en minutos." />
+  <link rel="canonical" href="https://juravia.app/" />
 
-  <link rel="icon" href="favicon.ico">
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/logo.png" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Juravia | Alegaciones y recursos de multas online" />
+  <meta property="og:description" content="Recurrir multas online, sencillo y profesional. Genera alegaciones y recursos en minutos." />
+  <meta property="og:url" content="https://juravia.app/" />
+  <meta property="og:image" content="https://juravia.app/logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Juravia | Alegaciones y recursos de multas online" />
+  <meta name="twitter:description" content="Recurrir multas online, sencillo y profesional. Genera alegaciones y recursos en minutos." />
+  <meta name="twitter:image" content="https://juravia.app/logo.png" />
+
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Juravia",
-    "url": "https://juravia.app",
+    "url": "https://juravia.app/",
     "logo": "https://juravia.app/logo.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Juravia",
+    "url": "https://juravia.app/"
   }
   </script>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-      background: #f8f9fb;
-      color: #1a1a1a;
+    :root{
+      --ink:#0f172a;
+      --muted:#475569;
+      --brand:#0b4aa2;
+      --brandHover:#083c84;
+      --ring: rgba(11, 74, 162, 0.18);
     }
-    img {
-      width: 140px;
-      margin-bottom: 30px;
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:#ffffff; /* <-- blanco total */
+      color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
     }
-    h1 {
-      font-size: 32px;
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:64px 20px;
     }
-    p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: 20px auto;
+    .card{
+      width:100%;
+      max-width:920px;
+      text-align:center;
     }
-    a.button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: #0b4aa2;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
+    .logo{
+      width: 220px;            /* <-- más grande */
+      height: auto;
+      margin: 0 auto 22px;
+      display:block;
+    }
+    h1{
+      margin: 0 0 14px;
+      font-size: clamp(34px, 4vw, 52px);
+      letter-spacing:-0.02em;
+      line-height:1.08;
+    }
+    .subtitle{
+      margin: 0 auto 26px;
+      max-width: 720px;
+      font-size: clamp(16px, 1.4vw, 20px);
+      line-height: 1.5;
+      color: var(--muted);
+    }
+    .ctaRow{
+      margin-top: 22px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      appearance:none;
+      border:0;
+      background: var(--brand);
+      color:#fff;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width: 210px;
+      box-shadow: 0 10px 24px rgba(2, 6, 23, 0.10);
+      transition: transform .06s ease, background .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover{ background: var(--brandHover); }
+    .btn:active{ transform: translateY(1px); }
+    .btn:focus{ outline: none; box-shadow: 0 0 0 6px var(--ring), 0 10px 24px rgba(2, 6, 23, 0.10); }
+
+    .fine{
+      margin-top: 26px;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    /* Pequeño “trust row” opcional sin inventar claims */
+    .trust{
+      margin: 22px auto 0;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:#334155;
+      font-size:14px;
+    }
+    .pill{
+      border:1px solid #e2e8f0;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#fff;
     }
   </style>
 </head>
+
 <body>
+  <main class="wrap">
+    <div class="card">
+      <!-- Asegúrate de que este archivo existe en la raíz del repo -->
+      <img class="logo" src="/logo.png" alt="Juravia" />
 
-  <img src="logo.png" alt="Juravia logo">
+      <h1>Alegaciones y recursos de multas online</h1>
 
-  <h1>Alegaciones y recursos de multas online</h1>
+      <p class="subtitle">
+        Juravia es una herramienta legal online para preparar alegaciones y recursos de forma rápida, clara y profesional.
+      </p>
 
-  <p>
-    Juravia es una herramienta legal online que te permite recurrir multas de tráfico
-    de forma rápida, clara y profesional.
-  </p>
+      <div class="ctaRow">
+        <a class="btn" href="https://app.juravia.app">Empezar ahora</a>
+      </div>
 
-  <a class="button" href="https://app.juravia.app">
-    Empezar ahora
-  </a>
+      <div class="trust">
+        <span class="pill">⚖️ Enfoque legal</span>
+        <span class="pill">🧾 Documentos listos para presentar</span>
+        <span class="pill">⏱️ En minutos</span>
+      </div>
 
+      <p class="fine">
+        Nota: Juravia es una herramienta de apoyo. Revisa siempre tu caso concreto antes de presentar documentación.
+      </p>
+    </div>
+  </main>
 </body>
 </html>
