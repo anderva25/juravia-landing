@@ -8,24 +8,20 @@
   <meta name="description" content="Juravia te ayuda a recurrir multas de tráfico online de forma sencilla, rápida y profesional. Genera tus alegaciones y recursos en minutos." />
   <link rel="canonical" href="https://juravia.app/" />
 
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/logo.png" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Juravia | Alegaciones y recursos de multas online" />
   <meta property="og:description" content="Recurrir multas online, sencillo y profesional. Genera alegaciones y recursos en minutos." />
   <meta property="og:url" content="https://juravia.app/" />
   <meta property="og:image" content="https://juravia.app/logo.png" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Juravia | Alegaciones y recursos de multas online" />
   <meta name="twitter:description" content="Recurrir multas online, sencillo y profesional. Genera alegaciones y recursos en minutos." />
   <meta name="twitter:image" content="https://juravia.app/logo.png" />
 
-  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -172,28 +168,46 @@
       line-height:1.55;
     }
 
-    /* --- Footer SEO (discreto, no molesta al usuario) --- */
-    .seo-footer{
-      margin:18px auto 0;
-      max-width:780px;
-      font-size:12px;
-      color:#6b7a8f;
-      text-align:center;
+    /* --- Footer SEO Mejorado y Separado --- */
+    .seo-footer {
+      margin: 48px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      max-width: 650px;
+      text-align: center;
     }
-    .seo-footer nav{
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:10px;
+
+    .seo-footer .footer-label {
+      margin-bottom: 16px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
-    .seo-footer a{
-      color:#0b4aa2;
-      text-decoration:none;
-      font-weight:600;
+
+    .seo-footer nav {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .seo-footer a:hover{
-      text-decoration:underline;
+
+    .seo-footer a {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      background: rgba(11, 74, 162, 0.05);
+      padding: 8px 16px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .seo-footer a:hover {
+      background: rgba(11, 74, 162, 0.1);
+      color: var(--brandHover);
+      transform: translateY(-1px);
     }
 
     @media (max-width:480px){
@@ -237,12 +251,11 @@
         Nota: Juravia es una herramienta de apoyo. Revisa siempre tu caso concreto antes de presentar documentación.
       </p>
 
-      <!-- Footer SEO (no es un CTA, es para descubrimiento e interlinking) -->
       <footer class="seo-footer" aria-label="Recursos legales">
-        <div>En Juravia ayudamos a ciudadanos a defender sus derechos ante sanciones injustas. Consulta alguna de nuestras guías específicas:</div>
+        <div class="footer-label">En Juravia ayudamos a ciudadanos a defender sus derechos ante sanciones injustas. Consulta alguna de nuestras guías específicas:s</div>
         <nav>
-          <a href="/recurrir_multa_itv_caducada.html">Recurrir multa por ITV caducada</a>
-          <a href="/recurrir_multa_radar.html">Recurrir multa por radar</a>
+          <a href="/recurrir_multa_itv_caducada.html">Multas ITV caducada</a>
+          <a href="/recurrir_multa_radar.html">Multas por Radar</a>
         </nav>
       </footer>
 
