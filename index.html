@@ -8,38 +8,6 @@
   <meta name="description" content="Juravia te ayuda a recurrir multas de tráfico online de forma sencilla, rápida y profesional. Genera tus alegaciones y recursos en minutos." />
   <link rel="canonical" href="https://juravia.app/" />
 
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/logo.png" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Juravia | Alegaciones y recursos de multas online" />
-  <meta property="og:description" content="Recurrir multas online, sencillo y profesional. Genera alegaciones y recursos en minutos." />
-  <meta property="og:url" content="https://juravia.app/" />
-  <meta property="og:image" content="https://juravia.app/logo.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Juravia | Alegaciones y recursos de multas online" />
-  <meta name="twitter:description" content="Recurrir multas online, sencillo y profesional. Genera alegaciones y recursos en minutos." />
-  <meta name="twitter:image" content="https://juravia.app/logo.png" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Juravia",
-    "url": "https://juravia.app/",
-    "logo": "https://juravia.app/logo.png"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Juravia",
-    "url": "https://juravia.app/"
-  }
-  </script>
-
   <style>
     :root{
       --ink:#0b1220;
@@ -125,11 +93,6 @@
       transition:transform .06s ease, background .15s ease, box-shadow .15s ease;
     }
     .btn:hover{ background:var(--brandHover); }
-    .btn:active{ transform:translateY(1px); }
-    .btn:focus{
-      outline:none;
-      box-shadow:0 0 0 6px var(--ring), 0 12px 28px rgba(2,6,23,.12);
-    }
 
     .trust{
       margin:28px auto 0;
@@ -168,60 +131,54 @@
       line-height:1.55;
     }
 
-    /* --- Footer SEO Mejorado y Separado --- */
+    /* --- FOOTER FINO Y PROFESIONAL --- */
     .seo-footer {
-      margin: 48px auto 0;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      max-width: 650px;
-      text-align: center;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,0.05); /* Línea casi invisible */
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .seo-footer .footer-label {
-      margin-bottom: 16px;
+    .footer-label {
       font-size: 11px;
-      font-weight: 700;
-      color: var(--muted);
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
+      color: #94a3b8; /* Gris muy suave */
+      margin-bottom: 12px;
     }
 
     .seo-footer nav {
       display: flex;
-      gap: 12px;
       justify-content: center;
-      flex-wrap: wrap;
+      gap: 20px;
     }
 
     .seo-footer a {
-      color: var(--brand);
+      font-size: 12px;
+      color: #64748b;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 13px;
-      background: rgba(11, 74, 162, 0.05);
-      padding: 8px 16px;
-      border-radius: 10px;
-      transition: all 0.2s ease;
+      transition: color 0.2s;
+      position: relative;
     }
 
     .seo-footer a:hover {
-      background: rgba(11, 74, 162, 0.1);
-      color: var(--brandHover);
-      transform: translateY(-1px);
+      color: var(--brand);
+    }
+
+    /* Separador visual entre links (el puntito medio) */
+    .seo-footer a:not(:last-child)::after {
+      content: "•";
+      position: absolute;
+      right: -12px;
+      color: #cbd5e1;
+      pointer-events: none;
     }
 
     @media (max-width:480px){
       .logo{ width:220px; }
-      .btn{ min-width:220px; }
-      .wrap{ padding:56px 16px; }
-      body{
-        background:
-          linear-gradient(
-            rgba(255,255,255,var(--overlay)),
-            rgba(255,255,255,var(--overlay))
-          ),
-          url("/juravia_banner_road.png") center 22% / cover no-repeat;
-      }
+      .wrap{ padding:40px 16px; }
     }
   </style>
 </head>
@@ -241,21 +198,21 @@
         <a class="btn" href="https://app.juravia.app">Crear alegaciones</a>
       </div>
 
-      <ul class="trust" aria-label="Ventajas">
-        <li class="pill"><span class="dot" aria-hidden="true"></span>Enfoque legal</li>
-        <li class="pill"><span class="dot" aria-hidden="true"></span>Documentos listos para presentar</li>
-        <li class="pill"><span class="dot" aria-hidden="true"></span>En minutos</li>
+      <ul class="trust">
+        <li class="pill"><span class="dot"></span>Enfoque legal</li>
+        <li class="pill"><span class="dot"></span>Documentos listos</li>
+        <li class="pill"><span class="dot"></span>En minutos</li>
       </ul>
 
       <p class="fine">
         Nota: Juravia es una herramienta de apoyo. Revisa siempre tu caso concreto antes de presentar documentación.
       </p>
 
-      <footer class="seo-footer" aria-label="Recursos legales">
-        <div class="footer-label">En Juravia ayudamos a ciudadanos a defender sus derechos ante sanciones injustas. Consulta alguna de nuestras guías específicas:s</div>
+      <footer class="seo-footer">
+        <div class="footer-label">En Juravia ayudamos a ciudadanos a defender sus derechos ante sanciones injustas. Consulta alguna de nuestras guías específicas:</div>
         <nav>
-          <a href="/recurrir_multa_itv_caducada.html">Multas ITV caducada</a>
-          <a href="/recurrir_multa_radar.html">Multas por Radar</a>
+          <a href="/recurrir_multa_itv_caducada.html">Multas ITV</a>
+          <a href="/recurrir_multa_radar.html">Multas Radar</a>
         </nav>
       </footer>
 
