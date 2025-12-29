@@ -57,11 +57,12 @@
       /* UI sobre foto */
       --border: rgba(255,255,255,.18);
 
-      /* Fondo hero (cambia a .png si prefieres) */
+      /* Fondo hero */
       --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.webp");
       /* si usas PNG:
       --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
       */
+
       --hero-bg-y: 18%;
       --hero-bg-attachment: fixed;
     }
@@ -73,19 +74,23 @@
       color:var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
 
-      /* 1) halo blanco superior (para integrar logo con fondo blanco)
-         2) scrim oscuro (para legibilidad del texto)
-         3) imagen */
+      /*
+        IMPORTANTE:
+        - Este oscurecido NO tapa el centro-arriba (donde va el logo),
+          para que el hueco del banner se quede BLANCO PURO.
+        - A la vez oscurece laterales y parte baja para que el texto sea legible.
+      */
       background-image:
-        radial-gradient(circle at 50% 14%,
-          rgba(255,255,255,.95) 0%,
-          rgba(255,255,255,.85) 10%,
-          rgba(255,255,255,0) 30%
+        radial-gradient(ellipse at 50% 14%,
+          rgba(0,0,0,0) 0%,
+          rgba(0,0,0,0.06) 26%,
+          rgba(0,0,0,0.35) 55%,
+          rgba(0,0,0,0.62) 100%
         ),
         linear-gradient(180deg,
-          rgba(3, 8, 20, .36) 0%,
-          rgba(3, 8, 20, .52) 62%,
-          rgba(3, 8, 20, .70) 100%
+          rgba(0,0,0,0.00) 0%,
+          rgba(0,0,0,0.22) 38%,
+          rgba(0,0,0,0.58) 100%
         ),
         var(--hero-bg);
 
@@ -119,7 +124,6 @@
       align-items:center;
       justify-content:center;
       padding:72px 20px;
-      /* NO blur aquí (era lo que emborronaba el fondo) */
     }
 
     .card{
@@ -128,30 +132,16 @@
       text-align:center;
     }
 
-    /* Placa del logo para que no parezca "pegote" */
-    .logo-wrap{
-      display:inline-block;
-      position:relative;
-      padding: 10px 14px;
-      background: rgba(255,255,255,.96);
-      border-radius: 18px;
-      border: 1px solid rgba(10,20,35,.08);
-      box-shadow: 0 18px 46px rgba(0,0,0,.28);
-      margin: 0 auto 18px;
-    }
-    .logo-wrap::before{
-      content:"";
-      position:absolute;
-      inset:-14px;
-      border-radius: 26px;
-      background: radial-gradient(circle, rgba(255,255,255,.55), rgba(255,255,255,0) 70%);
-      filter: blur(10px);
-      z-index:-1;
-    }
+    /* Logo SIN recuadro, SIN sombra (para que “desaparezca” en el hueco blanco) */
     .logo{
       width:260px;
       height:auto;
       display:block;
+      margin:0 auto 18px;
+      background: transparent;
+      border:0;
+      border-radius:0;
+      box-shadow:none;
       filter:none;
     }
 
@@ -268,7 +258,7 @@
     /* Responsive */
     @media (max-width: 768px){
       :root{
-        --hero-bg-attachment: scroll; /* mejora rendimiento móvil */
+        --hero-bg-attachment: scroll;
         --hero-bg-y: 36%;
       }
       .wrap{ padding:56px 16px; }
@@ -282,7 +272,7 @@
     }
 
     @media (min-width: 1400px){
-      :root{ --hero-bg-y: 12%; } /* un pelín más skyline */
+      :root{ --hero-bg-y: 12%; }
     }
   </style>
 </head>
@@ -290,9 +280,7 @@
 <body>
   <main class="wrap">
     <div class="card">
-      <div class="logo-wrap" aria-label="Juravia">
-        <img class="logo" src="/logo.png" alt="Juravia" />
-      </div>
+      <img class="logo" src="/logo.png" alt="Juravia" />
 
       <h1>Alegaciones y recursos de multas online</h1>
 
