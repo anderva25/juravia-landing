@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -20,6 +21,13 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/logo.png" />
 
+  <meta property="og:title" content="Juravia | Recursos de multas online" />
+  <meta property="og:description" content="Prepara escritos de forma rápida y profesional, con un enfoque claro y orientado a la presentación." />
+  <meta property="og:image" content="https://juravia.app/logo.png" />
+  <meta property="og:url" content="https://juravia.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@JuraviaApp" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,16 +43,9 @@
   }
   </script>
 
-  <meta property="og:title" content="Juravia | Recursos de multas online" />
-  <meta property="og:description" content="Prepara escritos de forma rápida y profesional, con un enfoque claro y orientado a la presentación." />
-  <meta property="og:image" content="https://juravia.app/logo.png" />
-  <meta property="og:url" content="https://juravia.app" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@JuraviaApp" />
-
   <style>
     :root{
-      /* Tipografía/colores texto (BLANCO para leerse sobre foto) */
+      /* Texto */
       --ink:#ffffff;
       --muted: rgba(255,255,255,.84);
 
@@ -56,15 +57,13 @@
       /* UI sobre foto */
       --border: rgba(255,255,255,.18);
 
-      /* Fondo hero */
+      /* Fondo hero (cambia a .png si prefieres) */
+      --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.webp");
+      /* si usas PNG:
       --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
+      */
       --hero-bg-y: 18%;
       --hero-bg-attachment: fixed;
-
-      /* Scrim oscuro para contraste (no afecta al HTML, solo al fondo) */
-      --scrimTop: 0.55;
-      --scrimMid: 0.55;
-      --scrimBottom: 0.72;
     }
 
     *{ box-sizing:border-box; }
@@ -74,28 +73,39 @@
       color:var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
 
+      /* 1) halo blanco superior (para integrar logo con fondo blanco)
+         2) scrim oscuro (para legibilidad del texto)
+         3) imagen */
       background-image:
-        linear-gradient(
-          180deg,
-          rgba(3, 8, 20, var(--scrimTop)) 0%,
-          rgba(3, 8, 20, var(--scrimMid)) 62%,
-          rgba(3, 8, 20, var(--scrimBottom)) 100%
+        radial-gradient(circle at 50% 14%,
+          rgba(255,255,255,.95) 0%,
+          rgba(255,255,255,.85) 10%,
+          rgba(255,255,255,0) 30%
+        ),
+        linear-gradient(180deg,
+          rgba(3, 8, 20, .36) 0%,
+          rgba(3, 8, 20, .52) 62%,
+          rgba(3, 8, 20, .70) 100%
         ),
         var(--hero-bg);
 
       background-position:
         center center,
+        center center,
         center var(--hero-bg-y);
 
       background-size:
+        cover,
         cover,
         cover;
 
       background-repeat:
         no-repeat,
+        no-repeat,
         no-repeat;
 
       background-attachment:
+        scroll,
         scroll,
         var(--hero-bg-attachment);
 
@@ -109,7 +119,7 @@
       align-items:center;
       justify-content:center;
       padding:72px 20px;
-      backdrop-filter: blur(2px);
+      /* NO blur aquí (era lo que emborronaba el fondo) */
     }
 
     .card{
@@ -118,12 +128,31 @@
       text-align:center;
     }
 
+    /* Placa del logo para que no parezca "pegote" */
+    .logo-wrap{
+      display:inline-block;
+      position:relative;
+      padding: 10px 14px;
+      background: rgba(255,255,255,.96);
+      border-radius: 18px;
+      border: 1px solid rgba(10,20,35,.08);
+      box-shadow: 0 18px 46px rgba(0,0,0,.28);
+      margin: 0 auto 18px;
+    }
+    .logo-wrap::before{
+      content:"";
+      position:absolute;
+      inset:-14px;
+      border-radius: 26px;
+      background: radial-gradient(circle, rgba(255,255,255,.55), rgba(255,255,255,0) 70%);
+      filter: blur(10px);
+      z-index:-1;
+    }
     .logo{
       width:260px;
       height:auto;
       display:block;
-      margin:0 auto 18px;
-      filter: drop-shadow(0 10px 26px rgba(0,0,0,.28));
+      filter:none;
     }
 
     h1{
@@ -234,38 +263,26 @@
       text-decoration:none;
       font-weight:700;
     }
+    .seo-footer a:hover{ text-decoration: underline; }
 
-    .seo-footer a:hover{
-      text-decoration: underline;
-    }
-
-    /* Responsive: móvil -> mejor rendimiento + encuadre + más scrim */
+    /* Responsive */
     @media (max-width: 768px){
       :root{
-        --hero-bg-attachment: scroll;
+        --hero-bg-attachment: scroll; /* mejora rendimiento móvil */
         --hero-bg-y: 36%;
-        --scrimTop: 0.62;
-        --scrimMid: 0.62;
-        --scrimBottom: 0.78;
       }
       .wrap{ padding:56px 16px; }
+      .logo{ width:220px; }
     }
 
-    @media (max-width:480px){
-      :root{
-        --hero-bg-y: 42%;
-        --scrimTop: 0.66;
-        --scrimMid: 0.66;
-        --scrimBottom: 0.82;
-      }
-      .logo{ width:220px; }
+    @media (max-width: 480px){
+      :root{ --hero-bg-y: 42%; }
       .wrap{ padding:40px 16px; }
       .seo-footer nav { flex-direction: column; gap: 8px; }
     }
 
-    /* Pantallas muy grandes: un pelín más skyline */
     @media (min-width: 1400px){
-      :root{ --hero-bg-y: 12%; }
+      :root{ --hero-bg-y: 12%; } /* un pelín más skyline */
     }
   </style>
 </head>
@@ -273,7 +290,9 @@
 <body>
   <main class="wrap">
     <div class="card">
-      <img class="logo" src="/logo.png" alt="Juravia" />
+      <div class="logo-wrap" aria-label="Juravia">
+        <img class="logo" src="/logo.png" alt="Juravia" />
+      </div>
 
       <h1>Alegaciones y recursos de multas online</h1>
 
