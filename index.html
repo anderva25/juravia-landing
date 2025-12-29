@@ -45,59 +45,43 @@
 
   <style>
     :root{
-      /* Texto */
       --ink:#ffffff;
       --muted: rgba(255,255,255,.84);
 
-      /* Marca */
       --brand:#0b4aa2;
       --brandHover:#083c84;
       --gold:#d4af37;
 
-      /* UI sobre foto */
       --border: rgba(255,255,255,.18);
 
-      /* Fondo hero */
-      --hero-bg-y: 18%;
-      --hero-bg-attachment: fixed;
-
-      /*
-        3) Calidad retina + performance
-        - 1x WEBP (ligero)
-        - 2x PNG (más grande / más nítido)
-        Si no tienes el 2048x1152, cambia esa URL por la que sí tengas.
-      */
-      --hero-bg: image-set(
-        url("/juravia_banner_road_legaltech_clean_1920x1080.webp") 1x,
-        url("/juravia_banner_road_legaltech_clean_2048x1152.png") 2x
-      );
-      /* Si prefieres fijo en PNG:
+      /* Fondo */
+      --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.webp");
+      /* Si usas PNG, cambia a:
       --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
       */
+
+      --hero-bg-y: 18%;
+      --hero-bg-attachment: fixed;
     }
 
     *{ box-sizing:border-box; }
 
-    /*
-      1) Fondo más nítido (menos “lavado”):
-      - viñeteado suave + degradado inferior
-      - enfoca al centro y mantiene legibilidad
-    */
     body{
       margin:0;
       color:var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
 
+      /* Fondo “serio”: viñeta suave + degradado inferior + imagen */
       background-image:
-        radial-gradient(ellipse at 50% 45%,
+        radial-gradient(ellipse at 50% 40%,
           rgba(0,0,0,0.00) 0%,
           rgba(0,0,0,0.22) 58%,
-          rgba(0,0,0,0.65) 100%
+          rgba(0,0,0,0.68) 100%
         ),
         linear-gradient(180deg,
-          rgba(0,0,0,0.18) 0%,
-          rgba(0,0,0,0.42) 55%,
-          rgba(0,0,0,0.78) 100%
+          rgba(0,0,0,0.22) 0%,
+          rgba(0,0,0,0.45) 55%,
+          rgba(0,0,0,0.80) 100%
         ),
         var(--hero-bg);
 
@@ -127,40 +111,15 @@
       width:100%;
       max-width:980px;
       text-align:center;
-      position:relative;
-      padding: 18px 16px;
     }
 
-    /*
-      2) Glass panel SOLO detrás del contenido
-      (no emborrona el fondo entero, solo ayuda a legibilidad)
-    */
-    .card::after{
-      content:"";
-      position:absolute;
-      inset: 0;
-      border-radius: 22px;
-      background: rgba(10, 16, 28, 0.18);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 28px 80px rgba(0,0,0,0.30);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index:0;
-    }
-
-    /* Asegura que todo el contenido quede por encima del panel */
-    .card > *{
-      position:relative;
-      z-index:1;
-    }
-
-    /* Logo transparente (sin “pegote”) */
+    /* Logo sin recuadros (usa /logo.png transparente) */
     .logo{
       width:260px;
       height:auto;
       display:block;
       margin:0 auto 18px;
-      filter: drop-shadow(0 16px 40px rgba(0,0,0,.28));
+      filter: drop-shadow(0 16px 40px rgba(0,0,0,.25));
     }
 
     h1{
@@ -168,7 +127,7 @@
       font-size:clamp(34px,4.1vw,56px);
       letter-spacing:-0.03em;
       line-height:1.06;
-      text-shadow: 0 12px 34px rgba(0,0,0,.35);
+      text-shadow: 0 14px 34px rgba(0,0,0,.40);
     }
 
     .subtitle{
@@ -177,7 +136,7 @@
       font-size:clamp(16px,1.35vw,20px);
       line-height:1.6;
       color:var(--muted);
-      text-shadow: 0 10px 26px rgba(0,0,0,.30);
+      text-shadow: 0 12px 26px rgba(0,0,0,.35);
     }
 
     .cta{
@@ -220,12 +179,12 @@
       border:1px solid var(--border);
       padding:10px 14px;
       border-radius:999px;
-      background: rgba(255,255,255,.10);
+      background: rgba(10, 16, 28, 0.35);
       display:inline-flex;
       align-items:center;
       gap:10px;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
     }
 
     .pill .dot{
@@ -277,17 +236,11 @@
     /* Responsive */
     @media (max-width: 768px){
       :root{
-        --hero-bg-attachment: scroll; /* mejora rendimiento móvil */
+        --hero-bg-attachment: scroll;
         --hero-bg-y: 36%;
       }
       .wrap{ padding:56px 16px; }
       .logo{ width:220px; }
-      .card{ padding: 16px 12px; }
-      /* En móviles, el blur a veces es costoso: lo bajamos un punto */
-      .card::after{
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-      }
     }
 
     @media (max-width: 480px){
@@ -297,7 +250,7 @@
     }
 
     @media (min-width: 1400px){
-      :root{ --hero-bg-y: 12%; } /* un pelín más skyline */
+      :root{ --hero-bg-y: 12%; }
     }
   </style>
 </head>
@@ -305,8 +258,8 @@
 <body>
   <main class="wrap">
     <div class="card">
-      <!-- Usa tu logo transparente -->
-      <img class="logo" src="/juravia_logo_transparent_clean.png" alt="Juravia" />
+      <!-- Importante: usa /logo.png (y reemplázalo por el transparente) -->
+      <img class="logo" src="/logo.png" alt="Juravia" />
 
       <h1>Alegaciones y recursos de multas online</h1>
 
