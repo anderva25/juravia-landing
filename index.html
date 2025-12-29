@@ -15,7 +15,7 @@
   <title>Juravia | Alegaciones y recursos de multas online</title>
   <meta name="description" content="Juravia te ayuda a recurrir multas de tráfico online de forma sencilla, rápida y profesional. Genera tus alegaciones en minutos." />
   <link rel="canonical" href="https://juravia.app/" />
-  
+
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/logo.png" />
@@ -44,14 +44,27 @@
 
   <style>
     :root{
-      --ink:#0b1220;
-      --muted:#526071;
+      /* Tipografía/colores texto (BLANCO para leerse sobre foto) */
+      --ink:#ffffff;
+      --muted: rgba(255,255,255,.84);
+
+      /* Marca */
       --brand:#0b4aa2;
       --brandHover:#083c84;
-      --ring: rgba(11, 74, 162, 0.18);
       --gold:#d4af37;
-      --border:#e7edf5;
-      --overlay: 0.92;
+
+      /* UI sobre foto */
+      --border: rgba(255,255,255,.18);
+
+      /* Fondo hero */
+      --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.webp");
+      --hero-bg-y: 18%;
+      --hero-bg-attachment: fixed;
+
+      /* Scrim oscuro para contraste (no afecta al HTML, solo al fondo) */
+      --scrimTop: 0.55;
+      --scrimMid: 0.55;
+      --scrimBottom: 0.72;
     }
 
     *{ box-sizing:border-box; }
@@ -60,12 +73,33 @@
       margin:0;
       color:var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      background:
+
+      background-image:
         linear-gradient(
-          rgba(255,255,255,var(--overlay)),
-          rgba(255,255,255,var(--overlay))
+          180deg,
+          rgba(3, 8, 20, var(--scrimTop)) 0%,
+          rgba(3, 8, 20, var(--scrimMid)) 62%,
+          rgba(3, 8, 20, var(--scrimBottom)) 100%
         ),
-        url("/juravia_banner_road.png") center 18% / cover no-repeat fixed;
+        var(--hero-bg);
+
+      background-position:
+        center center,
+        center var(--hero-bg-y);
+
+      background-size:
+        cover,
+        cover;
+
+      background-repeat:
+        no-repeat,
+        no-repeat;
+
+      background-attachment:
+        scroll,
+        var(--hero-bg-attachment);
+
+      background-color:#050a16;
       min-height:100vh;
     }
 
@@ -89,6 +123,7 @@
       height:auto;
       display:block;
       margin:0 auto 18px;
+      filter: drop-shadow(0 10px 26px rgba(0,0,0,.28));
     }
 
     h1{
@@ -96,6 +131,7 @@
       font-size:clamp(34px,4.1vw,56px);
       letter-spacing:-0.03em;
       line-height:1.06;
+      text-shadow: 0 12px 34px rgba(0,0,0,.35);
     }
 
     .subtitle{
@@ -104,6 +140,7 @@
       font-size:clamp(16px,1.35vw,20px);
       line-height:1.6;
       color:var(--muted);
+      text-shadow: 0 10px 26px rgba(0,0,0,.30);
     }
 
     .cta{
@@ -123,10 +160,11 @@
       font-size:16px;
       text-decoration:none;
       min-width:240px;
-      box-shadow:0 12px 28px rgba(2,6,23,.12);
+      box-shadow:0 18px 40px rgba(0,0,0,.26);
       transition:transform .06s ease, background .15s ease, box-shadow .15s ease;
     }
     .btn:hover{ background:var(--brandHover); }
+    .btn:active{ transform: translateY(1px); }
 
     .trust{
       margin:28px auto 0;
@@ -136,18 +174,20 @@
       flex-wrap:wrap;
       padding:0;
       list-style:none;
-      color:#2a3a55;
+      color: rgba(255,255,255,.92);
       font-size:14px;
+      text-shadow: 0 10px 22px rgba(0,0,0,.25);
     }
 
     .pill{
       border:1px solid var(--border);
       padding:10px 14px;
       border-radius:999px;
-      background:#fff;
+      background: rgba(255,255,255,.10);
       display:inline-flex;
       align-items:center;
       gap:10px;
+      backdrop-filter: blur(6px);
     }
 
     .pill .dot{
@@ -160,47 +200,72 @@
 
     .fine{
       margin-top:28px;
-      color:#6b7a8f;
+      color: rgba(255,255,255,.75);
       font-size:13px;
       line-height:1.55;
+      text-shadow: 0 10px 22px rgba(0,0,0,.25);
     }
 
-    .seo-footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(0,0,0,0.05);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+    .seo-footer{
+      margin-top:60px;
+      padding-top:20px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      max-width:600px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
-    .footer-label {
-      font-size: 12px;
-      color: #94a3b8;
-      margin-bottom: 12px;
+    .footer-label{
+      font-size:12px;
+      color: rgba(255,255,255,.70);
+      margin-bottom:12px;
+      text-shadow: 0 10px 22px rgba(0,0,0,.20);
     }
 
-    .seo-footer nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+    .seo-footer nav{
+      display:flex;
+      justify-content:center;
+      gap:20px;
     }
 
-    .seo-footer a {
-      font-size: 13px;
-      color: var(--brand);
-      text-decoration: none;
-      font-weight: 600;
+    .seo-footer a{
+      font-size:13px;
+      color: rgba(255,255,255,.92);
+      text-decoration:none;
+      font-weight:700;
     }
 
-    .seo-footer a:hover {
+    .seo-footer a:hover{
       text-decoration: underline;
     }
 
+    /* Responsive: móvil -> mejor rendimiento + encuadre + más scrim */
+    @media (max-width: 768px){
+      :root{
+        --hero-bg-attachment: scroll;
+        --hero-bg-y: 36%;
+        --scrimTop: 0.62;
+        --scrimMid: 0.62;
+        --scrimBottom: 0.78;
+      }
+      .wrap{ padding:56px 16px; }
+    }
+
     @media (max-width:480px){
+      :root{
+        --hero-bg-y: 42%;
+        --scrimTop: 0.66;
+        --scrimMid: 0.66;
+        --scrimBottom: 0.82;
+      }
       .logo{ width:220px; }
       .wrap{ padding:40px 16px; }
       .seo-footer nav { flex-direction: column; gap: 8px; }
+    }
+
+    /* Pantallas muy grandes: un pelín más skyline */
+    @media (min-width: 1400px){
+      :root{ --hero-bg-y: 12%; }
     }
   </style>
 </head>
