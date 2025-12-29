@@ -56,10 +56,9 @@
 
       /* Fondo */
       --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.webp");
-      /* Si usas PNG, cambia a:
+      /* Si usas PNG:
       --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
       */
-
       --hero-bg-y: 18%;
       --hero-bg-attachment: fixed;
     }
@@ -100,6 +99,7 @@
     }
 
     .wrap{
+      position:relative; /* necesario para el spotlight */
       min-height:100vh;
       display:flex;
       align-items:center;
@@ -107,19 +107,39 @@
       padding:72px 20px;
     }
 
+    /* Spotlight blanco SOLO arriba-centro para integrar el borde del PNG */
+    .wrap::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      background: radial-gradient(
+        ellipse at 50% 12%,
+        rgba(255,255,255,0.55) 0%,
+        rgba(255,255,255,0.32) 16%,
+        rgba(255,255,255,0.14) 28%,
+        rgba(255,255,255,0.00) 46%
+      );
+    }
+
     .card{
       width:100%;
       max-width:980px;
       text-align:center;
+      position:relative;
+      z-index:1; /* por encima del spotlight */
     }
 
-    /* Logo sin recuadros (usa /logo.png transparente) */
+    /* Logo transparente + halo para fundir el borde */
     .logo{
       width:260px;
       height:auto;
       display:block;
       margin:0 auto 18px;
-      filter: drop-shadow(0 16px 40px rgba(0,0,0,.25));
+      filter:
+        drop-shadow(0 0 14px rgba(255,255,255,0.22))
+        drop-shadow(0 16px 40px rgba(0,0,0,0.22));
     }
 
     h1{
@@ -241,6 +261,17 @@
       }
       .wrap{ padding:56px 16px; }
       .logo{ width:220px; }
+
+      /* Spotlight un poco ajustado en móvil */
+      .wrap::before{
+        background: radial-gradient(
+          ellipse at 50% 10%,
+          rgba(255,255,255,0.58) 0%,
+          rgba(255,255,255,0.34) 18%,
+          rgba(255,255,255,0.12) 30%,
+          rgba(255,255,255,0.00) 48%
+        );
+      }
     }
 
     @media (max-width: 480px){
@@ -258,7 +289,6 @@
 <body>
   <main class="wrap">
     <div class="card">
-      <!-- Importante: usa /logo.png (y reemplázalo por el transparente) -->
       <img class="logo" src="/logo.png" alt="Juravia" />
 
       <h1>Alegaciones y recursos de multas online</h1>
