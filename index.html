@@ -22,9 +22,10 @@
   <link rel="apple-touch-icon" href="/logo.png" />
 
   <meta property="og:title" content="Juravia | Recursos de multas online" />
-  <meta property="og:description" content="Prepara escritos de forma rápida y profesional, con un enfoque claro y orientado a la presentación." />
+    <meta property="og:type" content="website" />
+<meta property="og:description" content="Prepara escritos de forma rápida y profesional, con un enfoque claro y orientado a la presentación." />
   <meta property="og:image" content="https://juravia.app/logo.png" />
-  <meta property="og:url" content="https://juravia.app" />
+  <meta property="og:url" content="https://juravia.app/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@JuraviaApp" />
 
@@ -33,7 +34,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Juravia",
-    "url": "https://juravia.app",
+    "url": "https://juravia.app/",
     "logo": "https://juravia.app/logo.png",
     "description": "Juravia te ayuda a recurrir multas de tráfico online de forma sencilla, rápida y profesional.",
     "sameAs": [
@@ -283,7 +284,58 @@
     @media (min-width: 1400px){
       :root{ --hero-bg-y: 12%; }
     }
+  
+    .seo-box{
+      margin-top: 28px;
+      text-align: left;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 18px;
+      padding: 18px 18px 6px 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .seo-box h2{
+      margin: 10px 0 10px 0;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.96);
+      letter-spacing: .2px;
+    }
+    .seo-box p{
+      color: rgba(255,255,255,0.86);
+      line-height: 1.55;
+      margin: 0 0 12px 0;
+    }
+    .how{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 10px 0 14px 0;
+    }
+    .how-item{
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      padding: 10px 12px;
+      color: rgba(255,255,255,0.86);
+    }
+    .seo-links{
+      margin: 0 0 14px 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,0.88);
+    }
+    .seo-links a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .faq{
+      margin-bottom: 8px;
+    }
+    .faq strong{
+      color: rgba(255,255,255,0.96);
+    }
   </style>
+  <meta name="robots" content="index,follow" />
 </head>
 
 <body>
@@ -298,14 +350,46 @@
       </p>
 
       <div class="cta">
-        <a class="btn" href="https://app.juravia.app">Crear alegaciones</a>
+        <a class="btn" href="https://app.juravia.app" rel="nofollow noopener noreferrer">Crear alegaciones</a>
       </div>
 
       <ul class="trust">
         <li class="pill"><span class="dot"></span>Enfoque legal</li>
         <li class="pill"><span class="dot"></span>Documentos listos</li>
         <li class="pill"><span class="dot"></span>En minutos</li>
-      </ul>
+      
+      <section class="seo-box" aria-label="Información sobre Juravia">
+        <h2>Cómo funciona Juravia</h2>
+        <p>
+          Juravia es una herramienta para preparar <strong>borradores de alegaciones</strong> y organizar la documentación
+          de forma clara (sin prometer resultados). Te ayuda a no olvidar anexos y a presentar un escrito coherente.
+        </p>
+
+        <div class="how">
+          <div class="how-item"><strong>1)</strong> Describe el caso y el tipo de multa.</div>
+          <div class="how-item"><strong>2)</strong> Adjunta o resume la notificación (si la tienes).</div>
+          <div class="how-item"><strong>3)</strong> Genera un borrador y una lista de anexos recomendados.</div>
+        </div>
+
+        <h2>Guías rápidas</h2>
+        <ul class="seo-links">
+          <li><a href="/recurrir_multa_baliza_v16.html">Baliza V16 conectada (2026): checklist y alegaciones</a></li>
+          <li><a href="/recurrir_multa_itv_caducada.html">ITV caducada: cómo enfocar el recurso</a></li>
+          <li><a href="/recurrir_multa_radar.html">Multa de radar: puntos típicos a revisar</a></li>
+        </ul>
+
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq">
+          <p><strong>¿Juravia es un despacho de abogados?</strong><br>
+          No. Es una herramienta que genera borradores y checklist de anexos. Si tu caso es complejo, conviene asesoramiento profesional.</p>
+
+          <p><strong>¿Tengo que llevar “tickets” en el coche?</strong><br>
+          No es un requisito “de llevar encima”. Pero conservar factura/capturas y fotos del dispositivo puede ayudarte si más adelante necesitas acreditar hechos.</p>
+
+          <p><strong>¿Promete que te quiten la multa?</strong><br>
+          No. Juravia te ayuda a ordenar el caso y a redactar un escrito coherente, pero el resultado depende del expediente y de las pruebas.</p>
+        </div>
+      </section>
 
       <p class="fine">
         Nota: Juravia es una herramienta de apoyo. Revisa siempre tu caso concreto antes de presentar documentación.
