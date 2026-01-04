@@ -360,6 +360,107 @@
       background: rgba(255,255,255,.10);
       opacity: 1;
     }
+
+
+/* Subtle inline trust (reduce "pill" feeling) */
+.trust{
+  list-style:none;
+  padding:0;
+  margin: 16px 0 0;
+  display:flex;
+  gap: 18px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.trust li{
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: .1px;
+  display:flex;
+  align-items:center;
+  gap: 8px;
+}
+.trust li .dot{
+  width: 8px;
+  height: 8px;
+  opacity: .85;
+  box-shadow:none;
+}
+
+/* Guías rápidas: compact, no big frame */
+.quick-guides{
+  margin-top: 14px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+.quick-guides h2{
+  margin: 8px 0 6px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,.9);
+}
+.quick-guides .guides-intro{ display:none; }
+
+.guide-pills{
+  display:flex;
+  gap: 10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top: 6px;
+}
+.guide-pills a{
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(0,0,0,.12);
+  text-decoration:none;
+  color: rgba(255,255,255,.92);
+}
+.guide-pills a:hover{
+  background: rgba(0,0,0,.18);
+  border-color: rgba(255,255,255,.32);
+}
+
+/* trust separators */
+.trust{ gap: 0; }
+.trust li{ gap: 0; }
+.trust li .dot{ display:none; }
+.trust li:not(:last-child)::after{
+  content:" · ";
+  color: rgba(255,255,255,.35);
+  margin: 0 10px;
+}
+
+/* Guías rápidas más sutiles (inline) */
+.guide-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 10px;
+  flex-wrap:wrap;
+  margin-top: 6px;
+}
+.guide-link{
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.92);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: 13px;
+}
+.guide-link:hover{ opacity: .92; }
+.sep{
+  color: rgba(255,255,255,.35);
+  font-size: 13px;
+}
 </style>
 </head>
 <body>
@@ -377,7 +478,7 @@
 <li class="pill"><span class="dot"></span>Enfoque legal</li>
 <li class="pill"><span class="dot"></span>Documentos listos</li>
 <li class="pill"><span class="dot"></span>En minutos</li>
-</ul><section aria-label="Guías rápidas" class="quick-guides"><h2>Guías rápidas</h2><p class="guides-hint">Elige tu caso:</p><div class="guide-pills"><a href="/recurrir_multa_baliza_v16.html">Baliza V16 (2026)</a><a href="/recurrir_multa_itv_caducada.html">ITV caducada</a><a href="/recurrir_multa_radar.html">Multa de radar</a></div></section><p class="fine">
+</ul><section aria-label="Guías rápidas" class="quick-guides"><h2>Guías rápidas</h2><div class="guide-row"><a class="guide-link" href="/recurrir_multa_baliza_v16.html">Baliza V16</a><span class="sep">·</span><a class="guide-link" href="/recurrir_multa_itv_caducada.html">ITV</a><span class="sep">·</span><a class="guide-link" href="/recurrir_multa_radar.html">Radar</a></div></section><p class="fine">
         Nota: Juravia es una herramienta de apoyo. Revisa siempre tu caso concreto antes de presentar documentación.
       </p>
 <footer class="seo-footer"><div class="footer-note">© Juravia. Herramienta de apoyo para generar alegaciones y recursos.</div></footer>
