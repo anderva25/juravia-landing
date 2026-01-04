@@ -60,6 +60,7 @@ window.dataLayer = window.dataLayer || [];
 
     *{box-sizing:border-box}
     html,body{height:100%}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
@@ -321,26 +322,6 @@ window.dataLayer = window.dataLayer || [];
       min-width: 260px;
     }
 
-    .btn-ghost{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 13px 18px;
-      border-radius: 16px;
-      text-decoration:none;
-      color: rgba(255,255,255,.92);
-      border: 1px solid rgba(255,255,255,.22);
-      background: rgba(0,0,0,.12);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-    .btn-ghost:hover{
-      transform: translateY(-1px);
-      background: rgba(0,0,0,.18);
-      border-color: rgba(255,255,255,.30);
-    }
-
     .highlights{
       gap: 10px;
       margin: 10px 0 20px;
@@ -413,9 +394,37 @@ window.dataLayer = window.dataLayer || [];
       .logo{ width: 200px; }
       .cta{ gap: 10px; }
       .btn{ width: 100%; max-width: 360px; }
-      .btn-ghost{ width: 100%; max-width: 360px; }
       .highlights{ margin-top: 10px; }
     }
+
+    .subcta{
+      margin: 6px 0 14px;
+      text-align:center;
+    }
+    .subcta a{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      color: rgba(255,255,255,.84);
+      text-decoration:none;
+      font-weight:600;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.10);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: background .12s ease, border-color .12s ease, transform .12s ease, opacity .12s ease;
+    }
+    .subcta a:hover{
+      background: rgba(0,0,0,.16);
+      border-color: rgba(255,255,255,.22);
+      transform: translateY(-1px);
+      opacity: .98;
+    }
+
+    #guias{ scroll-margin-top: 18px; }
 </style>
 </head>
 <body>
@@ -426,12 +435,12 @@ window.dataLayer = window.dataLayer || [];
 <p class="subtitle">Genera alegaciones y recursos de multas de tráfico en minutos. Un proceso claro y guiado, con el escrito y la documentación ordenada para presentar.</p>
 <div class="cta">
 <a class="btn" href="https://app.juravia.app/" rel="nofollow noopener noreferrer">Crear alegaciones y recursos</a>
-<a class="btn-ghost" href="#guias">Ver guías</a></div>
+</div>
 <div aria-label="Ventajas principales" class="highlights">
 <div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> Enfoque claro</div>
 <div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> Checklist de documentación</div>
 <div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> En minutos</div>
-</div>
+</div><div class="subcta"><a href="#guias">Ver guías ↓</a></div>
 <section aria-label="Guías rápidas" class="guides" id="guias">
 <h2>Guías rápidas</h2>
 <div class="guide-grid">
