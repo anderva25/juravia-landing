@@ -312,6 +312,54 @@
       text-underline-offset: 2px;
     }
     .guide-links a:hover{ opacity: .92; }
+
+
+    /* Guías rápidas (home) - versión compacta */
+    .quick-guides{
+      margin-top: 18px;
+      padding: 16px 14px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(0,0,0,.22);
+      backdrop-filter: blur(6px);
+    }
+    .quick-guides h2{
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    .guides-hint{
+      margin: 0 0 10px 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    .guide-pills{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    .guide-pills a{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .guide-pills a:hover{
+      background: rgba(255,255,255,.10);
+      opacity: 1;
+    }
 </style>
 </head>
 <body>
@@ -329,11 +377,10 @@
 <li class="pill"><span class="dot"></span>Enfoque legal</li>
 <li class="pill"><span class="dot"></span>Documentos listos</li>
 <li class="pill"><span class="dot"></span>En minutos</li>
-</ul><section aria-label="Guías rápidas" class="quick-guides"><h2>Guías rápidas</h2><p class="guides-intro">Consejos y puntos típicos a revisar según el tipo de multa:</p><ul class="guide-links"><li><a href="/recurrir_multa_baliza_v16.html">Baliza V16 conectada (2026): checklist y alegaciones</a></li><li><a href="/recurrir_multa_itv_caducada.html">ITV caducada: cómo enfocar el recurso</a></li><li><a href="/recurrir_multa_radar.html">Multa de radar: puntos típicos a revisar</a></li></ul></section><p class="fine">
+</ul><section aria-label="Guías rápidas" class="quick-guides"><h2>Guías rápidas</h2><p class="guides-hint">Elige tu caso:</p><div class="guide-pills"><a href="/recurrir_multa_baliza_v16.html">Baliza V16 (2026)</a><a href="/recurrir_multa_itv_caducada.html">ITV caducada</a><a href="/recurrir_multa_radar.html">Multa de radar</a></div></section><p class="fine">
         Nota: Juravia es una herramienta de apoyo. Revisa siempre tu caso concreto antes de presentar documentación.
       </p>
-
-<footer class="seo-footer"><nav class="footer-nav"><a href="https://juravia.app/">Inicio</a><a href="https://app.juravia.app/" rel="nofollow noopener noreferrer">Abrir app</a></nav><div class="footer-note">© Juravia. Herramienta de apoyo para generar alegaciones y recursos.</div></footer>
+<footer class="seo-footer"><div class="footer-note">© Juravia. Herramienta de apoyo para generar alegaciones y recursos.</div></footer>
 </div>
 </main>
 </body>
