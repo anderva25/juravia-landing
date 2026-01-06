@@ -529,7 +529,7 @@ window.dataLayer = window.dataLayer || [];
 <h1>Alegaciones y recursos de multas online</h1>
 <p class="subtitle">Genera alegaciones y recursos de multas de tráfico en minutos. Un proceso claro y guiado, con el escrito y la documentación ordenada para presentar.</p>
 <div class="cta">
-<a class="btn" data-jv-cta="open_app" href="https://app.juravia.app/" rel="nofollow noreferrer noopener">Crear alegaciones y recursos</a>
+<a class="btn" href="https://app.juravia.app/" rel="nofollow noopener noreferrer">Crear alegaciones y recursos</a>
 </div>
 <div aria-label="Ventajas principales" class="highlights">
 <div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> Enfoque claro</div>
@@ -569,69 +569,99 @@ window.dataLayer = window.dataLayer || [];
 <footer>© Juravia. Herramienta de apoyo para generar alegaciones y recursos.</footer>
 </div>
 </main>
-<script id="jv-propagate-params">
-(function () {
-  try {
-    var params = window.location.search || "";
-    if (!params || params === "?") { return; }
 
-    // Normalize: only keep relevant params (gclid + utm_*)
-    var incoming = new URLSearchParams(params);
-    var keep = new URLSearchParams();
-    ["gclid","utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(k){
-      if (incoming.has(k)) keep.set(k, incoming.get(k));
+<!-- JV_ADS_TRACKING_v1 -->
+<script>
+(function() {
+  const KEYS = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "msclkid"];
+  function pickParams() {
+    try {
+      const u = new URL(window.location.href);
+      const out = new URLSearchParams();
+      KEYS.forEach(k => {
+        const v = u.searchParams.get(k);
+        if (v) out.set(k, v);
+      });
+      return out;
+    } catch (e) {
+      return new URLSearchParams();
+    }
+  }
+
+  function mergeIntoHref(href, params) {
+    try {
+      const url = new URL(href, window.location.origin);
+      // only merge into http(s)
+      if (!/^https?:$/.test(url.protocol)) return href;
+      params.forEach((v, k) => {
+        if (!url.searchParams.get(k)) url.searchParams.set(k, v);
+      });
+      return url.toString();
+    } catch (e) {
+      return href;
+    }
+  }
+
+  function isInternalGuideLink(a) {
+    try {
+      const href = a.getAttribute('href') || '';
+      if (!href) return false;
+      if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return false;
+      // match .html guide pages
+      return href.includes('.html');
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function isAppCta(a) {
+    const href = (a.getAttribute('href') || '').trim();
+    return href.startsWith('https://app.juravia.app') || href.startsWith('http://app.juravia.app');
+  }
+
+  function decorateLinks(params) {
+    if (!params || [...params.keys()].length === 0) return;
+    document.querySelectorAll('a[href]').forEach(a => {
+      if (isAppCta(a) || isInternalGuideLink(a)) {
+        const newHref = mergeIntoHref(a.getAttribute('href'), params);
+        if (newHref) a.setAttribute('href', newHref);
+      }
     });
-    var keepStr = keep.toString();
-    if (!keepStr) { return; }
+  }
 
-    // 1) Propagate to Streamlit app link(s)
-    var appLinks = document.querySelectorAll('a[href^="https://app.juravia.app"]');
-    appLinks.forEach(function(a){
-      try{
-        var url = new URL(a.href);
-        var cur = new URLSearchParams(url.search);
-        keep.forEach(function(v,k){ if(!cur.has(k)) cur.set(k,v); });
-        url.search = cur.toString();
-        a.href = url.toString();
-
-        // Click tracking (GA4) - best effort
-        a.addEventListener("click", function(){
-          try{
-            if (typeof window.gtag === "function") {
-              window.gtag("event", "click_open_app", {
-                link_url: a.href,
-                utm_source: keep.get("utm_source") || undefined,
-                utm_campaign: keep.get("utm_campaign") || undefined
+  function bindCtaEvent(params) {
+    // Attach to all app CTAs
+    const ctas = Array.from(document.querySelectorAll('a[href]')).filter(isAppCta);
+    ctas.forEach(a => {
+      a.addEventListener('click', function(ev) {
+        // Try GA4 event if gtag exists
+        const href = a.getAttribute('href');
+        const send = () => {
+          try {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'click_open_app', {
+                transport_type: 'beacon',
+                event_callback: function() { window.location.href = href; }
               });
+              // fallback in case callback doesn't fire
+              setTimeout(function() { window.location.href = href; }, 350);
+              ev.preventDefault();
             }
-          }catch(e){}
-        }, {passive:true});
-      }catch(e){}
+          } catch(e) {}
+        };
+        // If no gtag, just navigate (but keep params already decorated)
+        if (typeof window.gtag !== 'function') return;
+        send();
+      });
     });
+  }
 
-    // 2) Propagate to internal guide links (.html) so attribution is preserved across landings
-    var internal = document.querySelectorAll('a[href$=".html"], a[href*=".html#"], a[href^="/"]');
-    internal.forEach(function(a){
-      try{
-        var href = a.getAttribute("href") || "";
-        // Skip external links and the app links already handled
-        if (!href || href.startsWith("http")) return;
-        if (href.startsWith("mailto:") || href.startsWith("tel:")) return;
-
-        // Only add to our guide pages (avoid breaking anchor-only links)
-        var isHtml = href.indexOf(".html") !== -1;
-        if (!isHtml) return;
-
-        var url = new URL(href, window.location.origin);
-        var cur = new URLSearchParams(url.search);
-        keep.forEach(function(v,k){ if(!cur.has(k)) cur.set(k,v); });
-        url.search = cur.toString();
-        // Preserve relative formatting
-        var out = url.pathname + (url.search ? ("?" + url.searchParams.toString()) : "") + (url.hash || "");
-        a.setAttribute("href", out);
-      }catch(e){}
-    });
-  } catch (e) {}
+  document.addEventListener('DOMContentLoaded', function() {
+    const params = pickParams();
+    decorateLinks(params);
+    bindCtaEvent(params);
+  });
 })();
-</script></body>
+</script>
+</body>
 </html>
