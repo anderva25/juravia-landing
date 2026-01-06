@@ -1,49 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-M9PX0ZVVF2');
   </script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Juravia | Alegaciones y recursos de multas online</title>
-  <meta name="description" content="Juravia te ayuda a recurrir multas de tráfico online de forma sencilla, rápida y profesional. Genera tus alegaciones en minutos." />
-  <link rel="canonical" href="https://juravia.app/" />
-
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/logo.png" />
-
-  <meta property="og:title" content="Juravia | Recursos de multas online" />
-  <meta property="og:description" content="Prepara escritos de forma rápida y profesional, con un enfoque claro y orientado a la presentación." />
-  <meta property="og:image" content="https://juravia.app/logo.png" />
-  <meta property="og:url" content="https://juravia.app" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@JuraviaApp" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Juravia",
-    "url": "https://juravia.app",
-    "logo": "https://juravia.app/logo.png",
-    "description": "Juravia te ayuda a recurrir multas de tráfico online de forma sencilla, rápida y profesional.",
-    "sameAs": [
-      "https://x.com/JuraviaApp",
-      "https://www.burbuja.info/inmobiliaria/threads/me-clavaron-200-por-la-itv-con-el-coche-parado-en-vez-de-pagar-me-hice-una-herramienta-para-recurrir-multas.2163484/"
-    ]
-  }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Juravia | Alegaciones y recursos de multas online</title>
+<meta content="Genera alegaciones y recursos de multas de tráfico online en minutos. Claro, sencillo y con la documentación ordenada para presentar." name="description"/>
+<link href="https://juravia.app/" rel="canonical"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="Juravia | Alegaciones y recursos de multas online" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="Genera alegaciones y recursos de multas de tráfico online en minutos. Claro, sencillo y con la documentación ordenada para presentar." property="og:description"/>
+<meta content="https://juravia.app/logo.png" property="og:image"/>
+<meta content="https://juravia.app/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@JuraviaApp" name="twitter:site"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Juravia",
+  "url": "https://juravia.app/",
+  "logo": "https://juravia.app/logo.png",
+  "description": "Juravia genera alegaciones y recursos de multas de tráfico online.",
+  "sameAs": [
+    "https://x.com/JuraviaApp"
+  ]
+}
   </script>
-
-  <style>
+<meta content="index,follow" name="robots"/>
+<style>
     :root{
       --ink:#ffffff;
       --muted: rgba(255,255,255,.84);
@@ -60,54 +56,34 @@
       --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
       */
       --hero-bg-y: 18%;
-      --hero-bg-attachment: fixed;
     }
 
-    *{ box-sizing:border-box; }
-
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
       color:var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-
-      /* Fondo “serio”: viñeta suave + degradado inferior + imagen */
-      background-image:
-        radial-gradient(ellipse at 50% 40%,
-          rgba(0,0,0,0.00) 0%,
-          rgba(0,0,0,0.22) 58%,
-          rgba(0,0,0,0.68) 100%
-        ),
-        linear-gradient(180deg,
-          rgba(0,0,0,0.22) 0%,
-          rgba(0,0,0,0.45) 55%,
-          rgba(0,0,0,0.80) 100%
-        ),
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.72)),
         var(--hero-bg);
-
-      background-position:
-        center center,
-        center center,
-        center var(--hero-bg-y);
-
-      background-size: cover, cover, cover;
-      background-repeat: no-repeat, no-repeat, no-repeat;
-
-      background-attachment: scroll, scroll, var(--hero-bg-attachment);
-
-      background-color:#050a16;
-      min-height:100vh;
+      background-size: cover;
+      background-position: 50% var(--hero-bg-y);
+      background-repeat:no-repeat;
     }
 
     .wrap{
-      position:relative; /* necesario para el spotlight */
-      min-height:100vh;
+      min-height:100%;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:72px 20px;
+      padding:28px 16px 34px;
+      position:relative;
+      overflow:hidden;
     }
 
-    /* Spotlight blanco SOLO arriba-centro para integrar el borde del PNG */
+    /* Spotlight blanco arriba-centro para integrar el borde del PNG */
     .wrap::before{
       content:"";
       position:absolute;
@@ -128,274 +104,534 @@
       max-width:980px;
       text-align:center;
       position:relative;
-      z-index:1; /* por encima del spotlight */
+      z-index:1;
     }
 
-    /* Logo transparente + halo para fundir el borde */
     .logo{
-      width:260px;
+      width:240px;
       height:auto;
-      display:block;
+      filter: drop-shadow(0 18px 28px rgba(0,0,0,.35));
       margin:0 auto 18px;
-      filter:
-        drop-shadow(0 0 14px rgba(255,255,255,0.22))
-        drop-shadow(0 16px 40px rgba(0,0,0,0.22));
+      display:block;
     }
 
     h1{
-      margin:0 0 16px;
-      font-size:clamp(34px,4.1vw,56px);
-      letter-spacing:-0.03em;
+      margin:0 0 12px;
+      font-size: clamp(34px, 5vw, 54px);
       line-height:1.06;
-      text-shadow: 0 14px 34px rgba(0,0,0,.40);
+      letter-spacing:-.5px;
+      text-shadow: 0 18px 34px rgba(0,0,0,.35);
     }
 
     .subtitle{
-      margin:0 auto 26px;
-      max-width:780px;
-      font-size:clamp(16px,1.35vw,20px);
-      line-height:1.6;
-      color:var(--muted);
-      text-shadow: 0 12px 26px rgba(0,0,0,.35);
+      margin: 0 auto 18px;
+      max-width: 860px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--muted);
+      text-shadow: 0 10px 22px rgba(0,0,0,.25);
     }
 
     .cta{
-      margin-top:10px;
+      margin: 10px 0 14px;
       display:flex;
       justify-content:center;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
     }
 
     .btn{
-      appearance:none;
-      border:0;
       background:var(--brand);
       color:#fff;
-      padding:14px 22px;
-      border-radius:14px;
-      font-weight:750;
-      font-size:16px;
       text-decoration:none;
-      min-width:240px;
-      box-shadow:0 18px 40px rgba(0,0,0,.26);
-      transition:transform .06s ease, background .15s ease, box-shadow .15s ease;
-    }
-    .btn:hover{ background:var(--brandHover); }
-    .btn:active{ transform: translateY(1px); }
-
-    .trust{
-      margin:28px auto 0;
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-      padding:0;
-      list-style:none;
-      color: rgba(255,255,255,.92);
-      font-size:14px;
-      text-shadow: 0 10px 22px rgba(0,0,0,.25);
-    }
-
-    .pill{
-      border:1px solid var(--border);
-      padding:10px 14px;
-      border-radius:999px;
-      background: rgba(10, 16, 28, 0.35);
       display:inline-flex;
       align-items:center;
-      gap:10px;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
+      justify-content:center;
+      padding:14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      letter-spacing:.2px;
+      box-shadow: 0 12px 26px rgba(0,0,0,.30);
+      transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
+      min-width: 240px;
+    }
+    .btn:hover{
+      background:var(--brandHover);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0,0,0,.33);
     }
 
-    .pill .dot{
-      width:8px;
-      height:8px;
-      border-radius:999px;
-      background:var(--gold);
-      box-shadow:0 0 0 3px rgba(212,175,55,.16);
+    .highlights{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin: 8px 0 18px;
+    }
+    .highlight{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border:1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(10, 16, 28, 0.28);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      font-size: 13px;
+      color: rgba(255,255,255,.92);
+    }
+    .highlight svg{
+      width:15px;
+      height:15px;
+      flex:0 0 auto;
+      stroke: var(--gold);
+      stroke-width: 2.2;
+      fill: none;
+      filter: drop-shadow(0 0 10px rgba(212,175,55,.12));
+    }
+
+    .guides{
+      margin: 18px auto 0;
+      max-width: 980px;
+    }
+    .guides h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      color: rgba(255,255,255,.92);
+      text-shadow: 0 10px 22px rgba(0,0,0,.25);
+    }
+    .guide-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .guide{
+      display:block;
+      text-decoration:none;
+      color: #fff;
+      text-align:left;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      background: rgba(0,0,0,0.18);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 12px 26px rgba(0,0,0,.18);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      min-height: 86px;
+    }
+    .guide:hover{
+      transform: translateY(-1px);
+      background: rgba(0,0,0,0.24);
+      border-color: rgba(255,255,255,0.26);
+    }
+    .guide-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom: 8px;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,.35);
+      background: rgba(212,175,55,.12);
+      font-size: 12px;
+      color: rgba(255,255,255,.95);
+    }
+    .arrow{
+      opacity:.9;
+      font-weight:700;
+      color: rgba(255,255,255,.82);
+    }
+    .guide-title{
+      font-weight: 800;
+      letter-spacing:.2px;
+      margin:0 0 4px;
+      font-size: 14px;
+    }
+    .guide-desc{
+      margin:0;
+      font-size: 13px;
+      color: rgba(255,255,255,.80);
+      line-height: 1.35;
     }
 
     .fine{
-      margin-top:28px;
-      color: rgba(255,255,255,.75);
-      font-size:13px;
-      line-height:1.55;
+      margin-top: 18px;
+      color: rgba(255,255,255,.74);
+      font-size: 13px;
+      line-height: 1.55;
       text-shadow: 0 10px 22px rgba(0,0,0,.25);
     }
 
-    .seo-footer{
-      margin-top:60px;
-      padding-top:20px;
-      border-top: 1px solid rgba(255,255,255,0.14);
-      max-width:600px;
-      margin-left:auto;
-      margin-right:auto;
+    footer{
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+      text-shadow: 0 10px 22px rgba(0,0,0,.25);
     }
 
-    .footer-label{
-      font-size:12px;
-      color: rgba(255,255,255,.70);
-      margin-bottom:12px;
-      text-shadow: 0 10px 22px rgba(0,0,0,.20);
-    }
-
-    .seo-footer nav{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-    }
-
-    .seo-footer a{
-      font-size:13px;
-      color: rgba(255,255,255,.92);
-      text-decoration:none;
-      font-weight:700;
-    }
-    .seo-footer a:hover{ text-decoration: underline; }
-
-    /* Responsive */
-    @media (max-width: 768px){
-      :root{
-        --hero-bg-attachment: scroll;
-        --hero-bg-y: 36%;
-      }
-      .wrap{ padding:56px 16px; }
-      .logo{ width:220px; }
-
-      /* Spotlight un poco ajustado en móvil */
-      .wrap::before{
-        background: radial-gradient(
-          ellipse at 50% 10%,
-          rgba(255,255,255,0.58) 0%,
-          rgba(255,255,255,0.34) 18%,
-          rgba(255,255,255,0.12) 30%,
-          rgba(255,255,255,0.00) 48%
-        );
-      }
-    }
-
-    @media (max-width: 480px){
-      :root{ --hero-bg-y: 42%; }
-      .wrap{ padding:40px 16px; }
-      .seo-footer nav { flex-direction: column; gap: 8px; }
+    @media (max-width: 860px){
+      .guide-grid{ grid-template-columns: 1fr; }
+      .logo{ width: 210px; }
+      .btn{ width: 100%; max-width: 340px; }
     }
 
     @media (min-width: 1400px){
       :root{ --hero-bg-y: 12%; }
     }
-  </style>
+  
+
+    /* --- Premium refinements (overrides) --- */
+    body{
+      background:
+        radial-gradient(ellipse at 50% 12%, rgba(255,255,255,.10), rgba(0,0,0,0) 48%),
+        linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.78)),
+        var(--hero-bg);
+      background-size: cover;
+      background-position: 50% var(--hero-bg-y);
+      background-repeat:no-repeat;
+    }
+
+    .wrap{ padding: 36px 16px 44px; }
+
+    .logo{ width: 220px; margin-bottom: 16px; }
+
+    .subtitle{
+      max-width: 820px;
+      font-size: 15.5px;
+      letter-spacing: .1px;
+    }
+
+    .cta{ margin: 12px 0 12px; }
+
+    .btn{
+      border-radius: 16px;
+      padding: 14px 24px;
+      min-width: 260px;
+    }
+
+    .highlights{
+      gap: 10px;
+      margin: 10px 0 20px;
+      opacity: .98;
+    }
+    .highlight{
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(10, 16, 28, 0.18);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12.5px;
+      letter-spacing: .1px;
+    }
+    .highlight svg{ stroke: var(--gold); }
+
+    .guides{ margin-top: 22px; }
+    .guides h2{
+      font-size: 15px;
+      color: rgba(255,255,255,.88);
+      margin-bottom: 12px;
+    }
+    .guide-grid{ gap: 14px; }
+    .guide{
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.12));
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 18px 40px rgba(0,0,0,.20);
+      position: relative;
+      overflow:hidden;
+    }
+    .guide::before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      pointer-events:none;
+      background: radial-gradient(1200px 160px at 20% 0%, rgba(212,175,55,.18), rgba(0,0,0,0) 60%);
+      opacity:.9;
+    }
+    .guide:hover{
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.14));
+      border-color: rgba(255,255,255,0.24);
+    }
+    .guide-top, .guide-title, .guide-desc{ position: relative; }
+    .tag{
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.92);
+      font-weight: 600;
+    }
+    .guide-title{ font-size: 14px; }
+    .guide-desc{ font-size: 13px; color: rgba(255,255,255,.78); }
+
+    .guide:focus-visible{
+      outline: 3px solid rgba(212,175,55,.65);
+      outline-offset: 3px;
+    }
+
+    .fine{ margin-top: 22px; }
+
+    footer{
+      border-top: 1px solid rgba(255,255,255,.10);
+      margin-top: 20px;
+      padding-top: 14px;
+      color: rgba(255,255,255,.66);
+    }
+
+    @media (max-width: 860px){
+      .logo{ width: 200px; }
+      .cta{ gap: 10px; }
+      .btn{ width: 100%; max-width: 360px; }
+      .highlights{ margin-top: 10px; }
+    }
+
+    .subcta{
+      margin: 6px 0 14px;
+      text-align:center;
+    }
+    .subcta a{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      color: rgba(255,255,255,.84);
+      text-decoration:none;
+      font-weight:600;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.10);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: background .12s ease, border-color .12s ease, transform .12s ease, opacity .12s ease;
+    }
+    .subcta a:hover{
+      background: rgba(0,0,0,.16);
+      border-color: rgba(255,255,255,.22);
+      transform: translateY(-1px);
+      opacity: .98;
+    }
+
+    #guias{ scroll-margin-top: 18px; }
+
+
+/* ---- Premium tweaks (v3): más sutil, CTA dominante, móvil ligero ---- */
+
+/* Highlights: 3 pills independientes (sin subrayados) */
+.highlights{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin: 10px 0 16px;
+}
+.highlight{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  background: rgba(10, 16, 28, 0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: 13px;
+  color: rgba(255,255,255,.92);
+  box-shadow: 0 10px 22px rgba(0,0,0,.14);
+}
+.highlight svg{
+  width:15px;
+  height:15px;
+  stroke: rgba(212,175,55,.9);
+  stroke-width:2.2;
+  fill:none;
+}
+
+/* Guías rápidas: tarjetas minimalistas (sin tono dorado) */
+.guides h2{
+  font-size: 14px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity: .9;
+  margin: 14px 0 10px;
+}
+.guide{
+  background: rgba(0,0,0,0.16);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 12px 24px rgba(0,0,0,.16);
+  min-height: 76px;
+}
+.guide:hover{
+  background: rgba(0,0,0,0.22);
+  border-color: rgba(255,255,255,0.22);
+}
+.tag{
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,.92);
+}
+
+/* Más compacto */
+.guide-title{ font-size: 14px; }
+.guide-desc{ font-size: 12.5px; color: rgba(255,255,255,.78); }
+
+/* Móvil: CTA a ancho completo + guías en carrusel horizontal para ahorrar altura */
+@media (max-width: 860px){
+  .wrap{ padding: 22px 14px 26px; }
+  .logo{ width: 200px; }
+  .subtitle{ font-size: 15px; line-height: 1.55; }
+  .btn{ width: 100%; max-width: 420px; min-width: unset; }
+  .highlights{ margin: 10px 0 12px; }
+
+  .guide-grid{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+  .guide{
+    scroll-snap-align: start;
+    min-width: 240px;
+    max-width: 260px;
+    padding: 12px 12px 10px;
+  }
+  .guide-desc{ display: none; } /* menos altura en móvil */
+}
+
+/* Muy pequeño: reduce aún más alturas */
+@media (max-width: 420px){
+  .logo{ width: 180px; }
+  h1{ font-size: 34px; }
+  .subtitle{ font-size: 14.5px; }
+  .highlight{ font-size: 12.5px; padding: 7px 10px; }
+  .guide{ min-width: 220px; }
+}
+</style>
 </head>
-
 <body>
-  <main class="wrap">
-    <div class="card">
-      <img class="logo" src="/logo.png" alt="Juravia" />
+<main class="wrap">
+<div class="card">
+<img alt="Juravia" class="logo" src="/logo.png"/>
+<h1>Alegaciones y recursos de multas online</h1>
+<p class="subtitle">Genera alegaciones y recursos de multas de tráfico en minutos. Un proceso claro y guiado, con el escrito y la documentación ordenada para presentar.</p>
+<div class="cta">
+<a class="btn" data-jv-cta="open_app" href="https://app.juravia.app/" rel="nofollow noreferrer noopener">Crear alegaciones y recursos</a>
+</div>
+<div aria-label="Ventajas principales" class="highlights">
+<div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> Enfoque claro</div>
+<div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> Documentación guiada</div>
+<div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> En minutos</div>
+</div><div class="subcta"></div>
+<section aria-label="Guías rápidas" class="guides" id="guias">
+<h2>Guías rápidas</h2>
+<div class="guide-grid">
+<a class="guide" href="/recurrir_multa_baliza_v16.html">
+<div class="guide-top">
+<span class="tag">V16 · 2026</span>
+<span class="arrow">→</span>
+</div>
+<div class="guide-title">Baliza V16 conectada</div>
+<p class="guide-desc">Checklist de validez y alegaciones.</p>
+</a>
+<a class="guide" href="/recurrir_multa_itv_caducada.html">
+<div class="guide-top">
+<span class="tag">ITV</span>
+<span class="arrow">→</span>
+</div>
+<div class="guide-title">ITV caducada</div>
+<p class="guide-desc">Cómo enfocar el recurso y anexos.</p>
+</a>
+<a class="guide" href="/recurrir_multa_radar.html">
+<div class="guide-top">
+<span class="tag">Radar</span>
+<span class="arrow">→</span>
+</div>
+<div class="guide-title">Multa de radar</div>
+<p class="guide-desc">Puntos típicos a revisar.</p>
+</a>
+</div>
+</section>
+<p class="fine">Nota: Juravia es una herramienta de apoyo para preparar alegaciones y recursos. Revisa siempre tu caso concreto antes de presentar documentación.</p>
+<footer>© Juravia. Herramienta de apoyo para generar alegaciones y recursos.</footer>
+</div>
+</main>
+<script id="jv-propagate-params">
+(function () {
+  try {
+    var params = window.location.search || "";
+    if (!params || params === "?") { return; }
 
-      <h1>Alegaciones y recursos de multas online</h1>
+    // Normalize: only keep relevant params (gclid + utm_*)
+    var incoming = new URLSearchParams(params);
+    var keep = new URLSearchParams();
+    ["gclid","utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(k){
+      if (incoming.has(k)) keep.set(k, incoming.get(k));
+    });
+    var keepStr = keep.toString();
+    if (!keepStr) { return; }
 
-      <p class="subtitle">
-        Prepara escritos de forma rápida y profesional, con un enfoque claro y orientado a la presentación.
-      </p>
-
-      <div class="cta">
-        <a class="btn" href="https://app.juravia.app">Crear alegaciones</a>
-      </div>
-
-      <ul class="trust">
-        <li class="pill"><span class="dot"></span>Enfoque legal</li>
-        <li class="pill"><span class="dot"></span>Documentos listos</li>
-        <li class="pill"><span class="dot"></span>En minutos</li>
-      </ul>
-
-      <p class="fine">
-        Nota: Juravia es una herramienta de apoyo. Revisa siempre tu caso concreto antes de presentar documentación.
-      </p>
-
-      <footer class="seo-footer">
-        <div class="footer-label"><strong>Guías de ayuda:</strong></div>
-        <nav>
-          <a href="/recurrir_multa_itv_caducada.html">Recurrir multa ITV</a>
-          <a href="/recurrir_multa_radar.html">Recurrir multa Radar</a>
-        </nav>
-      </footer>
-    </div>
-  </main>
-
-<!-- Juravia attribution + CTA tracking -->
-<script>
-(function(){
-  try{
-    var KEY_ALLOW = ["gclid","msclkid","fbclid","utm_source","utm_medium","utm_campaign","utm_term","utm_content","jv_debug"];
-    var incoming = new URLSearchParams(window.location.search || "");
-    function pickParams(){
-      var out = new URLSearchParams();
-      KEY_ALLOW.forEach(function(k){
-        var v = incoming.get(k);
-        if (v) out.set(k, v);
-      });
-      return out;
-    }
-    function mergeUrl(href, params){
-      try{
-        var u = new URL(href, window.location.origin);
-        params.forEach(function(v,k){
-          if(!u.searchParams.has(k)) u.searchParams.set(k, v);
-        });
-        return u.toString();
-      } catch(e){ return href; }
-    }
-
-    // Always: track CTA clicks to Streamlit app
+    // 1) Propagate to Streamlit app link(s)
     var appLinks = document.querySelectorAll('a[href^="https://app.juravia.app"]');
-    function fireClickAndNavigate(a, evt){
-      try{
-        if (typeof window.gtag !== "function") return false;
-        var dest = a.href;
-        var done = false;
-        var go = function(){ if(done) return; done = true; window.location.href = dest; };
-        var debugMode = incoming.get("jv_debug") === "1";
-        window.gtag("event","click_open_app",{
-          event_category: "cta",
-          event_label: "open_app",
-          transport_type: "beacon",
-          debug_mode: debugMode ? true : undefined,
-          event_callback: go
-        });
-        setTimeout(go, 350);
-        evt.preventDefault();
-        return true;
-      }catch(e){ return false; }
-    }
     appLinks.forEach(function(a){
-      a.addEventListener("click", function(evt){
-        // only left click without modifiers in same tab
-        if (evt.defaultPrevented) return;
-        if (evt.button !== 0) return;
-        if (evt.metaKey || evt.ctrlKey || evt.shiftKey || evt.altKey) return;
-        var t = (a.getAttribute("target") || "").toLowerCase();
-        if (t && t !== "_self") return;
-        fireClickAndNavigate(a, evt);
-      });
+      try{
+        var url = new URL(a.href);
+        var cur = new URLSearchParams(url.search);
+        keep.forEach(function(v,k){ if(!cur.has(k)) cur.set(k,v); });
+        url.search = cur.toString();
+        a.href = url.toString();
+
+        // Click tracking (GA4) - best effort
+        a.addEventListener("click", function(){
+          try{
+            if (typeof window.gtag === "function") {
+              window.gtag("event", "click_open_app", {
+                link_url: a.href,
+                utm_source: keep.get("utm_source") || undefined,
+                utm_campaign: keep.get("utm_campaign") || undefined
+              });
+            }
+          }catch(e){}
+        }, {passive:true});
+      }catch(e){}
     });
 
-    // If there are attribution params: propagate to app links and internal guide links
-    var params = pickParams();
-    if ([...params.keys()].length){
-      appLinks.forEach(function(a){
-        a.setAttribute("href", mergeUrl(a.getAttribute("href"), params));
-      });
-      // Internal links (keep params across guides)
-      var internal = document.querySelectorAll('a[href^="/"],a[href^="./"],a[href^="../"],a[href^="recurrir_"]');
-      internal.forEach(function(a){
-        var h = a.getAttribute("href");
-        if(!h) return;
-        if(/^https?:\/\//i.test(h)) return;
-        a.setAttribute("href", mergeUrl(h, params));
-      });
-    }
-  }catch(e){}
-})();
-</script>
+    // 2) Propagate to internal guide links (.html) so attribution is preserved across landings
+    var internal = document.querySelectorAll('a[href$=".html"], a[href*=".html#"], a[href^="/"]');
+    internal.forEach(function(a){
+      try{
+        var href = a.getAttribute("href") || "";
+        // Skip external links and the app links already handled
+        if (!href || href.startsWith("http")) return;
+        if (href.startsWith("mailto:") || href.startsWith("tel:")) return;
 
-</body>
+        // Only add to our guide pages (avoid breaking anchor-only links)
+        var isHtml = href.indexOf(".html") !== -1;
+        if (!isHtml) return;
+
+        var url = new URL(href, window.location.origin);
+        var cur = new URLSearchParams(url.search);
+        keep.forEach(function(v,k){ if(!cur.has(k)) cur.set(k,v); });
+        url.search = cur.toString();
+        // Preserve relative formatting
+        var out = url.pathname + (url.search ? ("?" + url.searchParams.toString()) : "") + (url.hash || "");
+        a.setAttribute("href", out);
+      }catch(e){}
+    });
+  } catch (e) {}
+})();
+</script></body>
 </html>
