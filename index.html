@@ -529,7 +529,7 @@ window.dataLayer = window.dataLayer || [];
 <h1>Alegaciones y recursos de multas online</h1>
 <p class="subtitle">Genera alegaciones y recursos de multas de tráfico en minutos. Un proceso claro y guiado, con el escrito y la documentación ordenada para presentar.</p>
 <div class="cta">
-<a class="btn" href="https://app.juravia.app/" rel="nofollow noopener noreferrer">Crear alegaciones y recursos</a>
+<a class="btn" data-jv-cta="open_app" href="https://app.juravia.app/" rel="nofollow noreferrer noopener">Crear alegaciones y recursos</a>
 </div>
 <div aria-label="Ventajas principales" class="highlights">
 <div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> Enfoque claro</div>
@@ -569,5 +569,69 @@ window.dataLayer = window.dataLayer || [];
 <footer>© Juravia. Herramienta de apoyo para generar alegaciones y recursos.</footer>
 </div>
 </main>
-</body>
+<script id="jv-propagate-params">
+(function () {
+  try {
+    var params = window.location.search || "";
+    if (!params || params === "?") { return; }
+
+    // Normalize: only keep relevant params (gclid + utm_*)
+    var incoming = new URLSearchParams(params);
+    var keep = new URLSearchParams();
+    ["gclid","utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(k){
+      if (incoming.has(k)) keep.set(k, incoming.get(k));
+    });
+    var keepStr = keep.toString();
+    if (!keepStr) { return; }
+
+    // 1) Propagate to Streamlit app link(s)
+    var appLinks = document.querySelectorAll('a[href^="https://app.juravia.app"]');
+    appLinks.forEach(function(a){
+      try{
+        var url = new URL(a.href);
+        var cur = new URLSearchParams(url.search);
+        keep.forEach(function(v,k){ if(!cur.has(k)) cur.set(k,v); });
+        url.search = cur.toString();
+        a.href = url.toString();
+
+        // Click tracking (GA4) - best effort
+        a.addEventListener("click", function(){
+          try{
+            if (typeof window.gtag === "function") {
+              window.gtag("event", "click_open_app", {
+                link_url: a.href,
+                utm_source: keep.get("utm_source") || undefined,
+                utm_campaign: keep.get("utm_campaign") || undefined
+              });
+            }
+          }catch(e){}
+        }, {passive:true});
+      }catch(e){}
+    });
+
+    // 2) Propagate to internal guide links (.html) so attribution is preserved across landings
+    var internal = document.querySelectorAll('a[href$=".html"], a[href*=".html#"], a[href^="/"]');
+    internal.forEach(function(a){
+      try{
+        var href = a.getAttribute("href") || "";
+        // Skip external links and the app links already handled
+        if (!href || href.startsWith("http")) return;
+        if (href.startsWith("mailto:") || href.startsWith("tel:")) return;
+
+        // Only add to our guide pages (avoid breaking anchor-only links)
+        var isHtml = href.indexOf(".html") !== -1;
+        if (!isHtml) return;
+
+        var url = new URL(href, window.location.origin);
+        var cur = new URLSearchParams(url.search);
+        keep.forEach(function(v,k){ if(!cur.has(k)) cur.set(k,v); });
+        url.search = cur.toString();
+        // Preserve relative formatting
+        var out = url.pathname + (url.search ? ("?" + url.searchParams.toString()) : "") + (url.hash || "");
+        a.setAttribute("href", out);
+      }catch(e){}
+    });
+  } catch (e) {}
+})();
+</script></body>
 </html>
