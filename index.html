@@ -204,8 +204,8 @@
 
 /* HERO: todo sobre el banner (sin tarjetas / sin recuadros) */
     .hero{
-      padding: 66px 0 34px;
-      min-height: 80vh;
+      padding: 52px 0 28px;
+      min-height: 78vh;
       display:flex;
       align-items:center;
     }
@@ -216,13 +216,15 @@
       text-align:center;
       gap: 14px;
       padding: 6px 8px;
+      margin-top: -10px;
     }
 
     /* Logo principal: más sutil (evita “pegatina” / sobre-dominancia) */
     .hero-logo{
-      width: min(420px, 78vw);
+      width: min(300px, 62vw);
       height: auto;
       display:block;
+      transform: translateY(-6px);
       filter: drop-shadow(0 24px 34px rgba(0,0,0,.55));
     }
 
@@ -508,7 +510,8 @@
       .grid-3{grid-template-columns: 1fr;}
       .includes{grid-template-columns: 1fr;}
       .foot-grid{grid-template-columns: 1fr;}
-      .hero{min-height: 70vh; padding: 52px 0 28px;}
+      .hero{min-height: 70vh; padding: 46px 0 24px;}
+      .hero-content{margin-top: 0;}
     }
   </style>
 </head>
@@ -589,8 +592,8 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Experiencia</p>
-          <h2>Un flujo claro, sin duplicados</h2>
-          <p class="lead">La landing explica el proceso. La app empieza en el Paso 1 para generar el escrito.</p>
+          <h2>Cómo funciona en 3 pasos</h2>
+          <p class="lead">Elige plantilla, personaliza tu escrito y preséntalo con un pack final (PDF profesional + guía de presentación + recordatorio .ics).</p>
         </div>
 
         <div class="grid-3">
@@ -722,13 +725,55 @@
       </div>
     </section>
 
-    <!-- GUÍAS -->
+    
+    <!-- SOBRE JURAVIA -->
+    <section class="section" id="sobre-juravia">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Sobre Juravia</p>
+          <h2>Preparación documental para presentar con orden</h2>
+          <p class="lead">Juravia es una herramienta para redactar y organizar alegaciones y recursos con estructura formal, anexos y checklist de presentación.</p>
+        </div>
+
+        <div class="panel">
+          <div class="includes">
+            <div class="check">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+              </svg>
+              <div>
+                <b>Estructura clara del escrito</b>
+                <span>Ordena identificación, hechos, fundamentos y petición para facilitar la lectura del órgano instructor.</span>
+              </div>
+            </div>
+
+            <div class="check">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+              </svg>
+              <div>
+                <b>Gestión de anexos y trazabilidad</b>
+                <span>Te ayuda a adjuntar pruebas y a mantener un expediente ordenado (PDF, anexos y acuse de registro).</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sep" style="margin:18px 0;"></div>
+
+          <p class="lead" style="margin:0; max-width: 92ch;">
+            Importante: Juravia no sustituye el asesoramiento jurídico personalizado. La referencia válida de plazos y requisitos es siempre la notificación y la sede/registro del órgano competente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- GUÍAS -->
     <section class="section" id="guias">
       <div class="container">
         <div class="section-head">
           <p class="kicker">Guías</p>
-          <h2>Contenido útil para casos comunes</h2>
-          <p class="lead">Material de apoyo para entender el contexto y preparar mejor los anexos.</p>
+          <h2>Guías rápidas de algunos casos frecuentes</h2>
+          <p class="lead">En la app tienes <b>más de 37 plantillas</b> disponibles. Estas son guías rápidas de algunos casos habituales para orientarte y preparar anexos.</p>
         </div>
 
         <div class="grid-3">
