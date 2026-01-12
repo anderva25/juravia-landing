@@ -44,11 +44,8 @@
         .card{ width:100%; max-width:980px; text-align:center; position:relative; z-index:1; flex-grow: 1; }
         
         .logo{ width:220px; margin:0 auto 16px; display:block; filter: drop-shadow(0 18px 28px rgba(0,0,0,.35)); }
-        
-        /* Frase principal mejorada */
         h1{ font-size: clamp(34px, 5vw, 54px); line-height:1.02; margin-bottom: 12px; font-weight: 800; }
-        .highlight { color: var(--gold); }
-        
+        .gold-text { color: var(--gold); }
         .subtitle{ max-width: 820px; margin: 0 auto 18px; font-size: 16px; line-height: 1.6; color: var(--muted); }
 
         .btn{
@@ -60,18 +57,8 @@
         }
         .btn:hover{ transform: translateY(-2px); background: var(--brandHover); box-shadow: 0 15px 35px rgba(212,175,55,0.2); }
 
-        .live-counter { margin: 20px 0 10px; font-size: 14px; color: #ffca3a; font-weight: 600; }
-        
-        /* Contador de recursos */
-        .success-badge { 
-            display: inline-block; 
-            background: rgba(255,255,255,0.1); 
-            padding: 6px 15px; 
-            border-radius: 99px; 
-            font-size: 13px; 
-            border: 1px solid var(--border);
-            margin-bottom: 25px;
-        }
+        .live-counter { margin: 20px 0 5px; font-size: 14px; color: #ffca3a; font-weight: 600; }
+        .rescursos-counter { font-size: 13px; opacity: 0.8; margin-bottom: 25px; }
 
         .comparison-container {
             margin: 40px auto;
@@ -107,24 +94,23 @@
         .faq-item h3 { font-size: 18px; color: var(--gold); margin: 0 0 12px; }
         .faq-item p { font-size: 14px; opacity: 0.85; line-height: 1.6; }
 
-        /* FOOTER MEJORADO */
+        /* FOOTER CORREGIDO */
         footer {
             width: 100%; max-width: 980px; margin-top: 80px; padding: 60px 0 40px;
             border-top: 1px solid var(--border); display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; text-align: left;
+            grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; text-align: left;
         }
-        .footer-logo-area img { width: 120px; margin-bottom: 15px; opacity: 0.9; }
-        .footer-logo-area p { font-size: 13px; opacity: 0.6; line-height: 1.6; padding-right: 20px; }
-        .footer-col h5 { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; color: var(--gold); font-weight: 700; }
+        .footer-brand img { width: 110px; margin-bottom: 15px; opacity: 0.9; }
+        .footer-brand p { font-size: 13px; opacity: 0.6; line-height: 1.5; }
+        .footer-col h5 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; color: var(--gold); font-weight: 700; }
         .footer-col ul { list-style: none; padding: 0; margin: 0; }
-        .footer-col ul li { margin-bottom: 12px; font-size: 14px; }
-        .footer-col a { color: var(--muted); text-decoration: none; transition: 0.2s; }
-        .footer-col a:hover { color: #fff; }
-        .footer-bottom { grid-column: 1 / -1; text-align: center; font-size: 12px; opacity: 0.4; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer-col ul li { margin-bottom: 10px; font-size: 14px; }
+        .footer-col a { color: #fff; opacity: 0.7; text-decoration: none; }
+        .footer-col a:hover { opacity: 1; color: var(--gold); }
+        .footer-bottom { grid-column: 1 / -1; text-align: center; font-size: 11px; opacity: 0.4; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
 
         @media (max-width: 860px){
-            footer { grid-template-columns: 1fr 1fr; gap: 30px; }
-            .footer-logo-area { grid-column: 1 / -1; margin-bottom: 20px; }
+            footer { grid-template-columns: 1fr; gap: 30px; }
             .guide-grid, .trust-grid { grid-template-columns: 1fr; text-align: center; }
             .faq-item { border-left: none; border-bottom: 1px solid var(--border); padding-left: 0; padding-bottom: 20px; }
         }
@@ -136,9 +122,9 @@
     <div class="card">
         <img alt="Juravia" class="logo" src="/logo.png"/>
         
-        <h1>No pagues tu multa sin antes revisarla: <br><span class="highlight">Recurre con éxito en 5 minutos</span></h1>
+        <h1>No pagues tu multa sin revisarla: <br><span class="gold-text">Recurre con éxito en 5 minutos</span></h1>
         
-        <p class="subtitle">Únete a la plataforma legaltech líder que elimina la complejidad legal. Genera documentos profesionales con base jurídica real y defiende tus derechos como conductor.</p>
+        <p class="subtitle">Accede a nuestra tecnología legaltech para generar alegaciones profesionales. Un asistente inteligente diseñado para que cualquier conductor defienda sus derechos sin complicaciones.</p>
         
         <div class="cta">
             <a class="btn" href="https://app.juravia.app/">EMPEZAR MI RECURSO AHORA</a>
@@ -147,9 +133,8 @@
         <div class="live-counter">
             ● <span id="user-count">16</span> conductores están <span style="color:#fff">preparando sus recursos</span> ahora mismo
         </div>
-        
-        <div class="success-badge">
-            🛡️ <b>+4.200</b> Recursos generados con éxito este año
+        <div class="rescursos-counter">
+            🛡️ <b>+3.400</b> recursos generados con éxito este año
         </div>
 
         <section class="comparison-container">
@@ -215,40 +200,31 @@
                     <p style="font-size:12px; opacity:0.8; margin:4px 0 0">La importancia de los márgenes de error en la validez de la multa.</p>
                 </a>
             </div>
-            <p style="margin-top:20px; font-size:14px; opacity:0.7">Contamos con más de <b>37 plantillas profesionales</b> dentro de la aplicación.</p>
         </section>
 
         <section class="faq-home">
             <h2 style="text-align:center; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; opacity: 0.8;">Preguntas Frecuentes</h2>
             <div class="faq-item">
                 <h3>¿Tienen validez legal estos recursos?</h3>
-                <p>Sí, absolutamente. Los documentos generados por Juravia siguen estrictamente los estándares de la Ley de Procedimiento Administrativo. Están redactados con base jurídica sólida y utilizan la terminología técnica necesaria.</p>
+                <p>Sí, absolutamente. Los documentos generados por Juravia siguen estrictamente los estándares de la Ley de Procedimiento Administrativo y están redactados con base jurídica sólida.</p>
             </div>
             <div class="faq-item">
                 <h3>¿Qué ocurre una vez descargo el documento?</h3>
-                <p>Recibirás un archivo PDF profesional personalizado. Te proporcionamos una guía paso a paso para presentarlo online con certificado digital o entregarlo físicamente en registros oficiales.</p>
+                <p>Recibirás un PDF profesional personalizado. Te proporcionamos una guía paso a paso para presentarlo online con certificado digital o en cualquier registro oficial.</p>
             </div>
         </section>
 
         <footer>
-            <div class="footer-logo-area">
-                <img alt="Juravia" src="/logo.png"/>
-                <p>Líderes en tecnología legal aplicada al tráfico. Empoderamos a los conductores frente a sanciones injustas mediante automatización inteligente.</p>
+            <div class="footer-brand">
+                <img src="/logo.png" alt="Juravia Logo">
+                <p>Hacemos que el derecho administrativo sea accesible. Tecnología legaltech al servicio de la defensa del conductor.</p>
             </div>
             <div class="footer-col">
                 <h5>Navegación</h5>
                 <ul>
-                    <li><a href="#guias">Guías y Blog</a></li>
-                    <li><a href="https://app.juravia.app/">App Recursos</a></li>
-                    <li><a href="mailto:soporte@juravia.app">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Nosotros</h5>
-                <ul>
-                    <li><a href="#">Sobre Juravia</a></li>
-                    <li><a href="#">Cómo funciona</a></li>
-                    <li><a href="#">Soporte 24/7</a></li>
+                    <li><a href="#guias">Guías de Tráfico</a></li>
+                    <li><a href="https://app.juravia.app/">Acceso Plataforma</a></li>
+                    <li><a href="mailto:soporte@juravia.app">Contacto Soporte</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -256,11 +232,11 @@
                 <ul>
                     <li><a href="/legal.html">Aviso Legal</a></li>
                     <li><a href="/privacidad.html">Privacidad</a></li>
-                    <li><a href="/cookies.html">Cookies</a></li>
+                    <li><a href="/cookies.html">Política Cookies</a></li>
                 </ul>
             </div>
             <div class="footer-bottom">
-                © 2024 Juravia Legaltech. Todos los derechos reservados. El uso de esta plataforma implica la aceptación de los términos de servicio.
+                © 2024 Juravia. Todos los derechos reservados.
             </div>
         </footer>
     </div>
