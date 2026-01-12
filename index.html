@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -57,14 +57,8 @@
         }
         .btn:hover{ transform: translateY(-2px); background: var(--brandHover); box-shadow: 0 15px 35px rgba(212,175,55,0.2); }
 
-        .live-counter {
-            margin: 20px 0;
-            font-size: 14px;
-            color: #ffca3a;
-            font-weight: 600;
-        }
+        .live-counter { margin: 20px 0; font-size: 14px; color: #ffca3a; font-weight: 600; }
 
-        /* TABLA COMPARATIVA ACTUALIZADA */
         .comparison-container {
             margin: 40px auto;
             max-width: 800px;
@@ -80,7 +74,6 @@
         .feature-label { text-align: left; opacity: 0.8; font-weight: 600; }
         .juravia-col { background: rgba(11, 74, 162, 0.2); font-weight: bold; border-radius: 8px; }
 
-        /* GUÍAS Y FAQ */
         .guide-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
         .guide{ 
             text-decoration:none; color:#fff; display:block; padding: 16px; 
@@ -106,7 +99,7 @@
     <div class="card">
         <img alt="Juravia" class="logo" src="/logo.png"/>
         <h1>Recurrir tu multa ahora es fácil para todos</h1>
-        <p class="subtitle">Accede a nuestra plataforma inteligente y genera tus documentos profesionales en minutos. Un asistente guiado que elimina la complejidad legal para que cualquier conductor pueda defenderse.</p>
+        <p class="subtitle">Accede a nuestra plataforma y genera tus documentos profesionales en minutos. Un proceso asistido que elimina la complejidad legal para que cualquier conductor pueda defenderse.</p>
         
         <div class="cta">
             <a class="btn" href="https://app.juravia.app/">ACCEDER A LA PLATAFORMA</a>
@@ -168,4 +161,73 @@
         </section>
 
         <section class="faq-home">
-            <h2 style="text-align:center; font-size: 14px; letter-spacing: 2px; text
+            <h2 style="text-align:center; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; opacity: 0.8;">Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Qué documentos obtendré en la plataforma?</h3>
+                <p>Generarás un PDF profesional con la alegación redactada con terminología jurídica, listo para presentar.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cómo presento el recurso una vez descargado?</h3>
+                <p>Dentro de la plataforma te indicamos cómo enviarlo online por la Sede Electrónica de la DGT o físicamente.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); opacity: 0.6; font-size: 12px;">
+            © Juravia. Plataforma de apoyo para generar alegaciones y recursos de tráfico.
+        </footer>
+    </div>
+</main>
+
+<script>
+(function() {
+  const KEYS = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "msclkid"];
+  function pickParams() {
+    try {
+      const u = new URL(window.location.href);
+      const out = new URLSearchParams();
+      KEYS.forEach(k => {
+        const v = u.searchParams.get(k);
+        if (v) out.set(k, v);
+      });
+      return out;
+    } catch (e) { return new URLSearchParams(); }
+  }
+
+  function mergeIntoHref(href, params) {
+    try {
+      const url = new URL(href, window.location.origin);
+      if (!/^https?:$/.test(url.protocol)) return href;
+      params.forEach((v, k) => { if (!url.searchParams.get(k)) url.searchParams.set(k, v); });
+      return url.toString();
+    } catch (e) { return href; }
+  }
+
+  function decorateLinks(params) {
+    if (!params || [...params.keys()].length === 0) return;
+    document.querySelectorAll('a[href]').forEach(a => {
+      const h = a.getAttribute('href');
+      if (h && (h.includes('app.juravia.app') || h.includes('.html'))) {
+        const n = mergeIntoHref(h, params);
+        if (n) a.setAttribute('href', n);
+      }
+    });
+  }
+
+  function updateUsers() {
+      const el = document.getElementById('user-count');
+      if(!el) return;
+      let count = parseInt(el.innerText);
+      count += Math.floor(Math.random() * 5) - 2;
+      if (count < 14) count = 15;
+      if (count > 25) count = 21;
+      el.innerText = count;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    decorateLinks(pickParams());
+    setInterval(updateUsers, 3500);
+  });
+})();
+</script>
+</body>
+</html>
