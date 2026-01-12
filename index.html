@@ -180,32 +180,32 @@
       border-color: rgba(212,175,55,.30);
     }
 
-    /* ÚNICO CTA (botón) */
+    /* CTA principal (más grande, engagement) */
     .btn{
       background: var(--brand);
       color:#fff;
       text-decoration:none;
       display:inline-flex; align-items:center; justify-content:center;
-      padding: 15px 22px;
-      border-radius: 18px;
+      padding: 18px 26px;
+      border-radius: 20px;
       font-weight: 950;
       letter-spacing: .45px;
-      border: 1px solid rgba(212,175,55,.85);
-      box-shadow: 0 14px 30px rgba(0,0,0,.35);
+      border: 1px solid rgba(212,175,55,.90);
+      box-shadow: 0 16px 34px rgba(0,0,0,.38);
       transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
       white-space: nowrap;
-      font-size: 14.5px;
+      font-size: 16px;
     }
     .btn:hover{
       transform: translateY(-1px);
       background: var(--brand2);
-      box-shadow: 0 18px 40px rgba(0,0,0,.40);
+      box-shadow: 0 22px 48px rgba(0,0,0,.42);
     }
 
-    /* HERO SIN TARJETA (branding sobre el banner) */
+/* HERO: todo sobre el banner (sin tarjetas / sin recuadros) */
     .hero{
-      padding: 58px 0 30px;
-      min-height: 72vh;
+      padding: 66px 0 34px;
+      min-height: 80vh;
       display:flex;
       align-items:center;
     }
@@ -214,67 +214,43 @@
       flex-direction:column;
       align-items:center;
       text-align:center;
-      gap: 12px;
-      padding: 12px 8px;
-      position:relative;
-    }
-    /* “spotlight” para legibilidad (no tarjeta) */
-    .hero-content::before{
-      content:"";
-      position:absolute;
-      inset: -36px -26px -26px -26px;
-      background: radial-gradient(ellipse at 50% 25%, rgba(5,9,20,.22), rgba(5,9,20,.78) 64%, rgba(5,9,20,.0));
-      z-index:-1;
-      pointer-events:none;
+      gap: 14px;
+      padding: 6px 8px;
     }
 
+    /* Logo principal: más sutil (evita “pegatina” / sobre-dominancia) */
     .hero-logo{
-      width: min(520px, 92vw);
+      width: min(420px, 78vw);
       height: auto;
       display:block;
-      filter: drop-shadow(0 24px 34px rgba(0,0,0,.50));
+      filter: drop-shadow(0 24px 34px rgba(0,0,0,.55));
     }
+
     .gold-underline{
       width: min(520px, 70vw);
-      height: 2px;
-      background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.95), rgba(212,175,55,0));
+      height: 3px;
+      background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.98), rgba(212,175,55,0));
       border-radius: 999px;
       opacity:.95;
       margin-top: 2px;
     }
     .slogan{
-      margin: 2px 0 0;
-      font-size: 16.5px;
+      margin: 4px 0 0;
+      font-size: 16.8px;
       line-height: 1.65;
       color: var(--muted);
-      max-width: 82ch;
-      text-shadow: 0 10px 22px rgba(0,0,0,.45);
+      max-width: 86ch;
+      text-shadow: 0 10px 22px rgba(0,0,0,.48);
     }
     .hero-cta{
-      margin-top: 12px;
+      margin-top: 10px;
       display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
       justify-content:center;
       align-items:center;
     }
-    .hero-link{
-      color: rgba(255,255,255,.92);
-      text-decoration: underline;
-      text-decoration-color: rgba(212,175,55,.70);
-      text-underline-offset: 6px;
-      font-weight: 850;
-      font-size: 13.5px;
-      padding: 8px 10px;
-      border-radius: 12px;
-    }
-    .hero-link:hover{
-      background: rgba(255,255,255,.06);
-      text-decoration-color: rgba(212,175,55,.95);
-    }
 
     .mini-trust{
-      margin-top: 14px;
+      margin-top: 12px;
       display:flex; gap: 10px; flex-wrap: wrap; justify-content:center;
     }
     .pill{
@@ -294,12 +270,15 @@
       box-shadow: 0 0 0 4px rgba(212,175,55,.18);
     }
     .hero-fine{
-      margin-top: 10px;
+      margin-top: 8px;
       color: rgba(255,255,255,.64);
       font-size: 12.5px;
       line-height: 1.55;
       max-width: 92ch;
+      text-shadow: 0 10px 22px rgba(0,0,0,.40);
     }
+
+
 
     /* Secciones alternadas */
     section{padding: 34px 0;}
@@ -482,7 +461,7 @@
       letter-spacing: 2px;
       color: rgba(212,175,55,.92);
     }
-    .foot ul{ensure:unset; list-style:none; padding:0; margin:0; display:grid; gap: 10px;}
+    .foot ul{list-style:none; padding:0; margin:0; display:grid; gap: 10px;}
     .foot a{
       color:#fff;
       text-decoration:none;
@@ -529,7 +508,7 @@
       .grid-3{grid-template-columns: 1fr;}
       .includes{grid-template-columns: 1fr;}
       .foot-grid{grid-template-columns: 1fr;}
-      .hero{min-height: 64vh; padding: 46px 0 26px;}
+      .hero{min-height: 70vh; padding: 52px 0 28px;}
     }
   </style>
 </head>
@@ -577,7 +556,7 @@
   </header>
 
   <main id="contenido">
-    <!-- HERO: logo completo sobre el banner (sin tarjeta) -->
+    <!-- HERO: todo el branding sobre el banner (sin recuadros) -->
     <section class="hero" id="inicio">
       <div class="container">
         <div class="hero-content">
@@ -585,22 +564,21 @@
           <div class="gold-underline" aria-hidden="true"></div>
 
           <p class="slogan">
-            Defensa legal en carretera. Genera alegaciones y recursos en minutos: añade pruebas y descarga un PDF profesional listo para presentar.
+            Defensa legal en carretera. Genera alegaciones y recursos en minutos: incorpora documentación probatoria y descarga un PDF profesional listo para su presentación.
           </p>
 
           <div class="hero-cta">
-            <a class="btn" href="https://app.juravia.app/" id="cta-hero">Empezar ahora</a>
-            <a class="hero-link" href="#como-funciona">Ver cómo funciona</a>
+            <a class="btn" href="https://app.juravia.app/" id="cta-hero">Generar mi alegación</a>
           </div>
 
-          <div class="mini-trust" aria-label="Beneficios principales">
+          <div class="mini-trust" aria-label="Entregables">
             <span class="pill"><span class="dot" aria-hidden="true"></span>PDF profesional</span>
             <span class="pill"><span class="dot" aria-hidden="true"></span>Guía de presentación</span>
             <span class="pill"><span class="dot" aria-hidden="true"></span>Recordatorio .ics</span>
           </div>
 
           <p class="hero-fine">
-            Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados. Revisa siempre tu notificación y plazos antes de presentar.
+            Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados. Verifica siempre el órgano competente, la vía de presentación y el cómputo de plazos indicado en tu notificación.
           </p>
         </div>
       </div>
@@ -781,33 +759,48 @@
         <div class="section-head">
           <p class="kicker">FAQ</p>
           <h2>Preguntas frecuentes</h2>
-          <p class="lead">Respuestas rápidas antes de entrar a la app.</p>
+          <p class="lead">Información general para tramitar alegaciones y recursos con seguridad documental.</p>
         </div>
 
         <div class="faq">
           <details>
-            <summary>¿Puedo presentar el documento ante la Administración? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>Juravia genera escritos con formato formal y estructura estándar para su presentación. El resultado depende del expediente y de las pruebas aportadas.</p>
+            <summary>¿Es válido presentar el escrito generado por Juravia? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>
+              Juravia genera un escrito con estructura administrativa estándar (identificación, hechos, fundamentos y petición) orientado a su presentación ante el órgano competente.
+              La estimación depende del expediente sancionador, de la prueba disponible y de la tramitación del procedimiento.
+            </p>
           </details>
 
           <details>
-            <summary>¿Qué necesito para empezar? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>La notificación (o sus datos principales) y tus pruebas (fotos, documentación, justificantes).</p>
+            <summary>¿Qué documentación debo aportar como anexos? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>
+              Con carácter general: notificación/boletín, fotografías del lugar (señalización, vía, condiciones), documentación técnica relevante (p. ej. certificados, ITV),
+              justificantes (tickets, autorizaciones) y, cuando proceda, solicitudes de acceso a información del expediente. Un anexo bien ordenado mejora la trazabilidad.
+            </p>
           </details>
 
           <details>
-            <summary>¿Y si no tengo certificado digital? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>Según el órgano, podrás presentar online con sistemas alternativos o mediante registro. Por eso incluimos una guía de presentación.</p>
+            <summary>¿Puedo presentar sin certificado digital? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>
+              Depende del órgano y de la vía habilitada. En algunos casos se admite presentación con sistemas alternativos; en otros será necesario registro presencial o representante.
+              Por eso Juravia incluye una guía de presentación y recomendaciones para conservar el justificante de registro.
+            </p>
           </details>
 
           <details>
-            <summary>¿Se pueden añadir pruebas y anexos? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>Sí. Los anexos suelen ser la parte clave: fotos, documentos, justificantes o evidencia relevante.</p>
+            <summary>¿Qué es el acuse de recibo y por qué es clave? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>
+              Es el justificante de registro (telemático o presencial) que acredita fecha y hora de presentación y el número de asiento/registro.
+              Debe conservarse junto con el escrito y anexos: es la prueba de presentación dentro de plazo ante la Administración.
+            </p>
           </details>
 
           <details>
-            <summary>¿Qué hago tras presentar? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>Guarda el acuse de recibo o justificante de registro. Es tu prueba de presentación dentro de plazo.</p>
+            <summary>¿Cómo controlo los plazos del procedimiento? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>
+              El cómputo puede variar según la notificación y la vía. Revisa la fecha de notificación y el plazo indicado; Juravia genera un recordatorio .ics para control interno,
+              pero la referencia válida es siempre la notificación oficial.
+            </p>
           </details>
         </div>
       </div>
