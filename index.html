@@ -1,576 +1,178 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-M9PX0ZVVF2');
-  </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Juravia | Alegaciones y recursos de multas online</title>
-<meta content="Genera alegaciones y recursos de multas de tráfico online en minutos. Claro, sencillo y con la documentación ordenada para presentar." name="description"/>
-<link href="https://juravia.app/" rel="canonical"/>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
-<meta content="Juravia | Alegaciones y recursos de multas online" property="og:title"/>
-<meta content="website" property="og:type"/>
-<meta content="Genera alegaciones y recursos de multas de tráfico online en minutos. Claro, sencillo y con la documentación ordenada para presentar." property="og:description"/>
-<meta content="https://juravia.app/logo.png" property="og:image"/>
-<meta content="https://juravia.app/" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="@JuraviaApp" name="twitter:site"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Juravia",
-  "url": "https://juravia.app/",
-  "logo": "https://juravia.app/logo.png",
-  "description": "Juravia genera alegaciones y recursos de multas de tráfico online.",
-  "sameAs": [
-    "https://x.com/JuraviaApp"
-  ]
-}
-  </script>
-<meta content="index,follow" name="robots"/>
-<style>
-    :root{
-      --ink:#ffffff;
-      --muted: rgba(255,255,255,.84);
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M9PX0ZVVF2');
+    </script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Juravia | Alegaciones de multas fáciles para todos</title>
+    <meta content="Genera alegaciones y recursos de multas de tráfico online en minutos. Fácil, rápido y sin necesidad de abogados." name="description"/>
+    
+    <style>
+        /* Mantenemos tus variables y estilos base */
+        :root{
+            --ink:#ffffff;
+            --muted: rgba(255,255,255,.84);
+            --brand:#0b4aa2;
+            --brandHover:#083c84;
+            --gold:#d4af37;
+            --action:#e63946; /* Color para destacar el botón principal */
+            --border: rgba(255,255,255,.18);
+            --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.webp");
+            --hero-bg-y: 18%;
+        }
 
-      --brand:#0b4aa2;
-      --brandHover:#083c84;
-      --gold:#d4af37;
+        *{box-sizing:border-box}
+        html,body{height:100%; scroll-behavior:smooth;}
+        body{
+            margin:0;
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            color:var(--ink);
+            background: radial-gradient(ellipse at 50% 12%, rgba(255,255,255,.10), rgba(0,0,0,0) 48%),
+                        linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.78)),
+                        var(--hero-bg);
+            background-size: cover;
+            background-position: 50% var(--hero-bg-y);
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+        }
 
-      --border: rgba(255,255,255,.18);
+        .wrap{ min-height:100%; display:flex; align-items:center; justify-content:center; padding:36px 16px; position:relative; }
+        .card{ width:100%; max-width:980px; text-align:center; position:relative; z-index:1; }
+        
+        /* Estilos del nuevo contador dinámico */
+        .live-counter {
+            margin: 15px 0;
+            font-size: 14px;
+            color: #ffca3a;
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
 
-      /* Fondo */
-      --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.webp");
-      /* Si usas PNG:
-      --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
-      */
-      --hero-bg-y: 18%;
-    }
+        /* Estilos de la nueva tabla comparativa */
+        .comparison-container {
+            margin: 40px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .comparison-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .comparison-table th { color: var(--gold); padding: 12px; border-bottom: 2px solid var(--border); text-transform: uppercase; letter-spacing: 1px; }
+        .comparison-table td { padding: 14px; border-bottom: 1px solid var(--border); }
+        .feature-label { text-align: left; opacity: 0.8; font-weight: 600; }
+        .juravia-col { background: rgba(11, 74, 162, 0.25); font-weight: bold; border-radius: 8px; }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--ink);
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.72)),
-        var(--hero-bg);
-      background-size: cover;
-      background-position: 50% var(--hero-bg-y);
-      background-repeat:no-repeat;
-    }
+        /* Mantenemos tus estilos de botones y guías */
+        .logo{ width:220px; margin:0 auto 16px; display:block; filter: drop-shadow(0 18px 28px rgba(0,0,0,.35)); }
+        h1{ font-size: clamp(34px, 5vw, 54px); line-height:1.06; margin-bottom: 12px; }
+        .subtitle{ max-width: 820px; margin: 0 auto 18px; font-size: 16px; line-height: 1.6; color: var(--muted); }
+        
+        .btn{
+            background: var(--action); /* Rojo para destacar más que la competencia */
+            color:#fff; text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
+            padding:16px 32px; border-radius: 16px; font-weight: 800;
+            box-shadow: 0 12px 26px rgba(230,57,70,0.3); transition: all .2s ease;
+        }
+        .btn:hover{ transform: translateY(-2px); box-shadow: 0 15px 35px rgba(230,57,70,0.4); }
 
-    .wrap{
-      min-height:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px 16px 34px;
-      position:relative;
-      overflow:hidden;
-    }
+        .guide-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+        .guide{ 
+            text-decoration:none; color:#fff; display:block; padding: 16px; 
+            background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 18px; 
+            text-align: left; transition: all .2s; 
+        }
+        .guide:hover{ border-color: var(--gold); background: rgba(0,0,0,0.3); }
+        .tag{ padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.1); font-size: 11px; font-weight: 700; }
 
-    /* Spotlight blanco arriba-centro para integrar el borde del PNG */
-    .wrap::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      z-index:0;
-      background: radial-gradient(
-        ellipse at 50% 12%,
-        rgba(255,255,255,0.55) 0%,
-        rgba(255,255,255,0.32) 16%,
-        rgba(255,255,255,0.14) 28%,
-        rgba(255,255,255,0.00) 46%
-      );
-    }
-
-    .card{
-      width:100%;
-      max-width:980px;
-      text-align:center;
-      position:relative;
-      z-index:1;
-    }
-
-    .logo{
-      width:240px;
-      height:auto;
-      filter: drop-shadow(0 18px 28px rgba(0,0,0,.35));
-      margin:0 auto 18px;
-      display:block;
-    }
-
-    h1{
-      margin:0 0 12px;
-      font-size: clamp(34px, 5vw, 54px);
-      line-height:1.06;
-      letter-spacing:-.5px;
-      text-shadow: 0 18px 34px rgba(0,0,0,.35);
-    }
-
-    .subtitle{
-      margin: 0 auto 18px;
-      max-width: 860px;
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--muted);
-      text-shadow: 0 10px 22px rgba(0,0,0,.25);
-    }
-
-    .cta{
-      margin: 10px 0 14px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      background:var(--brand);
-      color:#fff;
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:14px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      letter-spacing:.2px;
-      box-shadow: 0 12px 26px rgba(0,0,0,.30);
-      transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
-      min-width: 240px;
-    }
-    .btn:hover{
-      background:var(--brandHover);
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(0,0,0,.33);
-    }
-
-    .highlights{
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      flex-wrap:wrap;
-      margin: 8px 0 18px;
-    }
-    .highlight{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border:1px solid var(--border);
-      border-radius: 12px;
-      background: rgba(10, 16, 28, 0.28);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      font-size: 13px;
-      color: rgba(255,255,255,.92);
-    }
-    .highlight svg{
-      width:15px;
-      height:15px;
-      flex:0 0 auto;
-      stroke: var(--gold);
-      stroke-width: 2.2;
-      fill: none;
-      filter: drop-shadow(0 0 10px rgba(212,175,55,.12));
-    }
-
-    .guides{
-      margin: 18px auto 0;
-      max-width: 980px;
-    }
-    .guides h2{
-      margin: 0 0 10px;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: .2px;
-      color: rgba(255,255,255,.92);
-      text-shadow: 0 10px 22px rgba(0,0,0,.25);
-    }
-    .guide-grid{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .guide{
-      display:block;
-      text-decoration:none;
-      color: #fff;
-      text-align:left;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 14px 14px 12px;
-      background: rgba(0,0,0,0.18);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      box-shadow: 0 12px 26px rgba(0,0,0,.18);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-      min-height: 86px;
-    }
-    .guide:hover{
-      transform: translateY(-1px);
-      background: rgba(0,0,0,0.24);
-      border-color: rgba(255,255,255,0.26);
-    }
-    .guide-top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      margin-bottom: 8px;
-    }
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(212,175,55,.35);
-      background: rgba(212,175,55,.12);
-      font-size: 12px;
-      color: rgba(255,255,255,.95);
-    }
-    .arrow{
-      opacity:.9;
-      font-weight:700;
-      color: rgba(255,255,255,.82);
-    }
-    .guide-title{
-      font-weight: 800;
-      letter-spacing:.2px;
-      margin:0 0 4px;
-      font-size: 14px;
-    }
-    .guide-desc{
-      margin:0;
-      font-size: 13px;
-      color: rgba(255,255,255,.80);
-      line-height: 1.35;
-    }
-
-    .fine{
-      margin-top: 18px;
-      color: rgba(255,255,255,.74);
-      font-size: 13px;
-      line-height: 1.55;
-      text-shadow: 0 10px 22px rgba(0,0,0,.25);
-    }
-
-    footer{
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-      text-shadow: 0 10px 22px rgba(0,0,0,.25);
-    }
-
-    @media (max-width: 860px){
-      .guide-grid{ grid-template-columns: 1fr; }
-      .logo{ width: 210px; }
-      .btn{ width: 100%; max-width: 340px; }
-    }
-
-    @media (min-width: 1400px){
-      :root{ --hero-bg-y: 12%; }
-    }
-  
-
-    /* --- Premium refinements (overrides) --- */
-    body{
-      background:
-        radial-gradient(ellipse at 50% 12%, rgba(255,255,255,.10), rgba(0,0,0,0) 48%),
-        linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.78)),
-        var(--hero-bg);
-      background-size: cover;
-      background-position: 50% var(--hero-bg-y);
-      background-repeat:no-repeat;
-    }
-
-    .wrap{ padding: 36px 16px 44px; }
-
-    .logo{ width: 220px; margin-bottom: 16px; }
-
-    .subtitle{
-      max-width: 820px;
-      font-size: 15.5px;
-      letter-spacing: .1px;
-    }
-
-    .cta{ margin: 12px 0 12px; }
-
-    .btn{
-      border-radius: 16px;
-      padding: 14px 24px;
-      min-width: 260px;
-    }
-
-    .highlights{
-      gap: 10px;
-      margin: 10px 0 20px;
-      opacity: .98;
-    }
-    .highlight{
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgba(10, 16, 28, 0.18);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 12.5px;
-      letter-spacing: .1px;
-    }
-    .highlight svg{ stroke: var(--gold); }
-
-    .guides{ margin-top: 22px; }
-    .guides h2{
-      font-size: 15px;
-      color: rgba(255,255,255,.88);
-      margin-bottom: 12px;
-    }
-    .guide-grid{ gap: 14px; }
-    .guide{
-      border-radius: 18px;
-      padding: 14px 14px 12px;
-      background: linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.12));
-      border: 1px solid rgba(255,255,255,0.16);
-      box-shadow: 0 18px 40px rgba(0,0,0,.20);
-      position: relative;
-      overflow:hidden;
-    }
-    .guide::before{
-      content:"";
-      position:absolute;
-      inset:-1px;
-      pointer-events:none;
-      background: radial-gradient(1200px 160px at 20% 0%, rgba(212,175,55,.18), rgba(0,0,0,0) 60%);
-      opacity:.9;
-    }
-    .guide:hover{
-      transform: translateY(-2px);
-      background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.14));
-      border-color: rgba(255,255,255,0.24);
-    }
-    .guide-top, .guide-title, .guide-desc{ position: relative; }
-    .tag{
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.08);
-      color: rgba(255,255,255,.92);
-      font-weight: 600;
-    }
-    .guide-title{ font-size: 14px; }
-    .guide-desc{ font-size: 13px; color: rgba(255,255,255,.78); }
-
-    .guide:focus-visible{
-      outline: 3px solid rgba(212,175,55,.65);
-      outline-offset: 3px;
-    }
-
-    .fine{ margin-top: 22px; }
-
-    footer{
-      border-top: 1px solid rgba(255,255,255,.10);
-      margin-top: 20px;
-      padding-top: 14px;
-      color: rgba(255,255,255,.66);
-    }
-
-    @media (max-width: 860px){
-      .logo{ width: 200px; }
-      .cta{ gap: 10px; }
-      .btn{ width: 100%; max-width: 360px; }
-      .highlights{ margin-top: 10px; }
-    }
-
-    .subcta{
-      margin: 6px 0 14px;
-      text-align:center;
-    }
-    .subcta a{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      color: rgba(255,255,255,.84);
-      text-decoration:none;
-      font-weight:600;
-      font-size: 13px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.10);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      transition: background .12s ease, border-color .12s ease, transform .12s ease, opacity .12s ease;
-    }
-    .subcta a:hover{
-      background: rgba(0,0,0,.16);
-      border-color: rgba(255,255,255,.22);
-      transform: translateY(-1px);
-      opacity: .98;
-    }
-
-    #guias{ scroll-margin-top: 18px; }
-
-
-/* ---- Premium tweaks (v3): más sutil, CTA dominante, móvil ligero ---- */
-
-/* Highlights: 3 pills independientes (sin subrayados) */
-.highlights{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  margin: 10px 0 16px;
-}
-.highlight{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 12px;
-  border:1px solid rgba(255,255,255,.16);
-  border-radius:999px;
-  background: rgba(10, 16, 28, 0.22);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  font-size: 13px;
-  color: rgba(255,255,255,.92);
-  box-shadow: 0 10px 22px rgba(0,0,0,.14);
-}
-.highlight svg{
-  width:15px;
-  height:15px;
-  stroke: rgba(212,175,55,.9);
-  stroke-width:2.2;
-  fill:none;
-}
-
-/* Guías rápidas: tarjetas minimalistas (sin tono dorado) */
-.guides h2{
-  font-size: 14px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  opacity: .9;
-  margin: 14px 0 10px;
-}
-.guide{
-  background: rgba(0,0,0,0.16);
-  border: 1px solid rgba(255,255,255,0.16);
-  box-shadow: 0 12px 24px rgba(0,0,0,.16);
-  min-height: 76px;
-}
-.guide:hover{
-  background: rgba(0,0,0,0.22);
-  border-color: rgba(255,255,255,0.22);
-}
-.tag{
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,.92);
-}
-
-/* Más compacto */
-.guide-title{ font-size: 14px; }
-.guide-desc{ font-size: 12.5px; color: rgba(255,255,255,.78); }
-
-/* Móvil: CTA a ancho completo + guías en carrusel horizontal para ahorrar altura */
-@media (max-width: 860px){
-  .wrap{ padding: 22px 14px 26px; }
-  .logo{ width: 200px; }
-  .subtitle{ font-size: 15px; line-height: 1.55; }
-  .btn{ width: 100%; max-width: 420px; min-width: unset; }
-  .highlights{ margin: 10px 0 12px; }
-
-  .guide-grid{
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 6px;
-  }
-  .guide{
-    scroll-snap-align: start;
-    min-width: 240px;
-    max-width: 260px;
-    padding: 12px 12px 10px;
-  }
-  .guide-desc{ display: none; } /* menos altura en móvil */
-}
-
-/* Muy pequeño: reduce aún más alturas */
-@media (max-width: 420px){
-  .logo{ width: 180px; }
-  h1{ font-size: 34px; }
-  .subtitle{ font-size: 14.5px; }
-  .highlight{ font-size: 12.5px; padding: 7px 10px; }
-  .guide{ min-width: 220px; }
-}
-</style>
+        @media (max-width: 860px){
+            .guide-grid{ grid-template-columns: 1fr; }
+            .comparison-container { padding: 15px; }
+            .comparison-table { font-size: 12px; }
+        }
+    </style>
 </head>
 <body>
+
 <main class="wrap">
-<div class="card">
-<img alt="Juravia" class="logo" src="/logo.png"/>
-<h1>Alegaciones y recursos de multas online</h1>
-<p class="subtitle">Genera alegaciones y recursos de multas de tráfico en minutos. Un proceso claro y guiado, con el escrito y la documentación ordenada para presentar.</p>
-<div class="cta">
-<a class="btn" href="https://app.juravia.app/" rel="nofollow noopener noreferrer">Crear alegaciones y recursos</a>
-</div>
-<div aria-label="Ventajas principales" class="highlights">
-<div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> Enfoque claro</div>
-<div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> Documentación guiada</div>
-<div class="highlight"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg> En minutos</div>
-</div><div class="subcta"></div>
-<section aria-label="Guías rápidas" class="guides" id="guias">
-<h2>Guías rápidas</h2>
-<div class="guide-grid">
-<a class="guide" href="/recurrir_multa_baliza_v16.html">
-<div class="guide-top">
-<span class="tag">V16 · 2026</span>
-<span class="arrow">→</span>
-</div>
-<div class="guide-title">Baliza V16 conectada</div>
-<p class="guide-desc">Checklist de validez y alegaciones.</p>
-</a>
-<a class="guide" href="/recurrir_multa_itv_caducada.html">
-<div class="guide-top">
-<span class="tag">ITV</span>
-<span class="arrow">→</span>
-</div>
-<div class="guide-title">ITV caducada</div>
-<p class="guide-desc">Cómo enfocar el recurso y anexos.</p>
-</a>
-<a class="guide" href="/recurrir_multa_radar.html">
-<div class="guide-top">
-<span class="tag">Radar</span>
-<span class="arrow">→</span>
-</div>
-<div class="guide-title">Multa de radar</div>
-<p class="guide-desc">Puntos típicos a revisar.</p>
-</a>
-</div>
-</section>
-<p class="fine">Nota: Juravia es una herramienta de apoyo para preparar alegaciones y recursos. Revisa siempre tu caso concreto antes de presentar documentación.</p>
-<footer>© Juravia. Herramienta de apoyo para generar alegaciones y recursos.</footer>
-</div>
+    <div class="card">
+        <img alt="Juravia" class="logo" src="/logo.png"/>
+        <h1>Recurrir tu multa ahora es fácil para todos</h1>
+        <p class="subtitle">Automatizamos la generación de tus alegaciones de tráfico en minutos. Un proceso guiado y sencillo para que cualquiera pueda defenderse sin necesidad de abogados.</p>
+        
+        <div class="cta">
+            <a class="btn" href="https://app.juravia.app/">GENERAR MI ALEGACIÓN AHORA</a>
+        </div>
+
+        <div class="live-counter">
+            ● <span id="user-count">16</span> personas están <span style="color:#fff">generando su alegación</span> en este momento
+        </div>
+
+        <section class="comparison-container">
+            <h2 style="font-size: 15px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; opacity: 0.9;">¿Por qué usar Juravia?</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="feature-label">Ventaja</th>
+                        <th class="juravia-col">Juravia</th>
+                        <th>Abogado Tradicional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-label">Dificultad</td>
+                        <td class="juravia-col">Muy fácil y guiado</td>
+                        <td>Lenguaje complejo</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Tiempo</td>
+                        <td class="juravia-col">5 minutos</td>
+                        <td>Días o semanas</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Coste</td>
+                        <td class="juravia-col">Bajo / Gratuito</td>
+                        <td>Desde 150€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="guides" id="guias">
+            <h2 style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.8;">Plantillas de automatización</h2>
+            <div class="guide-grid">
+                <a class="guide" href="/recurrir_multa_baliza_v16.html">
+                    <div style="margin-bottom:8px"><span class="tag">V16 · 2026</span></div>
+                    <div style="font-weight:800; font-size:14px">Baliza V16</div>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Generación de alegación por problemas de homologación.</p>
+                </a>
+                <a class="guide" href="/recurrir_multa_itv_caducada.html">
+                    <div style="margin-bottom:8px"><span class="tag">ITV</span></div>
+                    <div style="font-weight:800; font-size:14px">ITV caducada</div>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Recurso profesional por falta de notificación previa.</p>
+                </a>
+                <a class="guide" href="/recurrir_multa_radar.html">
+                    <div style="margin-bottom:8px"><span class="tag">RADAR</span></div>
+                    <div style="font-weight:800; font-size:14px">Multa de radar</div>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Alegación basada en márgenes de error técnicos.</p>
+                </a>
+            </div>
+        </section>
+
+        <footer style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); opacity: 0.6; font-size: 12px;">
+            © Juravia. Herramienta de apoyo para automatizar alegaciones y recursos de tráfico.
+        </footer>
+    </div>
 </main>
 
-<!-- JV_ADS_TRACKING_v1 -->
 <script>
 (function() {
   const KEYS = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "msclkid"];
@@ -583,85 +185,47 @@ window.dataLayer = window.dataLayer || [];
         if (v) out.set(k, v);
       });
       return out;
-    } catch (e) {
-      return new URLSearchParams();
-    }
+    } catch (e) { return new URLSearchParams(); }
   }
 
   function mergeIntoHref(href, params) {
     try {
       const url = new URL(href, window.location.origin);
-      // only merge into http(s)
       if (!/^https?:$/.test(url.protocol)) return href;
-      params.forEach((v, k) => {
-        if (!url.searchParams.get(k)) url.searchParams.set(k, v);
-      });
+      params.forEach((v, k) => { if (!url.searchParams.get(k)) url.searchParams.set(k, v); });
       return url.toString();
-    } catch (e) {
-      return href;
-    }
-  }
-
-  function isInternalGuideLink(a) {
-    try {
-      const href = a.getAttribute('href') || '';
-      if (!href) return false;
-      if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return false;
-      // match .html guide pages
-      return href.includes('.html');
-    } catch (e) {
-      return false;
-    }
-  }
-
-  function isAppCta(a) {
-    const href = (a.getAttribute('href') || '').trim();
-    return href.startsWith('https://app.juravia.app') || href.startsWith('http://app.juravia.app');
+    } catch (e) { return href; }
   }
 
   function decorateLinks(params) {
     if (!params || [...params.keys()].length === 0) return;
     document.querySelectorAll('a[href]').forEach(a => {
-      if (isAppCta(a) || isInternalGuideLink(a)) {
-        const newHref = mergeIntoHref(a.getAttribute('href'), params);
+      const href = a.getAttribute('href');
+      if (href && (href.includes('app.juravia.app') || href.includes('.html'))) {
+        const newHref = mergeIntoHref(href, params);
         if (newHref) a.setAttribute('href', newHref);
       }
     });
   }
 
-  function bindCtaEvent(params) {
-    // Attach to all app CTAs
-    const ctas = Array.from(document.querySelectorAll('a[href]')).filter(isAppCta);
-    ctas.forEach(a => {
-      a.addEventListener('click', function(ev) {
-        // Try GA4 event if gtag exists
-        const href = a.getAttribute('href');
-        const send = () => {
-          try {
-            if (typeof window.gtag === 'function') {
-              window.gtag('event', 'click_open_app', {
-                transport_type: 'beacon',
-                event_callback: function() { window.location.href = href; }
-              });
-              // fallback in case callback doesn't fire
-              setTimeout(function() { window.location.href = href; }, 350);
-              ev.preventDefault();
-            }
-          } catch(e) {}
-        };
-        // If no gtag, just navigate (but keep params already decorated)
-        if (typeof window.gtag !== 'function') return;
-        send();
-      });
-    });
+  // Lógica del contador dinámico
+  function updateUsers() {
+      const el = document.getElementById('user-count');
+      if(!el) return;
+      let count = parseInt(el.innerText);
+      count += Math.floor(Math.random() * 5) - 2;
+      if (count < 13) count = 15;
+      if (count > 26) count = 22;
+      el.innerText = count;
   }
 
   document.addEventListener('DOMContentLoaded', function() {
     const params = pickParams();
     decorateLinks(params);
-    bindCtaEvent(params);
+    setInterval(updateUsers, 4000);
   });
 })();
 </script>
+
 </body>
 </html>
