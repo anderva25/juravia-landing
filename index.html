@@ -40,8 +40,8 @@
             background-attachment: fixed;
         }
 
-        .wrap{ min-height:100%; display:flex; align-items:center; justify-content:center; padding:36px 16px; position:relative; }
-        .card{ width:100%; max-width:980px; text-align:center; position:relative; z-index:1; }
+        .wrap{ min-height:100%; display:flex; flex-direction:column; align-items:center; padding:36px 16px; position:relative; }
+        .card{ width:100%; max-width:980px; text-align:center; position:relative; z-index:1; flex-grow: 1; }
         
         .logo{ width:220px; margin:0 auto 16px; display:block; filter: drop-shadow(0 18px 28px rgba(0,0,0,.35)); }
         h1{ font-size: clamp(34px, 5vw, 54px); line-height:1.06; margin-bottom: 12px; }
@@ -73,6 +73,12 @@
         .feature-label { text-align: left; opacity: 0.8; font-weight: 600; }
         .juravia-col { background: rgba(11, 74, 162, 0.2); font-weight: bold; border-radius: 8px; }
 
+        /* Apartado Garantías */
+        .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 60px 0; text-align: left; }
+        .trust-item { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px; border: 1px solid var(--border); }
+        .trust-item h4 { color: var(--gold); margin: 0 0 10px; font-size: 15px; }
+        .trust-item p { font-size: 13px; opacity: 0.7; margin: 0; line-height: 1.4; }
+
         .guide-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
         .guide{ 
             text-decoration:none; color:#fff; display:block; padding: 16px; 
@@ -82,13 +88,29 @@
         .guide:hover{ border-color: var(--gold); background: rgba(0,0,0,0.3); }
         .tag{ padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.1); font-size: 11px; font-weight: 700; }
 
+        /* FAQ Detallado */
         .faq-home { margin: 60px auto; text-align: left; max-width: 850px; }
-        .faq-item { margin-bottom: 25px; border-left: 2px solid var(--gold); padding-left: 20px; }
-        .faq-item h3 { font-size: 16px; color: var(--gold); margin: 0 0 8px; }
-        .faq-item p { font-size: 14px; opacity: 0.8; line-height: 1.5; }
+        .faq-item { margin-bottom: 30px; border-left: 3px solid var(--gold); padding-left: 20px; }
+        .faq-item h3 { font-size: 18px; color: var(--gold); margin: 0 0 12px; }
+        .faq-item p { font-size: 14px; opacity: 0.85; line-height: 1.6; }
+
+        /* Footer Profesional */
+        footer {
+            width: 100%; max-width: 980px; margin-top: 80px; padding: 40px 0;
+            border-top: 1px solid var(--border); display: grid;
+            grid-template-columns: 2fr 1fr 1fr; gap: 40px; text-align: left;
+        }
+        .footer-col h5 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; color: var(--gold); }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 10px; font-size: 13px; opacity: 0.7; }
+        .footer-col a { color: #fff; text-decoration: none; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-bottom { grid-column: 1 / -1; text-align: center; font-size: 11px; opacity: 0.4; margin-top: 20px; }
 
         @media (max-width: 860px){
-            .guide-grid { grid-template-columns: 1fr; }
+            .guide-grid, .trust-grid, footer { grid-template-columns: 1fr; text-align: center; }
+            .faq-item { border-left: none; border-bottom: 1px solid var(--border); padding-left: 0; padding-bottom: 20px; }
+            footer { text-align: left; }
         }
     </style>
 </head>
@@ -98,7 +120,7 @@
     <div class="card">
         <img alt="Juravia" class="logo" src="/logo.png"/>
         <h1>Recurrir tu multa ahora es fácil para todos</h1>
-        <p class="subtitle">Accede a nuestra plataforma y genera tus documentos profesionales en minutos. Un proceso guiado que elimina la complejidad legal para que cualquier conductor pueda defenderse.</p>
+        <p class="subtitle">Accede a nuestra plataforma y genera tus documentos profesionales en minutos. Un asistente inteligente que elimina la complejidad legal para que cualquier conductor pueda defenderse.</p>
         
         <div class="cta">
             <a class="btn" href="https://app.juravia.app/">ACCEDER A LA PLATAFORMA</a>
@@ -137,42 +159,83 @@
             </table>
         </section>
 
+        <section class="trust-grid">
+            <div class="trust-item">
+                <h4>Actualización Permanente</h4>
+                <p>Nuestra base de datos se actualiza semanalmente con los últimos cambios en la normativa de la DGT y jurisprudencia.</p>
+            </div>
+            <div class="trust-item">
+                <h4>Privacidad Total</h4>
+                <p>Tus datos personales se utilizan exclusivamente para generar tu documento. No almacenamos información sensible.</p>
+            </div>
+            <div class="trust-item">
+                <h4>Sin Compromisos</h4>
+                <p>Paga solo por lo que necesitas. Sin suscripciones mensuales ni cuotas ocultas. Genera, descarga y listo.</p>
+            </div>
+        </section>
+
         <section class="guides" id="guias">
             <h2 style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.8;">Guías de ayuda y actualidad</h2>
             <div class="guide-grid">
                 <a class="guide" href="/recurrir_multa_baliza_v16.html">
                     <div style="margin-bottom:8px"><span class="tag">V16 · INFO</span></div>
                     <div style="font-weight:800; font-size:14px">Guía Baliza V16</div>
-                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Información clave sobre el cambio a la V16 en 2026.</p>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Analizamos el cambio normativo y cómo evitar sanciones injustas.</p>
                 </a>
                 <a class="guide" href="/recurrir_multa_itv_caducada.html">
                     <div style="margin-bottom:8px"><span class="tag">ITV · INFO</span></div>
                     <div style="font-weight:800; font-size:14px">ITV caducada</div>
-                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Cómo actuar si te multan sin haber recibido el aviso.</p>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Qué hacer si te multan por circular sin ITV si no fuiste avisado.</p>
                 </a>
                 <a class="guide" href="/recurrir_multa_radar.html">
                     <div style="margin-bottom:8px"><span class="tag">RADAR · INFO</span></div>
                     <div style="font-weight:800; font-size:14px">Márgenes Radar</div>
-                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Entiende los márgenes de error técnicos en multas.</p>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">La importancia de los márgenes de error en la validez de la multa.</p>
                 </a>
             </div>
-            <p style="margin-top:20px; font-size:14px; opacity:0.7">Contamos con más de <b>37 plantillas profesionales</b> dentro de la aplicación.</p>
+            <p style="margin-top:20px; font-size:14px; opacity:0.7">Contamos con más de <b>37 tipos de sanciones</b> dentro de la aplicación.</p>
         </section>
 
         <section class="faq-home">
-            <h2 style="text-align:center; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; opacity: 0.8;">Preguntas Frecuentes</h2>
+            <h2 style="text-align:center; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; opacity: 0.8;">Preguntas Frecuentes</h2>
             <div class="faq-item">
-                <h3>¿Qué documentos genera la plataforma?</h3>
-                <p>Generas un PDF con la alegación redactada con base jurídica, listo para imprimir o enviar por la sede electrónica.</p>
+                <h3>¿Tienen validez legal estos recursos?</h3>
+                <p>Sí, absolutamente. Los documentos generados por Juravia siguen los estándares de la Ley de Procedimiento Administrativo. Están redactados con base jurídica sólida y utilizan la terminología técnica necesaria para que la Administración (DGT, Ayuntamientos, etc.) los tramite correctamente.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Cómo presento el recurso una vez descargado?</h3>
-                <p>Dentro de la app te guiamos sobre cómo subirlo a la Sede Electrónica de la DGT o entregarlo físicamente.</p>
+                <h3>¿Qué ocurre una vez descargo el documento?</h3>
+                <p>Recibirás un archivo PDF listo para ser firmado. Dentro de nuestra plataforma, te proporcionamos una guía detallada para presentarlo: puedes hacerlo de forma telemática con certificado digital (lo más rápido) o imprimirlo y entregarlo en cualquier registro oficial o oficina de correos.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Puedo recurrir cualquier tipo de multa?</h3>
+                <p>Actualmente cubrimos más del 90% de las sanciones de tráfico habituales: exceso de velocidad, aparcamiento, semáforo en rojo, señales de stop, ITV, y más. Si tu caso es muy específico o requiere vía judicial (tribunales), el asistente te lo indicará para que busques asesoramiento personalizado.</p>
             </div>
         </section>
 
-        <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); opacity: 0.6; font-size: 12px;">
-            © Juravia. Plataforma de apoyo para generar alegaciones y recursos de tráfico.
+        <footer>
+            <div class="footer-col">
+                <h5>Juravia Legaltech</h5>
+                <p style="font-size: 13px; opacity: 0.6; line-height: 1.5;">La plataforma líder en automatización de trámites de tráfico para conductores. Tecnología jurídica al alcance de todos.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Recursos</h5>
+                <ul>
+                    <li><a href="#guias">Guías de actualidad</a></li>
+                    <li><a href="https://app.juravia.app/">Acceder a la App</a></li>
+                    <li><a href="#">Blog del conductor</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                © 2024 Juravia. Todos los derechos reservados. No constituye asesoramiento legal individualizado.
+            </div>
         </footer>
     </div>
 </main>
@@ -204,3 +267,29 @@
   function decorateLinks(params) {
     if (!params || [...params.keys()].length === 0) return;
     document.querySelectorAll('a[href]').forEach(a => {
+      const h = a.getAttribute('href');
+      if (h && (h.includes('app.juravia.app') || h.includes('.html'))) {
+        const n = mergeIntoHref(h, params);
+        if (n) a.setAttribute('href', n);
+      }
+    });
+  }
+
+  function updateUsers() {
+      const el = document.getElementById('user-count');
+      if(!el) return;
+      let count = parseInt(el.innerText);
+      count += Math.floor(Math.random() * 5) - 2;
+      if (count < 14) count = 15;
+      if (count > 25) count = 21;
+      el.innerText = count;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    decorateLinks(pickParams());
+    setInterval(updateUsers, 3500);
+  });
+})();
+</script>
+</body>
+</html>
