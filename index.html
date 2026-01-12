@@ -182,32 +182,61 @@
 
     /* CTA principal (más grande, engagement) */
     .btn{
-      background: var(--brand);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--brand), var(--brand2));
       color:#fff;
       text-decoration:none;
       display:inline-flex; align-items:center; justify-content:center;
-      padding: 18px 26px;
+      padding: 18px 28px;
       border-radius: 20px;
       font-weight: 950;
       letter-spacing: .45px;
-      border: 1px solid rgba(212,175,55,.90);
-      box-shadow: 0 16px 34px rgba(0,0,0,.38);
-      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+      border: 1px solid rgba(212,175,55,.92);
+      box-shadow:
+        0 18px 40px rgba(0,0,0,.42),
+        0 0 0 1px rgba(212,175,55,.18),
+        0 0 30px rgba(212,175,55,.22);
+      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
       white-space: nowrap;
       font-size: 16px;
     }
+    .btn::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-140%;
+      width:140%;
+      height:100%;
+      background: linear-gradient(120deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,.40) 45%,
+        rgba(255,255,255,0) 80%);
+      transform: skewX(-18deg);
+      opacity: .95;
+      pointer-events:none;
+      animation: shine 2.8s ease-in-out infinite;
+    }
+    @keyframes shine{
+      0%   { left:-140%; }
+      55%  { left:120%; }
+      100% { left:120%; }
+    }
     .btn:hover{
       transform: translateY(-1px);
-      background: var(--brand2);
-      box-shadow: 0 22px 48px rgba(0,0,0,.42);
+      filter: brightness(1.05);
+      box-shadow:
+        0 24px 54px rgba(0,0,0,.46),
+        0 0 0 1px rgba(212,175,55,.28),
+        0 0 42px rgba(212,175,55,.30);
     }
 
 /* HERO: todo sobre el banner (sin tarjetas / sin recuadros) */
     .hero{
-      padding: 52px 0 28px;
-      min-height: 78vh;
+      padding: 26px 0 20px;
+      min-height: 74vh;
       display:flex;
-      align-items:center;
+      align-items:flex-start;
     }
     .hero-content{
       display:flex;
@@ -216,15 +245,15 @@
       text-align:center;
       gap: 14px;
       padding: 6px 8px;
-      margin-top: -10px;
-    }
+      margin-top: -18px;
+      }
 
     /* Logo principal: más sutil (evita “pegatina” / sobre-dominancia) */
     .hero-logo{
-      width: min(300px, 62vw);
+      width: min(240px, 52vw);
       height: auto;
       display:block;
-      transform: translateY(-6px);
+      transform: translateY(-10px);
       filter: drop-shadow(0 24px 34px rgba(0,0,0,.55));
     }
 
@@ -510,7 +539,8 @@
       .grid-3{grid-template-columns: 1fr;}
       .includes{grid-template-columns: 1fr;}
       .foot-grid{grid-template-columns: 1fr;}
-      .hero{min-height: 70vh; padding: 46px 0 24px;}
+      .hero{min-height: 70vh; padding: 40px 0 22px;}
+      .hero-logo{width: min(220px, 72vw); transform: translateY(-8px);}
       .hero-content{margin-top: 0;}
     }
   </style>
@@ -593,7 +623,7 @@
         <div class="section-head">
           <p class="kicker">Experiencia</p>
           <h2>Cómo funciona en 3 pasos</h2>
-          <p class="lead">Elige plantilla, personaliza tu escrito y preséntalo con un pack final (PDF profesional + guía de presentación + recordatorio .ics).</p>
+          <p class="lead">Proceso guiado para preparar el escrito y dejar la presentación lista, con anexos y entregables finales.</p>
         </div>
 
         <div class="grid-3">
