@@ -10,7 +10,7 @@
     </script>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <title>Juravia | Alegaciones y recursos de multas fáciles para todos</title>
+    <title>Juravia | Automatización de recursos de multas de tráfico</title>
     <meta content="Genera alegaciones y recursos de multas de tráfico online en minutos. Fácil, rápido y sin necesidad de abogados." name="description"/>
     
     <style>
@@ -47,12 +47,11 @@
         h1{ font-size: clamp(34px, 5vw, 54px); line-height:1.06; margin-bottom: 12px; }
         .subtitle{ max-width: 820px; margin: 0 auto 18px; font-size: 16px; line-height: 1.6; color: var(--muted); }
 
-        /* --- BOTÓN AZUL CON BORDE DORADO --- */
         .btn{
             background: var(--brand);
             color:#fff; text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
             padding:16px 32px; border-radius: 16px; font-weight: 800;
-            border: 2px solid var(--gold); /* Borde dorado solicitado */
+            border: 2px solid var(--gold);
             box-shadow: 0 12px 26px rgba(0,0,0,0.4); transition: all .2s ease;
         }
         .btn:hover{ transform: translateY(-2px); background: var(--brandHover); box-shadow: 0 15px 35px rgba(212,175,55,0.2); }
@@ -64,7 +63,6 @@
             font-weight: 600;
         }
 
-        /* --- NUEVA SECCIÓN: PASOS --- */
         .steps-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -77,7 +75,16 @@
         .step { font-size: 14px; opacity: 0.9; }
         .step b { color: var(--gold); display: block; font-size: 18px; margin-bottom: 5px; }
 
-        /* --- NUEVA SECCIÓN: TABLA --- */
+        /* Sección de variedad de multas */
+        .multa-types {
+            margin: 40px 0;
+            font-size: 13px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .multa-types span { margin: 0 10px; border-bottom: 1px solid var(--gold); }
+
         .comparison-container {
             margin: 40px auto;
             max-width: 800px;
@@ -93,7 +100,6 @@
         .feature-label { text-align: left; opacity: 0.8; font-weight: 600; }
         .juravia-col { background: rgba(11, 74, 162, 0.2); font-weight: bold; border-radius: 8px; }
 
-        /* Mantenemos tus estilos de guías rápidos */
         .guide-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
         .guide{ 
             text-decoration:none; color:#fff; display:block; padding: 16px; 
@@ -102,6 +108,12 @@
         }
         .guide:hover{ border-color: var(--gold); background: rgba(0,0,0,0.3); }
         .tag{ padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.1); font-size: 11px; font-weight: 700; }
+
+        /* FAQ Estilizado */
+        .faq-home { margin-top: 60px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .faq-item { margin-bottom: 25px; border-left: 2px solid var(--gold); padding-left: 20px; }
+        .faq-item h3 { font-size: 16px; margin: 0 0 10px; color: var(--gold); }
+        .faq-item p { font-size: 14px; opacity: 0.8; margin: 0; line-height: 1.5; }
 
         @media (max-width: 860px){
             .guide-grid, .steps-container { grid-template-columns: 1fr; }
@@ -114,19 +126,23 @@
     <div class="card">
         <img alt="Juravia" class="logo" src="/logo.png"/>
         <h1>Recurrir tu multa ahora es fácil para todos</h1>
-        <p class="subtitle">Automatizamos la generación de tus alegaciones de tráfico en minutos. Un proceso guiado para que cualquiera pueda defenderse sin necesidad de conocimientos legales.</p>
+        <p class="subtitle">Accede a nuestra plataforma inteligente para generar alegaciones profesionales en minutos. Un asistente guiado que elimina la complejidad legal para que cualquiera pueda defenderse.</p>
         
         <div class="cta">
-            <a class="btn" href="https://app.juravia.app/">GENERAR MI ALEGACIÓN AHORA</a>
+            <a class="btn" href="https://app.juravia.app/">ACCEDER A LA PLATAFORMA</a>
         </div>
 
         <div class="live-counter">
-            ● <span id="user-count">16</span> personas están <span style="color:#fff">generando su recurso</span> en este momento
+            ● <span id="user-count">16</span> conductores están <span style="color:#fff">preparando sus alegaciones</span> ahora mismo
+        </div>
+
+        <div class="multa-types">
+            Plantillas para: <span>Velocidad</span> <span>Aparcamiento</span> <span>ITV</span> <span>Baliza V16</span> <span>Señalización</span>
         </div>
 
         <div class="steps-container">
-            <div class="step"><b>1. Selecciona</b> Elige el tipo de multa que has recibido.</div>
-            <div class="step"><b>2. Rellena</b> Sigue nuestro asistente guiado en pocos pasos.</div>
+            <div class="step"><b>1. Accede</b> Entra en la aplicación y selecciona tu tipo de sanción.</div>
+            <div class="step"><b>2. Personaliza</b> Responde a las preguntas del asistente según tu caso.</div>
             <div class="step"><b>3. Descarga</b> Obtén tu documento profesional listo para presentar.</div>
         </div>
 
@@ -142,52 +158,68 @@
                 <tbody>
                     <tr>
                         <td class="feature-label">Dificultad</td>
-                        <td class="juravia-col">Muy fácil para todos</td>
+                        <td class="juravia-col">Asistente muy intuitivo</td>
                         <td>Lenguaje complejo</td>
                     </tr>
                     <tr>
                         <td class="feature-label">Tiempo</td>
-                        <td class="juravia-col">5 minutos</td>
+                        <td class="juravia-col">Inmediato (5 min)</td>
                         <td>Días de gestiones</td>
                     </tr>
                     <tr>
-                        <td class="feature-label">Coste</td>
-                        <td class="juravia-col">Asequible / Pago por uso</td>
-                        <td>Desde 150€</td>
+                        <td class="feature-label">Variedad</td>
+                        <td class="juravia-col">+37 tipos de multas</td>
+                        <td>Limitado por el despacho</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section class="guides" id="guias">
-            <h2 style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.8;">Plantillas de automatización</h2>
+            <h2 style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.8;">Guías de ayuda y actualidad</h2>
             <div class="guide-grid">
                 <a class="guide" href="/recurrir_multa_baliza_v16.html">
-                    <div style="margin-bottom:8px"><span class="tag">V16 · 2026</span></div>
-                    <div style="font-weight:800; font-size:14px">Baliza V16</div>
-                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Genera tu alegación por problemas de homologación.</p>
+                    <div style="margin-bottom:8px"><span class="tag">V16 · INFO</span></div>
+                    <div style="font-weight:800; font-size:14px">Guía Baliza V16</div>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Información sobre problemas de homologación y cómo proceder.</p>
                 </a>
                 <a class="guide" href="/recurrir_multa_itv_caducada.html">
-                    <div style="margin-bottom:8px"><span class="tag">ITV</span></div>
-                    <div style="font-weight:800; font-size:14px">ITV caducada</div>
-                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Recurso profesional por falta de notificación previa.</p>
+                    <div style="margin-bottom:8px"><span class="tag">ITV · INFO</span></div>
+                    <div style="font-weight:800; font-size:14px">Guía ITV caducada</div>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Cómo actuar si no recibiste la notificación previa obligatoria.</p>
                 </a>
                 <a class="guide" href="/recurrir_multa_radar.html">
-                    <div style="margin-bottom:8px"><span class="tag">RADAR</span></div>
-                    <div style="font-weight:800; font-size:14px">Multa de radar</div>
-                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Alegación basada en márgenes de error técnicos.</p>
+                    <div style="margin-bottom:8px"><span class="tag">RADAR · INFO</span></div>
+                    <div style="font-weight:800; font-size:14px">Guía Márgenes Radar</div>
+                    <p style="font-size:12px; opacity:0.8; margin:4px 0 0">Entiende cómo se aplican los márgenes de error técnicos.</p>
                 </a>
+            </div>
+            <p style="margin-top:20px; font-size:14px; opacity:0.7">Contamos con más de <b>37 plantillas profesionales</b> dentro de la plataforma.</p>
+        </section>
+
+        <section class="faq-home">
+            <h2 style="text-align:center; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px;">Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Qué documentos obtendré al finalizar?</h3>
+                <p>La plataforma genera un documento PDF profesional con la alegación o recurso redactado con base jurídica, listo para que lo firmes y presentes ante la Administración.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Es difícil presentar el recurso una vez descargado?</h3>
+                <p>Para nada. Te explicamos los pasos para enviarlo a través de la Sede Electrónica de la DGT o entregarlo en cualquier oficina de registro.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿La aplicación es segura?</h3>
+                <p>Sí, en Juravia priorizamos la privacidad. Solo procesamos los datos necesarios para generar tu documento de forma anónima y segura.</p>
             </div>
         </section>
 
-        <footer style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); opacity: 0.6; font-size: 12px;">
-            © Juravia. Herramienta de apoyo para automatizar alegaciones y recursos de tráfico.
+        <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); opacity: 0.6; font-size: 12px;">
+            © Juravia. Plataforma de automatización de recursos y alegaciones de tráfico.
         </footer>
     </div>
 </main>
 
 <script>
-/* Mantenemos intacto tu sistema de tracking original */
 (function() {
   const KEYS = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "msclkid"];
   function pickParams() {
@@ -228,7 +260,7 @@
       let count = parseInt(el.innerText);
       count += Math.floor(Math.random() * 5) - 2;
       if (count < 14) count = 15;
-      if (count > 25) count = 22;
+      if (count > 25) count = 21;
       el.innerText = count;
   }
 
