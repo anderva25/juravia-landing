@@ -233,8 +233,8 @@
 
 /* HERO: todo sobre el banner (sin tarjetas / sin recuadros) */
     .hero{
-      padding: 26px 0 20px;
-      min-height: 74vh;
+      padding: 22px 0 8px;
+      min-height: 60vh;
       display:flex;
       align-items:flex-start;
     }
@@ -313,6 +313,9 @@
 
     /* Secciones alternadas */
     section{padding: 34px 0;}
+    /* Reduce el espacio entre el HERO y el primer bloque */
+    #como-funciona{padding-top: 18px;}
+    #como-funciona .section-head{margin-top: 0;}
     .section{ background: rgba(5,9,20,.16); }
     .section.alt{ background: rgba(255,255,255,.03); }
 
@@ -539,7 +542,7 @@
       .grid-3{grid-template-columns: 1fr;}
       .includes{grid-template-columns: 1fr;}
       .foot-grid{grid-template-columns: 1fr;}
-      .hero{min-height: 70vh; padding: 40px 0 22px;}
+      .hero{min-height: 64vh; padding: 26px 0 12px;}
       .hero-logo{width: min(220px, 72vw); transform: translateY(-8px);}
       .hero-content{margin-top: 0;}
     }
