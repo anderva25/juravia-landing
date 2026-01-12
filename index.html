@@ -20,29 +20,37 @@
   <meta property="og:title" content="Juravia | Defensa legal en carretera" />
   <meta property="og:description" content="Genera alegaciones y recursos de multas de tráfico en minutos: PDF pro, guía y recordatorio .ics." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/juravia_banner_road_legaltech_clean_1920x1080.webp" />
+  <meta property="og:image" content="/juravia_banner_road_legaltech_clean_1920x1080.png" />
   <meta property="og:locale" content="es_ES" />
 
   <meta name="theme-color" content="#0b4aa2" />
 
   <style>
     :root{
-      --bg:#050914;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.04);
       --ink:#ffffff;
       --muted: rgba(255,255,255,.82);
       --muted2: rgba(255,255,255,.68);
+
+      --bg:#050914;
+      --glass: rgba(10, 14, 28, .62);
+      --glass2: rgba(10, 14, 28, .44);
+
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.04);
+
       --brand:#0b4aa2;
       --brandHover:#083c84;
       --gold:#d4af37;
-      --border: rgba(255,255,255,.14);
-      --shadow: 0 16px 42px rgba(0,0,0,.45);
 
-      --hero-bg: url("/juravia_banner_road_legaltech_clean_1920x1080.webp");
-      --hero-bg-y: 18%;
+      --border: rgba(255,255,255,.14);
+      --border2: rgba(255,255,255,.10);
+      --shadow: 0 18px 46px rgba(0,0,0,.45);
+
       --radius: 22px;
-      --max: 1100px;
+      --max: 1140px;
+
+      --bg-img: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
+      --bg-pos: 50% 16%;
     }
 
     *{box-sizing:border-box}
@@ -51,123 +59,230 @@
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color:var(--ink);
+      background: var(--bg);
+      overflow-x:hidden;
+    }
+
+    /* Banner en TODA la página */
+    .bg-wrap{
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-image: var(--bg-img);
+      background-size: cover;
+      background-position: var(--bg-pos);
+      background-repeat: no-repeat;
+      transform: scale(1.02);
+      filter: saturate(1.02) contrast(1.03);
+    }
+    .bg-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: -1;
       background:
-        radial-gradient(ellipse at 20% 0%, rgba(11,74,162,.20), rgba(0,0,0,0) 45%),
-        radial-gradient(ellipse at 80% 10%, rgba(212,175,55,.14), rgba(0,0,0,0) 42%),
-        linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.25)),
-        var(--bg);
+        radial-gradient(ellipse at 30% 0%, rgba(11,74,162,.22), rgba(0,0,0,0) 55%),
+        radial-gradient(ellipse at 76% 10%, rgba(212,175,55,.16), rgba(0,0,0,0) 55%),
+        linear-gradient(180deg, rgba(5,9,20,.12), rgba(5,9,20,.78) 44%, rgba(5,9,20,.92));
     }
 
     a{color:inherit}
     .container{width:100%; max-width: var(--max); margin:0 auto; padding:0 18px;}
-    .sep{height:1px; background: linear-gradient(90deg, rgba(255,255,255,0), var(--border), rgba(255,255,255,0)); margin: 34px 0;}
+    .sep{height:1px; background: linear-gradient(90deg, rgba(255,255,255,0), var(--border), rgba(255,255,255,0)); margin: 32px 0;}
 
     /* Topbar */
     .topbar{
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(14px);
       background: rgba(5,9,20,.55);
       border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(14px);
     }
     .topbar-inner{
       display:flex; align-items:center; justify-content:space-between;
       padding: 12px 0;
-      gap: 14px;
+      gap: 12px;
     }
     .brand{
-      display:flex; align-items:center; gap: 12px; text-decoration:none;
-      min-width: 180px;
+      display:flex; align-items:center; gap: 10px;
+      text-decoration:none;
+      min-width: 170px;
     }
     .brand img{
-      width: 40px; height: 40px; border-radius: 12px;
-      box-shadow: 0 10px 22px rgba(0,0,0,.35);
-      border: 1px solid rgba(212,175,55,.35);
+      width: 28px; height: 28px;
+      display:block;
+      filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));
     }
-    .brand span{font-weight: 900; letter-spacing: .3px;}
-    nav{
-      display:flex; gap: 14px; align-items:center; flex-wrap:wrap; justify-content:flex-end;
-    }
-    .navlink{
-      text-decoration:none; font-size: 13px; color: var(--muted);
-      padding: 8px 10px; border-radius: 12px;
-      transition: background .18s ease, color .18s ease;
-      border: 1px solid transparent;
-    }
-    .navlink:hover{
-      color:#fff;
-      background: rgba(255,255,255,.05);
-      border-color: rgba(255,255,255,.10);
-    }
-
-    .cta{
-      display:flex; gap: 10px; align-items:center;
-    }
-    .btn{
-      background: var(--brand);
-      color:#fff; text-decoration:none;
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 12px 16px;
-      border-radius: 16px;
+    .brand span{
       font-weight: 900;
       letter-spacing: .4px;
-      border: 1px solid rgba(212,175,55,.65);
-      box-shadow: 0 12px 26px rgba(0,0,0,.35);
+      font-size: 14px;
+    }
+
+    nav{display:flex; gap: 14px; align-items:center;}
+    .navlink{
+      text-decoration:none;
+      font-size: 13px;
+      color: rgba(255,255,255,.80);
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: background .18s ease, border-color .18s ease, color .18s ease;
+      white-space: nowrap;
+    }
+    .navlink:hover{
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.10);
+      color:#fff;
+    }
+
+    /* Mobile menu */
+    .menu-btn{
+      display:none;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      padding: 10px 12px;
+      color:#fff;
+      cursor:pointer;
+      line-height: 0;
+    }
+    .menu-btn svg{display:block}
+
+    .mobile-drawer{
+      display:none;
+      position: fixed;
+      top: 64px;
+      left: 18px;
+      right: 18px;
+      z-index: 60;
+      background: rgba(5,9,20,.90);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      padding: 10px;
+    }
+    .mobile-drawer a{
+      display:block;
+      text-decoration:none;
+      padding: 12px 12px;
+      border-radius: 14px;
+      color: rgba(255,255,255,.86);
+      border: 1px solid transparent;
+    }
+    .mobile-drawer a:hover{
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.10);
+      color:#fff;
+    }
+
+    /* Botón principal (único CTA grande) */
+    .btn{
+      background: var(--brand);
+      color:#fff;
+      text-decoration:none;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 15px 20px;
+      border-radius: 18px;
+      font-weight: 900;
+      letter-spacing: .4px;
+      border: 1px solid rgba(212,175,55,.75);
+      box-shadow: 0 14px 30px rgba(0,0,0,.35);
       transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
       white-space: nowrap;
-      font-size: 13px;
+      font-size: 14px;
     }
-    .btn:hover{ transform: translateY(-1px); background: var(--brandHover); box-shadow: 0 16px 34px rgba(0,0,0,.40); }
+    .btn:hover{ transform: translateY(-1px); background: var(--brandHover); box-shadow: 0 18px 40px rgba(0,0,0,.40); }
+
     .btn.secondary{
       background: rgba(255,255,255,.06);
       border-color: rgba(255,255,255,.14);
-      color: #fff;
       box-shadow: none;
+      color: #fff;
     }
     .btn.secondary:hover{ background: rgba(255,255,255,.10); }
 
-    /* Hero */
-    .hero{ position:relative; padding: 54px 0 26px; }
-    .hero::before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        linear-gradient(180deg, rgba(5,9,20,.10), rgba(5,9,20,.82) 72%),
-        radial-gradient(ellipse at 50% 35%, rgba(255,255,255,.08), rgba(0,0,0,0) 55%),
-        var(--hero-bg);
-      background-size: cover;
-      background-position: 50% var(--hero-bg-y);
-      filter: saturate(1.02);
-      z-index:-1;
-    }
-    .hero-grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap: 22px; align-items: center; }
-    h1{ font-size: clamp(34px, 5vw, 54px); line-height:1.06; margin: 8px 0 12px; letter-spacing: -0.4px; }
-    .subtitle{ max-width: 62ch; margin: 0 0 18px; font-size: 16px; line-height: 1.65; color: var(--muted); }
-    .hero-actions{display:flex; gap: 10px; flex-wrap: wrap; margin: 16px 0 10px;}
-    .micro{ color: var(--muted2); font-size: 12.5px; line-height: 1.5; margin: 8px 0 0; }
-    .hero-card{
-      background: rgba(0,0,0,.26);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: var(--radius);
-      padding: 18px;
+    /* HERO centrado + branding */
+    .hero{ padding: 46px 0 22px; }
+    .hero-inner{
+      background: rgba(5,9,20,.30);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: calc(var(--radius) + 4px);
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
+      padding: 30px 18px;
+      position:relative;
+      overflow:hidden;
     }
-    .badge-row{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-    .badge{
+    .hero-inner::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(ellipse at 25% 25%, rgba(11,74,162,.30), rgba(0,0,0,0) 55%),
+        radial-gradient(ellipse at 80% 10%, rgba(212,175,55,.18), rgba(0,0,0,0) 55%);
+      pointer-events:none;
+      opacity:.7;
+    }
+    .hero-content{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap: 10px;
+      padding: 6px 6px 0;
+    }
+    .brand-icon{
+      width: 96px; height: 96px;
+      display:block;
+      filter: drop-shadow(0 18px 26px rgba(0,0,0,.45));
+      margin-top: 2px;
+    }
+    .wordmark{
+      font-size: clamp(34px, 5vw, 52px);
+      line-height:1.05;
+      margin: 2px 0 0;
+      letter-spacing: -0.4px;
+      font-weight: 950;
+    }
+    .slogan{
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 78ch;
+    }
+    .hero-cta{ margin-top: 10px; display:flex; gap: 10px; flex-wrap: wrap; justify-content:center; }
+    .mini-trust{ margin-top: 14px; display:flex; gap: 10px; flex-wrap: wrap; justify-content:center; }
+    .pill{
       display:inline-flex; align-items:center; gap: 8px;
-      font-size: 12px; font-weight: 800;
-      padding: 8px 10px;
+      padding: 9px 12px;
       border-radius: 999px;
       background: rgba(255,255,255,.06);
       border: 1px solid rgba(255,255,255,.10);
-      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      color: rgba(255,255,255,.92);
     }
-    .dot{ width:8px; height:8px; border-radius: 99px; background: var(--gold); box-shadow: 0 0 0 4px rgba(212,175,55,.18); }
+    .dot{
+      width:8px; height:8px; border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(212,175,55,.18);
+    }
+    .hero-fine{
+      margin-top: 10px;
+      color: rgba(255,255,255,.62);
+      font-size: 12.5px;
+      line-height: 1.55;
+      max-width: 92ch;
+    }
 
-    /* Sections */
+    /* Secciones alternadas (menos monotonía) */
     section{padding: 34px 0;}
+    .section{ background: rgba(5,9,20,.20); }
+    .section.alt{ background: rgba(255,255,255,.03); }
+
     .section-head{
       display:flex; align-items:flex-end; justify-content:space-between; gap: 14px; flex-wrap: wrap;
       margin-bottom: 18px;
@@ -176,7 +291,7 @@
       font-size: 12px;
       letter-spacing: 2.6px;
       text-transform: uppercase;
-      color: rgba(255,255,255,.72);
+      color: rgba(255,255,255,.74);
       margin: 0 0 10px;
     }
     h2{ margin: 0; font-size: 24px; letter-spacing: -0.2px; }
@@ -194,10 +309,11 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 22px;
+      backdrop-filter: blur(10px);
     }
 
     .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px;}
-    .grid-2{display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px;}
+    .includes{display:grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; margin-top: 10px;}
 
     .cardx{
       background: rgba(255,255,255,.04);
@@ -222,13 +338,6 @@
     .cardx h3{ margin: 0 0 8px; font-size: 16px; letter-spacing: -0.2px; }
     .cardx p{ margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
 
-    /* Includes list */
-    .includes{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px 18px;
-      margin-top: 12px;
-    }
     .check{
       display:flex; gap: 10px; align-items:flex-start;
       padding: 10px 12px;
@@ -251,7 +360,7 @@
     }
     .guide:hover{
       border-color: rgba(212,175,55,.45);
-      background: rgba(0,0,0,.18);
+      background: rgba(0,0,0,.16);
       transform: translateY(-2px);
     }
     .tag{
@@ -268,7 +377,7 @@
     .guide p{ margin:0; font-size: 12.5px; color: var(--muted); line-height: 1.55; }
 
     /* FAQ */
-    .faq{ display:grid; gap: 12px; }
+    .faq{display:grid; gap: 12px;}
     details{
       background: rgba(255,255,255,.04);
       border: 1px solid rgba(255,255,255,.12);
@@ -276,10 +385,7 @@
       padding: 14px 16px;
       transition: border-color .18s ease, background .18s ease;
     }
-    details[open]{
-      border-color: rgba(212,175,55,.40);
-      background: rgba(255,255,255,.055);
-    }
+    details[open]{ border-color: rgba(212,175,55,.40); background: rgba(255,255,255,.055); }
     summary{
       cursor:pointer;
       list-style:none;
@@ -300,47 +406,66 @@
       color: rgba(255,255,255,.85);
       flex: 0 0 auto;
     }
-    details p{
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.6;
-      max-width: 90ch;
-    }
+    details p{ margin: 10px 0 0; color: var(--muted); font-size: 13.5px; line-height: 1.6; max-width: 90ch; }
 
-    /* Footer */
+    /* Footer mejorado (sin CTA grande extra) */
     footer{
-      padding: 44px 0 26px;
-      margin-top: 24px;
+      padding: 44px 0 24px;
+      margin-top: 16px;
       border-top: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.10);
+      background: rgba(5,9,20,.72);
+      backdrop-filter: blur(14px);
     }
+    .foot-top{
+      display:flex;
+      gap: 18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .foot-brand{
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+      max-width: 520px;
+    }
+    .foot-brand img{
+      width: 42px; height: 42px;
+      filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));
+    }
+    .foot-brand b{ display:block; font-size: 14px; letter-spacing: .5px; }
+    .foot-brand p{ margin: 8px 0 0; font-size: 13px; color: rgba(255,255,255,.70); line-height: 1.55; }
+
     .foot-grid{
       display:grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 18px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      width: 100%;
+      max-width: 560px;
     }
     .foot h4{
-      margin:0 0 12px;
-      font-size: 13px;
+      margin:0 0 10px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: rgba(212,175,55,.9);
-    }
-    .foot p, .foot li{
-      margin: 0;
-      font-size: 13px;
-      color: rgba(255,255,255,.72);
-      line-height: 1.55;
+      color: rgba(212,175,55,.92);
     }
     .foot ul{list-style:none; padding:0; margin:0; display:grid; gap: 10px;}
-    .foot a{color:#fff; text-decoration:none; opacity:.84;}
+    .foot a{
+      color:#fff;
+      text-decoration:none;
+      opacity:.86;
+      font-size: 13px;
+    }
     .foot a:hover{opacity:1; color: var(--gold);}
 
     .fineprint{
       margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.10);
       font-size: 11.5px;
-      color: rgba(255,255,255,.50);
+      color: rgba(255,255,255,.52);
       line-height: 1.55;
       text-align:center;
     }
@@ -367,537 +492,431 @@
     }
     :focus-visible{ outline: 3px solid rgba(212,175,55,.55); outline-offset: 3px; border-radius: 12px; }
 
-    @media (max-width: 920px){
-      .hero-grid{grid-template-columns: 1fr; }
-      nav{display:none;} /* si quieres, después lo cambiamos por menú hamburguesa */
-      .includes{grid-template-columns: 1fr;}
+    @media (max-width: 980px){
+      nav{display:none;}
+      .menu-btn{display:inline-flex;}
       .grid-3{grid-template-columns: 1fr;}
-      .grid-2{grid-template-columns: 1fr;}
+      .includes{grid-template-columns: 1fr;}
       .foot-grid{grid-template-columns: 1fr;}
     }
   </style>
 </head>
 
 <body>
-<a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="bg-wrap" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
 
-<header class="topbar" aria-label="Barra superior">
-  <div class="container">
-    <div class="topbar-inner">
-      <a class="brand" href="#inicio" aria-label="Juravia, inicio">
-        <img src="/logo.png" alt="Juravia"/>
-        <span>JURAVIA</span>
-      </a>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
 
-      <nav aria-label="Navegación principal">
-        <a class="navlink" href="#como-funciona">Cómo funciona</a>
-        <a class="navlink" href="#que-incluye">Qué incluye</a>
-        <a class="navlink" href="#guias">Guías</a>
-        <a class="navlink" href="#faq">FAQ</a>
-        <a class="navlink" href="#legal">Legal</a>
-      </nav>
+  <header class="topbar" aria-label="Barra superior">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="#inicio" aria-label="Juravia, inicio">
+          <img src="/Brand_Icon.png" alt="Juravia"/>
+          <span>JURAVIA</span>
+        </a>
 
-      <div class="cta">
-        <a class="btn secondary" href="#como-funciona">Ver proceso</a>
-        <a class="btn" href="https://app.juravia.app/" id="cta-top">Acceder</a>
+        <nav aria-label="Navegación principal">
+          <a class="navlink" href="#como-funciona">Cómo funciona</a>
+          <a class="navlink" href="#que-incluye">Qué incluye</a>
+          <a class="navlink" href="#guias">Guías</a>
+          <a class="navlink" href="#faq">FAQ</a>
+          <a class="navlink" href="#legal">Legal</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".95"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-drawer" id="mobileMenu" role="dialog" aria-label="Menú móvil">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#que-incluye">Qué incluye</a>
+        <a href="#guias">Guías</a>
+        <a href="#faq">FAQ</a>
+        <a href="#legal">Legal</a>
+        <div class="sep" style="margin:10px 0;"></div>
+        <a class="btn" style="width:100%; justify-content:center;" href="https://app.juravia.app/" id="cta-mobile">Empezar ahora</a>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main id="contenido">
-  <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <p class="kicker">Defensa legal en carretera</p>
-          <h1>Recurrir tu multa, sin líos y con un documento profesional</h1>
-          <p class="subtitle">
-            Genera alegaciones y recursos en minutos con un flujo guiado: rellenas los datos, adjuntas pruebas y descargas un PDF listo para presentar.
-          </p>
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <img class="brand-icon" src="/Brand_Icon.png" alt="Juravia (icono)"/>
 
-          <div class="hero-actions">
-            <a class="btn" href="https://app.juravia.app/" id="cta-hero">Empezar ahora</a>
-            <a class="btn secondary" href="#como-funciona">Cómo funciona</a>
-          </div>
+            <h1 class="wordmark">JURAVIA</h1>
+            <p class="slogan">
+              Defensa legal en carretera. Genera alegaciones y recursos en minutos: añades pruebas y descargas un PDF profesional listo para presentar.
+            </p>
 
-          <p class="micro">
-            Juravia no garantiza el resultado del procedimiento. Revisa siempre tu notificación y plazos antes de presentar.
-          </p>
-
-          <div class="badge-row" aria-label="Beneficios principales">
-            <span class="badge"><span class="dot" aria-hidden="true"></span>PDF profesional</span>
-            <span class="badge"><span class="dot" aria-hidden="true"></span>Guía de presentación</span>
-            <span class="badge"><span class="dot" aria-hidden="true"></span>Recordatorio .ics</span>
-          </div>
-        </div>
-
-        <aside class="hero-card" aria-label="Resumen rápido">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;">
-            <div style="font-weight:900; letter-spacing:-0.2px;">En 3 pasos</div>
-            <span class="tag">Proceso guiado</span>
-          </div>
-
-          <div style="display:grid; gap:10px;">
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 8h10M7 12h10M7 16h7" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>1 · Elige plantilla</b>
-                <span>Selecciona el tipo de infracción y la autoridad.</span>
-              </div>
+            <!-- CTA principal (único destacado) -->
+            <div class="hero-cta">
+              <a class="btn" href="https://app.juravia.app/" id="cta-hero">Empezar ahora</a>
+              <a class="btn secondary" href="#como-funciona">Ver cómo funciona</a>
             </div>
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 20h9" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z" stroke="white" stroke-width="2" stroke-linejoin="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>2 · Personaliza</b>
-                <span>Edita hechos, añade anexos y firma si quieres.</span>
-              </div>
+
+            <div class="mini-trust" aria-label="Beneficios principales">
+              <span class="pill"><span class="dot" aria-hidden="true"></span>PDF profesional</span>
+              <span class="pill"><span class="dot" aria-hidden="true"></span>Guía de presentación</span>
+              <span class="pill"><span class="dot" aria-hidden="true"></span>Recordatorio .ics</span>
             </div>
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-                <path d="M7 10l5 5 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-                <path d="M12 15V3" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>3 · Descarga y presenta</b>
-                <span>PDF + guía + recordatorio .ics de plazos.</span>
-              </div>
-            </div>
+
+            <p class="hero-fine">
+              Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados. Revisa siempre tu notificación y plazos antes de presentar.
+            </p>
           </div>
-
-          <div class="sep" style="margin:18px 0;"></div>
-
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn secondary" href="#faq">Dudas frecuentes</a>
-            <a class="btn" href="https://app.juravia.app/" id="cta-hero-2">Ir al Paso 1</a>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMO FUNCIONA -->
-  <section id="como-funciona">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Experiencia de usuario</p>
-          <h2>Un flujo claro, de principio a fin</h2>
-          <p class="lead">La landing te informa; la aplicación te lleva directamente al Paso 1 para que generes tu documento sin duplicidades.</p>
         </div>
       </div>
+    </section>
 
-      <div class="grid-3">
-        <div class="cardx">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M6 3h12v18H6V3Z" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M9 7h6M9 11h6M9 15h4" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-            </svg>
-          </div>
-          <h3>Paso 1 · Plantilla y autoridad</h3>
-          <p>Elige el tipo de sanción y el órgano. Juravia te guía para encajar los datos esenciales.</p>
-        </div>
-
-        <div class="cardx">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M4 4h16v16H4V4Z" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M8 12h8" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-              <path d="M12 8v8" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-            </svg>
-          </div>
-          <h3>Paso 2 · Hechos y anexos</h3>
-          <p>Añade tus pruebas (fotos, notificación, documentación) y genera un escrito con estructura profesional.</p>
-        </div>
-
-        <div class="cardx">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M21 8v13H3V8" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M23 3H1v5h22V3Z" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M12 12v6" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-            </svg>
-          </div>
-          <h3>Paso 3 · Presentación y acuse</h3>
-          <p>Descarga el ZIP con PDF y guía. Presenta y guarda el acuse de recibo como prueba.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUÉ INCLUYE -->
-  <section id="que-incluye">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Producto</p>
-          <h2>Lo que te llevas al terminar</h2>
-          <p class="lead">Todo lo necesario para presentar tu escrito con orden: documento final, anexos y recordatorio de plazo.</p>
-        </div>
-        <div>
-          <a class="btn" href="https://app.juravia.app/" id="cta-includes">Acceder a la plataforma</a>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="includes">
-          <div class="check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-            </svg>
-            <div>
-              <b>PDF listo para presentar</b>
-              <span>Estructura formal: encabezado, hechos, fundamentos y solicitud.</span>
-            </div>
-          </div>
-
-          <div class="check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-            </svg>
-            <div>
-              <b>Sello en 1ª página</b>
-              <span>Área preparada para sellado/acuse (según presentación).</span>
-            </div>
-          </div>
-
-          <div class="check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-            </svg>
-            <div>
-              <b>Guía de presentación</b>
-              <span>Pasos claros para tramitar online o por registro.</span>
-            </div>
-          </div>
-
-          <div class="check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-            </svg>
-            <div>
-              <b>Recordatorio .ics</b>
-              <span>Evento de calendario para no apurar plazos.</span>
-            </div>
-          </div>
-
-          <div class="check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-            </svg>
-            <div>
-              <b>Anexos organizados</b>
-              <span>Recomendaciones de pruebas según tipo de infracción.</span>
-            </div>
-          </div>
-
-          <div class="check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-            </svg>
-            <div>
-              <b>Privacidad por diseño</b>
-              <span>Tú controlas tus documentos; uso orientado a generar el escrito.</span>
-            </div>
+    <!-- CÓMO FUNCIONA -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Experiencia</p>
+            <h2>Un flujo claro, sin duplicados</h2>
+            <p class="lead">La landing explica. La app empieza en el Paso 1 para generar el escrito.</p>
           </div>
         </div>
-
-        <div class="sep" style="margin:22px 0;"></div>
 
         <div class="grid-3">
           <div class="cardx">
             <div class="icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M6 3h12v18H6V3Z" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M9 7h6M9 11h6M9 15h4" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
               </svg>
             </div>
-            <h3>Privacidad</h3>
-            <p>Tus documentos y anexos son tuyos. Diseñado para minimizar datos y facilitar el borrado/retención.</p>
+            <h3>Paso 1 · Elige plantilla</h3>
+            <p>Selecciona el tipo de infracción y el órgano. Datos esenciales, sin ruido.</p>
           </div>
 
           <div class="cardx">
             <div class="icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 3v18" stroke="white" stroke-width="2" opacity=".9"/>
-                <path d="M7 7h10" stroke="white" stroke-width="2" opacity=".9"/>
-                <path d="M6 21h12" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z" stroke="white" stroke-width="2" stroke-linejoin="round" opacity=".9"/>
+                <path d="M12 20h9" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
               </svg>
             </div>
-            <h3>Transparencia</h3>
-            <p>Sin promesas de éxito. Te indicamos vías de presentación y puntos críticos (plazo, anexos, acuse).</p>
+            <h3>Paso 2 · Personaliza</h3>
+            <p>Edita hechos, añade anexos y firma si quieres. Resultado con tono profesional.</p>
           </div>
 
           <div class="cardx">
             <div class="icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7l3-7Z" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+                <path d="M7 10l5 5 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+                <path d="M12 15V3" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
               </svg>
             </div>
-            <h3>Calidad del escrito</h3>
-            <p>Formato de despacho: orden, claridad y coherencia para que la Administración lo tramite sin fricción.</p>
+            <h3>Paso 3 · Descarga y presenta</h3>
+            <p>PDF + guía + .ics. Presenta y guarda el acuse de recibo.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CASOS -->
-  <section id="casos">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Ejemplos habituales</p>
-          <h2>Casos donde suele haber margen de revisión</h2>
-          <p class="lead">Tres patrones típicos. Cada expediente es distinto: úsalo como orientación para revisar tu notificación y pruebas.</p>
-        </div>
-      </div>
-
-      <div class="grid-3">
-        <div class="cardx">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M8 7V3h8v4" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M6 7h12v14H6V7Z" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M9 11h6" stroke="white" stroke-width="2" opacity=".9"/>
-            </svg>
+    <!-- QUÉ INCLUYE -->
+    <section class="section alt" id="que-incluye">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Producto</p>
+            <h2>Todo lo que necesitas para presentar bien</h2>
+            <p class="lead">Pack final pensado para tramitar con orden y conservar justificantes.</p>
           </div>
-          <h3>Notificación fuera de plazo</h3>
-          <p>Si la notificación llega con demoras, conviene revisar el expediente y el historial de intentos de notificación.</p>
         </div>
 
-        <div class="cardx">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2v4" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M4.93 4.93l2.83 2.83" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M2 12h4" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M4.93 19.07l2.83-2.83" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M12 18v4" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M19.07 19.07l-2.83-2.83" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M18 12h4" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M19.07 4.93l-2.83 2.83" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" stroke="white" stroke-width="2" opacity=".9"/>
-            </svg>
+        <div class="panel">
+          <div class="includes">
+            <div class="check">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+              </svg>
+              <div>
+                <b>PDF listo para presentar</b>
+                <span>Estructura formal: hechos, fundamentos y solicitud.</span>
+              </div>
+            </div>
+
+            <div class="check">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+              </svg>
+              <div>
+                <b>Sello / 1ª página</b>
+                <span>Área preparada para sellado o acuse (según vía).</span>
+              </div>
+            </div>
+
+            <div class="check">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+              </svg>
+              <div>
+                <b>Guía de presentación</b>
+                <span>Pasos claros para sede electrónica o registro.</span>
+              </div>
+            </div>
+
+            <div class="check">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+              </svg>
+              <div>
+                <b>Recordatorio .ics</b>
+                <span>Evento de calendario para no apurar plazos.</span>
+              </div>
+            </div>
           </div>
-          <h3>Radar y documentación técnica</h3>
-          <p>En sanciones por velocidad, a veces es útil solicitar documentación técnica y verificar coherencias de medición.</p>
-        </div>
 
-        <div class="cardx">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M7 17h10" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M8 7h8l2 4H6l2-4Z" stroke="white" stroke-width="2" opacity=".9"/>
-              <path d="M6 11v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-6" stroke="white" stroke-width="2" opacity=".9"/>
-            </svg>
+          <div class="sep" style="margin:22px 0;"></div>
+
+          <div class="grid-3">
+            <div class="cardx">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="white" stroke-width="2" opacity=".9"/>
+                </svg>
+              </div>
+              <h3>Privacidad</h3>
+              <p>Tus documentos y anexos son tuyos. Control orientado a minimizar datos.</p>
+            </div>
+
+            <div class="cardx">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3v18" stroke="white" stroke-width="2" opacity=".9"/>
+                  <path d="M7 7h10" stroke="white" stroke-width="2" opacity=".9"/>
+                  <path d="M6 21h12" stroke="white" stroke-width="2" opacity=".9"/>
+                </svg>
+              </div>
+              <h3>Transparencia</h3>
+              <p>Sin promesas de éxito. Plazos, vías de presentación y acuse: claro.</p>
+            </div>
+
+            <div class="cardx">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7l3-7Z" stroke="white" stroke-width="2" opacity=".9"/>
+                </svg>
+              </div>
+              <h3>Calidad del escrito</h3>
+              <p>Formato de despacho: orden, claridad y coherencia.</p>
+            </div>
           </div>
-          <h3>Error en matrícula o datos</h3>
-          <p>Comprueba matrícula, lugar, fecha, modelo y cualquier dato del vehículo. Errores materiales pueden ser relevantes.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GUÍAS -->
-  <section id="guias">
+    <!-- GUÍAS -->
+    <section class="section" id="guias">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Guías</p>
+            <h2>Contenido útil para casos comunes</h2>
+            <p class="lead">Material de apoyo para entender el contexto y preparar mejor los anexos.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <a class="guide" href="/recurrir_multa_baliza_v16.html">
+            <span class="tag">V16 · INFO</span>
+            <div class="guide-title">Guía Baliza V16</div>
+            <p>Qué cambia y cómo evitar sanciones por requisitos y uso.</p>
+          </a>
+
+          <a class="guide" href="/recurrir_multa_itv_caducada.html">
+            <span class="tag">ITV · INFO</span>
+            <div class="guide-title">ITV caducada</div>
+            <p>Qué revisar y cómo preparar la documentación básica.</p>
+          </a>
+
+          <a class="guide" href="/recurrir_multa_radar.html">
+            <span class="tag">RADAR · INFO</span>
+            <div class="guide-title">Radar: medición y documentos</div>
+            <p>Qué información suele pedirse y cómo ordenarla en anexos.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">FAQ</p>
+            <h2>Preguntas frecuentes</h2>
+            <p class="lead">Respuestas rápidas antes de entrar a la app.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>¿Puedo presentar el documento ante la Administración? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>Juravia genera escritos con formato formal y estructura estándar para su presentación. El resultado depende del expediente y de las pruebas aportadas.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué necesito para empezar? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>La notificación (o sus datos principales) y tus pruebas (fotos, documentación, justificantes). En la app te guiamos para adjuntar y ordenar anexos.</p>
+          </details>
+
+          <details>
+            <summary>¿Y si no tengo certificado digital? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>Según el órgano, podrás presentar online con sistemas alternativos o mediante registro. Por eso incluimos una guía de presentación.</p>
+          </details>
+
+          <details>
+            <summary>¿Se pueden añadir pruebas y anexos? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>Sí. Los anexos suelen ser la parte clave: fotos, documentos, solicitudes de información o cualquier evidencia relevante.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué hago tras presentar? <span class="chev" aria-hidden="true">+</span></summary>
+            <p>Guarda el acuse de recibo o justificante de registro. Es tu prueba de presentación dentro de plazo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER mejorado -->
+  <footer id="legal">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Guías y actualidad</p>
-          <h2>Contenido útil, sin humo</h2>
-          <p class="lead">Guías para entender situaciones comunes y evitar errores al presentar.</p>
+      <div class="foot-top">
+        <div class="foot-brand">
+          <img src="/Brand_Icon.png" alt="Juravia"/>
+          <div>
+            <b>JURAVIA</b>
+            <p>Plantillas y herramientas para ayudarte a presentar alegaciones y recursos de forma clara, ordenada y profesional.</p>
+          </div>
+        </div>
+
+        <div class="foot-grid">
+          <div class="foot">
+            <h4>Producto</h4>
+            <ul>
+              <li><a href="#como-funciona">Cómo funciona</a></li>
+              <li><a href="#que-incluye">Qué incluye</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="https://app.juravia.app/">Acceso a la app</a></li>
+            </ul>
+          </div>
+          <div class="foot">
+            <h4>Guías</h4>
+            <ul>
+              <li><a href="/recurrir_multa_baliza_v16.html">Baliza V16</a></li>
+              <li><a href="/recurrir_multa_itv_caducada.html">ITV caducada</a></li>
+              <li><a href="/recurrir_multa_radar.html">Radar</a></li>
+            </ul>
+          </div>
+          <div class="foot">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/legal.html">Aviso legal</a></li>
+              <li><a href="/privacidad.html">Privacidad</a></li>
+              <li><a href="/cookies.html">Cookies</a></li>
+              <li><a href="mailto:soporte@juravia.app">soporte@juravia.app</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="grid-3">
-        <a class="guide" href="/recurrir_multa_baliza_v16.html">
-          <span class="tag">V16 · INFO</span>
-          <div class="guide-title">Guía Baliza V16</div>
-          <p>Qué cambia y cómo evitar sanciones por requisitos y uso.</p>
-        </a>
-
-        <a class="guide" href="/recurrir_multa_itv_caducada.html">
-          <span class="tag">ITV · INFO</span>
-          <div class="guide-title">ITV caducada</div>
-          <p>Cómo actuar si te sancionan y qué revisar en la notificación.</p>
-        </a>
-
-        <a class="guide" href="/recurrir_multa_radar.html">
-          <span class="tag">RADAR · INFO</span>
-          <div class="guide-title">Márgenes y medición</div>
-          <p>Por qué el margen puede ser relevante y qué documentos suelen pedirse.</p>
-        </a>
-      </div>
-
-      <p class="micro" style="text-align:center; margin-top:16px;">
-        Dentro de la aplicación encontrarás múltiples plantillas por tipo de infracción y autoridad.
-      </p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Dudas frecuentes</p>
-          <h2>Respuestas rápidas antes de empezar</h2>
-          <p class="lead">Si necesitas un caso muy específico o complejo, considera consultarlo con un profesional.</p>
-        </div>
-        <div>
-          <a class="btn secondary" href="https://app.juravia.app/" id="cta-faq">Ir al Paso 1</a>
-        </div>
-      </div>
-
-      <div class="faq">
-        <details>
-          <summary>¿Los documentos se pueden presentar ante la Administración? <span class="chev" aria-hidden="true">+</span></summary>
-          <p>Juravia genera escritos con formato formal y estructura estándar para su presentación. Aun así, el resultado depende del expediente y de cómo se presenten las pruebas y el trámite.</p>
-        </details>
-
-        <details>
-          <summary>¿Qué necesito para empezar? <span class="chev" aria-hidden="true">+</span></summary>
-          <p>La notificación (o sus datos principales), tus pruebas (fotos, documentación, justificantes) y revisar el plazo indicado. En la app te guiamos para adjuntar anexos y ordenarlos.</p>
-        </details>
-
-        <details>
-          <summary>¿Y si no tengo certificado digital? <span class="chev" aria-hidden="true">+</span></summary>
-          <p>Dependiendo del órgano, podrás presentar online con sistemas alternativos o mediante registro. Por eso la app incluye una guía paso a paso para elegir la vía adecuada.</p>
-        </details>
-
-        <details>
-          <summary>¿Pronto pago o alegaciones? <span class="chev" aria-hidden="true">+</span></summary>
-          <p>En muchas sanciones existe reducción por pago temprano y, en algunos casos, alegar puede afectar a esa reducción. Juravia prioriza la transparencia: revisa tu notificación y decide en función de tu caso.</p>
-        </details>
-
-        <details>
-          <summary>¿Puedo adjuntar pruebas? <span class="chev" aria-hidden="true">+</span></summary>
-          <p>Sí. La parte clave del recurso suelen ser los anexos: fotografías, documentación, justificantes, solicitudes de información o cualquier elemento que apoye tu versión de los hechos.</p>
-        </details>
-
-        <details>
-          <summary>¿Qué pasa después de presentar? <span class="chev" aria-hidden="true">+</span></summary>
-          <p>Guarda siempre el acuse de recibo o justificante de registro. Ese documento es tu prueba de presentación dentro de plazo.</p>
-        </details>
+      <div class="fineprint">
+        © 2024 Juravia. Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados. Guarda siempre el acuse de recibo.
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- CTA FINAL -->
-  <section aria-label="Llamada a la acción final">
-    <div class="container">
-      <div class="panel" style="display:flex; align-items:center; justify-content:space-between; gap: 14px; flex-wrap:wrap;">
-        <div>
-          <p class="kicker" style="margin-bottom:8px;">Listo para empezar</p>
-          <h2 style="margin:0;">Entra al Paso 1 y genera tu escrito</h2>
-          <p class="lead" style="margin-top:8px;">Sin duplicar pantallas: aquí te informas; en la app lo haces.</p>
-        </div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn secondary" href="#como-funciona">Ver el proceso</a>
-          <a class="btn" href="https://app.juravia.app/" id="cta-bottom">Acceder ahora</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+  <script>
+  (function() {
+    // UTMs a app y a páginas internas .html
+    const KEYS = ["gclid","gbraid","wbraid","utm_source","utm_medium","utm_campaign","utm_term","utm_content","fbclid","msclkid"];
 
-<!-- FOOTER -->
-<footer id="legal">
-  <div class="container">
-    <div class="foot-grid">
-      <div class="foot">
-        <h4>Juravia Legaltech</h4>
-        <p>Herramientas para ayudarte a presentar alegaciones y recursos de forma clara, ordenada y con una experiencia de usuario profesional.</p>
-      </div>
+    function pickParams() {
+      try {
+        const u = new URL(window.location.href);
+        const out = new URLSearchParams();
+        KEYS.forEach(k => { const v = u.searchParams.get(k); if (v) out.set(k, v); });
+        return out;
+      } catch (e) { return new URLSearchParams(); }
+    }
 
-      <div class="foot">
-        <h4>Navegación</h4>
-        <ul>
-          <li><a href="#como-funciona">Cómo funciona</a></li>
-          <li><a href="#guias">Guías</a></li>
-          <li><a href="https://app.juravia.app/">Acceso plataforma</a></li>
-          <li><a href="mailto:soporte@juravia.app">soporte@juravia.app</a></li>
-        </ul>
-      </div>
+    function mergeIntoHref(href, params) {
+      try {
+        const url = new URL(href, window.location.origin);
+        if (!/^https?:$/.test(url.protocol)) return href;
+        params.forEach((v, k) => { if (!url.searchParams.get(k)) url.searchParams.set(k, v); });
+        return url.toString();
+      } catch (e) { return href; }
+    }
 
-      <div class="foot">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="/legal.html">Aviso legal</a></li>
-          <li><a href="/privacidad.html">Privacidad</a></li>
-          <li><a href="/cookies.html">Cookies</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="fineprint">
-      © 2024 Juravia. Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados. Guarda siempre el acuse de recibo.
-    </div>
-  </div>
-</footer>
-
-<script>
-(function() {
-  // Mantener UTMs / IDs de click a la app y a páginas internas
-  const KEYS = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "msclkid"];
-
-  function pickParams() {
-    try {
-      const u = new URL(window.location.href);
-      const out = new URLSearchParams();
-      KEYS.forEach(k => {
-        const v = u.searchParams.get(k);
-        if (v) out.set(k, v);
+    function decorateLinks(params) {
+      if (!params || [...params.keys()].length === 0) return;
+      document.querySelectorAll('a[href]').forEach(a => {
+        const h = a.getAttribute('href');
+        if (h && (h.includes('app.juravia.app') || h.includes('.html'))) {
+          a.setAttribute('href', mergeIntoHref(h, params));
+        }
       });
-      return out;
-    } catch (e) { return new URLSearchParams(); }
-  }
+    }
 
-  function mergeIntoHref(href, params) {
-    try {
-      const url = new URL(href, window.location.origin);
-      if (!/^https?:$/.test(url.protocol)) return href;
-      params.forEach((v, k) => { if (!url.searchParams.get(k)) url.searchParams.set(k, v); });
-      return url.toString();
-    } catch (e) { return href; }
-  }
+    // FAQ +/- (simple)
+    function initFaqChevrons(){
+      document.querySelectorAll('details').forEach(d => {
+        const chev = d.querySelector('.chev');
+        if(!chev) return;
+        const sync = () => { chev.textContent = d.open ? "–" : "+"; };
+        sync();
+        d.addEventListener('toggle', sync);
+      });
+    }
 
-  function decorateLinks(params) {
-    if (!params || [...params.keys()].length === 0) return;
-    document.querySelectorAll('a[href]').forEach(a => {
-      const h = a.getAttribute('href');
-      if (h && (h.includes('app.juravia.app') || h.includes('.html'))) {
-        const n = mergeIntoHref(h, params);
-        if (n) a.setAttribute('href', n);
-      }
+    // Menú móvil
+    function initMobileMenu(){
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      if(!btn || !menu) return;
+
+      const close = () => {
+        menu.style.display = 'none';
+        btn.setAttribute('aria-expanded', 'false');
+      };
+
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        if(open){ close(); return; }
+        menu.style.display = 'block';
+        btn.setAttribute('aria-expanded', 'true');
+      });
+
+      menu.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', close));
+      document.addEventListener('click', (e) => {
+        const isBtn = btn.contains(e.target);
+        const isMenu = menu.contains(e.target);
+        if(!isBtn && !isMenu) close();
+      });
+      document.addEventListener('keydown', (e) => { if(e.key === 'Escape') close(); });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      decorateLinks(pickParams());
+      initFaqChevrons();
+      initMobileMenu();
     });
-  }
-
-  // UX: cambiar símbolo +/− en FAQ al abrir/cerrar
-  function initFaqChevrons(){
-    document.querySelectorAll('details').forEach(d => {
-      const chev = d.querySelector('.chev');
-      if(!chev) return;
-      const sync = () => { chev.textContent = d.open ? "–" : "+"; };
-      sync();
-      d.addEventListener('toggle', sync);
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    decorateLinks(pickParams());
-    initFaqChevrons();
-  });
-})();
-</script>
-
+  })();
+  </script>
 </body>
 </html>
