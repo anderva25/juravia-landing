@@ -272,7 +272,19 @@
       z-index: 1;
     }
 
-    /* Logo principal: más sutil (evita “pegatina” / sobre-dominancia) */
+    
+
+    /* Animación sutil de entrada (cabecera) */
+    .hero-content{
+      animation: heroEnter .72s cubic-bezier(.2,.8,.2,1) both;
+      will-change: transform, opacity;
+    }
+    @keyframes heroEnter{
+      from{ opacity: 0; transform: translateY(10px); }
+      to  { opacity: 1; transform: translateY(0); }
+    }
+
+/* Logo principal: más sutil (evita “pegatina” / sobre-dominancia) */
     .hero-logo{
       width: min(240px, 52vw);
       height: auto;
@@ -324,7 +336,30 @@
       background: var(--gold);
       box-shadow: 0 0 0 4px rgba(212,175,55,.18);
     }
-    .hero-fine{
+    
+
+    /* Micro trust line (institucional, sin ruido) */
+    .trustline{
+      margin-top: 12px;
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content:center;
+      align-items:center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(212,175,55,.22);
+      backdrop-filter: blur(10px);
+      color: rgba(255,255,255,.78);
+      font-size: 12.5px;
+      line-height: 1.35;
+      max-width: 980px;
+    }
+    .trustline b{ color: rgba(255,255,255,.92); font-weight: 950; }
+    .trustsep{ opacity:.55; }
+
+.hero-fine{
       margin-top: 8px;
       color: rgba(255,255,255,.64);
       font-size: 12.5px;
@@ -588,7 +623,29 @@
     }
     :focus-visible{ outline: 3px solid rgba(212,175,55,.60); outline-offset: 3px; border-radius: 12px; }
 
-    @media (max-width: 980px){
+    
+
+    /* Accesibilidad: foco visible consistente (teclado) */
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+      outline: 3px solid rgba(212,175,55,.78);
+      outline-offset: 3px;
+      border-radius: 14px;
+    }
+    .btn:focus-visible{
+      outline: 3px solid rgba(212,175,55,.88);
+      outline-offset: 4px;
+      box-shadow:
+        0 0 0 6px rgba(212,175,55,.16),
+        0 24px 54px rgba(0,0,0,.46),
+        0 0 42px rgba(212,175,55,.30);
+    }
+    details:focus-within{
+      border-color: rgba(212,175,55,.55);
+      box-shadow: 0 0 0 5px rgba(212,175,55,.12);
+    }
+    summary{ border-radius: 14px; padding: 6px 4px; }
+
+@media (max-width: 980px){
       nav{display:none;}
       .menu-btn{display:inline-flex;}
       .grid-3{grid-template-columns: 1fr;}
@@ -598,7 +655,15 @@
       .hero-logo{width: min(220px, 72vw); transform: translateY(-8px);}
       .hero-content{margin-top: 0;}
     }
-  </style>
+  
+    @media (prefers-reduced-motion: reduce){
+      html, body{ scroll-behavior: auto; }
+      .hero-content{ animation: none !important; }
+      .btn::before{ animation: none !important; }
+      *{ transition: none !important; }
+    }
+
+</style>
 </head>
 
 <body>
@@ -665,6 +730,13 @@
             <span class="pill"><span class="dot" aria-hidden="true"></span>PDF profesional</span>
             <span class="pill"><span class="dot" aria-hidden="true"></span>Guía de presentación</span>
             <span class="pill"><span class="dot" aria-hidden="true"></span>Recordatorio .ics</span>
+          </div>
+
+
+          <div class="trustline" role="note" aria-label="Información institucional">
+            <span>Órganos habituales: <b>DGT</b> · <b>SCT</b> · <b>Trafikoa</b> · <b>Municipal</b></span>
+            <span class="trustsep" aria-hidden="true">·</span>
+            <span>No afiliado a organismos públicos</span>
           </div>
 
           <p class="hero-fine">
