@@ -71,10 +71,14 @@
       position: fixed;
       inset: 0;
       z-index: -1;
+      /* Más luz en cabecera (hero) sin perder contraste en el resto */
       background:
-        radial-gradient(ellipse at 30% 0%, rgba(11,74,162,.25), rgba(0,0,0,0) 60%),
-        radial-gradient(ellipse at 76% 10%, rgba(212,175,55,.22), rgba(0,0,0,0) 55%),
-        linear-gradient(180deg, rgba(5,9,20,.10), rgba(5,9,20,.76) 44%, rgba(5,9,20,.92));
+        
+        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.24), rgba(255,255,255,0) 58%),
+        radial-gradient(ellipse at 30% 0%, rgba(11,74,162,.18), rgba(0,0,0,0) 64%),
+        radial-gradient(ellipse at 76% 10%, rgba(212,175,55,.16), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(5,9,20,0), rgba(5,9,20,.56) 52%, rgba(5,9,20,.88))
+    ;
     }
 
     a{color:inherit}
@@ -234,9 +238,27 @@
 /* HERO: todo sobre el banner (sin tarjetas / sin recuadros) */
     .hero{
       padding: 22px 0 8px;
-      min-height: 52vh;
+      min-height: 60vh;
       display:flex;
       align-items:flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Lavado de luz solo en cabecera (evita “bruma” oscura en la zona de marca) */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset: -8px 0 auto 0;
+      height: 340px;
+      background:
+        
+        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.26), rgba(255,255,255,0) 64%),
+        radial-gradient(ellipse at 30% 0%, rgba(11,74,162,.16), rgba(0,0,0,0) 62%),
+        radial-gradient(ellipse at 75% 0%, rgba(212,175,55,.12), rgba(0,0,0,0) 60%)
+    ;
+      opacity: 0.92;
+      pointer-events:none;
+      z-index: 0;
     }
     .hero-content{
       display:flex;
@@ -246,7 +268,9 @@
       gap: 14px;
       padding: 6px 8px;
       margin-top: -18px;
-      }
+      position: relative;
+      z-index: 1;
+    }
 
     /* Logo principal: más sutil (evita “pegatina” / sobre-dominancia) */
     .hero-logo{
@@ -280,18 +304,7 @@
       align-items:center;
     }
 
-    
-
-    .hero-price{
-      margin: 8px 0 0;
-      font-size: 13.2px;
-      line-height: 1.5;
-      color: rgba(255,255,255,.80);
-      text-shadow: 0 10px 22px rgba(0,0,0,.40);
-    }
-    .hero-price b{ color: var(--gold); font-weight: 950; }
-
-.mini-trust{
+    .mini-trust{
       margin-top: 12px;
       display:flex; gap: 10px; flex-wrap: wrap; justify-content:center;
     }
@@ -392,6 +405,34 @@
     .cardx h3{ margin: 0 0 8px; font-size: 16px; letter-spacing: -0.2px; }
     .cardx p{ margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
 
+    /* Badge de precio (solo en comparativa) */
+    .price-row{ margin-top: 10px; display:flex; gap:10px; flex-wrap:wrap; }
+    .price-badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(212,175,55,.12);
+      border: 1px solid rgba(212,175,55,.38);
+      color: rgba(255,255,255,.95);
+      font-weight: 950;
+      font-size: 12.5px;
+      letter-spacing: .2px;
+    }
+    .price-badge span{
+      opacity:.9;
+      font-weight: 900;
+    }
+
+    /* Listas cortas (para comparativa) */
+    .ulx{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13.2px;
+      line-height: 1.55;
+    }
+    .ulx li{ margin: 6px 0; }
+
     .check{
       display:flex; gap: 10px; align-items:flex-start;
       padding: 10px 12px;
@@ -428,16 +469,7 @@
       display:inline-block;
       color: rgba(255,255,255,.95);
     }
-    
-
-    .tagrow{
-      display:flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-
-.guide-title{ font-weight: 950; font-size: 14px; margin: 10px 0 6px; }
+    .guide-title{ font-weight: 950; font-size: 14px; margin: 10px 0 6px; }
     .guide p{ margin:0; font-size: 12.5px; color: var(--muted); line-height: 1.55; }
 
     /* FAQ */
@@ -587,6 +619,7 @@
         <nav aria-label="Navegación principal">
           <a class="navlink" href="#como-funciona">Cómo funciona</a>
           <a class="navlink" href="#que-incluye">Qué incluye</a>
+          <a class="navlink" href="#casos">Casos</a>
           <a class="navlink" href="#guias">Guías</a>
           <a class="navlink" href="#faq">FAQ</a>
           <a class="navlink" href="#legal">Legal</a>
@@ -602,6 +635,7 @@
       <div class="mobile-drawer" id="mobileMenu" role="dialog" aria-label="Menú móvil">
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#que-incluye">Qué incluye</a>
+        <a href="#casos">Casos</a>
         <a href="#guias">Guías</a>
         <a href="#faq">FAQ</a>
         <a href="#legal">Legal</a>
@@ -627,8 +661,7 @@
             <a class="btn" href="https://app.juravia.app/" id="cta-hero">Generar mi alegación</a>
           </div>
 
-          <p class="hero-price">Desde <b>6,99 €</b> por escrito · Plan mensual <b>19 €</b></p>
-<div class="mini-trust" aria-label="Entregables">
+          <div class="mini-trust" aria-label="Entregables">
             <span class="pill"><span class="dot" aria-hidden="true"></span>PDF profesional</span>
             <span class="pill"><span class="dot" aria-hidden="true"></span>Guía de presentación</span>
             <span class="pill"><span class="dot" aria-hidden="true"></span>Recordatorio .ics</span>
@@ -779,69 +812,171 @@
       </div>
     </section>
 
-
-    <!-- COMPARATIVA (precio) -->
-    <section class="section" id="comparativa">
+    
+    
+    <!-- CASOS HABITUALES -->
+    <section class="section" id="casos">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Precio</p>
-          <h2>Coste claro frente a alternativas</h2>
-          <p class="lead">Juravia ofrece un precio cerrado y un pack listo para presentar. En servicios tradicionales, el coste suele depender del alcance y de las actuaciones necesarias.</p>
+          <p class="kicker">Casos habituales</p>
+          <h2>Plantillas para escenarios frecuentes</h2>
+          <p class="lead">Ejemplos típicos en los que conviene ordenar pruebas y presentar con un escrito claro. En la app encontrarás <b>más de 37 plantillas</b> y variantes según órgano y situación.</p>
         </div>
 
         <div class="grid-3">
           <div class="cardx">
             <div class="icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M4 12h16" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+                <path d="M7 7h10M7 17h10" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
               </svg>
             </div>
-            <div class="tagrow">
-              <span class="tag">Desde 6,99 €</span>
-              <span class="tag">19 € / mes</span>
-            </div>
-            <h3>Juravia</h3>
-            <p>Precio predecible: genera el escrito, ordena anexos y descarga PDF profesional + guía de presentación + recordatorio .ics.</p>
+            <h3>Velocidad / radar</h3>
+            <p>Solicitud de documentación del equipo, verificación de datos y anexos (fotos, señalización, margen de error).</p>
           </div>
 
           <div class="cardx">
             <div class="icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 7h16M6 3h12v18H6V3Z" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M7 10V7a5 5 0 0 1 10 0v3" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+                <path d="M6 10h12v10H6V10Z" stroke="white" stroke-width="2" opacity=".9"/>
               </svg>
             </div>
-            <div class="tagrow">
-              <span class="tag">Coste variable</span>
-              <span class="tag">Presupuesto a medida</span>
-            </div>
-            <h3>Despacho / gestoría</h3>
-            <p>Intervención profesional con presupuesto según complejidad, trámites y actuaciones adicionales (alegaciones, recursos, subsanaciones, etc.).</p>
+            <h3>Estacionamiento / ORA</h3>
+            <p>Tickets, autorizaciones, carga/descarga, señalización y fotografías del entorno para soporte probatorio.</p>
           </div>
 
+          <div class="cardx">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M6 2h12v20H6V2Z" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M9 6h6M9 10h6M9 14h6" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>ITV / documentación</h3>
+            <p>Fechas, justificantes, revisiones y documentación técnica: orden y consistencia del expediente.</p>
+          </div>
+
+          <div class="cardx">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l8 8-8 8-8-8 8-8Z" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M12 7v6" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+                <path d="M12 16h.01" stroke="white" stroke-width="3" opacity=".9" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Señalización / vía</h3>
+            <p>Señales contradictorias, obras, visibilidad o ubicación: fotografías y croquis para reforzar la alegación.</p>
+          </div>
+
+          <div class="cardx">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 6v6l4 2" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20Z" stroke="white" stroke-width="2" opacity=".9"/>
+              </svg>
+            </div>
+            <h3>Notificación y plazos</h3>
+            <p>Control de fechas, conservación de acuse y documentación para trazabilidad del procedimiento.</p>
+          </div>
+
+          <div class="cardx">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16M7 4v6M17 4v6" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+                <path d="M6 14h12M6 18h8" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+                <path d="M5 10h14v12H5V10Z" stroke="white" stroke-width="2" opacity=".9"/>
+              </svg>
+            </div>
+            <h3>Tramitación y registro</h3>
+            <p>Preparación del pack final (PDF + anexos + guía) para presentar y archivar justificantes correctamente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARATIVA -->
+    <!-- COMPARATIVA -->
+    <section class="section alt" id="comparativa">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Comparativa</p>
+          <h2>Juravia vs despacho/gestoría vs hacerlo por tu cuenta</h2>
+          <p class="lead">Comparación orientativa centrada en coste, tiempo y entregables. Los precios de terceros pueden variar según complejidad, provincia y actuaciones.</p>
+        </div>
+
+        <div class="grid-3">
           <div class="cardx">
             <div class="icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                 <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7l3-7Z" stroke="white" stroke-width="2" opacity=".9"/>
               </svg>
             </div>
-            <div class="tagrow">
-              <span class="tag">Coste bajo</span>
-              <span class="tag">Más tiempo</span>
+            <h3>Juravia</h3>
+            <p>Preparación documental rápida con formato profesional y entregables de presentación.</p>
+
+            <div class="price-row" aria-label="Precios Juravia">
+              <span class="price-badge"><span>Escrito</span> 6,99 €</span>
+              <span class="price-badge"><span>Mensual</span> 19 €</span>
+            </div>
+
+            <ul class="ulx">
+              <li>Escrito estructurado (hechos, fundamentos y solicitud).</li>
+              <li>Pack final: PDF + guía de presentación + recordatorio .ics.</li>
+              <li>Anexos ordenados para adjuntar y conservar acuse.</li>
+            </ul>
+          </div>
+
+          <div class="cardx">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 21V7l8-4 8 4v14" stroke="white" stroke-width="2" opacity=".9"/>
+                <path d="M9 21v-8h6v8" stroke="white" stroke-width="2" opacity=".9"/>
+              </svg>
+            </div>
+            <h3>Despacho / gestoría</h3>
+            <p>Asistencia personalizada y, en su caso, representación. Coste normalmente variable.</p>
+
+            <div class="price-row" aria-label="Coste despacho orientativo">
+              <span class="price-badge"><span>Coste</span> elevado y variable</span>
+            </div>
+
+            <ul class="ulx">
+              <li>Presupuesto a medida según actuaciones y complejidad.</li>
+              <li>Recomendable en expedientes complejos o de alta cuantía.</li>
+              <li>Mayor coordinación y tiempos de tramitación.</li>
+            </ul>
+          </div>
+
+          <div class="cardx">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 20h9" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
+              </svg>
             </div>
             <h3>Hacerlo por tu cuenta</h3>
-            <p>Menor coste económico, pero mayor inversión de tiempo y riesgo de errores formales o anexos poco ordenados en la presentación.</p>
+            <p>Si conoces el procedimiento y sabes qué anexos aportar y cómo ordenarlos.</p>
+
+            <div class="price-row" aria-label="Coste por tu cuenta">
+              <span class="price-badge"><span>Coste</span> bajo</span>
+            </div>
+
+            <ul class="ulx">
+              <li>Más tiempo: redacción, sede/registro y anexos.</li>
+              <li>Riesgo de errores formales o documentación incompleta.</li>
+              <li>Depende de tu experiencia y del órgano competente.</li>
+            </ul>
           </div>
         </div>
 
-        <p class="lead" style="margin-top:14px; font-size:12.5px; color: rgba(255,255,255,.62); max-width: 92ch;">
-          Comparativa informativa. Juravia no sustituye asesoramiento jurídico personalizado. Los costes y el alcance de un servicio profesional pueden variar según el caso.
+        <p class="hero-fine" style="margin-top:14px;">
+          Nota: comparativa informativa. Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados.
         </p>
       </div>
     </section>
 
-
-    
-    <!-- SOBRE JURAVIA -->
+<!-- SOBRE JURAVIA -->
     <section class="section" id="sobre-juravia">
       <div class="container">
         <div class="section-head">
