@@ -1,23 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://juravia.app/</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://juravia.app/recurrir_multa_itv_caducada.html</loc>
-    <lastmod>2026-01-04</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://juravia.app/recurrir_multa_radar.html</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://juravia.app/recurrir_multa_alcoholemia.html</loc>
+    <lastmod>2026-01-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_baliza_v16.html</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_casco.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_cinturon.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_documentacion.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_drogas.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_itv_caducada.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_itv_estacionado.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_movil.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_ora.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_ora_ticket_visible.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_radar.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_radar_margen_error.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_radar_sin_foto.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_semaforo_rojo.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_v16_no_certificada.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
