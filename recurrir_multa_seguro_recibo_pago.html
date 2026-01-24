@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Seguro obligatorio: recibo y justificantes de pago | Juravia</title>
+  <meta name="description" content="Qué anexos adjuntar para demostrar vigencia, tomador y matrícula. Guía profesional con motivos y anexos para recurrir en Juravia."/>
+  <link rel="canonical" href="https://juravia.app/recurrir_multa_seguro_recibo_pago.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Seguro obligatorio: recibo y justificantes de pago | Juravia"/>
+  <meta property="og:description" content="Qué anexos adjuntar para demostrar vigencia, tomador y matrícula. Guía profesional con motivos y anexos para recurrir en Juravia."/>
+  <meta property="og:url" content="https://juravia.app/recurrir_multa_seguro_recibo_pago.html"/>
+  <meta property="og:image" content="https://juravia.app/juravia_banner_road_legaltech_clean_1920x1080.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <style>
+    :root{
+      --ink:#ffffff;
+      --muted: rgba(255,255,255,.86);
+      --bg:#050914;
+      --panel: rgba(255,255,255,.06);
+      --brand:#0b4aa2;
+      --brand2:#083c84;
+      --gold:#d4af37;
+      --shadow: 0 18px 46px rgba(0,0,0,.45);
+      --radius: 22px;
+      --max: 980px;
+      --bg-img: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
+      --bg-pos: 50% 16%;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%; scroll-behavior:smooth;}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color:var(--ink);
+      background: var(--bg);
+      overflow-x:hidden;
+      line-height:1.45;
+    }
+    .bg-wrap{
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-image: var(--bg-img);
+      background-size: cover;
+      background-position: var(--bg-pos);
+      background-repeat: no-repeat;
+      transform: scale(1.02);
+      filter: saturate(1.02) contrast(1.03);
+    }
+    .bg-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(1100px 520px at 20% 0%, rgba(11,74,162,.42), rgba(5,9,20,.18) 60%),
+        linear-gradient(180deg, rgba(5,9,20,.35), rgba(5,9,20,.92));
+    }
+
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: linear-gradient(180deg, rgba(11,74,162,.92), rgba(8,60,132,.86));
+      border-bottom: 1px solid rgba(212,175,55,.55);
+      backdrop-filter: blur(12px);
+    }
+    .topbar-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 10px 16px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap: 10px;
+      text-decoration:none;
+      color:#fff;
+      min-width: 160px;
+    }
+    .brand img{
+      width: 30px; height: 30px;
+      display:block;
+      filter: drop-shadow(0 10px 16px rgba(0,0,0,.30));
+    }
+    .brand span{ font-weight: 900; letter-spacing: .4px; font-size: 14px; }
+    .back{
+      color: rgba(255,255,255,.92);
+      text-decoration:none;
+      font-weight: 800;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 999px;
+      padding: 9px 12px;
+      background: rgba(0,0,0,.12);
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+      white-space: nowrap;
+    }
+    .back:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
+
+    .container{width:100%; max-width: var(--max); margin:0 auto; padding: 22px 16px 60px;}
+    .hero{
+      margin-top: 16px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      font-size: 12px;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.84);
+      margin: 0 0 10px;
+    }
+    .kicker::before{
+      content:"";
+      width: 10px; height: 10px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 0 5px rgba(212,175,55,.18);
+    }
+    h1{ margin: 0 0 10px; font-size: 34px; line-height: 1.1; }
+    .lead{ color: var(--muted); font-size: 16px; margin: 0 0 14px; }
+    .actions{display:flex; flex-wrap:wrap; gap: 10px; align-items:center; margin-top: 12px;}
+    .btn{
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--brand), var(--brand2));
+      color:#fff;
+      text-decoration:none;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 14px 18px;
+      border-radius: 18px;
+      font-weight: 950;
+      letter-spacing: .35px;
+      border: 1px solid rgba(212,175,55,.92);
+      box-shadow: 0 18px 40px rgba(0,0,0,.42);
+      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+      white-space: nowrap;
+      font-size: 15px;
+    }
+    .btn:hover{ transform: translateY(-2px); filter: brightness(1.02); box-shadow: 0 24px 46px rgba(0,0,0,.46); }
+    .btn-ghost{
+      text-decoration:none;
+      color: rgba(255,255,255,.92);
+      font-weight: 900;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 18px;
+      padding: 13px 16px;
+      background: rgba(255,255,255,.04);
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+      white-space: nowrap;
+      font-size: 15px;
+    }
+    .btn-ghost:hover{ border-color: rgba(212,175,55,.55); background: rgba(255,255,255,.06); transform: translateY(-1px); }
+
+    .toc{
+      margin-top: 14px;
+      background: rgba(0,0,0,.12);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 18px;
+      padding: 14px 16px;
+    }
+    .toc-title{ font-weight: 950; margin: 0 0 8px; letter-spacing:.2px; }
+    .toc a{ color: rgba(255,255,255,.92); text-decoration:none; font-weight: 800; }
+    .toc a:hover{ text-decoration: underline; text-decoration-color: rgba(212,175,55,.8); }
+    .toc ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.86); }
+    .toc li{ margin: 6px 0; }
+
+    section.card{
+      margin-top: 16px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      padding: 18px 18px;
+    }
+    h2{ margin: 0 0 10px; font-size: 22px; }
+    h3{ margin: 14px 0 8px; font-size: 18px; }
+    p{ margin: 0 0 10px; color: rgba(255,255,255,.88); }
+    ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.88); }
+    li{ margin: 6px 0; }
+
+    .callout{
+      margin-top: 12px;
+      background: rgba(11,74,162,.16);
+      border: 1px solid rgba(212,175,55,.35);
+      border-radius: 18px;
+      padding: 12px 14px;
+      color: rgba(255,255,255,.92);
+    }
+    details{
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: 12px 14px;
+      margin-top: 10px;
+    }
+    details[open]{ border-color: rgba(212,175,55,.45); background: rgba(255,255,255,.045); }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight: 950;
+      letter-spacing:.2px;
+      color: rgba(255,255,255,.92);
+    }
+    summary::-webkit-details-marker{display:none}
+    .related{
+      display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px;
+    }
+    .pill{
+      text-decoration:none;
+      display:inline-flex; align-items:center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.12);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.92);
+      font-weight: 850;
+      font-size: 14px;
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+    }
+    .pill:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
+
+    footer{
+      margin-top: 18px;
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+      text-align:center;
+    }
+    footer a{ color: rgba(255,255,255,.82); }
+    </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Seguro obligatorio: recibo y justificantes de pago", "url": "https://juravia.app/recurrir_multa_seguro_recibo_pago.html", "description": "Qué anexos adjuntar para demostrar vigencia, tomador y matrícula. Guía profesional con motivos y anexos para recurrir en Juravia.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué debo acreditar en seguro obligatorio: recibo y justificantes de pago?", "acceptedAnswer": {"@type": "Answer", "text": "Debes aportar hechos verificables (lugar, señalización, documentos) y enlazarlos con el motivo de impugnación elegido. Evita afirmaciones sin soporte."}}, {"@type": "Question", "name": "¿Qué anexo suele ser más determinante?", "acceptedAnswer": {"@type": "Answer", "text": "El que conecta directamente con el hecho discutido: fotografía del punto real, documento oficial (permiso/registro) o justificante temporal (ticket/cita)."}}, {"@type": "Question", "name": "¿Puedo usar esta guía si la sanción la tramita un ayuntamiento?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La estructura es válida para la mayoría de órganos sancionadores. Ajusta el canal de presentación al órgano que figure en tu notificación."}}, {"@type": "Question", "name": "¿Cómo pido la prueba completa del expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Incluye una solicitud expresa de acceso a expediente y de incorporación de la prueba completa, indicando que la información recibida es incompleta."}}, {"@type": "Question", "name": "¿Qué hago si el caso es especialmente grave o complejo?", "acceptedAnswer": {"@type": "Answer", "text": "Si hay riesgo elevado (retirada de puntos, inmovilización, posible ámbito penal o transporte), considera revisión profesional antes de presentar."}}]}</script>
+</head>
+<body>
+  <div class="bg-wrap" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/#inicio" aria-label="Juravia, inicio">
+        <img src="/brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+        <span>JURAVIA</span>
+      </a>
+      <a class="back" href="/#guias">Volver al inicio</a>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="hero" id="top">
+      <p class="kicker">Guía · Caso específico</p>
+      <h1>Seguro obligatorio: recibo y justificantes de pago</h1>
+      <p class="lead">Qué anexos adjuntar para demostrar vigencia, tomador y matrícula.</p>
+      <div class="actions">
+        <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
+        <a class="btn-ghost" href="/recurrir_multa_seguro_obligatorio.html">Ver guía principal: Seguro obligatorio</a>
+      </div>
+      <div class="toc">
+        <div class="toc-title">Contenido</div>
+        <ul>
+          <li><a href="#enfoque">Enfoque recomendado</a></li>
+          <li><a href="#argumentos">Cómo redactarlo (argumentos)</a></li>
+          <li><a href="#anexos">Anexos recomendados</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="callout">
+        Consejo práctico: concreta el punto exacto (lugar, fecha, hora) y aporta prueba directa. La claridad probatoria suele pesar más que textos largos.
+      </div>
+    </div>
+
+    <section class="card" id="enfoque">
+      <h2>Enfoque recomendado</h2>
+      <p>Este supuesto es frecuente y suele resolverse mejor cuando el escrito:</p>
+      <ul>
+        <li>Define con precisión el hecho controvertido y por qué la prueba/relato no lo acredita.</li>
+        <li>Explica de forma cronológica y breve lo ocurrido, evitando afirmaciones genéricas.</li>
+        <li>Aporta anexos numerados que permitan verificar lo alegado de inmediato.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="argumentos">
+      <h2>Cómo redactarlo (argumentos)</h2>
+      <p>Modelo de estructura argumental (adáptalo a tu caso):</p>
+      <ul>
+        <li><b>Hechos:</b> describe el contexto y el punto exacto, con referencias a anexos.</li>
+        <li><b>Motivo:</b> plantea la insuficiencia probatoria o el defecto concreto (señalización, identificación, etc.).</li>
+        <li><b>Solicitud:</b> pide la estimación y, subsidiariamente, acceso a expediente y prueba completa.</li>
+      </ul>
+      <div class="related" aria-label="Motivos procedimentales relacionados">
+        <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
+      </div>
+    </section>
+
+    <section class="card" id="anexos">
+      <h2>Anexos recomendados</h2>
+      <ul>
+        <li>Copia íntegra de la denuncia y documentos anexos recibidos.</li>
+        <li>Fotografías del punto real (señalización, marcas, acceso), fechadas si es posible.</li>
+        <li>Justificante documental aplicable al supuesto (permiso, ticket, registro, cita, factura, etc.).</li>
+        <li>Solicitud de acceso al expediente y a la prueba completa si no consta en la notificación.</li>
+      </ul>
+      <details>
+        <summary>Texto listo para pegar (solicitud de expediente)</summary>
+        <p>Se solicita expresamente acceso al expediente administrativo y a la prueba completa que sustente la denuncia, incluyendo imágenes, actas, informes y cualquier documento en que se base la imputación, a fin de poder ejercer adecuadamente el derecho de defensa y evitar indefensión.</p>
+      </details>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Qué debo acreditar en seguro obligatorio: recibo y justificantes de pago?</summary><p>Debes aportar hechos verificables (lugar, señalización, documentos) y enlazarlos con el motivo de impugnación elegido. Evita afirmaciones sin soporte.</p></details><details><summary>¿Qué anexo suele ser más determinante?</summary><p>El que conecta directamente con el hecho discutido: fotografía del punto real, documento oficial (permiso/registro) o justificante temporal (ticket/cita).</p></details><details><summary>¿Puedo usar esta guía si la sanción la tramita un ayuntamiento?</summary><p>Sí. La estructura es válida para la mayoría de órganos sancionadores. Ajusta el canal de presentación al órgano que figure en tu notificación.</p></details><details><summary>¿Cómo pido la prueba completa del expediente?</summary><p>Incluye una solicitud expresa de acceso a expediente y de incorporación de la prueba completa, indicando que la información recibida es incompleta.</p></details><details><summary>¿Qué hago si el caso es especialmente grave o complejo?</summary><p>Si hay riesgo elevado (retirada de puntos, inmovilización, posible ámbito penal o transporte), considera revisión profesional antes de presentar.</p></details>
+    </section>
+    
+    <footer>
+      Juravia — Plantillas legales para defender tus derechos · <a href="/#inicio">juravia.app</a>
+    </footer>
+  </main>
+</body>
+</html>

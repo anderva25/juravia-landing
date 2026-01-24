@@ -640,14 +640,32 @@
       *{ transition: none !important; }
     }
 
-    /* SEO · Guías por tipo (listado compacto) */
-    .guide-groups{display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px;}
-    .guide-group{background: rgba(255,255,255,.86); border:1px solid rgba(255,255,255,.10); border-radius: 18px; padding:14px 14px;}
-    .guide-group h3{margin:0 0 10px; font-size:16px;}
-    .link-grid{list-style:none; padding:0; margin:0; display:grid; gap:8px;}
-    .link-grid a{display:block; text-decoration:none; padding:10px 10px; border-radius:14px; border:1px solid rgba(212,175,55,.20); background: rgba(212,175,55,.08);}
-    .link-grid a:hover{transform: translateY(-1px); transition: transform .15s ease;}
-  </style>
+
+    /* Guías (acordeones por tipología) */
+    .guides-accordion{display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px;}
+    @media (max-width: 860px){ .guides-accordion{grid-template-columns: 1fr;} }
+
+    .guide-acc{ padding: 14px 16px; }
+    .guide-pills{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 12px; }
+    .pill-link{
+      text-decoration:none;
+      display:inline-flex; align-items:center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.10);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.92);
+      font-weight: 900;
+      font-size: 14px;
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+    }
+    .pill-link:hover{
+      border-color: rgba(212,175,55,.55);
+      background: rgba(0,0,0,.16);
+      transform: translateY(-1px);
+    }
+
+</style>
 </head>
 
 <body>
@@ -661,7 +679,7 @@
       <div class="topbar-inner">
         <!-- Menú: icono SOLO -->
         <a class="brand" href="#inicio" aria-label="Juravia, inicio">
-          <img src="/topnav_logo.png" alt="Juravia"/>
+          <img src="/brand_icon.png" onerror="this.onerror=null;this.src='brand_icon.png';" alt="Juravia"/>
           <span>JURAVIA</span>
         </a>
 
@@ -702,9 +720,9 @@
           <img class="hero-logo" src="/logo.png" alt="Juravia"/>
           <div class="gold-underline" aria-hidden="true"></div>
 
-          <h1 class="slogan">
+          <p class="slogan">
             Defensa legal en carretera. Genera alegaciones y recursos en minutos: incorpora documentación probatoria y descarga un PDF profesional listo para su presentación.
-          </h1>
+          </p>
 
           <div class="hero-cta">
             <a class="btn" href="https://app.juravia.app/" id="cta-hero">Generar mi alegación</a>
@@ -1071,46 +1089,53 @@
     <div class="section-head">
       <p class="kicker">Guías</p>
       <h2>Guías por tipo de multa (plantillas de Juravia)</h2>
-      <p class="lead">Accede a la guía de cada plantilla y genera tu escrito con estructura profesional. Todas las páginas están pensadas para que puedas identificar <b>motivos</b>, preparar <b>anexos</b> y presentar dentro de plazo.</p>
+      <p class="lead">Selecciona una tipología para ver sus plantillas. Cada guía incluye estructura, motivos habituales y checklist de anexos para preparar el escrito con criterio profesional.</p>
     </div>
 
-    <div class="guide-groups">
-      <div class="guide-group">
-  <h3>Conducción y señalización</h3>
-  <ul class="link-grid">
-    <li><a href="/recurrir_multa_velocidad.html">Exceso de velocidad (radar fijo y tramo)</a></li><li><a href="/recurrir_multa_semaforo_fotorrojo.html">Semáforo en rojo (fotorrojo)</a></li><li><a href="/recurrir_multa_stop_ceda.html">STOP / ceda el paso</a></li><li><a href="/recurrir_multa_giro_prohibido.html">Giro prohibido</a></li><li><a href="/recurrir_multa_adelantamiento_linea_continua.html">Adelantamiento / línea continua</a></li><li><a href="/recurrir_multa_distancia_seguridad.html">Distancia de seguridad</a></li><li><a href="/recurrir_multa_luces_iluminacion.html">Luces e iluminación obligatoria</a></li>
-  </ul>
-</div>
-      <div class="guide-group">
-  <h3>Estacionamiento y accesos</h3>
-  <ul class="link-grid">
-    <li><a href="/recurrir_multa_estacionamiento_indebido.html">Estacionamiento indebido</a></li><li><a href="/recurrir_multa_zona_residentes.html">Zona de residentes</a></li><li><a href="/recurrir_multa_carga_descarga.html">Carga y descarga</a></li><li><a href="/recurrir_multa_parada_doble_fila.html">Parada / doble fila</a></li><li><a href="/recurrir_multa_plaza_pmr.html">Plaza PMR sin autorización</a></li><li><a href="/recurrir_multa_vado_garaje.html">Vado / acceso a garaje</a></li><li><a href="/recurrir_multa_retirada_deposito_municipal.html">Retirada y depósito municipal</a></li>
-  </ul>
-</div>
-      <div class="guide-group">
-  <h3>Tecnología y seguridad</h3>
-  <ul class="link-grid">
-    <li><a href="/recurrir_multa_movil.html">Uso de teléfono móvil</a></li><li><a href="/recurrir_multa_auriculares_audio.html">Auriculares / dispositivos de audio</a></li><li><a href="/recurrir_multa_cinturon_sri.html">Cinturón de seguridad / SRI</a></li>
-  </ul>
-</div>
-      <div class="guide-group">
-  <h3>Movilidad y restricciones</h3>
-  <ul class="link-grid">
-    <li><a href="/recurrir_multa_zbe.html">ZBE (Zona de Bajas Emisiones)</a></li><li><a href="/recurrir_multa_vmp_patinete.html">VMP / patinete eléctrico</a></li><li><a href="/recurrir_multa_carril_bus_bao.html">Carril bus / BAO / bus‑taxi</a></li><li><a href="/recurrir_multa_acceso_restringido_temporal.html">Acceso restringido temporal</a></li><li><a href="/recurrir_multa_matricula_extranjera.html">Matrícula extranjera</a></li><li><a href="/recurrir_multa_baliza_v16.html">Baliza V16 conectada</a></li>
-  </ul>
-</div>
-      <div class="guide-group">
-  <h3>Documentación e ITV</h3>
-  <ul class="link-grid">
-    <li><a href="/recurrir_multa_itv_caducada.html">ITV caducada</a></li><li><a href="/recurrir_multa_itv_desfavorable_subsanacion.html">ITV desfavorable (subsanación)</a></li><li><a href="/recurrir_multa_seguro_obligatorio.html">Seguro obligatorio</a></li><li><a href="/recurrir_multa_permiso_conducir_caducado.html">Permiso de conducir caducado</a></li>
-  </ul>
-</div>
-      <div class="guide-group">
-  <h3>Procedimiento y transporte profesional</h3>
-  <ul class="link-grid">
-    <li><a href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a></li><li><a href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a></li><li><a href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a></li><li><a href="/recurrir_multa_identificacion_conductor_empresas.html">Identificación del conductor (empresas/flotas)</a></li><li><a href="/recurrir_multa_taller_arrendamiento.html">Taller / arrendamiento</a></li><li><a href="/recurrir_multa_carga_estiba.html">Carga y estiba</a></li><li><a href="/recurrir_multa_tacografo.html">Tacógrafo</a></li><li><a href="/recurrir_multa_transporte_autorizaciones.html">Transporte: autorizaciones/tarjeta</a></li><li><a href="/recurrir_multa_adr_mercancias_peligrosas.html">ADR: mercancías peligrosas</a></li><li><a href="/recurrir_multa_senalizacion_obras.html">Señalización temporal de obras</a></li><li><a href="/recurrir_multa_alcohol_drogas.html">Alcohol / drogas (ámbito penal posible)</a></li>
-  </ul>
-</div>
+    <div class="guides-accordion">
+      
+        <details class="guide-acc">
+          <summary>Conducción y señalización</summary>
+          <div class="guide-pills">
+            <a class="pill-link" href="/recurrir_multa_velocidad.html">Exceso de velocidad (radar fijo y tramo)</a><a class="pill-link" href="/recurrir_multa_semaforo_fotorrojo.html">Semáforo en rojo (fotorrojo)</a><a class="pill-link" href="/recurrir_multa_stop_ceda.html">STOP / ceda el paso</a><a class="pill-link" href="/recurrir_multa_giro_prohibido.html">Giro prohibido</a><a class="pill-link" href="/recurrir_multa_adelantamiento_linea_continua.html">Adelantamiento prohibido / línea continua</a><a class="pill-link" href="/recurrir_multa_distancia_seguridad.html">Distancia de seguridad</a><a class="pill-link" href="/recurrir_multa_luces_iluminacion.html">Luces e iluminación obligatoria</a><a class="pill-link" href="/recurrir_multa_carril_bus_bao.html">Carril bus / BAO / bus-taxi</a><a class="pill-link" href="/recurrir_multa_senalizacion_obras.html">Señalización temporal de obras</a>
+          </div>
+        </details>
+        
+        <details class="guide-acc">
+          <summary>Estacionamiento y accesos</summary>
+          <div class="guide-pills">
+            <a class="pill-link" href="/recurrir_multa_estacionamiento_indebido.html">Estacionamiento indebido</a><a class="pill-link" href="/recurrir_multa_zona_residentes.html">Zona de residentes</a><a class="pill-link" href="/recurrir_multa_carga_descarga.html">Carga y descarga</a><a class="pill-link" href="/recurrir_multa_parada_doble_fila.html">Parada / doble fila</a><a class="pill-link" href="/recurrir_multa_plaza_pmr.html">Plaza PMR sin autorización</a><a class="pill-link" href="/recurrir_multa_vado_garaje.html">Vado / acceso a garaje</a><a class="pill-link" href="/recurrir_multa_retirada_deposito_municipal.html">Retirada y depósito municipal</a>
+          </div>
+        </details>
+        
+        <details class="guide-acc">
+          <summary>Tecnología y seguridad</summary>
+          <div class="guide-pills">
+            <a class="pill-link" href="/recurrir_multa_movil.html">Uso de teléfono móvil</a><a class="pill-link" href="/recurrir_multa_auriculares_audio.html">Auriculares / dispositivos de audio</a><a class="pill-link" href="/recurrir_multa_cinturon_sri.html">Cinturón de seguridad / SRI</a><a class="pill-link" href="/recurrir_multa_alcohol_drogas.html">Alcohol / drogas (posible ámbito penal)</a><a class="pill-link" href="/recurrir_multa_baliza_v16.html">Baliza V16 conectada</a>
+          </div>
+        </details>
+        
+        <details class="guide-acc">
+          <summary>Movilidad y restricciones</summary>
+          <div class="guide-pills">
+            <a class="pill-link" href="/recurrir_multa_zbe.html">ZBE (Zona de Bajas Emisiones)</a><a class="pill-link" href="/recurrir_multa_vmp_patinete.html">VMP / patinete eléctrico</a><a class="pill-link" href="/recurrir_multa_acceso_restringido_temporal.html">Acceso restringido temporal</a><a class="pill-link" href="/recurrir_multa_matricula_extranjera.html">Matrícula extranjera</a>
+          </div>
+        </details>
+        
+        <details class="guide-acc">
+          <summary>Documentación y procedimiento</summary>
+          <div class="guide-pills">
+            <a class="pill-link" href="/recurrir_multa_itv_caducada.html">ITV caducada</a><a class="pill-link" href="/recurrir_multa_itv_desfavorable_subsanacion.html">ITV desfavorable: subsanación en plazo</a><a class="pill-link" href="/recurrir_multa_seguro_obligatorio.html">Seguro obligatorio</a><a class="pill-link" href="/recurrir_multa_permiso_conducir_caducado.html">Permiso de conducir caducado</a><a class="pill-link" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill-link" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill-link" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a><a class="pill-link" href="/recurrir_multa_identificacion_conductor_empresas.html">Identificación del conductor (empresas / flotas)</a><a class="pill-link" href="/recurrir_multa_taller_arrendamiento.html">Taller / arrendamiento (cesión del vehículo)</a>
+          </div>
+        </details>
+        
+        <details class="guide-acc">
+          <summary>Transporte profesional</summary>
+          <div class="guide-pills">
+            <a class="pill-link" href="/recurrir_multa_carga_estiba.html">Carga y estiba</a><a class="pill-link" href="/recurrir_multa_tacografo.html">Tacógrafo / tiempos de conducción y descanso</a><a class="pill-link" href="/recurrir_multa_transporte_autorizaciones.html">Transporte: autorizaciones / tarjeta</a><a class="pill-link" href="/recurrir_multa_adr_mercancias_peligrosas.html">ADR / mercancías peligrosas</a>
+          </div>
+        </details>
+        
     </div>
   </div>
 </section>
@@ -1174,7 +1199,7 @@
     <div class="container">
       <div class="foot-top" style="display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between;">
         <div class="foot-brand" style="display:flex; gap:12px; max-width:520px;">
-          <img src="/topnav_logo.png" alt="Juravia" style="width:42px; height:42px; filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));"/>
+          <img src="/brand_icon.png" onerror="this.onerror=null;this.src='brand_icon.png';" alt="Juravia" style="width:42px; height:42px; filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));"/>
           <div>
             <b style="display:block; font-size:14px; letter-spacing:.5px;">JURAVIA</b>
             <p style="margin:8px 0 0; font-size:13px; color: rgba(255,255,255,.72); line-height:1.55;">
@@ -1198,7 +1223,7 @@
             <ul>
               <li><a href="/recurrir_multa_baliza_v16.html">Baliza V16</a></li>
               <li><a href="/recurrir_multa_itv_caducada.html">ITV caducada</a></li>
-              <li><a href="/recurrir_multa_velocidad.html">Radar</a></li>
+              <li><a href="/recurrir_multa_radar.html">Radar</a></li>
             </ul>
           </div>
           <div class="foot">
