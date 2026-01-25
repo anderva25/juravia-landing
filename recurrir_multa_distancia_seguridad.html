@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Distancia de seguridad | Juravia</title>
-  <meta name="description" content="Guía profesional para alegar multas por distancia de seguridad: qué revisar, motivos habituales y anexos recomendados."/>
+  <meta name="description" content="Guía profesional para preparar alegaciones y anexos en sanciones por distancia de seguridad. Estructura, motivos habituales y checklist documental."/>
   <link rel="canonical" href="https://juravia.app/recurrir_multa_distancia_seguridad.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Distancia de seguridad | Juravia"/>
@@ -231,12 +231,35 @@
       text-align:center;
     }
     footer a{ color: rgba(255,255,255,.82); }
-    </style>
+    
+
+    /* Footer (landings + guías) */
+    .site-footer{
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
+    .site-footer a:hover{text-decoration: underline;}
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 10px 0 18px;
+    }
+    .footer-left{display:flex; align-items:center; gap: 10px;}
+    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
+    .footer-name{font-weight: 800; letter-spacing: .08em;}
+    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
+    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Distancia de seguridad", "url": "https://juravia.app/recurrir_multa_distancia_seguridad.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por distancia de seguridad. Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
-  <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Por qué es difícil recurrir estas multas?", "acceptedAnswer": {"@type": "Answer", "text": "Porque a menudo se basan en valoración del agente. La alegación mejora si evidencias falta de concreción o ausencia de prueba objetiva."}}, {"@type": "Question", "name": "¿Qué debo buscar en el boletín?", "acceptedAnswer": {"@type": "Answer", "text": "Que describa condiciones, situación de tráfico y el riesgo. Si es genérico, es un punto a trabajar."}}, {"@type": "Question", "name": "¿Sirve aportar un vídeo?", "acceptedAnswer": {"@type": "Answer", "text": "Si existe y es pertinente, puede ayudar. Prioriza evidencia clara y coherente."}}, {"@type": "Question", "name": "¿Qué anexos adjunto?", "acceptedAnswer": {"@type": "Answer", "text": "Denuncia y cualquier prueba objetiva. Sin soporte, céntrate en motivación y concreción."}}, {"@type": "Question", "name": "¿Conviene pedir expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, especialmente si sospechas que existe vídeo o documentación adicional."}}]}
-</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuándo conviene presentar alegaciones en una multa de distancia de seguridad?", "acceptedAnswer": {"@type": "Answer", "text": "Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción."}}, {"@type": "Question", "name": "¿Qué documentación mínima debería adjuntar?", "acceptedAnswer": {"@type": "Answer", "text": "Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente."}}, {"@type": "Question", "name": "¿Puedo pedir la prueba completa y el expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen."}}, {"@type": "Question", "name": "¿Qué pasa si presento fuera de plazo?", "acceptedAnswer": {"@type": "Answer", "text": "Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro."}}, {"@type": "Question", "name": "¿Juravia sustituye a un abogado?", "acceptedAnswer": {"@type": "Answer", "text": "Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional."}}]}</script>
 </head>
 <body>
   <div class="bg-wrap" aria-hidden="true"></div>
@@ -244,11 +267,11 @@
 
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="/#inicio" aria-label="Juravia, inicio">
+      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
         <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
         <span>JURAVIA</span>
       </a>
-      <a class="back" href="/#guias">Volver al inicio</a>
+      <a class="back" href="index.html#guias">Volver al inicio</a>
     </div>
   </header>
 
@@ -257,7 +280,7 @@
     <div class="hero" id="top">
       <p class="kicker">Guía · Plantilla Juravia</p>
       <h1>Distancia de seguridad</h1>
-      <p class="lead">Guía profesional para sanciones por no mantener la distancia de seguridad. Suelen apoyarse en observación y valoración del agente; por eso es clave revisar la concreción del hecho y la prueba disponible.</p>
+      <p class="lead">Guía para sanciones por no respetar la distancia de seguridad. La línea habitual de defensa revisa: concreción del hecho, método de apreciación/medición y prueba.</p>
       <div class="actions">
         <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
         <a class="btn-ghost" href="#anexos">Ver checklist documental</a>
@@ -279,40 +302,35 @@
 
     <section class="card" id="revisar">
       <h2>Qué revisar en la denuncia</h2>
-      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Un control ordenado evita alegaciones genéricas y refuerza la consistencia del escrito.</p>
-<ul>
-        <li>Descripción del hecho: distancia, situación de tráfico y maniobra imputada.</li>
-        <li>Si existe prueba objetiva (vídeo/foto) o solo denuncia por agente.</li>
-        <li>Lugar exacto, velocidad aproximada, condiciones de la vía (lluvia, congestión) si constan.</li>
-        <li>Identificación del vehículo y coherencia del boletín.</li>
-        <li>Si hubo frenazo/maniobra del vehículo precedente (si es objetivable).</li>
-        <li>Notificación y plazos.</li>
-        <li>Errores materiales en hora/lugar.</li>
+      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Una revisión ordenada evita alegaciones genéricas y mejora la consistencia del escrito.</p>
+      <ul>
+        <li>Relato de hechos: distancia estimada y condiciones de la vía.</li><li>Si existe método objetivo (vídeo/medición) o mera apreciación.</li><li>Tráfico, meteorología y velocidad aproximada.</li><li>Prueba aportada y claridad de imágenes.</li>
       </ul>
-</section>
+    </section>
 
     <section class="card" id="motivos">
       <h2>Motivos habituales de impugnación</h2>
-      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. La solidez suele estar en la concreción: hechos verificables, anexos numerados y una conclusión clara.</p>
-<ul>
-        <li>Denuncia genérica sin concreción suficiente de distancia, condiciones y situación.</li>
-        <li>Ausencia de prueba objetiva o insuficiencia para acreditar el riesgo.</li>
-        <li>Incoherencias del expediente respecto al lugar o circunstancias.</li>
-        <li>Error material en identificación.</li>
-        <li>Falta de motivación suficiente sobre el peligro concreto.</li>
-        <li>Defectos procedimentales relevantes.</li>
+      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. En general, la Administración valora mejor escritos concretos, con hechos y anexos numerados.</p>
+      <ul>
+        <li>Falta de concreción: denuncia genérica sin datos de contexto.</li><li>Ausencia de método objetivo o prueba insuficiente.</li><li>Circunstancias del tráfico que impiden mantener distancia ideal (a contextualizar).</li><li>Errores formales/procedimentales.</li>
       </ul>
-</section>
+      
+    </section>
 
     <section class="card" id="anexos">
       <h2>Pruebas y anexos recomendados</h2>
-      <p>Aporta solo lo relevante y numera los anexos. La prueba documental y fotográfica, bien ordenada, suele pesar más que textos largos sin soporte.</p>
-<ul>
-        <li>Denuncia completa y prueba oficial si existe.</li>
-        <li>Cualquier evidencia objetiva disponible (p. ej., vídeo propio) cuando sea pertinente y lícito.</li>
-        <li>Croquis/explicación factual del tráfico y maniobras, sin especulación.</li>
+      <p>Ordena los anexos con numeración (Anexo 1, Anexo 2…) y referencia cada uno en el texto. Si falta prueba en la notificación, solicita acceso al expediente y pide la incorporación de la prueba completa.</p>
+      <ul>
+        <li>Solicitud de prueba completa (vídeo si existe).</li><li>Declaración de hechos y circunstancias (tráfico/meteorología).</li><li>Cualquier evidencia adicional (dashcam si la tienes, sin datos sensibles).</li><li>Croquis o explicación técnica si procede.</li>
       </ul>
-</section>
+      <details>
+        <summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
+        <p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
+        <ul>
+          <li>Anexo 1 · Solicitud de prueba completa (vídeo si existe).</li><li>Anexo 2 · Declaración de hechos y circunstancias (tráfico/meteorología).</li><li>Anexo 3 · Cualquier evidencia adicional (dashcam si la tienes, sin datos sensibles).</li><li>Anexo 4 · Croquis o explicación técnica si procede.</li>
+        </ul>
+      </details>
+    </section>
 
     <section class="card" id="presentacion">
       <h2>Cómo presentar alegaciones/recurso</h2>
@@ -325,7 +343,7 @@
         <li>Guarda el acuse de recibo y el expediente descargado.</li>
       </ol>
       <div class="related" aria-label="Refuerza tu recurso con motivos procedimentales">
-        <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
+        <a class="pill" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
       </div>
     </section>
 
@@ -333,22 +351,32 @@
       <h2>Guías relacionadas</h2>
       <p>Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
       <div class="related">
-        <a class="pill" href="/recurrir_multa_distancia_prueba_medicion.html">Distancia de seguridad: cómo se acredita la medición</a><a class="pill" href="/recurrir_multa_distancia_condiciones_via.html">Distancia de seguridad: condiciones de vía y tráfico</a>
+        <a class="pill" href="recurrir_multa_distancia_prueba_medicion.html">Distancia de seguridad: cómo se acredita la medición</a><a class="pill" href="recurrir_multa_distancia_condiciones_via.html">Distancia de seguridad: condiciones de vía y tráfico</a>
       </div>
     </section>
 
     <section class="card" id="faq">
       <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Por qué es difícil recurrir estas multas?</summary><p>Porque a menudo se basan en valoración del agente. La alegación mejora si evidencias falta de concreción o ausencia de prueba objetiva.</p></details>
-      <details><summary>¿Qué debo buscar en el boletín?</summary><p>Que describa condiciones, situación de tráfico y el riesgo. Si es genérico, es un punto a trabajar.</p></details>
-      <details><summary>¿Sirve aportar un vídeo?</summary><p>Si existe y es pertinente, puede ayudar. Prioriza evidencia clara y coherente.</p></details>
-      <details><summary>¿Qué anexos adjunto?</summary><p>Denuncia y cualquier prueba objetiva. Sin soporte, céntrate en motivación y concreción.</p></details>
-      <details><summary>¿Conviene pedir expediente?</summary><p>Sí, especialmente si sospechas que existe vídeo o documentación adicional.</p></details>
-</section>
+      <details><summary>¿Cuándo conviene presentar alegaciones en una multa de distancia de seguridad?</summary><p>Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción.</p></details><details><summary>¿Qué documentación mínima debería adjuntar?</summary><p>Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente.</p></details><details><summary>¿Puedo pedir la prueba completa y el expediente?</summary><p>Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen.</p></details><details><summary>¿Qué pasa si presento fuera de plazo?</summary><p>Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro.</p></details><details><summary>¿Juravia sustituye a un abogado?</summary><p>Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional.</p></details>
+    </section>
     
-    <footer>
-      Juravia — Plantillas legales para defender tus derechos · <a href="/#inicio">juravia.app</a>
-    </footer>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+      <div class="footer-meta">
+        <div class="footer-name">JURAVIA</div>
+        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
+      </div>
+    </div>
+    <div class="footer-links" aria-label="Enlaces">
+      <a href="index.html#guias">Guías</a>
+      <a href="index.html#sobre-juravia">Sobre Juravia</a>
+      <a href="quienes_somos.html">Quiénes somos</a>
+      <a href="#top">Subir</a>
+    </div>
+  </div>
+</footer>
   </main>
 </body>
 </html>

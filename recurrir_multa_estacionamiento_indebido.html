@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Estacionamiento indebido | Juravia</title>
-  <meta name="description" content="Cómo alegar una multa por estacionamiento indebido: señalización, prueba fotográfica, motivos habituales y anexos recomendados para un escrito sólido."/>
+  <meta name="description" content="Guía profesional para preparar alegaciones y anexos en sanciones por estacionamiento indebido. Estructura, motivos habituales y checklist documental."/>
   <link rel="canonical" href="https://juravia.app/recurrir_multa_estacionamiento_indebido.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Estacionamiento indebido | Juravia"/>
@@ -231,12 +231,35 @@
       text-align:center;
     }
     footer a{ color: rgba(255,255,255,.82); }
-    </style>
+    
+
+    /* Footer (landings + guías) */
+    .site-footer{
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
+    .site-footer a:hover{text-decoration: underline;}
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 10px 0 18px;
+    }
+    .footer-left{display:flex; align-items:center; gap: 10px;}
+    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
+    .footer-name{font-weight: 800; letter-spacing: .08em;}
+    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
+    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Estacionamiento indebido", "url": "https://juravia.app/recurrir_multa_estacionamiento_indebido.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por estacionamiento indebido. Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
-  <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué suele hacer perder fuerza a una alegación de estacionamiento?", "acceptedAnswer": {"@type": "Answer", "text": "Alegar de forma genérica sin fotos del lugar ni referencia concreta a la señalización aplicable. En estacionamiento, la prueba del entorno es determinante."}}, {"@type": "Question", "name": "¿Puedo recurrir si tenía ticket pero no era visible?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del caso. Si puedes aportar el ticket válido y demostrar que corresponde a tu matrícula y franja horaria, es un elemento probatorio relevante."}}, {"@type": "Question", "name": "¿Cómo demuestro que la señal no se veía?", "acceptedAnswer": {"@type": "Answer", "text": "Aporta fotografías desde la aproximación real del vehículo (misma calle y sentido) y, si es posible, contextualiza con un croquis o mapa."}}, {"@type": "Question", "name": "¿Y si la foto oficial no muestra la señal?", "acceptedAnswer": {"@type": "Answer", "text": "Eso puede reforzar la alegación: si la Administración no acredita la señalización o la situación exacta, la prueba puede ser insuficiente."}}, {"@type": "Question", "name": "¿Qué anexos son imprescindibles?", "acceptedAnswer": {"@type": "Answer", "text": "Denuncia, fotos del lugar y cualquier justificante (ticket/permiso) que respalde tu versión."}}]}
-</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuándo conviene presentar alegaciones en una multa de estacionamiento indebido?", "acceptedAnswer": {"@type": "Answer", "text": "Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción."}}, {"@type": "Question", "name": "¿Qué documentación mínima debería adjuntar?", "acceptedAnswer": {"@type": "Answer", "text": "Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente."}}, {"@type": "Question", "name": "¿Puedo pedir la prueba completa y el expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen."}}, {"@type": "Question", "name": "¿Qué pasa si presento fuera de plazo?", "acceptedAnswer": {"@type": "Answer", "text": "Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro."}}, {"@type": "Question", "name": "¿Juravia sustituye a un abogado?", "acceptedAnswer": {"@type": "Answer", "text": "Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional."}}]}</script>
 </head>
 <body>
   <div class="bg-wrap" aria-hidden="true"></div>
@@ -244,11 +267,11 @@
 
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="/#inicio" aria-label="Juravia, inicio">
+      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
         <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
         <span>JURAVIA</span>
       </a>
-      <a class="back" href="/#guias">Volver al inicio</a>
+      <a class="back" href="index.html#guias">Volver al inicio</a>
     </div>
   </header>
 
@@ -257,7 +280,7 @@
     <div class="hero" id="top">
       <p class="kicker">Guía · Plantilla Juravia</p>
       <h1>Estacionamiento indebido</h1>
-      <p class="lead">Guía profesional para impugnar denuncias por estacionamiento indebido. La clave está en la señalización aplicable, la descripción del hecho y la prueba (fotografías, ticket/permiso y circunstancias del lugar).</p>
+      <p class="lead">Guía para impugnar sanciones por estacionamiento indebido (prohibición, ORA/tiempo, zona regulada). El objetivo es acreditar hechos, señalización y, si procede, autorización o pago.</p>
       <div class="actions">
         <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
         <a class="btn-ghost" href="#anexos">Ver checklist documental</a>
@@ -279,42 +302,35 @@
 
     <section class="card" id="revisar">
       <h2>Qué revisar en la denuncia</h2>
-      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Un control ordenado evita alegaciones genéricas y refuerza la consistencia del escrito.</p>
-<ul>
-        <li>Tipo de infracción descrita (prohibición, zona regulada, carga/descarga, vado, etc.).</li>
-        <li>Señalización vertical y horizontal existente en el punto y su visibilidad.</li>
-        <li>Hora exacta y duración indicada (si es parada/estacionamiento y si existe margen).</li>
-        <li>Fotografías aportadas: que permitan situar el vehículo y la señalización.</li>
-        <li>Datos del vehículo (matrícula, marca/modelo) y coincidencia con la prueba.</li>
-        <li>Existencia de ticket/permiso válido y su correspondencia con matrícula y hora.</li>
-        <li>Notificación correcta y completa (hechos, lugar, fecha y órgano).</li>
+      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Una revisión ordenada evita alegaciones genéricas y mejora la consistencia del escrito.</p>
+      <ul>
+        <li>Lugar exacto, tipo de vía, señal vertical y marcas viales.</li><li>Motivo de la denuncia (prohibición, tiempo excedido, zona, obstaculización).</li><li>Prueba aportada (foto del vehículo y de la señalización).</li><li>Posibles autorizaciones (residente, PMR, carga/descarga, vado, etc.).</li>
       </ul>
-</section>
+    </section>
 
     <section class="card" id="motivos">
       <h2>Motivos habituales de impugnación</h2>
-      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. La solidez suele estar en la concreción: hechos verificables, anexos numerados y una conclusión clara.</p>
-<ul>
-        <li>Señalización insuficiente, contradictoria o no visible (si puede acreditarse).</li>
-        <li>Descripción de hechos imprecisa o no coincidente con la realidad (lugar/posición).</li>
-        <li>Prueba fotográfica insuficiente para acreditar prohibición o ubicación exacta.</li>
-        <li>Existencia de autorización, ticket o permiso vigente (residentes, PMR, carga/descarga).</li>
-        <li>Error material en matrícula/vehículo o en la ubicación indicada.</li>
-        <li>Circunstancias objetivas acreditables (p. ej., señal temporal retirada, expendedor fuera de servicio).</li>
+      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. En general, la Administración valora mejor escritos concretos, con hechos y anexos numerados.</p>
+      <ul>
+        <li>Señalización inexistente, confusa o no visible en el punto concreto.</li><li>Hecho no acreditado suficientemente (sin fotos o sin elementos esenciales).</li><li>Existencia de ticket/permiso/autorización válido no tenido en cuenta.</li><li>Error material (matrícula, ubicación, hora) o falta de motivación.</li>
       </ul>
-</section>
+      
+    </section>
 
     <section class="card" id="anexos">
       <h2>Pruebas y anexos recomendados</h2>
-      <p>Aporta solo lo relevante y numera los anexos. La prueba documental y fotográfica, bien ordenada, suele pesar más que textos largos sin soporte.</p>
-<ul>
-        <li>Denuncia completa y, si existe, fotos oficiales.</li>
-        <li>Fotos propias del punto con señales y marcas viales (varios ángulos).</li>
-        <li>Ticket/justificante (ORA, carga/descarga) o permiso (residentes/PMR) con matrícula.</li>
-        <li>Capturas de mapa y croquis del lugar con ubicación exacta.</li>
-        <li>Justificante de avería/urgencia si procede (muy excepcional y siempre documentado).</li>
+      <p>Ordena los anexos con numeración (Anexo 1, Anexo 2…) y referencia cada uno en el texto. Si falta prueba en la notificación, solicita acceso al expediente y pide la incorporación de la prueba completa.</p>
+      <ul>
+        <li>Fotografías del lugar: señal vertical, línea amarilla/azul, marcas y contexto.</li><li>Ticket ORA/permiso de residente o justificante de autorización (si aplica).</li><li>Prueba de actividad (albarán/entrega) si era una operación breve.</li><li>Plano o captura de ubicación (Google Maps) para situar señales.</li>
       </ul>
-</section>
+      <details>
+        <summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
+        <p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
+        <ul>
+          <li>Anexo 1 · Fotografías del lugar: señal vertical, línea amarilla/azul, marcas y contexto.</li><li>Anexo 2 · Ticket ORA/permiso de residente o justificante de autorización (si aplica).</li><li>Anexo 3 · Prueba de actividad (albarán/entrega) si era una operación breve.</li><li>Anexo 4 · Plano o captura de ubicación (Google Maps) para situar señales.</li>
+        </ul>
+      </details>
+    </section>
 
     <section class="card" id="presentacion">
       <h2>Cómo presentar alegaciones/recurso</h2>
@@ -327,7 +343,7 @@
         <li>Guarda el acuse de recibo y el expediente descargado.</li>
       </ol>
       <div class="related" aria-label="Refuerza tu recurso con motivos procedimentales">
-        <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
+        <a class="pill" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
       </div>
     </section>
 
@@ -335,22 +351,32 @@
       <h2>Guías relacionadas</h2>
       <p>Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
       <div class="related">
-        <a class="pill" href="/recurrir_multa_estacionamiento_ticket_visible_error_matricula.html">Estacionamiento: ticket visible o error de matrícula</a><a class="pill" href="/recurrir_multa_estacionamiento_senalizacion_deficiente.html">Estacionamiento: señalización confusa o insuficiente</a>
+        <a class="pill" href="recurrir_multa_estacionamiento_ticket_visible_error_matricula.html">Estacionamiento: ticket visible o error de matrícula</a><a class="pill" href="recurrir_multa_estacionamiento_senalizacion_deficiente.html">Estacionamiento: señalización confusa o insuficiente</a>
       </div>
     </section>
 
     <section class="card" id="faq">
       <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Qué suele hacer perder fuerza a una alegación de estacionamiento?</summary><p>Alegar de forma genérica sin fotos del lugar ni referencia concreta a la señalización aplicable. En estacionamiento, la prueba del entorno es determinante.</p></details>
-      <details><summary>¿Puedo recurrir si tenía ticket pero no era visible?</summary><p>Depende del caso. Si puedes aportar el ticket válido y demostrar que corresponde a tu matrícula y franja horaria, es un elemento probatorio relevante.</p></details>
-      <details><summary>¿Cómo demuestro que la señal no se veía?</summary><p>Aporta fotografías desde la aproximación real del vehículo (misma calle y sentido) y, si es posible, contextualiza con un croquis o mapa.</p></details>
-      <details><summary>¿Y si la foto oficial no muestra la señal?</summary><p>Eso puede reforzar la alegación: si la Administración no acredita la señalización o la situación exacta, la prueba puede ser insuficiente.</p></details>
-      <details><summary>¿Qué anexos son imprescindibles?</summary><p>Denuncia, fotos del lugar y cualquier justificante (ticket/permiso) que respalde tu versión.</p></details>
-</section>
+      <details><summary>¿Cuándo conviene presentar alegaciones en una multa de estacionamiento indebido?</summary><p>Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción.</p></details><details><summary>¿Qué documentación mínima debería adjuntar?</summary><p>Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente.</p></details><details><summary>¿Puedo pedir la prueba completa y el expediente?</summary><p>Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen.</p></details><details><summary>¿Qué pasa si presento fuera de plazo?</summary><p>Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro.</p></details><details><summary>¿Juravia sustituye a un abogado?</summary><p>Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional.</p></details>
+    </section>
     
-    <footer>
-      Juravia — Plantillas legales para defender tus derechos · <a href="/#inicio">juravia.app</a>
-    </footer>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+      <div class="footer-meta">
+        <div class="footer-name">JURAVIA</div>
+        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
+      </div>
+    </div>
+    <div class="footer-links" aria-label="Enlaces">
+      <a href="index.html#guias">Guías</a>
+      <a href="index.html#sobre-juravia">Sobre Juravia</a>
+      <a href="quienes_somos.html">Quiénes somos</a>
+      <a href="#top">Subir</a>
+    </div>
+  </div>
+</footer>
   </main>
 </body>
 </html>

@@ -231,7 +231,32 @@
       text-align:center;
     }
     footer a{ color: rgba(255,255,255,.82); }
-    </style>
+    
+
+    /* Footer (landings + guías) */
+    .site-footer{
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
+    .site-footer a:hover{text-decoration: underline;}
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 10px 0 18px;
+    }
+    .footer-left{display:flex; align-items:center; gap: 10px;}
+    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
+    .footer-name{font-weight: 800; letter-spacing: .08em;}
+    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
+    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Carga y estiba: pesaje, sujeción y prueba técnica", "url": "https://juravia.app/recurrir_multa_estiba_prueba_pesaje.html", "description": "Anexos típicos: albaranes, fotos de estiba, informe técnico o checklist de sujeción. Guía profesional con motivos y anexos para recurrir en Juravia.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué debo acreditar en carga y estiba: pesaje, sujeción y prueba técnica?", "acceptedAnswer": {"@type": "Answer", "text": "Debes aportar hechos verificables (lugar, señalización, documentos) y enlazarlos con el motivo de impugnación elegido. Evita afirmaciones sin soporte."}}, {"@type": "Question", "name": "¿Qué anexo suele ser más determinante?", "acceptedAnswer": {"@type": "Answer", "text": "El que conecta directamente con el hecho discutido: fotografía del punto real, documento oficial (permiso/registro) o justificante temporal (ticket/cita)."}}, {"@type": "Question", "name": "¿Puedo usar esta guía si la sanción la tramita un ayuntamiento?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La estructura es válida para la mayoría de órganos sancionadores. Ajusta el canal de presentación al órgano que figure en tu notificación."}}, {"@type": "Question", "name": "¿Cómo pido la prueba completa del expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Incluye una solicitud expresa de acceso a expediente y de incorporación de la prueba completa, indicando que la información recibida es incompleta."}}, {"@type": "Question", "name": "¿Qué hago si el caso es especialmente grave o complejo?", "acceptedAnswer": {"@type": "Answer", "text": "Si hay riesgo elevado (retirada de puntos, inmovilización, posible ámbito penal o transporte), considera revisión profesional antes de presentar."}}]}</script>
@@ -242,11 +267,11 @@
 
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="/#inicio" aria-label="Juravia, inicio">
-        <img src="/brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
+        <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
         <span>JURAVIA</span>
       </a>
-      <a class="back" href="/#guias">Volver al inicio</a>
+      <a class="back" href="index.html#guias">Volver al inicio</a>
     </div>
   </header>
 
@@ -258,7 +283,7 @@
       <p class="lead">Anexos típicos: albaranes, fotos de estiba, informe técnico o checklist de sujeción.</p>
       <div class="actions">
         <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
-        <a class="btn-ghost" href="/recurrir_multa_carga_estiba.html">Ver guía principal: Carga y estiba</a>
+        <a class="btn-ghost" href="recurrir_multa_carga_estiba.html">Ver guía principal: Carga y estiba</a>
       </div>
       <div class="toc">
         <div class="toc-title">Contenido</div>
@@ -293,7 +318,7 @@
         <li><b>Solicitud:</b> pide la estimación y, subsidiariamente, acceso a expediente y prueba completa.</li>
       </ul>
       <div class="related" aria-label="Motivos procedimentales relacionados">
-        <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
+        <a class="pill" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
       </div>
     </section>
 
@@ -316,9 +341,23 @@
       <details><summary>¿Qué debo acreditar en carga y estiba: pesaje, sujeción y prueba técnica?</summary><p>Debes aportar hechos verificables (lugar, señalización, documentos) y enlazarlos con el motivo de impugnación elegido. Evita afirmaciones sin soporte.</p></details><details><summary>¿Qué anexo suele ser más determinante?</summary><p>El que conecta directamente con el hecho discutido: fotografía del punto real, documento oficial (permiso/registro) o justificante temporal (ticket/cita).</p></details><details><summary>¿Puedo usar esta guía si la sanción la tramita un ayuntamiento?</summary><p>Sí. La estructura es válida para la mayoría de órganos sancionadores. Ajusta el canal de presentación al órgano que figure en tu notificación.</p></details><details><summary>¿Cómo pido la prueba completa del expediente?</summary><p>Incluye una solicitud expresa de acceso a expediente y de incorporación de la prueba completa, indicando que la información recibida es incompleta.</p></details><details><summary>¿Qué hago si el caso es especialmente grave o complejo?</summary><p>Si hay riesgo elevado (retirada de puntos, inmovilización, posible ámbito penal o transporte), considera revisión profesional antes de presentar.</p></details>
     </section>
     
-    <footer>
-      Juravia — Plantillas legales para defender tus derechos · <a href="/#inicio">juravia.app</a>
-    </footer>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+      <div class="footer-meta">
+        <div class="footer-name">JURAVIA</div>
+        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
+      </div>
+    </div>
+    <div class="footer-links" aria-label="Enlaces">
+      <a href="index.html#guias">Guías</a>
+      <a href="index.html#sobre-juravia">Sobre Juravia</a>
+      <a href="quienes_somos.html">Quiénes somos</a>
+      <a href="#top">Subir</a>
+    </div>
+  </div>
+</footer>
   </main>
 </body>
 </html>

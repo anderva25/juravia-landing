@@ -665,6 +665,22 @@
       transform: translateY(-1px);
     }
 
+
+    .sum-label{display:inline-flex; align-items:center; gap:10px;}
+    .sum-ico{display:inline-flex; align-items:center; justify-content:center;}
+    .sum-ico svg{width:18px; height:18px; display:block;}
+    .guide-acc summary{padding: 6px 4px;}
+    
+
+
+
+
+    /* About (home) */
+    .about-grid{margin-top: 14px;}
+    .about-card h3{margin:0 0 8px; font-size: 18px; letter-spacing: .02em;}
+    .about-card p{margin:0; color: var(--muted); line-height: 1.7; max-width: 62ch;}
+    .about-note{margin-top: 14px;}
+
 </style>
 </head>
 
@@ -679,15 +695,15 @@
       <div class="topbar-inner">
         <!-- Menú: icono SOLO -->
         <a class="brand" href="#inicio" aria-label="Juravia, inicio">
-          <img src="/brand_icon.png" onerror="this.onerror=null;this.src='brand_icon.png';" alt="Juravia"/>
+          <img src="brand_icon.png" onerror="this.onerror=null;this.style.display='none';" alt="Juravia"/>
           <span>JURAVIA</span>
         </a>
 
         <nav aria-label="Navegación principal">
           <a class="navlink" href="#como-funciona">Cómo funciona</a>
           <a class="navlink" href="#que-incluye">Qué incluye</a>
-          <a class="navlink" href="#casos">Casos</a>
           <a class="navlink" href="#guias">Guías</a>
+          <a class="navlink" href="#tramitacion">Tramitación</a>
           <a class="navlink" href="#faq">FAQ</a>
           <a class="navlink" href="#legal">Legal</a>
         </nav>
@@ -702,8 +718,8 @@
       <div class="mobile-drawer" id="mobileMenu" role="dialog" aria-label="Menú móvil">
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#que-incluye">Qué incluye</a>
-        <a href="#casos">Casos</a>
         <a href="#guias">Guías</a>
+        <a href="#tramitacion">Tramitación</a>
         <a href="#faq">FAQ</a>
         <a href="#legal">Legal</a>
         <div class="sep" style="margin:10px 0;"></div>
@@ -717,7 +733,7 @@
     <section class="hero" id="inicio">
       <div class="container">
         <div class="hero-content">
-          <img class="hero-logo" src="/logo.png" alt="Juravia"/>
+          <img class="hero-logo" src="logo.png" onerror="this.onerror=null;this.src='logo.png';" alt="Juravia"/>
           <div class="gold-underline" aria-hidden="true"></div>
 
           <p class="slogan">
@@ -880,87 +896,6 @@
 
     
     
-    <!-- CASOS HABITUALES -->
-    <section class="section" id="casos">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Casos habituales</p>
-          <h2>Plantillas para escenarios frecuentes</h2>
-          <p class="lead">Ejemplos típicos en los que conviene ordenar pruebas y presentar con un escrito claro. En la app encontrarás <b>más de 37 plantillas</b> y variantes según órgano y situación.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 12h16" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-                <path d="M7 7h10M7 17h10" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Velocidad / radar</h3>
-            <p>Solicitud de documentación del equipo, verificación de datos y anexos (fotos, señalización, margen de error).</p>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M7 10V7a5 5 0 0 1 10 0v3" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-                <path d="M6 10h12v10H6V10Z" stroke="white" stroke-width="2" opacity=".9"/>
-              </svg>
-            </div>
-            <h3>Estacionamiento / ORA</h3>
-            <p>Tickets, autorizaciones, carga/descarga, señalización y fotografías del entorno para soporte probatorio.</p>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M6 2h12v20H6V2Z" stroke="white" stroke-width="2" opacity=".9"/>
-                <path d="M9 6h6M9 10h6M9 14h6" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>ITV / documentación</h3>
-            <p>Fechas, justificantes, revisiones y documentación técnica: orden y consistencia del expediente.</p>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2l8 8-8 8-8-8 8-8Z" stroke="white" stroke-width="2" opacity=".9"/>
-                <path d="M12 7v6" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-                <path d="M12 16h.01" stroke="white" stroke-width="3" opacity=".9" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Señalización / vía</h3>
-            <p>Señales contradictorias, obras, visibilidad o ubicación: fotografías y croquis para reforzar la alegación.</p>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 6v6l4 2" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20Z" stroke="white" stroke-width="2" opacity=".9"/>
-              </svg>
-            </div>
-            <h3>Notificación y plazos</h3>
-            <p>Control de fechas, conservación de acuse y documentación para trazabilidad del procedimiento.</p>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 7h16M7 4v6M17 4v6" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-                <path d="M6 14h12M6 18h8" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-                <path d="M5 10h14v12H5V10Z" stroke="white" stroke-width="2" opacity=".9"/>
-              </svg>
-            </div>
-            <h3>Tramitación y registro</h3>
-            <p>Preparación del pack final (PDF + anexos + guía) para presentar y archivar justificantes correctamente.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- COMPARATIVA -->
     <!-- COMPARATIVA -->
     <section class="section alt" id="comparativa">
@@ -1042,43 +977,37 @@
       </div>
     </section>
 
-<!-- SOBRE JURAVIA -->
+    <!-- SOBRE JURAVIA -->
     <section class="section" id="sobre-juravia">
       <div class="container">
         <div class="section-head">
           <p class="kicker">Sobre Juravia</p>
-          <h2>Preparación documental para presentar con orden</h2>
-          <p class="lead">Juravia es una herramienta para redactar y organizar alegaciones y recursos con estructura formal, anexos y checklist de presentación.</p>
+          <h2>Documentación clara para defender tu caso</h2>
+          <p class="lead">Juravia te ayuda a preparar el escrito, organizar anexos y presentar con orden. Misma estructura profesional en cada plantilla, con lenguaje claro y enfoque probatorio.</p>
         </div>
 
-        <div class="panel">
-          <div class="includes">
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>Estructura clara del escrito</b>
-                <span>Ordena identificación, hechos, fundamentos y petición para facilitar la lectura del órgano instructor.</span>
-              </div>
-            </div>
-
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>Gestión de anexos y trazabilidad</b>
-                <span>Te ayuda a adjuntar pruebas y a mantener un expediente ordenado (PDF, anexos y acuse de registro).</span>
-              </div>
-            </div>
+        <div class="grid-3 about-grid">
+          <div class="cardx about-card">
+            <h3>Estructura formal, sin ruido</h3>
+            <p>Estructura clara: hechos, motivos y petición en orden, con un lenguaje directo y formal.</p>
           </div>
+          <div class="cardx about-card">
+            <h3>Anexos y checklist de presentación</h3>
+            <p>Checklist de anexos: qué aportar, cómo referenciarlo y cómo conservar el acuse de presentación.</p>
+          </div>
+          <div class="cardx about-card">
+            <h3>Preparado para tramitar</h3>
+            <p>Presentación por organismo: sede/registro, formato y confirmación del registro para tu expediente.</p>
+          </div>
+        </div>
 
-          <div class="sep" style="margin:18px 0;"></div>
-
+        <div class="panel about-note">
           <p class="lead" style="margin:0; max-width: 92ch;">
-            Importante: Juravia no sustituye el asesoramiento jurídico personalizado. La referencia válida de plazos y requisitos es siempre la notificación y la sede/registro del órgano competente.
+            Importante: Juravia no sustituye el asesoramiento jurídico personalizado ni garantiza resultados. La referencia válida de plazos y requisitos es siempre la notificación y la sede/registro del órgano competente.
           </p>
+          <div class="actions" style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn-ghost" href="quienes_somos.html">Quiénes somos</a>
+</div>
         </div>
       </div>
     </section>
@@ -1092,53 +1021,98 @@
       <p class="lead">Selecciona una tipología para ver sus plantillas. Cada guía incluye estructura, motivos habituales y checklist de anexos para preparar el escrito con criterio profesional.</p>
     </div>
 
+    
     <div class="guides-accordion">
       
         <details class="guide-acc">
-          <summary>Conducción y señalización</summary>
+          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0-18Z" stroke="white" stroke-width="2" opacity=".9"/>
+  <path d="M12 6v5m0 0l4 2m-4-2l-4 2" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>Conducción y señalización</span><span class="chev" aria-hidden="true">+</span></summary>
           <div class="guide-pills">
-            <a class="pill-link" href="/recurrir_multa_velocidad.html">Exceso de velocidad (radar fijo y tramo)</a><a class="pill-link" href="/recurrir_multa_semaforo_fotorrojo.html">Semáforo en rojo (fotorrojo)</a><a class="pill-link" href="/recurrir_multa_stop_ceda.html">STOP / ceda el paso</a><a class="pill-link" href="/recurrir_multa_giro_prohibido.html">Giro prohibido</a><a class="pill-link" href="/recurrir_multa_adelantamiento_linea_continua.html">Adelantamiento prohibido / línea continua</a><a class="pill-link" href="/recurrir_multa_distancia_seguridad.html">Distancia de seguridad</a><a class="pill-link" href="/recurrir_multa_luces_iluminacion.html">Luces e iluminación obligatoria</a><a class="pill-link" href="/recurrir_multa_carril_bus_bao.html">Carril bus / BAO / bus-taxi</a><a class="pill-link" href="/recurrir_multa_senalizacion_obras.html">Señalización temporal de obras</a>
+            <a class="pill-link" href="recurrir_multa_velocidad.html">Exceso de velocidad (radar fijo y tramo)</a><a class="pill-link" href="recurrir_multa_semaforo_fotorrojo.html">Semáforo en rojo (fotorrojo)</a><a class="pill-link" href="recurrir_multa_stop_ceda.html">STOP / ceda el paso</a><a class="pill-link" href="recurrir_multa_giro_prohibido.html">Giro prohibido</a><a class="pill-link" href="recurrir_multa_adelantamiento_linea_continua.html">Adelantamiento prohibido / línea continua</a><a class="pill-link" href="recurrir_multa_distancia_seguridad.html">Distancia de seguridad</a><a class="pill-link" href="recurrir_multa_luces_iluminacion.html">Luces e iluminación obligatoria</a><a class="pill-link" href="recurrir_multa_carril_bus_bao.html">Carril bus / BAO / bus-taxi</a><a class="pill-link" href="recurrir_multa_senalizacion_obras.html">Señalización temporal de obras</a>
           </div>
         </details>
         
         <details class="guide-acc">
-          <summary>Estacionamiento y accesos</summary>
+          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M5 4h14v16H5V4Z" stroke="white" stroke-width="2" opacity=".9"/>
+  <path d="M9 17V7h4a3 3 0 0 1 0 6H9" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>Estacionamiento y accesos</span><span class="chev" aria-hidden="true">+</span></summary>
           <div class="guide-pills">
-            <a class="pill-link" href="/recurrir_multa_estacionamiento_indebido.html">Estacionamiento indebido</a><a class="pill-link" href="/recurrir_multa_zona_residentes.html">Zona de residentes</a><a class="pill-link" href="/recurrir_multa_carga_descarga.html">Carga y descarga</a><a class="pill-link" href="/recurrir_multa_parada_doble_fila.html">Parada / doble fila</a><a class="pill-link" href="/recurrir_multa_plaza_pmr.html">Plaza PMR sin autorización</a><a class="pill-link" href="/recurrir_multa_vado_garaje.html">Vado / acceso a garaje</a><a class="pill-link" href="/recurrir_multa_retirada_deposito_municipal.html">Retirada y depósito municipal</a>
+            <a class="pill-link" href="recurrir_multa_estacionamiento_indebido.html">Estacionamiento indebido</a><a class="pill-link" href="recurrir_multa_zona_residentes.html">Zona de residentes</a><a class="pill-link" href="recurrir_multa_carga_descarga.html">Carga y descarga</a><a class="pill-link" href="recurrir_multa_parada_doble_fila.html">Parada / doble fila</a><a class="pill-link" href="recurrir_multa_plaza_pmr.html">Plaza PMR sin autorización</a><a class="pill-link" href="recurrir_multa_vado_garaje.html">Vado / acceso a garaje</a><a class="pill-link" href="recurrir_multa_retirada_deposito_municipal.html">Retirada y depósito municipal</a>
           </div>
         </details>
         
         <details class="guide-acc">
-          <summary>Tecnología y seguridad</summary>
+          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M12 2s7 3 7 6v5c0 5-7 9-7 9s-7-4-7-9V8c0-3 7-6 7-6Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
+  <path d="M9 12l2 2 4-5" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>Tecnología y seguridad</span><span class="chev" aria-hidden="true">+</span></summary>
           <div class="guide-pills">
-            <a class="pill-link" href="/recurrir_multa_movil.html">Uso de teléfono móvil</a><a class="pill-link" href="/recurrir_multa_auriculares_audio.html">Auriculares / dispositivos de audio</a><a class="pill-link" href="/recurrir_multa_cinturon_sri.html">Cinturón de seguridad / SRI</a><a class="pill-link" href="/recurrir_multa_alcohol_drogas.html">Alcohol / drogas (posible ámbito penal)</a><a class="pill-link" href="/recurrir_multa_baliza_v16.html">Baliza V16 conectada</a>
+            <a class="pill-link" href="recurrir_multa_movil.html">Uso de teléfono móvil</a><a class="pill-link" href="recurrir_multa_auriculares_audio.html">Auriculares / dispositivos de audio</a><a class="pill-link" href="recurrir_multa_cinturon_sri.html">Cinturón de seguridad / SRI</a><a class="pill-link" href="recurrir_multa_alcohol_drogas.html">Alcohol / drogas (posible ámbito penal)</a><a class="pill-link" href="recurrir_multa_baliza_v16.html">Baliza V16 conectada</a>
           </div>
         </details>
         
         <details class="guide-acc">
-          <summary>Movilidad y restricciones</summary>
+          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M12 21s7-4.5 7-10a7 7 0 1 0-14 0c0 5.5 7 10 7 10Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
+  <path d="M12 11.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5Z" stroke="white" stroke-width="2" opacity=".9"/>
+</svg></span>Movilidad y restricciones</span><span class="chev" aria-hidden="true">+</span></summary>
           <div class="guide-pills">
-            <a class="pill-link" href="/recurrir_multa_zbe.html">ZBE (Zona de Bajas Emisiones)</a><a class="pill-link" href="/recurrir_multa_vmp_patinete.html">VMP / patinete eléctrico</a><a class="pill-link" href="/recurrir_multa_acceso_restringido_temporal.html">Acceso restringido temporal</a><a class="pill-link" href="/recurrir_multa_matricula_extranjera.html">Matrícula extranjera</a>
+            <a class="pill-link" href="recurrir_multa_zbe.html">ZBE (Zona de Bajas Emisiones)</a><a class="pill-link" href="recurrir_multa_vmp_patinete.html">VMP / patinete eléctrico</a><a class="pill-link" href="recurrir_multa_acceso_restringido_temporal.html">Acceso restringido temporal</a><a class="pill-link" href="recurrir_multa_matricula_extranjera.html">Matrícula extranjera</a>
           </div>
         </details>
         
         <details class="guide-acc">
-          <summary>Documentación y procedimiento</summary>
+          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M7 3h7l3 3v15H7V3Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
+  <path d="M14 3v4h4" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+  <path d="M9 12h6M9 16h6" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
+</svg></span>Documentación y procedimiento</span><span class="chev" aria-hidden="true">+</span></summary>
           <div class="guide-pills">
-            <a class="pill-link" href="/recurrir_multa_itv_caducada.html">ITV caducada</a><a class="pill-link" href="/recurrir_multa_itv_desfavorable_subsanacion.html">ITV desfavorable: subsanación en plazo</a><a class="pill-link" href="/recurrir_multa_seguro_obligatorio.html">Seguro obligatorio</a><a class="pill-link" href="/recurrir_multa_permiso_conducir_caducado.html">Permiso de conducir caducado</a><a class="pill-link" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill-link" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill-link" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a><a class="pill-link" href="/recurrir_multa_identificacion_conductor_empresas.html">Identificación del conductor (empresas / flotas)</a><a class="pill-link" href="/recurrir_multa_taller_arrendamiento.html">Taller / arrendamiento (cesión del vehículo)</a>
+            <a class="pill-link" href="recurrir_multa_itv_caducada.html">ITV caducada</a><a class="pill-link" href="recurrir_multa_itv_desfavorable_subsanacion.html">ITV desfavorable: subsanación en plazo</a><a class="pill-link" href="recurrir_multa_seguro_obligatorio.html">Seguro obligatorio</a><a class="pill-link" href="recurrir_multa_permiso_conducir_caducado.html">Permiso de conducir caducado</a><a class="pill-link" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill-link" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill-link" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a><a class="pill-link" href="recurrir_multa_identificacion_conductor_empresas.html">Identificación del conductor (empresas / flotas)</a><a class="pill-link" href="recurrir_multa_taller_arrendamiento.html">Taller / arrendamiento (cesión del vehículo)</a>
           </div>
         </details>
         
         <details class="guide-acc">
-          <summary>Transporte profesional</summary>
+          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M3 7h11v10H3V7Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
+  <path d="M14 10h4l3 3v4h-7v-7Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
+  <path d="M7 17a2 2 0 1 0 0 4a2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z" stroke="white" stroke-width="2" opacity=".9"/>
+</svg></span>Transporte profesional</span><span class="chev" aria-hidden="true">+</span></summary>
           <div class="guide-pills">
-            <a class="pill-link" href="/recurrir_multa_carga_estiba.html">Carga y estiba</a><a class="pill-link" href="/recurrir_multa_tacografo.html">Tacógrafo / tiempos de conducción y descanso</a><a class="pill-link" href="/recurrir_multa_transporte_autorizaciones.html">Transporte: autorizaciones / tarjeta</a><a class="pill-link" href="/recurrir_multa_adr_mercancias_peligrosas.html">ADR / mercancías peligrosas</a>
+            <a class="pill-link" href="recurrir_multa_carga_estiba.html">Carga y estiba</a><a class="pill-link" href="recurrir_multa_tacografo.html">Tacógrafo / tiempos de conducción y descanso</a><a class="pill-link" href="recurrir_multa_transporte_autorizaciones.html">Transporte: autorizaciones / tarjeta</a><a class="pill-link" href="recurrir_multa_adr_mercancias_peligrosas.html">ADR / mercancías peligrosas</a>
           </div>
         </details>
         
     </div>
   </div>
 </section>
+
+
+<section class="section alt" id="tramitacion">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Tramitación</p>
+      <h2>Guías de presentación por organismo</h2>
+      <p class="lead">Procedimiento orientativo de presentación (sede/registro, anexos y acuse) según el órgano competente. La guía por tipo de multa sigue siendo la misma; aquí tienes el “cómo presentarlo”.</p>
+    </div>
+
+    <div class="panel">
+      <div class="guide-pills">
+        <a class="pill-link" href="guia_dgt.html">DGT</a>
+        <a class="pill-link" href="guia_sct.html">Servei Català de Trànsit (SCT)</a>
+        <a class="pill-link" href="guia_trafikoa.html">Trafikoa (Gobierno Vasco)</a>
+        <a class="pill-link" href="guia_transportes.html">Ministerio de Transportes</a>
+        <a class="pill-link" href="guia_municipal.html">Municipal / Registro</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- FAQ -->
     <section class="section alt" id="faq">
@@ -1199,7 +1173,7 @@
     <div class="container">
       <div class="foot-top" style="display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between;">
         <div class="foot-brand" style="display:flex; gap:12px; max-width:520px;">
-          <img src="/brand_icon.png" onerror="this.onerror=null;this.src='brand_icon.png';" alt="Juravia" style="width:42px; height:42px; filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));"/>
+          <img src="brand_icon.png" onerror="this.onerror=null;this.src='brand_icon.png';" alt="Juravia" style="width:42px; height:42px; filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));"/>
           <div>
             <b style="display:block; font-size:14px; letter-spacing:.5px;">JURAVIA</b>
             <p style="margin:8px 0 0; font-size:13px; color: rgba(255,255,255,.72); line-height:1.55;">
@@ -1221,9 +1195,9 @@
           <div class="foot">
             <h4>Guías</h4>
             <ul>
-              <li><a href="/recurrir_multa_baliza_v16.html">Baliza V16</a></li>
-              <li><a href="/recurrir_multa_itv_caducada.html">ITV caducada</a></li>
-              <li><a href="/recurrir_multa_radar.html">Radar</a></li>
+              <li><a href="recurrir_multa_baliza_v16.html">Baliza V16</a></li>
+              <li><a href="recurrir_multa_itv_caducada.html">ITV caducada</a></li>
+              <li><a href="recurrir_multa_velocidad.html">Velocidad</a></li>
             </ul>
           </div>
           <div class="foot">

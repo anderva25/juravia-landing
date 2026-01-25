@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Alcohol / drogas (posible ámbito penal) | Juravia</title>
-  <meta name="description" content="Guía profesional para alegaciones en sanciones por alcohol o drogas: qué revisar, motivos frecuentes y documentación clave."/>
+  <meta name="description" content="Guía profesional para preparar alegaciones y anexos en sanciones por alcohol / drogas (posible ámbito penal). Estructura, motivos habituales y checklist documental."/>
   <link rel="canonical" href="https://juravia.app/recurrir_multa_alcohol_drogas.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Alcohol / drogas (posible ámbito penal) | Juravia"/>
@@ -231,12 +231,35 @@
       text-align:center;
     }
     footer a{ color: rgba(255,255,255,.82); }
-    </style>
+    
+
+    /* Footer (landings + guías) */
+    .site-footer{
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
+    .site-footer a:hover{text-decoration: underline;}
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 10px 0 18px;
+    }
+    .footer-left{display:flex; align-items:center; gap: 10px;}
+    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
+    .footer-name{font-weight: 800; letter-spacing: .08em;}
+    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
+    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Alcohol / drogas (posible ámbito penal)", "url": "https://juravia.app/recurrir_multa_alcohol_drogas.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por alcohol / drogas (posible ámbito penal). Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
-  <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Esta plantilla sirve si hay posible delito?", "acceptedAnswer": {"@type": "Answer", "text": "Si hay indicios de ámbito penal, la estrategia cambia y es recomendable asesoramiento profesional. La guía es orientativa y no sustituye un análisis del caso."}}, {"@type": "Question", "name": "¿Qué es imprescindible revisar?", "acceptedAnswer": {"@type": "Answer", "text": "Que el expediente incluya actas y resultados completos, y que no haya incoherencias en tiempos, mediciones o identificación de la actuación."}}, {"@type": "Question", "name": "¿Puedo pedir prueba de contraste o confirmación?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del caso y del tipo de prueba. Lo esencial es que el expediente refleje diligencias y documentación suficiente."}}, {"@type": "Question", "name": "¿Qué anexos adjunto?", "acceptedAnswer": {"@type": "Answer", "text": "Denuncia, actas completas y cualquier documento objetivo relevante. Evita alegaciones especulativas sin soporte."}}, {"@type": "Question", "name": "¿Conviene alegar sin ver el expediente completo?", "acceptedAnswer": {"@type": "Answer", "text": "En alcohol/drogas, es preferible trabajar con documentación completa para no perder oportunidades probatorias."}}]}
-</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuándo conviene presentar alegaciones en una multa de alcohol / drogas (posible ámbito penal)?", "acceptedAnswer": {"@type": "Answer", "text": "Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción."}}, {"@type": "Question", "name": "¿Qué documentación mínima debería adjuntar?", "acceptedAnswer": {"@type": "Answer", "text": "Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente."}}, {"@type": "Question", "name": "¿Puedo pedir la prueba completa y el expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen."}}, {"@type": "Question", "name": "¿Qué pasa si presento fuera de plazo?", "acceptedAnswer": {"@type": "Answer", "text": "Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro."}}, {"@type": "Question", "name": "¿Juravia sustituye a un abogado?", "acceptedAnswer": {"@type": "Answer", "text": "Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional."}}]}</script>
 </head>
 <body>
   <div class="bg-wrap" aria-hidden="true"></div>
@@ -244,11 +267,11 @@
 
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="/#inicio" aria-label="Juravia, inicio">
+      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
         <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
         <span>JURAVIA</span>
       </a>
-      <a class="back" href="/#guias">Volver al inicio</a>
+      <a class="back" href="index.html#guias">Volver al inicio</a>
     </div>
   </header>
 
@@ -257,7 +280,7 @@
     <div class="hero" id="top">
       <p class="kicker">Guía · Plantilla Juravia</p>
       <h1>Alcohol / drogas (posible ámbito penal)</h1>
-      <p class="lead">Guía profesional para sanciones por alcohol o drogas. Estos expedientes requieren especial cuidado: revisa mediciones, actas, tiempos, derechos de contraste y, si hay indicios de ámbito penal, valora asesoramiento profesional.</p>
+      <p class="lead">Guía orientativa para alegaciones por alcohol/drogas. En estos casos es esencial revisar garantías del procedimiento y documentación del control. Si existe posible ámbito penal, conviene extremar la prudencia.</p>
       <div class="actions">
         <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
         <a class="btn-ghost" href="#anexos">Ver checklist documental</a>
@@ -279,41 +302,35 @@
 
     <section class="card" id="revisar">
       <h2>Qué revisar en la denuncia</h2>
-      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Un control ordenado evita alegaciones genéricas y refuerza la consistencia del escrito.</p>
-<ul>
-        <li>Tipo de actuación: alcohol (etilómetro) o drogas (test) y qué actas se aportan.</li>
-        <li>Existencia de doble medición/contraste y tiempos entre pruebas cuando proceda.</li>
-        <li>Identificación del equipo y de los agentes actuantes en el boletín/actas.</li>
-        <li>Cadena de custodia/contraste en drogas (si se practicó confirmación) y documentación asociada.</li>
-        <li>Derechos informados y diligencias practicadas (si consta) y coherencia del expediente.</li>
-        <li>Circunstancias del control (lugar, hora, motivo) y cualquier incidencia registrada.</li>
-        <li>Riesgo de ámbito penal (tasas elevadas/accidente): priorizar estrategia con prudencia.</li>
+      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Una revisión ordenada evita alegaciones genéricas y mejora la consistencia del escrito.</p>
+      <ul>
+        <li>Tipo de control (alcoholemia / drogas) y documentación entregada.</li><li>Existencia de segunda prueba/contraste y tiempos entre mediciones.</li><li>Identificación del equipo/kit y cumplimentación de actas.</li><li>Custodia y trazabilidad de muestras (cuando aplica).</li>
       </ul>
-</section>
+    </section>
 
     <section class="card" id="motivos">
       <h2>Motivos habituales de impugnación</h2>
-      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. La solidez suele estar en la concreción: hechos verificables, anexos numerados y una conclusión clara.</p>
-<ul>
-        <li>Falta de actas esenciales o documentación incompleta para acreditar el resultado.</li>
-        <li>Incoherencias en tiempos, mediciones o identificación de equipos/diligencias.</li>
-        <li>Defectos formales relevantes en el procedimiento o en la motivación del expediente.</li>
-        <li>Incidencias registradas que afecten a la fiabilidad (si constan y son objetivas).</li>
-        <li>Vulneración de garantías procedimentales cuando esté debidamente fundamentada.</li>
-        <li>En supuestos con posible ámbito penal, enfocar la defensa con criterio profesional.</li>
+      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. En general, la Administración valora mejor escritos concretos, con hechos y anexos numerados.</p>
+      <ul>
+        <li>Incidencias en el procedimiento (actas incompletas, falta de información, tiempos).</li><li>Falta de documentación suficiente o contradicciones en el expediente.</li><li>Cuestiones de custodia/confirmación analítica (especialmente en drogas).</li><li>Indefensión por defectos de notificación o falta de acceso a expediente.</li>
       </ul>
-</section>
+      <p class="callout">Si hay citación penal o riesgo de delito, consulta con un profesional antes de decidir estrategia.</p>
+    </section>
 
     <section class="card" id="anexos">
       <h2>Pruebas y anexos recomendados</h2>
-      <p>Aporta solo lo relevante y numera los anexos. La prueba documental y fotográfica, bien ordenada, suele pesar más que textos largos sin soporte.</p>
-<ul>
-        <li>Denuncia y actas completas (todas las páginas).</li>
-        <li>Documentación aportada por la Administración (resultados, diligencias, contrastes).</li>
-        <li>Parte médico/accidente si existe (solo cuando sea necesario y con cautela).</li>
-        <li>Cualquier documento objetivo que acredite incidencias relevantes (sin especulación).</li>
+      <p>Ordena los anexos con numeración (Anexo 1, Anexo 2…) y referencia cada uno en el texto. Si falta prueba en la notificación, solicita acceso al expediente y pide la incorporación de la prueba completa.</p>
+      <ul>
+        <li>Copia de actas, tickets/impresiones y documentos del control.</li><li>Solicitud de acceso al expediente completo (incluida documentación técnica disponible).</li><li>Informe médico si existió circunstancia relevante (sin datos innecesarios).</li><li>Documentos de contraste/confirmación (si se practicó).</li>
       </ul>
-</section>
+      <details>
+        <summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
+        <p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
+        <ul>
+          <li>Anexo 1 · Copia de actas, tickets/impresiones y documentos del control.</li><li>Anexo 2 · Solicitud de acceso al expediente completo (incluida documentación técnica disponible).</li><li>Anexo 3 · Informe médico si existió circunstancia relevante (sin datos innecesarios).</li><li>Anexo 4 · Documentos de contraste/confirmación (si se practicó).</li>
+        </ul>
+      </details>
+    </section>
 
     <section class="card" id="presentacion">
       <h2>Cómo presentar alegaciones/recurso</h2>
@@ -326,7 +343,7 @@
         <li>Guarda el acuse de recibo y el expediente descargado.</li>
       </ol>
       <div class="related" aria-label="Refuerza tu recurso con motivos procedimentales">
-        <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
+        <a class="pill" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
       </div>
     </section>
 
@@ -334,22 +351,32 @@
       <h2>Guías relacionadas</h2>
       <p>Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
       <div class="related">
-        <a class="pill" href="/recurrir_multa_alcohol_contraste_segunda_prueba.html">Alcohol: prueba de contraste y garantías del procedimiento</a><a class="pill" href="/recurrir_multa_drogas_cadena_custodia.html">Drogas: cadena de custodia y confirmación analítica</a>
+        <a class="pill" href="recurrir_multa_alcohol_contraste_segunda_prueba.html">Alcohol: prueba de contraste y garantías del procedimiento</a><a class="pill" href="recurrir_multa_drogas_cadena_custodia.html">Drogas: cadena de custodia y confirmación analítica</a>
       </div>
     </section>
 
     <section class="card" id="faq">
       <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Esta plantilla sirve si hay posible delito?</summary><p>Si hay indicios de ámbito penal, la estrategia cambia y es recomendable asesoramiento profesional. La guía es orientativa y no sustituye un análisis del caso.</p></details>
-      <details><summary>¿Qué es imprescindible revisar?</summary><p>Que el expediente incluya actas y resultados completos, y que no haya incoherencias en tiempos, mediciones o identificación de la actuación.</p></details>
-      <details><summary>¿Puedo pedir prueba de contraste o confirmación?</summary><p>Depende del caso y del tipo de prueba. Lo esencial es que el expediente refleje diligencias y documentación suficiente.</p></details>
-      <details><summary>¿Qué anexos adjunto?</summary><p>Denuncia, actas completas y cualquier documento objetivo relevante. Evita alegaciones especulativas sin soporte.</p></details>
-      <details><summary>¿Conviene alegar sin ver el expediente completo?</summary><p>En alcohol/drogas, es preferible trabajar con documentación completa para no perder oportunidades probatorias.</p></details>
-</section>
+      <details><summary>¿Cuándo conviene presentar alegaciones en una multa de alcohol / drogas (posible ámbito penal)?</summary><p>Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción.</p></details><details><summary>¿Qué documentación mínima debería adjuntar?</summary><p>Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente.</p></details><details><summary>¿Puedo pedir la prueba completa y el expediente?</summary><p>Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen.</p></details><details><summary>¿Qué pasa si presento fuera de plazo?</summary><p>Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro.</p></details><details><summary>¿Juravia sustituye a un abogado?</summary><p>Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional.</p></details>
+    </section>
     
-    <footer>
-      Juravia — Plantillas legales para defender tus derechos · <a href="/#inicio">juravia.app</a>
-    </footer>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+      <div class="footer-meta">
+        <div class="footer-name">JURAVIA</div>
+        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
+      </div>
+    </div>
+    <div class="footer-links" aria-label="Enlaces">
+      <a href="index.html#guias">Guías</a>
+      <a href="index.html#sobre-juravia">Sobre Juravia</a>
+      <a href="quienes_somos.html">Quiénes somos</a>
+      <a href="#top">Subir</a>
+    </div>
+  </div>
+</footer>
   </main>
 </body>
 </html>
