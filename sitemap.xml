@@ -1,198 +1,608 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://juravia.app</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://juravia.app/</loc>
+    <lastmod>2026-01-25</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_velocidad.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_estacionamiento_indebido.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_semaforo_fotorrojo.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_itv_caducada.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_movil.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_alcohol_drogas.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_cinturon_sri.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_auriculares_audio.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_carril_bus_bao.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_zbe.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_vmp_patinete.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_giro_prohibido.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_stop_ceda.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_adelantamiento_linea_continua.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_distancia_seguridad.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_luces_iluminacion.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_plaza_pmr.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_parada_doble_fila.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_seguro_obligatorio.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_permiso_conducir_caducado.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_carga_estiba.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_zona_residentes.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_carga_descarga.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_defectos_notificacion.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_caducidad_procedimiento.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_prescripcion_infraccion.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_identificacion_conductor_empresas.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_taller_arrendamiento.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_tacografo.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_transporte_autorizaciones.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_adr_mercancias_peligrosas.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_senalizacion_obras.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_retirada_deposito_municipal.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_itv_desfavorable_subsanacion.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_acceso_restringido_temporal.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_vado_garaje.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_matricula_extranjera.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://juravia.app/recurrir_multa_baliza_v16.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_velocidad_margen_error_radar.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_velocidad_sin_foto_identificacion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_estacionamiento_ticket_visible_error_matricula.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_estacionamiento_senalizacion_deficiente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_semaforo_amarillo_intermitencia.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_semaforo_prueba_fotografica_deficiente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_itv_estacionado.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_itv_cita_previa_imposibilidad.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_movil_sin_imagen.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_movil_confusion_objeto.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_alcohol_contraste_segunda_prueba.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_drogas_cadena_custodia.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_sri_adecuacion_silla.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_cinturon_prueba_insuficiente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_auriculares_manos_libres.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_auriculares_sin_prueba.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_carril_bus_horarios_senalizacion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_carril_bus_exencion_servicio.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_zbe_exencion_autorizacion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_zbe_senalizacion_acceso.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_vmp_normativa_municipal.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_vmp_identificacion_usuario.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_giro_senalizacion_confusa.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_giro_fuerza_mayor.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_stop_linea_detencion_borrada.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_stop_prueba_video_inexistente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_linea_continua_desgastada.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_adelantamiento_obstaculo.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_distancia_prueba_medicion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_distancia_condiciones_via.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_luces_averia_sobrevenida.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_luces_tipo_luz_confusion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_pmr_senalizacion_inexistente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_pmr_autorizacion_temporal.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_doble_fila_emergencia.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_parada_asistencia_persona.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_seguro_poliza_en_vigor.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_seguro_recibo_pago.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_permiso_renovacion_tramite.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_permiso_error_datos.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_estiba_responsables.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_estiba_prueba_pesaje.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_residentes_autorizacion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_residentes_senalizacion_ambito.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_carga_descarga_horario.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_carga_descarga_justificante.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_notificacion_direccion_erronea.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_notificacion_electronica.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_caducidad_computo_plazos.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_caducidad_interrupciones.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_prescripcion_plazos_interrupcion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_prescripcion_pruebas_expediente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_identificacion_requerimiento_incompleto.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_identificacion_plazo_respuesta.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_arrendamiento_contrato.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_taller_resguardo.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_tacografo_descargas_calibracion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_tacografo_justificantes_actividad.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_transporte_tarjeta_tramite.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_transporte_documentacion_inspeccion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_adr_documentacion_equipos.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_adr_formacion_conductor.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_obras_senalizacion_deficiente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_obras_gestion_responsable.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_deposito_gastos_documentos.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_retirada_motivo_inexistente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_itv_desfavorable_justificante.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_itv_desfavorable_plazo.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_acceso_restringido_evento.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_acceso_restringido_autorizacion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_vado_no_vigente.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_vado_prueba_acceso.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_matricula_extranjera_notificacion.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_matricula_extranjera_zbe_registro.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_v16_dispositivo_certificado.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/recurrir_multa_v16_prueba_uso.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/quienes_somos.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/guia_dgt.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/guia_sct.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/guia_trafikoa.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/guia_transportes.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juravia.app/guia_municipal.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>

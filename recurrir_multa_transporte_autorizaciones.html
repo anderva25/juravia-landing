@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Transporte: autorizaciones / tarjeta | Juravia</title>
-  <meta name="description" content="Guía profesional para recurrir sanciones de transporte por autorizaciones/tarjeta: qué revisar, motivos habituales y anexos recomendados."/>
+  <meta name="description" content="Guía profesional para preparar alegaciones y anexos en sanciones por transporte: autorizaciones / tarjeta. Estructura, motivos habituales y checklist documental."/>
   <link rel="canonical" href="https://juravia.app/recurrir_multa_transporte_autorizaciones.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Transporte: autorizaciones / tarjeta | Juravia"/>
@@ -231,12 +231,35 @@
       text-align:center;
     }
     footer a{ color: rgba(255,255,255,.82); }
-    </style>
+    
+
+    /* Footer (landings + guías) */
+    .site-footer{
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
+    .site-footer a:hover{text-decoration: underline;}
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 10px 0 18px;
+    }
+    .footer-left{display:flex; align-items:center; gap: 10px;}
+    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
+    .footer-name{font-weight: 800; letter-spacing: .08em;}
+    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
+    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Transporte: autorizaciones / tarjeta", "url": "https://juravia.app/recurrir_multa_transporte_autorizaciones.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por transporte: autorizaciones / tarjeta. Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
-  <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué documento suele resolver estos casos?", "acceptedAnswer": {"@type": "Answer", "text": "La autorización/tarjeta vigente y, si aplica, justificantes de renovación o permisos."}}, {"@type": "Question", "name": "¿Debo aportar documentación del servicio?", "acceptedAnswer": {"@type": "Answer", "text": "Solo si es relevante para demostrar que se actuó dentro del ámbito autorizado."}}, {"@type": "Question", "name": "¿Qué pasa si la tarjeta no estaba a bordo?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del régimen aplicable. Aporta la documentación y centra la alegación en motivación y proporcionalidad cuando proceda."}}, {"@type": "Question", "name": "¿Conviene pedir expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, para ver exactamente qué se imputa y qué pruebas se aportan."}}, {"@type": "Question", "name": "¿Qué anexos mínimos adjunto?", "acceptedAnswer": {"@type": "Answer", "text": "Autorización/tarjeta y denuncia/acta."}}]}
-</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuándo conviene presentar alegaciones en una multa de transporte: autorizaciones / tarjeta?", "acceptedAnswer": {"@type": "Answer", "text": "Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción."}}, {"@type": "Question", "name": "¿Qué documentación mínima debería adjuntar?", "acceptedAnswer": {"@type": "Answer", "text": "Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente."}}, {"@type": "Question", "name": "¿Puedo pedir la prueba completa y el expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen."}}, {"@type": "Question", "name": "¿Qué pasa si presento fuera de plazo?", "acceptedAnswer": {"@type": "Answer", "text": "Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro."}}, {"@type": "Question", "name": "¿Juravia sustituye a un abogado?", "acceptedAnswer": {"@type": "Answer", "text": "Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional."}}]}</script>
 </head>
 <body>
   <div class="bg-wrap" aria-hidden="true"></div>
@@ -244,11 +267,11 @@
 
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="/#inicio" aria-label="Juravia, inicio">
+      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
         <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
         <span>JURAVIA</span>
       </a>
-      <a class="back" href="/#guias">Volver al inicio</a>
+      <a class="back" href="index.html#guias">Volver al inicio</a>
     </div>
   </header>
 
@@ -257,7 +280,7 @@
     <div class="hero" id="top">
       <p class="kicker">Guía · Plantilla Juravia</p>
       <h1>Transporte: autorizaciones / tarjeta</h1>
-      <p class="lead">Guía profesional para sanciones en transporte por autorizaciones/tarjeta. La defensa se centra en acreditar vigencia, ámbito de la autorización y coherencia del acta con la actividad realizada.</p>
+      <p class="lead">Guía para alegaciones por transporte: autorizaciones/tarjeta y documentación habilitante. El punto crítico suele ser demostrar vigencia, solicitud de renovación o posibilidad de subsanación.</p>
       <div class="actions">
         <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
         <a class="btn-ghost" href="#anexos">Ver checklist documental</a>
@@ -279,41 +302,35 @@
 
     <section class="card" id="revisar">
       <h2>Qué revisar en la denuncia</h2>
-      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Un control ordenado evita alegaciones genéricas y refuerza la consistencia del escrito.</p>
-<ul>
-        <li>Autorización/tarjeta afectada y su vigencia en la fecha del hecho.</li>
-        <li>Qué se imputa: ausencia, caducidad, ámbito indebido, falta de documentación a bordo, etc.</li>
-        <li>Acta de inspección y documentación aportada.</li>
-        <li>Datos del vehículo, empresa y conductor (coherencia).</li>
-        <li>Itinerario/servicio y si encaja con el ámbito de autorización (si es relevante).</li>
-        <li>Notificación y plazos.</li>
-        <li>Errores materiales.</li>
+      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Una revisión ordenada evita alegaciones genéricas y mejora la consistencia del escrito.</p>
+      <ul>
+        <li>Qué autorización/tarjeta se exige y cuál se imputa como defectuosa.</li><li>Vigencia, renovación y situación administrativa en la fecha.</li><li>Documentación exhibida en inspección y lo que consta en acta.</li><li>Posible subsanación documental (según el caso).</li>
       </ul>
-</section>
+    </section>
 
     <section class="card" id="motivos">
       <h2>Motivos habituales de impugnación</h2>
-      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. La solidez suele estar en la concreción: hechos verificables, anexos numerados y una conclusión clara.</p>
-<ul>
-        <li>Existencia de autorización vigente (acreditable) o documentación disponible.</li>
-        <li>Acta insuficiente o sin motivación/documentación mínima.</li>
-        <li>Incoherencias entre servicio realizado y lo imputado.</li>
-        <li>Errores materiales en datos esenciales.</li>
-        <li>Falta de concreción sobre el motivo de sanción.</li>
-        <li>Defectos procedimentales relevantes.</li>
+      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. En general, la Administración valora mejor escritos concretos, con hechos y anexos numerados.</p>
+      <ul>
+        <li>Autorización vigente o renovación solicitada y no valorada.</li><li>Defecto meramente documental susceptible de subsanación.</li><li>Errores de identificación del vehículo/empresa/fecha.</li><li>Defectos formales/procedimentales.</li>
       </ul>
-</section>
+      
+    </section>
 
     <section class="card" id="anexos">
       <h2>Pruebas y anexos recomendados</h2>
-      <p>Aporta solo lo relevante y numera los anexos. La prueba documental y fotográfica, bien ordenada, suele pesar más que textos largos sin soporte.</p>
-<ul>
-        <li>Copia de autorización/tarjeta con vigencia.</li>
-        <li>Acta/denuncia completa.</li>
-        <li>Documentación del servicio (solo lo necesario) si es relevante.</li>
-        <li>Justificantes de renovación o solicitud si aplica.</li>
+      <p>Ordena los anexos con numeración (Anexo 1, Anexo 2…) y referencia cada uno en el texto. Si falta prueba en la notificación, solicita acceso al expediente y pide la incorporación de la prueba completa.</p>
+      <ul>
+        <li>Tarjeta/autorización, justificantes de solicitud/renovación.</li><li>Certificados o consultas administrativas (si disponibles).</li><li>Acta de inspección y documentos aportados ese día.</li><li>Solicitud de acceso al expediente completo.</li>
       </ul>
-</section>
+      <details>
+        <summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
+        <p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
+        <ul>
+          <li>Anexo 1 · Tarjeta/autorización, justificantes de solicitud/renovación.</li><li>Anexo 2 · Certificados o consultas administrativas (si disponibles).</li><li>Anexo 3 · Acta de inspección y documentos aportados ese día.</li><li>Anexo 4 · Solicitud de acceso al expediente completo.</li>
+        </ul>
+      </details>
+    </section>
 
     <section class="card" id="presentacion">
       <h2>Cómo presentar alegaciones/recurso</h2>
@@ -326,7 +343,7 @@
         <li>Guarda el acuse de recibo y el expediente descargado.</li>
       </ol>
       <div class="related" aria-label="Refuerza tu recurso con motivos procedimentales">
-        <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
+        <a class="pill" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
       </div>
     </section>
 
@@ -334,22 +351,32 @@
       <h2>Guías relacionadas</h2>
       <p>Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
       <div class="related">
-        <a class="pill" href="/recurrir_multa_transporte_tarjeta_tramite.html">Transporte: tarjeta/autorización en trámite</a><a class="pill" href="/recurrir_multa_transporte_documentacion_inspeccion.html">Transporte: documentación en inspección y subsanación</a>
+        <a class="pill" href="recurrir_multa_transporte_tarjeta_tramite.html">Transporte: tarjeta/autorización en trámite</a><a class="pill" href="recurrir_multa_transporte_documentacion_inspeccion.html">Transporte: documentación en inspección y subsanación</a>
       </div>
     </section>
 
     <section class="card" id="faq">
       <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Qué documento suele resolver estos casos?</summary><p>La autorización/tarjeta vigente y, si aplica, justificantes de renovación o permisos.</p></details>
-      <details><summary>¿Debo aportar documentación del servicio?</summary><p>Solo si es relevante para demostrar que se actuó dentro del ámbito autorizado.</p></details>
-      <details><summary>¿Qué pasa si la tarjeta no estaba a bordo?</summary><p>Depende del régimen aplicable. Aporta la documentación y centra la alegación en motivación y proporcionalidad cuando proceda.</p></details>
-      <details><summary>¿Conviene pedir expediente?</summary><p>Sí, para ver exactamente qué se imputa y qué pruebas se aportan.</p></details>
-      <details><summary>¿Qué anexos mínimos adjunto?</summary><p>Autorización/tarjeta y denuncia/acta.</p></details>
-</section>
+      <details><summary>¿Cuándo conviene presentar alegaciones en una multa de transporte: autorizaciones / tarjeta?</summary><p>Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción.</p></details><details><summary>¿Qué documentación mínima debería adjuntar?</summary><p>Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente.</p></details><details><summary>¿Puedo pedir la prueba completa y el expediente?</summary><p>Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen.</p></details><details><summary>¿Qué pasa si presento fuera de plazo?</summary><p>Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro.</p></details><details><summary>¿Juravia sustituye a un abogado?</summary><p>Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional.</p></details>
+    </section>
     
-    <footer>
-      Juravia — Plantillas legales para defender tus derechos · <a href="/#inicio">juravia.app</a>
-    </footer>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+      <div class="footer-meta">
+        <div class="footer-name">JURAVIA</div>
+        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
+      </div>
+    </div>
+    <div class="footer-links" aria-label="Enlaces">
+      <a href="index.html#guias">Guías</a>
+      <a href="index.html#sobre-juravia">Sobre Juravia</a>
+      <a href="quienes_somos.html">Quiénes somos</a>
+      <a href="#top">Subir</a>
+    </div>
+  </div>
+</footer>
   </main>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>ZBE (Zona de Bajas Emisiones) | Juravia</title>
-  <meta name="description" content="Guía profesional para recurrir multas de ZBE: qué revisar, permisos/exenciones, motivos habituales y anexos clave."/>
+  <meta name="description" content="Guía profesional para preparar alegaciones y anexos en sanciones por zbe (zona de bajas emisiones). Estructura, motivos habituales y checklist documental."/>
   <link rel="canonical" href="https://juravia.app/recurrir_multa_zbe.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="ZBE (Zona de Bajas Emisiones) | Juravia"/>
@@ -231,12 +231,35 @@
       text-align:center;
     }
     footer a{ color: rgba(255,255,255,.82); }
-    </style>
+    
+
+    /* Footer (landings + guías) */
+    .site-footer{
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
+    .site-footer a:hover{text-decoration: underline;}
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 10px 0 18px;
+    }
+    .footer-left{display:flex; align-items:center; gap: 10px;}
+    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
+    .footer-name{font-weight: 800; letter-spacing: .08em;}
+    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
+    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "ZBE (Zona de Bajas Emisiones)", "url": "https://juravia.app/recurrir_multa_zbe.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por zbe (zona de bajas emisiones). Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
-  <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué suele ganar una alegación en ZBE?", "acceptedAnswer": {"@type": "Answer", "text": "Acreditar una autorización/exención vigente o señalar una falta clara de prueba del acceso. La documentación y la señalización del punto son decisivas."}}, {"@type": "Question", "name": "¿Vale con decir que no vi la señal?", "acceptedAnswer": {"@type": "Answer", "text": "No. Si se discute señalización, aporta fotos del acceso y del entorno para demostrar insuficiencia o confusión."}}, {"@type": "Question", "name": "¿Qué documentos sirven como exención?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del municipio, pero normalmente permisos/resoluciones/autorizaciones vigentes y trazables. Aporta solo lo imprescindible."}}, {"@type": "Question", "name": "¿Y si la matrícula se leyó mal?", "acceptedAnswer": {"@type": "Answer", "text": "Si hay indicios (mala calidad, incoherencias), es un motivo relevante. Solicitar y revisar la prueba del expediente ayuda."}}, {"@type": "Question", "name": "¿Qué anexos mínimos adjunto?", "acceptedAnswer": {"@type": "Answer", "text": "Denuncia, prueba del expediente y, si aplica, autorización/exención y fotos del acceso."}}]}
-</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuándo conviene presentar alegaciones en una multa de zbe (zona de bajas emisiones)?", "acceptedAnswer": {"@type": "Answer", "text": "Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción."}}, {"@type": "Question", "name": "¿Qué documentación mínima debería adjuntar?", "acceptedAnswer": {"@type": "Answer", "text": "Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente."}}, {"@type": "Question", "name": "¿Puedo pedir la prueba completa y el expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen."}}, {"@type": "Question", "name": "¿Qué pasa si presento fuera de plazo?", "acceptedAnswer": {"@type": "Answer", "text": "Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro."}}, {"@type": "Question", "name": "¿Juravia sustituye a un abogado?", "acceptedAnswer": {"@type": "Answer", "text": "Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional."}}]}</script>
 </head>
 <body>
   <div class="bg-wrap" aria-hidden="true"></div>
@@ -244,11 +267,11 @@
 
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="/#inicio" aria-label="Juravia, inicio">
+      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
         <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
         <span>JURAVIA</span>
       </a>
-      <a class="back" href="/#guias">Volver al inicio</a>
+      <a class="back" href="index.html#guias">Volver al inicio</a>
     </div>
   </header>
 
@@ -257,7 +280,7 @@
     <div class="hero" id="top">
       <p class="kicker">Guía · Plantilla Juravia</p>
       <h1>ZBE (Zona de Bajas Emisiones)</h1>
-      <p class="lead">Guía profesional para impugnar sanciones de ZBE (Zona de Bajas Emisiones). La defensa suele centrarse en la señalización y el régimen aplicable, permisos/exenciones, y la trazabilidad de la lectura de matrícula.</p>
+      <p class="lead">Guía para sanciones de acceso a ZBE. El éxito suele depender de (i) acreditación de exención/registro, (ii) señalización de acceso y (iii) corrección de datos del vehículo.</p>
       <div class="actions">
         <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
         <a class="btn-ghost" href="#anexos">Ver checklist documental</a>
@@ -279,42 +302,35 @@
 
     <section class="card" id="revisar">
       <h2>Qué revisar en la denuncia</h2>
-      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Un control ordenado evita alegaciones genéricas y refuerza la consistencia del escrito.</p>
-<ul>
-        <li>Municipio/ordenanza aplicable y perímetro exacto de la ZBE (según señalización del acceso).</li>
-        <li>Fecha y franja horaria: si hay restricciones por horario o episodios específicos.</li>
-        <li>Identificación del vehículo y categoría ambiental/etiqueta (si aplica) y posibles exenciones.</li>
-        <li>Prueba de acceso: lectura de matrícula y punto de control.</li>
-        <li>Si existía autorización temporal (residente, invitación, carga/descarga) y su vigencia.</li>
-        <li>Notificación y plazos.</li>
-        <li>Errores materiales: matrícula, fecha, acceso concreto.</li>
+      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Una revisión ordenada evita alegaciones genéricas y mejora la consistencia del escrito.</p>
+      <ul>
+        <li>Fecha/hora y punto exacto de acceso (pórtico/cámara).</li><li>Matrícula y categoría del vehículo tal como figura en la denuncia.</li><li>Si existe exención, autorización, registro o distintivo aplicable.</li><li>Prueba aportada (imágenes/capturas) y claridad del perímetro.</li>
       </ul>
-</section>
+    </section>
 
     <section class="card" id="motivos">
       <h2>Motivos habituales de impugnación</h2>
-      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. La solidez suele estar en la concreción: hechos verificables, anexos numerados y una conclusión clara.</p>
-<ul>
-        <li>Falta de acreditación suficiente del acceso (punto/tiempo) o prueba incompleta.</li>
-        <li>Existencia de autorización o exención vigente no considerada.</li>
-        <li>Señalización de acceso insuficiente o confusa (si se acredita con fotos).</li>
-        <li>Errores en identificación de matrícula/vehículo o en la categoría aplicable.</li>
-        <li>Incoherencias del expediente (fecha/hora/punto).</li>
-        <li>Defectos procedimentales relevantes.</li>
+      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. En general, la Administración valora mejor escritos concretos, con hechos y anexos numerados.</p>
+      <ul>
+        <li>Exención/autorización existente no considerada (a acreditar).</li><li>Errores de identificación del vehículo o datos administrativos.</li><li>Señalización insuficiente o perímetro no claro en el acceso.</li><li>Defectos procedimentales (notificación, motivación, acceso a expediente).</li>
       </ul>
-</section>
+      
+    </section>
 
     <section class="card" id="anexos">
       <h2>Pruebas y anexos recomendados</h2>
-      <p>Aporta solo lo relevante y numera los anexos. La prueba documental y fotográfica, bien ordenada, suele pesar más que textos largos sin soporte.</p>
-<ul>
-        <li>Denuncia y documentación del expediente (capturas de acceso, si existen).</li>
-        <li>Permisos/autorizaciones/exenciones (residente, invitación, carga/descarga) con vigencia.</li>
-        <li>Fotos del acceso y señales de ZBE (perímetro y paneles informativos).</li>
-        <li>Capturas de mapa con el punto de acceso.</li>
-        <li>Documentación del vehículo si es necesaria para acreditar categoría o excepción.</li>
+      <p>Ordena los anexos con numeración (Anexo 1, Anexo 2…) y referencia cada uno en el texto. Si falta prueba en la notificación, solicita acceso al expediente y pide la incorporación de la prueba completa.</p>
+      <ul>
+        <li>Justificante de autorización/exención/registro (si aplica).</li><li>Documentación del vehículo (ficha técnica) si hay errores de clasificación.</li><li>Fotos del acceso y señalización de ZBE.</li><li>Solicitud de acceso al expediente y a las pruebas completas.</li>
       </ul>
-</section>
+      <details>
+        <summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
+        <p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
+        <ul>
+          <li>Anexo 1 · Justificante de autorización/exención/registro (si aplica).</li><li>Anexo 2 · Documentación del vehículo (ficha técnica) si hay errores de clasificación.</li><li>Anexo 3 · Fotos del acceso y señalización de ZBE.</li><li>Anexo 4 · Solicitud de acceso al expediente y a las pruebas completas.</li>
+        </ul>
+      </details>
+    </section>
 
     <section class="card" id="presentacion">
       <h2>Cómo presentar alegaciones/recurso</h2>
@@ -327,7 +343,7 @@
         <li>Guarda el acuse de recibo y el expediente descargado.</li>
       </ol>
       <div class="related" aria-label="Refuerza tu recurso con motivos procedimentales">
-        <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
+        <a class="pill" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
       </div>
     </section>
 
@@ -335,22 +351,32 @@
       <h2>Guías relacionadas</h2>
       <p>Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
       <div class="related">
-        <a class="pill" href="/recurrir_multa_zbe_exencion_autorizacion.html">ZBE: exención, autorización o registro</a><a class="pill" href="/recurrir_multa_zbe_senalizacion_acceso.html">ZBE: señalización de acceso y perímetro</a>
+        <a class="pill" href="recurrir_multa_zbe_exencion_autorizacion.html">ZBE: exención, autorización o registro</a><a class="pill" href="recurrir_multa_zbe_senalizacion_acceso.html">ZBE: señalización de acceso y perímetro</a>
       </div>
     </section>
 
     <section class="card" id="faq">
       <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Qué suele ganar una alegación en ZBE?</summary><p>Acreditar una autorización/exención vigente o señalar una falta clara de prueba del acceso. La documentación y la señalización del punto son decisivas.</p></details>
-      <details><summary>¿Vale con decir que no vi la señal?</summary><p>No. Si se discute señalización, aporta fotos del acceso y del entorno para demostrar insuficiencia o confusión.</p></details>
-      <details><summary>¿Qué documentos sirven como exención?</summary><p>Depende del municipio, pero normalmente permisos/resoluciones/autorizaciones vigentes y trazables. Aporta solo lo imprescindible.</p></details>
-      <details><summary>¿Y si la matrícula se leyó mal?</summary><p>Si hay indicios (mala calidad, incoherencias), es un motivo relevante. Solicitar y revisar la prueba del expediente ayuda.</p></details>
-      <details><summary>¿Qué anexos mínimos adjunto?</summary><p>Denuncia, prueba del expediente y, si aplica, autorización/exención y fotos del acceso.</p></details>
-</section>
+      <details><summary>¿Cuándo conviene presentar alegaciones en una multa de zbe (zona de bajas emisiones)?</summary><p>Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción.</p></details><details><summary>¿Qué documentación mínima debería adjuntar?</summary><p>Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente.</p></details><details><summary>¿Puedo pedir la prueba completa y el expediente?</summary><p>Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen.</p></details><details><summary>¿Qué pasa si presento fuera de plazo?</summary><p>Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro.</p></details><details><summary>¿Juravia sustituye a un abogado?</summary><p>Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional.</p></details>
+    </section>
     
-    <footer>
-      Juravia — Plantillas legales para defender tus derechos · <a href="/#inicio">juravia.app</a>
-    </footer>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+      <div class="footer-meta">
+        <div class="footer-name">JURAVIA</div>
+        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
+      </div>
+    </div>
+    <div class="footer-links" aria-label="Enlaces">
+      <a href="index.html#guias">Guías</a>
+      <a href="index.html#sobre-juravia">Sobre Juravia</a>
+      <a href="quienes_somos.html">Quiénes somos</a>
+      <a href="#top">Subir</a>
+    </div>
+  </div>
+</footer>
   </main>
 </body>
 </html>
