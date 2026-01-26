@@ -4,11 +4,13 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Guía de presentación — Municipal | Juravia</title>
-  <meta name="description" content="Instrucciones para presentar alegaciones y recursos ante Ayuntamientos y organismos municipales: acceso, formulario, anexos, firma y acuse."/>
+  <meta name="description" content="Cómo presentar alegaciones o recursos ante un ayuntamiento u organismo municipal: acceso, anexos, firma y acuse (guía orientativa)."/>
   <link rel="canonical" href="https://juravia.app/guia_municipal.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Guía de presentación — Municipal | Juravia"/>
-  <meta property="og:description" content="Instrucciones para presentar alegaciones y recursos ante Ayuntamientos y organismos municipales: acceso, formulario, anexos, firma y acuse."/>
+  <meta property="og:description" content="Cómo presentar alegaciones o recursos ante un ayuntamiento u organismo municipal: acceso, anexos, firma y acuse (guía orientativa)."/>
+  <meta property="og:url" content="https://juravia.app/guia_municipal.html"/>
+  <meta property="og:site_name" content="Juravia"/>
   <style>
     :root{
       --ink:#ffffff;
@@ -230,195 +232,190 @@
     footer a{ color: rgba(255,255,255,.82); }
     
 
-    /* Footer (landings + guías) */
+    .note{ margin: 12px 0 0; color: rgba(255,255,255,.74); font-size: 13px; line-height: 1.55; }
+    .muted{ color: rgba(255,255,255,.78); }
+
+
+    /* Footer (igual en landings y guías, excepto home) */
     .site-footer{
-      margin-top: 22px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,.12);
-      color: rgba(255,255,255,.78);
-      font-size: 14px;
+      margin-top: 18px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      padding: 16px 16px;
     }
-    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
-    .site-footer a:hover{text-decoration: underline;}
-    .footer-inner{
+    .site-footer .foot-inner{
       display:flex;
+      gap: 14px;
       align-items:center;
       justify-content: space-between;
-      gap: 14px;
       flex-wrap: wrap;
-      padding: 10px 0 18px;
     }
-    .footer-left{display:flex; align-items:center; gap: 10px;}
-    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
-    .footer-name{font-weight: 800; letter-spacing: .08em;}
-    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
-    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
+    .site-footer .foot-brand{
+      display:flex;
+      gap: 12px;
+      align-items:center;
+      min-width: 260px;
+    }
+    .site-footer .foot-brand img{
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));
+    }
+    .site-footer .foot-brand b{
+      display:block;
+      font-size: 13px;
+      letter-spacing: .6px;
+    }
+    .site-footer .foot-brand p{
+      margin: 6px 0 0;
+      font-size: 13px;
+      color: rgba(255,255,255,.78);
+      line-height: 1.45;
+    }
+    .site-footer .foot-links{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .site-footer .foot-links a{
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.10);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.92);
+      font-weight: 850;
+      font-size: 13px;
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+    }
+    .site-footer .foot-links a:hover{
+      border-color: rgba(212,175,55,.55);
+      background: rgba(0,0,0,.16);
+      transform: translateY(-1px);
+    }
 
-/* Píldoras de enlaces (consistente con landings) */
-.guide-pills{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
-.pill-link{
-  text-decoration:none;
-  display:inline-flex; align-items:center;
-  padding: 10px 12px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.10);
-  border: 1px solid rgba(255,255,255,.14);
-  color: rgba(255,255,255,.92);
-  font-weight: 900;
-  font-size: 14px;
-  transition: border-color .18s ease, background .18s ease, transform .18s ease;
-}
-.pill-link:hover{
-  border-color: rgba(212,175,55,.55);
-  background: rgba(0,0,0,.16);
-  transform: translateY(-1px);
-}
-
-</style>
+  </style>
 </head>
 <body>
+  <div class="bg-wrap" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
-        <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+      <a class="brand" href="/index.html#inicio" aria-label="Juravia, inicio">
+        <img src="/brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
         <span>JURAVIA</span>
       </a>
-      <a class="back" href="index.html#guias">Volver a la pantalla principal</a>
+      <a class="back" href="/index.html#tramitacion">Volver a la pantalla principal</a>
     </div>
   </header>
+
   <main class="container">
     <div class="hero" id="top">
-      <p class="kicker">Guía · Juravia</p>
+      <p class="kicker">Guía · Tramitación</p>
       <h1>Guía de presentación — Municipal</h1>
       <p class="lead">Guía orientativa para presentar alegaciones y recursos en sanciones municipales: sede electrónica, anexos y conservación del acuse.</p>
+
       <div class="actions">
-        <a class="btn" href="https://app.juravia.app/" rel="nofollow">Abrir Juravia</a>
-        <a class="btn-ghost" href="index.html#guias">Ver guías por tipo de multa</a>
+        <a class="btn" href="https://app.juravia.app/" rel="nofollow" target="_blank">Abrir Juravia</a>
+        <a class="btn-ghost" href="/index.html#guias">Ver guías por tipo de multa</a>
+      </div>
+
+      <div class="toc">
+        <div class="toc-title">Contenido</div>
+        <ul>
+          <li><a href="#requisitos">Requisitos previos</a></li>
+          <li><a href="#acceso">Acceso al trámite</a></li>
+          <li><a href="#cumplimentacion">Cumplimentación</a></li>
+          <li><a href="#anexos">Anexos y formato</a></li>
+          <li><a href="#firma">Firma y presentación</a></li>
+          <li><a href="#acuse">Acuse y conservación</a></li>
+          <li><a href="#incidencias">Incidencias y alternativa</a></li>
+          <li><a href="#enlaces-oficiales">Enlaces oficiales</a></li>
+        </ul>
+      </div>
+
+      <p class="note">Nota: esta guía es orientativa. La notificación (expediente) y la sede del organismo son la referencia válida de plazos, requisitos y efectos del pago con descuento.</p>
+    </div>
+
+    <section class="card" id="enlaces-utiles">
+      <h2>Enlaces útiles (si aplican)</h2>
+      <div class="related">
+          <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a>
+          <a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad</a>
+          <a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción</a>
+      </div>
+      <p class="muted" style="margin-top:10px;">Estos motivos suelen ser transversales y dependen del expediente. Úsalos solo si encajan y puedes acreditarlo.</p>
+    </section>
+
+    <section class="card" id="requisitos">
+      <h2>Requisitos previos</h2>
+      <ul><li>Confirma el órgano sancionador (ayuntamiento/organismo municipal) y el canal indicado en la notificación.</li><li>Prepara número de expediente, datos del interesado y pruebas (anexos) que soportan la alegación.</li><li>Revisa el efecto del pago con descuento: en muchos procedimientos, pagar con reducción implica renunciar a alegar en vía administrativa (según el expediente).</li></ul>
+    </section>
+
+    <section class="card" id="acceso">
+      <h2>Acceso al trámite</h2>
+      <ul><li>Sede municipal: suele existir un trámite de “Alegaciones/recursos” o un “Registro electrónico”.</li><li>Registro: cuando sea admisible, puedes presentar por registro electrónico/presencial conforme a los canales indicados.</li></ul>
+    </section>
+
+    <section class="card" id="cumplimentacion">
+      <h2>Cumplimentación</h2>
+      <ul><li>Identifica expediente e interesado, expón hechos y motivos y termina con petición clara.</li><li>Si el ayuntamiento exige formulario, rellénalo y adjunta el escrito como documentación adicional si procede.</li></ul>
+    </section>
+
+    <section class="card" id="anexos">
+      <h2>Anexos y formato</h2>
+      <ul><li>Adjunta pruebas con nombres claros e incluye un índice de anexos en el escrito.</li><li>Si aportas fotos, añade fecha/lugar y describe qué acreditan.</li></ul>
+    </section>
+
+    <section class="card" id="firma">
+      <h2>Firma y presentación</h2>
+      <ul><li>En sede electrónica, finaliza con firma/registro y revisa el resumen antes de enviar.</li><li>En registro presencial, solicita sello/acuse en copia del escrito.</li></ul>
+    </section>
+
+    <section class="card" id="acuse">
+      <h2>Acuse de recibo y conservación</h2>
+      <ul><li>Guarda justificante, CSV y copia de todo lo enviado.</li></ul>
+    </section>
+
+    <section class="card" id="incidencias">
+      <h2>Incidencias y alternativa (REG)</h2>
+      <ul><li>Si la sede municipal falla, utiliza el canal alternativo indicado en la notificación (registro presencial/correo/REG si procede).</li><li>Regla práctica: si no puedes demostrar la presentación, para el órgano “no existe”. El acuse es tu prueba.</li></ul>
+    </section>
+
+    <section class="card" id="enlaces-oficiales">
+      <h2>Enlaces oficiales</h2>
+      <div class="related">
+          <a class="pill" href="https://rec.redsara.es/registro/action/are/acceso.do" target="_blank" rel="noopener">Registro Electrónico General (AGE)</a>
+      </div>
+      <div class="callout" style="margin-top:12px;">
+        <b>Consejo:</b> abre el trámite oficial y revisa qué campos y formatos acepta antes de adjuntar documentos. Guarda el justificante final.
+      </div>
+      
+    </section>
+
+    <div class="site-footer" aria-label="Pie de página">
+      <div class="foot-inner">
+        <div class="foot-brand">
+          <img src="/brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
+          <div>
+            <b>JURAVIA</b>
+            <p>Plantillas legales para defender tus derechos · <a href="/index.html#inicio">juravia.app</a></p>
+          </div>
+        </div>
+        <div class="foot-links" aria-label="Enlaces del sitio">
+          <a href="/index.html#guias">Guías</a>
+          <a href="/index.html#sobre-juravia">Sobre Juravia</a>
+          <a href="/quienes_somos.html">Quiénes somos</a>
+          <a href="#top">Subir</a>
+        </div>
       </div>
     </div>
-
-    
-    <div class="toc" aria-label="Índice">
-      <div class="toc-title">Contenido de esta guía</div>
-      <ul>
-        <li><a href="#requisitos">Requisitos previos</a></li>
-        <li><a href="#acceso">Acceso al trámite</a></li>
-        <li><a href="#formulario">Cumplimentación</a></li>
-        <li><a href="#anexos">Anexos y formato</a></li>
-        <li><a href="#firma">Firma y presentación</a></li>
-        <li><a href="#acuse">Acuse y conservación</a></li>
-        <li><a href="#incidencias">Incidencias y alternativa</a></li>
-      </ul>
-    </div>
-
-<div class="card">
-  <h2>Enlaces útiles (si aplican)</h2>
-  <div class="guide-pills">
-    <a class="pill-link" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a>
-    <a class="pill-link" href="recurrir_multa_caducidad_procedimiento.html">Caducidad</a>
-    <a class="pill-link" href="recurrir_multa_prescripcion_infraccion.html">Prescripción</a>
-  </div>
-  <p class="note" style="margin-top:10px;">Estos motivos suelen ser transversales y dependen del expediente. Úsalos solo si encajan y puedes acreditarlo.</p>
-</div>
-<div class="card" id="requisitos">
-  <h2>Requisitos previos</h2>
-  
-<ul class="list">
-  <li>Confirma el <strong>órgano sancionador</strong> (ayuntamiento/organismo municipal) y el canal de presentación indicado en la notificación.</li>
-  <li>Prepara el <strong>número de expediente</strong>, tus datos y las pruebas (anexos) que soportan tu alegación.</li>
-  <li>Revisa el efecto del pago con descuento: en muchos procedimientos, pagar con reducción implica renunciar a alegar en vía administrativa.</li>
-</ul>
-
-</div>
-
-<div class="card" id="acceso">
-  <h2>Acceso al trámite</h2>
-  
-<ul class="list">
-  <li><strong>Sede municipal:</strong> normalmente existe un trámite de “Alegaciones/recursos” o “Registro electrónico”.</li>
-  <li><strong>Registro:</strong> cuando sea admisible, puedes presentar por registro electrónico/presencial conforme a los canales indicados.</li>
-</ul>
-
-</div>
-
-<div class="card" id="formulario">
-  <h2>Cumplimentación</h2>
-  
-<ul class="list">
-  <li>Identifica expediente y persona interesada, expón hechos y motivos y termina con petición clara.</li>
-  <li>Si el ayuntamiento exige un formulario, rellénalo y adjunta el escrito como “documentación adicional” si procede.</li>
-</ul>
-
-</div>
-
-<div class="card" id="anexos">
-  <h2>Anexos y formato</h2>
-  
-<ul class="list">
-  <li>Adjunta pruebas con nombres claros y un índice de anexos en el escrito.</li>
-  <li>Si aportas fotos, incluye fecha/lugar y describe qué acreditan.</li>
-</ul>
-
-</div>
-
-<div class="card" id="firma">
-  <h2>Firma y presentación</h2>
-  
-<ul class="list">
-  <li>En sede electrónica, finaliza con firma/registro y revisa el resumen antes de enviar.</li>
-  <li>En registro presencial, solicita sello/acuse en copia del escrito.</li>
-</ul>
-
-</div>
-
-<div class="card" id="acuse">
-  <h2>Acuse y conservación</h2>
-  
-<ul class="list">
-  <li>Guarda justificante, CSV y copia de todo lo enviado.</li>
-</ul>
-
-</div>
-
-<div class="card" id="incidencias">
-  <h2>Incidencias y alternativa (REG)</h2>
-  
-<ul class="list">
-  <li>Si la sede municipal falla, utiliza el canal alternativo indicado en la notificación (registro presencial/correo/REG si procede).</li>
-  <li>Regla práctica: si no puedes demostrar la presentación, para el órgano “no existe”. El acuse es tu prueba.</li>
-</ul>
-
-</div>
-<div class="card">
-  <h2>Enlaces oficiales</h2>
-  <ul class="list">
-    <li><a href="https://rec.redsara.es/registro/action/are/acceso.do" target="_blank" rel="noopener noreferrer">Registro Electrónico General (AGE)</a></li>
-  </ul>
-  <p class="note">Consejo: abre el trámite oficial y revisa qué campos y formatos acepta antes de adjuntar documentos. Guarda el justificante final.</p>
-</div>
-
-<div class="callout">
-  <strong>Nota:</strong> la información de esta guía es orientativa. La notificación (expediente) y la sede del organismo son la referencia válida de plazos, requisitos y efectos del pago con descuento.
-</div>
-
-
-    <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-      <div class="footer-meta">
-        <div class="footer-name">JURAVIA</div>
-        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
-      </div>
-    </div>
-    <div class="footer-links" aria-label="Enlaces">
-      <a href="index.html#guias">Guías</a>
-      <a href="index.html#sobre-juravia">Sobre Juravia</a>
-      <a href="quienes_somos.html">Quiénes somos</a>
-      <a href="#top">Subir</a>
-    </div>
-  </div>
-</footer>
   </main>
 </body>
 </html>
