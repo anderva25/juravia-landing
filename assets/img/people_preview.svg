@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" fill="none" role="img" aria-label="Persona revisando un escrito con marca de agua">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="900" y2="640">
+      <stop stop-color="#EEF5FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="brand3" x1="240" y1="140" x2="700" y2="520">
+      <stop stop-color="#0B4AA2"/>
+      <stop offset="1" stop-color="#2A6BFF"/>
+    </linearGradient>
+    <filter id="shadow3" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#071024" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="900" height="640" rx="32" fill="url(#bg3)"/>
+  <circle cx="160" cy="520" r="160" fill="#0B4AA2" opacity="0.10"/>
+  <circle cx="760" cy="120" r="140" fill="#D4AF37" opacity="0.08"/>
+  <!-- Document -->
+  <g filter="url(#shadow3)">
+    <rect x="160" y="128" width="460" height="420" rx="26" fill="#FFFFFF" stroke="#071024" stroke-opacity="0.10"/>
+    <rect x="200" y="176" width="260" height="14" rx="7" fill="#071024" opacity="0.12"/>
+    <rect x="200" y="210" width="360" height="12" rx="6" fill="#071024" opacity="0.10"/>
+    <rect x="200" y="236" width="320" height="12" rx="6" fill="#071024" opacity="0.10"/>
+    <rect x="200" y="262" width="340" height="12" rx="6" fill="#071024" opacity="0.10"/>
+    <rect x="200" y="310" width="380" height="12" rx="6" fill="#071024" opacity="0.10"/>
+    <rect x="200" y="336" width="310" height="12" rx="6" fill="#071024" opacity="0.10"/>
+    <rect x="200" y="362" width="360" height="12" rx="6" fill="#071024" opacity="0.10"/>
+    <rect x="200" y="420" width="190" height="14" rx="7" fill="#0B4AA2" opacity="0.18"/>
+    <!-- watermark -->
+    <g opacity="0.08" transform="translate(180 160) rotate(-18)">
+      <text x="0" y="220" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="950" font-size="52" fill="#071024" letter-spacing="10">PREVIEW</text>
+    </g>
+  </g>
+  <!-- Person -->
+  <g filter="url(#shadow3)">
+    <circle cx="720" cy="300" r="52" fill="#F4C7A0"/>
+    <path d="M680 288c8-34 30-56 70-56 44 0 78 32 78 80 0 10-2 20-6 28-12-10-30-16-50-18-26-2-46-14-58-26-12 6-22 8-34 6z" fill="#2B2F3A"/>
+    <path d="M640 470c18-60 60-92 128-92s110 32 128 92" fill="url(#brand3)" opacity="0.16"/>
+    <path d="M652 470c14-50 50-74 116-74s102 24 116 74" stroke="url(#brand3)" stroke-width="22" stroke-linecap="round" opacity="0.75"/>
+  </g>
+  <!-- Badge -->
+  <g>
+    <rect x="540" y="520" width="300" height="62" rx="20" fill="#071024" opacity="0.06"/>
+    <circle cx="574" cy="551" r="8" fill="#D4AF37"/>
+    <text x="592" y="558" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800" font-size="16" fill="#071024" fill-opacity="0.78">Descarga sin marca de agua</text>
+  </g>
+</svg>

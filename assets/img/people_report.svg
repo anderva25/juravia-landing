@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" fill="none" role="img" aria-label="Persona revisando un informe">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF5FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="220" y1="120" x2="520" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B4AA2"/>
+      <stop offset="1" stop-color="#083C84"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#F2D77A"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#071024" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="900" height="640" rx="32" fill="url(#bg)"/>
+  <circle cx="680" cy="140" r="120" fill="#0B4AA2" opacity="0.10"/>
+  <circle cx="740" cy="230" r="140" fill="#D4AF37" opacity="0.08"/>
+  <!-- Desk -->
+  <rect x="120" y="430" width="660" height="120" rx="22" fill="#071024" opacity="0.06"/>
+  <!-- Laptop -->
+  <g filter="url(#shadow)">
+    <rect x="320" y="320" width="320" height="200" rx="20" fill="#071024" opacity="0.88"/>
+    <rect x="340" y="340" width="280" height="140" rx="14" fill="#0B0F24"/>
+    <rect x="360" y="360" width="170" height="12" rx="6" fill="#FFFFFF" opacity="0.18"/>
+    <rect x="360" y="382" width="240" height="10" rx="5" fill="#FFFFFF" opacity="0.12"/>
+    <rect x="360" y="402" width="210" height="10" rx="5" fill="#FFFFFF" opacity="0.12"/>
+    <rect x="360" y="422" width="190" height="10" rx="5" fill="#FFFFFF" opacity="0.12"/>
+    <rect x="360" y="446" width="120" height="10" rx="5" fill="#D4AF37" opacity="0.32"/>
+    <rect x="308" y="518" width="344" height="18" rx="9" fill="#071024" opacity="0.12"/>
+  </g>
+  <!-- Person -->
+  <g filter="url(#shadow)">
+    <path d="M238 456c16-40 54-64 98-64s82 24 98 64" stroke="#071024" stroke-opacity="0.12" stroke-width="22" stroke-linecap="round"/>
+    <path d="M260 456c12-30 42-48 76-48s64 18 76 48" stroke="url(#brand)" stroke-width="34" stroke-linecap="round"/>
+    <circle cx="336" cy="292" r="54" fill="#F4C7A0"/>
+    <path d="M300 302c12 18 30 26 52 26 16 0 30-6 42-18" stroke="#071024" stroke-opacity="0.22" stroke-width="10" stroke-linecap="round"/>
+    <path d="M285 286c10-34 36-56 74-56 46 0 82 32 82 82 0 8-1 16-3 24-10-12-26-18-48-20-32-2-58-16-72-30-14 4-24 4-33 0z" fill="#2B2F3A"/>
+    <path d="M248 468c18-46 58-72 124-72s106 26 124 72" fill="#0B0F24" opacity="0.10"/>
+  </g>
+  <!-- Report card -->
+  <g filter="url(#shadow)">
+    <rect x="140" y="150" width="260" height="170" rx="22" fill="#FFFFFF" opacity="0.82"/>
+    <rect x="164" y="176" width="150" height="12" rx="6" fill="#071024" opacity="0.14"/>
+    <rect x="164" y="200" width="210" height="10" rx="5" fill="#071024" opacity="0.10"/>
+    <rect x="164" y="220" width="190" height="10" rx="5" fill="#071024" opacity="0.10"/>
+    <rect x="164" y="252" width="220" height="12" rx="6" fill="#0B4AA2" opacity="0.18"/>
+    <rect x="164" y="276" width="110" height="12" rx="6" fill="url(#gold)" opacity="0.55"/>
+  </g>
+  <!-- Small badge -->
+  <g>
+    <rect x="560" y="150" width="210" height="54" rx="18" fill="#071024" opacity="0.06"/>
+    <circle cx="588" cy="177" r="8" fill="#D4AF37"/>
+    <text x="606" y="184" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800" font-size="16" fill="#071024" fill-opacity="0.78">Basado en el PDF</text>
+  </g>
+</svg>

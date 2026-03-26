@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" fill="none" role="img" aria-label="Persona subiendo un PDF">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="900" y2="640">
+      <stop stop-color="#071024"/>
+      <stop offset="1" stop-color="#0B0F24"/>
+    </linearGradient>
+    <linearGradient id="brand2" x1="210" y1="150" x2="660" y2="520">
+      <stop stop-color="#2A6BFF"/>
+      <stop offset="1" stop-color="#0B4AA2"/>
+    </linearGradient>
+    <linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#F2D77A"/>
+    </linearGradient>
+    <filter id="shadow2" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="900" height="640" rx="32" fill="url(#bg2)"/>
+  <circle cx="180" cy="120" r="140" fill="#2A6BFF" opacity="0.18"/>
+  <circle cx="760" cy="520" r="180" fill="#D4AF37" opacity="0.10"/>
+  <!-- Upload panel -->
+  <g filter="url(#shadow2)">
+    <rect x="140" y="132" width="620" height="420" rx="28" fill="#FFFFFF" opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <rect x="188" y="186" width="524" height="210" rx="22" fill="#0B0F24" opacity="0.72" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <path d="M450 236v90" stroke="url(#brand2)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M410 270l40-40 40 40" stroke="url(#brand2)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="250" y="322" width="400" height="12" rx="6" fill="#FFFFFF" opacity="0.16"/>
+    <rect x="250" y="346" width="320" height="12" rx="6" fill="#FFFFFF" opacity="0.12"/>
+    <rect x="188" y="416" width="220" height="44" rx="16" fill="url(#brand2)" opacity="0.92"/>
+    <text x="224" y="444" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="900" font-size="16" fill="#FFFFFF">Subir PDF</text>
+    <rect x="422" y="416" width="290" height="44" rx="16" fill="#FFFFFF" opacity="0.10" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="452" y="444" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800" font-size="16" fill="#FFFFFF" fill-opacity="0.82">OCR selectivo</text>
+  </g>
+  <!-- Person -->
+  <g filter="url(#shadow2)">
+    <circle cx="760" cy="210" r="50" fill="#F4C7A0"/>
+    <path d="M720 200c6-30 28-50 60-50 40 0 70 28 70 70 0 10-2 20-6 28-12-10-28-16-48-18-24-2-44-12-54-22-10 4-16 5-22 2z" fill="#2B2F3A"/>
+    <path d="M700 332c14-52 48-80 92-80s78 28 92 80" fill="#FFFFFF" opacity="0.10"/>
+    <path d="M708 332c12-44 40-66 84-66s72 22 84 66" stroke="url(#gold2)" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <g>
+    <rect x="170" y="70" width="250" height="54" rx="18" fill="#FFFFFF" opacity="0.10" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <circle cx="198" cy="97" r="8" fill="#D4AF37"/>
+    <text x="216" y="104" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800" font-size="16" fill="#FFFFFF" fill-opacity="0.86">Análisis gratuito</text>
+  </g>
+</svg>

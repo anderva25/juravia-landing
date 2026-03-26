@@ -1,0 +1,4012 @@
+/* Secondary guide pages – consistent with Home (bands + premium cards) */
+body.page-guide{
+  background: linear-gradient(180deg, #050914, #070B1A);
+}
+body.page-guide .bg .particles{ display:none; } /* keep background subtle for reading */
+body.page-guide .bg .blob{ opacity:.55; }
+body.page-guide .bg .grid{ opacity:.06; }
+body.page-guide .bg .dots{ opacity:.05; }
+
+.band{
+  position:relative;
+  padding: 72px 0;
+}
+.band--light{
+  background:
+    radial-gradient(900px 520px at 12% 0%, rgba(42,107,255,.14), rgba(255,255,255,0) 62%),
+    radial-gradient(900px 520px at 92% 10%, rgba(212,175,55,.10), rgba(255,255,255,0) 62%),
+    linear-gradient(180deg, #ffffff, #f5f7ff);
+  color:#071024;
+}
+.band--light .kicker{color: rgba(7,16,36,.72)}
+.band--light .lead{color: rgba(7,16,36,.72)}
+.band--light a{ color: #0B4AA2; }
+
+.guide-shell{
+  max-width: 920px;
+  margin: 0 auto;
+}
+.page-guide .kicker{
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+}
+.page-guide .kicker::before{
+  content:"";
+  width:10px;height:10px;border-radius:999px;
+  background: rgba(212,175,55,.95);
+  box-shadow: 0 0 0 4px rgba(212,175,55,.18);
+}
+.page-guide h1{
+  margin: 10px 0 10px;
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height: 1.06;
+  letter-spacing: -.02em;
+}
+.page-guide p{ color: rgba(7,16,36,.80); font-size: 17px; line-height:1.75; }
+.page-guide .lead{ margin-top: 6px; font-size: 18px; }
+
+.breadcrumbs{
+  display:flex; flex-wrap:wrap; gap:10px;
+  font-size: 13px;
+  color: rgba(7,16,36,.72);
+  margin: 12px 0 0;
+}
+.breadcrumbs a{ color: rgba(7,16,36,.86); text-decoration:none; }
+.breadcrumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+.breadcrumbs .sep{ opacity:.55; }
+
+.guide-hero-actions{
+  margin-top: 18px;
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+}
+.pills--guide{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(7,16,36,.05);
+  border: 1px solid rgba(7,16,36,.12);
+  color: rgba(7,16,36,.78);
+  font-size: 13px;
+}
+.pill .dot{
+  width: 8px; height: 8px; border-radius: 999px;
+  background: rgba(212,175,55,.95);
+  box-shadow: 0 0 0 3px rgba(212,175,55,.18);
+}
+
+.toc{
+  margin: 22px 0 28px;
+  background: rgba(7,16,36,.04);
+  border: 1px solid rgba(7,16,36,.10);
+  border-radius: 18px;
+  padding: 16px 18px;
+}
+.toc strong{ display:block; margin-bottom: 8px; color:#071024;}
+.toc ul{ margin: 0; padding-left: 18px; }
+.toc li{ margin: 8px 0; color: rgba(7,16,36,.78); }
+.toc a{ color:#0B4AA2; text-decoration:none; }
+.toc a:hover{ text-decoration:underline; text-underline-offset: 3px; }
+
+.page-guide h2{
+  margin: 34px 0 12px;
+  font-size: 22px;
+  line-height:1.25;
+  letter-spacing:-.01em;
+  color:#071024;
+}
+.page-guide h3{
+  margin: 22px 0 10px;
+  font-size: 18px;
+  color:#071024;
+}
+.page-guide ul{ padding-left: 20px; }
+.page-guide li{ margin: 8px 0; }
+
+.final-cta{
+  margin-top: 34px;
+  background: radial-gradient(700px 380px at 15% 0%, rgba(42,107,255,.10), rgba(255,255,255,0) 60%),
+              linear-gradient(180deg, rgba(7,16,36,.04), rgba(7,16,36,.02));
+  border: 1px solid rgba(7,16,36,.12);
+  border-radius: 22px;
+  padding: 22px;
+  text-align:center;
+}
+.final-cta h2{ margin: 0 0 8px; }
+.final-cta p{ margin: 0 0 14px; color: rgba(7,16,36,.74); }
+@media (max-width: 720px){
+  .pills--guide{ justify-content:center; }
+}
+
+/* Guide hero aligned with Home */
+    .hero--guide{
+      padding-top: 110px;
+      padding-bottom: 34px;
+    }
+    .guide-hero-card{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 34px 28px;
+      border-radius: 28px;
+      background: rgba(6,12,28,.46);
+      border: 1px solid rgba(212,175,55,.20);
+      box-shadow: 0 22px 70px rgba(0,0,0,.42);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      text-align: center;
+    }
+    .hero--guide .kicker{
+      color: rgba(246,247,251,.78);
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .hero--guide h1{
+      color: #f6f7fb;
+      margin-top: 10px;
+    }
+    .hero--guide .lead{
+      color: rgba(246,247,251,.75);
+      max-width: 70ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero--guide .breadcrumbs{
+      justify-content:center;
+      margin-top: 10px;
+    }
+    .hero--guide .breadcrumbs a,
+    .hero--guide .breadcrumbs span{
+      color: rgba(246,247,251,.72);
+    }
+    .hero--guide .breadcrumbs a:hover{ color: rgba(246,247,251,.92); }
+
+    .hero--guide .guide-hero-actions{
+      margin-top: 18px;
+      align-items:center;
+    }
+    .hero--guide .guide-hero-actions > .btn{
+      width:auto;
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+    .hero--guide .pills--guide{
+      justify-content:center;
+    }
+
+    /* Content band spacing */
+    .guide-content-band{
+      padding-top: 34px;
+      padding-bottom: 46px;
+    }
+
+    @media (max-width: 720px){
+      .hero--guide{ padding-top: 92px; }
+      .guide-hero-card{ padding: 22px 18px 18px; border-radius: 22px; }
+      .hero--guide h1{ font-size: clamp(30px, 7.2vw, 44px); }
+    }
+
+
+
+/* Ensure pills are legible on dark guide hero */
+.hero--guide .pills--guide .pill{
+  background: rgba(246,247,251,.10);
+  border-color: rgba(246,247,251,.16);
+  color: rgba(246,247,251,.88);
+}
+.hero--guide .pills--guide .pill .dot{
+  background: rgba(212,175,55,.96);
+  box-shadow: 0 0 0 3px rgba(212,175,55,.18);
+}
+/* Guide hero actions: keep one primary CTA and avoid accidental full-width */
+.hero--guide .guide-hero-actions{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+.hero--guide .guide-hero-actions .btn.primary{
+  width:auto;
+  min-width: 260px;
+  max-width: 360px;
+}
+
+
+/* Ensure buttons keep brand color inside light bands */
+.band--light a.btn{ color:#fff; }
+.band--light a.btn.secondary{ color:#fff; }
+
+/* Pills in dark guide hero */
+.hero--guide .pill{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.14);
+  color: rgba(246,247,251,.90);
+}
+.hero--guide .pill .dot{
+  background: rgba(212,175,55,.95);
+  box-shadow: 0 0 0 3px rgba(212,175,55,.18);
+}
+
+/* Premium legal-tech hero background (aurora + blueprint + radar sweep), lightweight */
+body.page-guide .bg::before{
+  content:"";
+  position:fixed; inset:-20vh -20vw;
+  background:
+    radial-gradient(900px 560px at 12% 10%, rgba(42,107,255,.22), rgba(0,0,0,0) 60%),
+    radial-gradient(820px 520px at 88% 20%, rgba(212,175,55,.14), rgba(0,0,0,0) 62%),
+    radial-gradient(1000px 700px at 40% 90%, rgba(10,210,255,.10), rgba(0,0,0,0) 62%);
+  opacity:.85;
+  pointer-events:none;
+  mix-blend-mode: screen;
+  filter: blur(18px);
+  transform: translateZ(0);
+}
+
+body.page-guide .bg::after{
+  content:"";
+  position:fixed; inset:0;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.05) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(0deg, rgba(255,255,255,.035) 1px, rgba(0,0,0,0) 1px);
+  background-size: 64px 64px, 64px 64px;
+  opacity:.06;
+  pointer-events:none;
+}
+
+.hero--guide{
+  position:relative;
+}
+.hero--guide::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 55%, rgba(42,107,255,.18), rgba(0,0,0,0) 56%),
+    conic-gradient(from 220deg at 50% 55%, rgba(212,175,55,.16), rgba(0,0,0,0) 55%, rgba(42,107,255,.08));
+  opacity:.22;
+  mix-blend-mode: screen;
+  animation: jv-radar-sweep 7.5s linear infinite;
+  transform: translateZ(0);
+}
+@keyframes jv-radar-sweep{
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
+}
+
+@media (max-width: 720px){
+  body.page-guide .bg::before{ filter: blur(12px); opacity:.75; }
+  body.page-guide .bg::after{ opacity:.05; }
+  .hero--guide::after{ animation: none; opacity:.14; }
+}
+@media (prefers-reduced-motion: reduce){
+  .hero--guide::after{ animation: none !important; }
+}
+
+
+/* === Secondary pages: match Home hero background (aurora + blueprint grid + lanes) === */
+body.page-guide{ background: linear-gradient(180deg, #050914, #070B1A); }
+
+/* Reuse Home hero FX on guide heroes */
+.page-guide .hero.hero-photo{
+  position:relative;
+  padding: 0;
+  min-height: 100svh;
+  display:flex;
+  align-items:center;
+}
+
+/* Aurora mesh base */
+.page-guide .hero.hero-photo::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:-10%;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.42), rgba(24,132,255,0) 62%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.26), rgba(212,175,55,0) 62%),
+    radial-gradient(780px 480px at 58% 72%, rgba(66,203,255,.22), rgba(66,203,255,0) 64%),
+    radial-gradient(820px 520px at 30% 78%, rgba(106,92,255,.18), rgba(106,92,255,0) 66%),
+    linear-gradient(180deg, rgba(6,10,24,1) 0%, rgba(7,12,28,1) 42%, rgba(7,13,30,1) 100%);
+  background-size: 120% 120%, 120% 120%, 140% 140%, 140% 140%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, 60% 100%, 20% 100%, 50% 50%;
+  filter: saturate(1.05) contrast(1.03);
+  transform: scale(1.02);
+  will-change: background-position, transform;
+  animation: auroraDrift 12s ease-in-out infinite alternate;
+}
+
+/* Grid + lane lines + vignette (same as Home) */
+.page-guide .hero.hero-photo::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    /* Blueprint grid */
+    linear-gradient(rgba(255,255,255,.035) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.030) 1px, rgba(0,0,0,0) 1px),
+    /* Subtle lane / trajectory lines */
+    repeating-linear-gradient(110deg, rgba(66,203,255,.06) 0 1px, rgba(0,0,0,0) 1px 28px),
+    /* Vignette + readability */
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78));
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50%;
+  pointer-events:none;
+}
+
+/* Radar sweep element (inserted in HTML) */
+.page-guide .hero-sweep{
+  position:absolute;
+  z-index:1;
+  inset:-18%;
+  pointer-events:none;
+  opacity:.55;
+  background: conic-gradient(from 0turn at 50% 50%,
+    rgba(0,0,0,0) 0turn,
+    rgba(66,203,255,0) .68turn,
+    rgba(66,203,255,.18) .71turn,
+    rgba(66,203,255,0) .74turn,
+    rgba(0,0,0,0) 1turn
+  );
+  mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%);
+  filter: blur(.2px);
+  transform-origin: 50% 50%;
+  animation: radarSpin 9s linear infinite;
+  mix-blend-mode: screen;
+}
+
+@keyframes auroraDrift{
+  0%   { background-position: 10% 0%, 92% 8%, 60% 96%, 18% 92%, 50% 50%; transform: scale(1.03) translate3d(0,0,0);}
+  100% { background-position: 0% 18%, 100% 0%, 52% 100%, 30% 84%, 50% 50%; transform: scale(1.06) translate3d(0,0,0);}
+}
+@keyframes radarSpin{
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .page-guide .hero.hero-photo::before{ animation: none !important; }
+  .page-guide .hero-sweep{ animation: none !important; opacity: .18; }
+}
+
+/* Guide hero spacing on top of hero-photo */
+.page-guide .hero--guide{
+  padding-top: 112px;
+  padding-bottom: 42px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Content reads better as a premium card on light band */
+.page-guide .guide-shell{
+  max-width: 980px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid rgba(10,20,40,.08);
+  border-radius: 26px;
+  padding: 34px 34px 40px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.08);
+}
+
+@media (max-width: 720px){
+  .page-guide .guide-shell{ padding: 22px 18px 26px; border-radius: 22px; }
+  .page-guide .hero.hero-photo{ min-height: 64vh; }
+}
+
+/* Ensure buttons keep Home styling on light bands (avoid link color overrides) */
+.page-guide .band--light .btn,
+.page-guide .band--light .btn:visited{
+  color: #fff !important;
+}
+
+/* === Guide content cards on light band
+
+/* === Guide content cards on light band (avoid 'white on white') === */
+.page-guide .band--light .card{
+  background: #ffffff;
+  border: 1px solid rgba(10,20,40,.10);
+  box-shadow: 0 14px 44px rgba(0,0,0,.08);
+}
+.page-guide .band--light .card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(42,107,255,.18);
+}
+.page-guide .band--light .card .muted,
+.page-guide .band--light .muted{
+  color: rgba(7,16,36,.70) !important;
+}
+.page-guide .band--light .card h2,
+.page-guide .band--light .card h3{
+  color:#071024;
+}
+.page-guide .band--light .card p,
+.page-guide .band--light .card li{
+  color: rgba(7,16,36,.86);
+  line-height: 1.75;
+}
+.page-guide .band--light .card a{
+  color: #0B4AA2;
+}
+.page-guide .final-cta .btn{ color:#fff !important; }
+
+
+/* Disable legacy sweep overlay on guide heroes (we use Home hero-photo overlays) */
+.page-guide .hero--guide::after{ display:none !important; }
+
+
+
+/* === 2026 premium upgrade for secondary SEO landings === */
+.page-guide .bg .grid{ opacity:.14 !important; }
+.page-guide .bg .dots{ opacity:.08 !important; }
+.page-guide .bg .vignette{ opacity:.9; }
+
+.page-guide .hero.hero-photo::after{
+  background:
+    linear-gradient(rgba(255,255,255,.055) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0) 18%),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.065) 0 1px, rgba(0,0,0,0) 1px 26px),
+    radial-gradient(900px 560px at 50% 0%, rgba(255,255,255,.18), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.06), rgba(4,7,16,.56) 52%, rgba(4,7,16,.82));
+  background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+}
+
+.guide-hero-card{
+  position:relative;
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04)),
+    rgba(6,12,28,.52);
+  box-shadow: 0 24px 90px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.09);
+}
+.guide-hero-card::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(640px 220px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 70%),
+    linear-gradient(120deg, rgba(255,255,255,.05) 0, rgba(255,255,255,0) 46%);
+  pointer-events:none;
+}
+.guide-hero-card::after{
+  content:"";
+  position:absolute;
+  inset:auto -12% -32% -12%;
+  height: 220px;
+  background: radial-gradient(closest-side, rgba(42,107,255,.18), rgba(42,107,255,0) 72%);
+  filter: blur(24px);
+  pointer-events:none;
+}
+
+.hero--guide .guide-shell{ background: transparent; border: 0; box-shadow:none; padding:0; }
+.hero--guide .kicker{ display:inline-flex; align-items:center; justify-content:center; gap:10px; }
+.hero--guide .lead{ font-size: 18px; line-height: 1.72; }
+.hero--guide h1{ max-width: 14ch; margin-left:auto; margin-right:auto; }
+.hero--guide .breadcrumbs{
+  display:inline-flex;
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  padding:8px 14px;
+}
+.guide-meta{
+  margin: 18px auto 2px;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 12px;
+  max-width: 820px;
+}
+.guide-meta__item{
+  text-align:left;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+.guide-meta__label{
+  display:block;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(246,247,251,.58);
+  margin-bottom: 6px;
+}
+.guide-meta__value{
+  display:block;
+  color: rgba(246,247,251,.96);
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+.guide-hero-actions{ margin-top: 20px; }
+.hero--guide .guide-hero-actions .btn.primary{ min-width: 290px; }
+.hero--guide .pills--guide{ max-width: 860px; }
+.hero--guide .pill{ box-shadow: inset 0 1px 0 rgba(255,255,255,.05); }
+
+.guide-content-band{
+  position:relative;
+  padding-top: 22px;
+}
+.guide-content-band::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(255,255,255,.24), rgba(255,255,255,0) 130px);
+  pointer-events:none;
+}
+.page-guide .guide-content-band .guide-shell{
+  position:relative;
+  z-index:1;
+  border-radius: 30px;
+  padding: 28px 28px 36px;
+  box-shadow: 0 20px 80px rgba(5,13,30,.10);
+}
+.guide-wrap{
+  border-radius: 22px;
+  border: 1px solid rgba(7,16,36,.08);
+  background: linear-gradient(180deg, rgba(247,249,255,1), rgba(255,255,255,1));
+  padding: 18px;
+  margin-bottom: 18px;
+}
+.toc-title{
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(7,16,36,.58);
+  margin-bottom: 12px;
+}
+.page-guide .guide-wrap ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+}
+.page-guide .guide-wrap li{ margin:0; }
+.page-guide .guide-wrap a{
+  display:block;
+  padding: 12px 14px;
+  border-radius: 16px;
+  text-decoration:none;
+  color:#071024;
+  background: #fff;
+  border: 1px solid rgba(7,16,36,.08);
+  font-weight: 700;
+}
+.page-guide .guide-wrap a:hover{ border-color: rgba(42,107,255,.28); transform: translateY(-1px); }
+
+.callout{
+  margin: 0 0 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(11,74,162,.05), rgba(11,74,162,.02));
+  border: 1px solid rgba(11,74,162,.12);
+  color: rgba(7,16,36,.78);
+  line-height: 1.72;
+}
+.expert-note{
+  display:grid;
+  grid-template-columns: 74px 1fr;
+  gap: 16px;
+  align-items:start;
+  margin: 0 0 20px;
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(7,16,36,.03), rgba(7,16,36,.01));
+  border: 1px solid rgba(7,16,36,.08);
+}
+.expert-note__icon{
+  width:74px; height:74px; border-radius:22px; display:flex; align-items:center; justify-content:center;
+  background: radial-gradient(circle at 30% 20%, rgba(212,175,55,.24), rgba(212,175,55,.08) 55%, rgba(212,175,55,.02));
+  border:1px solid rgba(212,175,55,.24);
+  color:#8b6a10;
+  font-size: 28px;
+}
+.expert-note__eyebrow{
+  display:block; margin-bottom: 8px; font-size: 11px; letter-spacing:.14em; text-transform:uppercase; color: rgba(7,16,36,.52); font-weight:900;
+}
+.expert-note p{ margin:0; font-size:15px; color: rgba(7,16,36,.82); }
+
+.page-guide .band--light .card{
+  position:relative;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.page-guide .band--light .card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height: 3px;
+  border-radius: 24px 24px 0 0;
+  background: linear-gradient(90deg, rgba(11,74,162,.96), rgba(212,175,55,.88));
+}
+.page-guide .band--light .card h2{
+  font-size: clamp(22px, 2.7vw, 28px);
+  margin-bottom: 10px;
+}
+.page-guide .band--light .card .section-intro{
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: rgba(7,16,36,.76);
+}
+.page-guide .band--light .card ul,
+.page-guide .band--light .card ol{
+  margin-top: 14px;
+}
+.page-guide .band--light .card li{ margin: 10px 0; }
+.page-guide .band--light details{
+  margin-top: 14px;
+  border:1px solid rgba(7,16,36,.10);
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: rgba(246,248,253,.9);
+}
+.page-guide .band--light details summary{ cursor:pointer; font-weight: 800; color:#071024; }
+.page-guide .band--light details p,
+.page-guide .band--light details li{ font-size: 15px; }
+
+.related{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.related .pill{
+  background: rgba(11,74,162,.05);
+  border-color: rgba(11,74,162,.12);
+  color:#0b4aa2;
+  font-weight:800;
+}
+
+.page-guide .band--light #faq details{
+  background: #fff;
+}
+.final-cta{
+  margin-top: 26px;
+  padding: 28px;
+  border-radius: 24px;
+  text-align:left;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 18px;
+}
+.final-cta h2{ margin-bottom: 8px; }
+.final-cta p{ margin-bottom: 0; max-width: 52ch; }
+.final-cta .btn{ flex: 0 0 auto; }
+
+@media (max-width: 860px){
+  .guide-meta{ grid-template-columns: 1fr; }
+  .page-guide .guide-wrap ul{ grid-template-columns: 1fr; }
+  .final-cta{ flex-direction:column; align-items:flex-start; }
+}
+@media (max-width: 720px){
+  .expert-note{ grid-template-columns: 1fr; }
+  .expert-note__icon{ width:60px; height:60px; border-radius:18px; }
+  .page-guide .band--light .card{ padding: 20px 18px; }
+  .page-guide .guide-content-band .guide-shell{ padding: 18px 16px 24px; border-radius: 24px; }
+}
+
+
+/* === 2026 refinement pass: clearer grid, less text, more premium tonal cards === */
+.page-guide .hero.hero-photo::after{
+  background:
+    linear-gradient(rgba(255,255,255,.075) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.06) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(108deg, rgba(66,203,255,.085) 0 1px, rgba(0,0,0,0) 1px 26px),
+    radial-gradient(980px 580px at 50% 0%, rgba(255,255,255,.18), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.06), rgba(4,7,16,.50) 54%, rgba(4,7,16,.80));
+  background-size: 30px 30px, 30px 30px, 100% 100%, 100% 100%, 100% 100%;
+}
+.page-guide .hero.hero-photo::before{ filter: saturate(1.08) contrast(1.06); }
+.guide-hero-card{
+  max-width: 1020px;
+  padding: 40px 42px 30px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)),
+    rgba(6,12,28,.44);
+  border: 1px solid rgba(255,255,255,.16);
+}
+.hero--guide h1{ max-width: 12ch; margin-bottom: 16px; }
+.hero--guide .lead{ max-width: 58ch; font-size: 19px; line-height: 1.68; }
+.hero--guide .breadcrumbs{ margin-bottom: 12px; }
+.guide-meta{ margin-top: 24px; gap: 14px; }
+.guide-meta__item{
+  min-height: 104px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+}
+.guide-meta__item:nth-child(2){
+  background: linear-gradient(180deg, rgba(42,107,255,.18), rgba(255,255,255,.06));
+}
+.guide-meta__item:nth-child(3){
+  background: linear-gradient(180deg, rgba(212,175,55,.12), rgba(255,255,255,.05));
+}
+.hero--guide .guide-hero-actions{ margin-top: 24px; gap: 16px; }
+.hero--guide .pills--guide{ gap: 12px; }
+.hero--guide .pill{
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.16);
+  padding: 9px 14px;
+}
+.page-guide .guide-content-band .guide-shell{ max-width: 1040px; padding: 34px 34px 40px; }
+.guide-wrap{
+  padding: 20px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(244,247,255,1), rgba(255,255,255,1));
+}
+.toc{
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin-bottom: 18px;
+}
+.page-guide .guide-wrap ul{ gap: 12px; }
+.page-guide .guide-wrap a{
+  min-height: 72px;
+  display:flex;
+  align-items:center;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,1), rgba(247,249,255,1));
+  box-shadow: 0 10px 26px rgba(10,20,40,.05);
+}
+.cta-container.compact{
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(11,74,162,.05), rgba(11,74,162,.02));
+  border: 1px solid rgba(11,74,162,.10);
+}
+.cta-container.compact h3{ margin:0 0 8px; font-size:20px; }
+.cta-container.compact p{ margin:0; font-size:15px; color: rgba(7,16,36,.78); }
+.cta-container.compact .note{ margin-top:8px; font-size:13px; color: rgba(7,16,36,.56); }
+.value-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 14px;
+  margin: 0 0 22px;
+}
+.value-card{
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(7,16,36,.08);
+  box-shadow: 0 12px 34px rgba(10,20,40,.05);
+}
+.value-card strong{ display:block; font-size: 16px; color:#071024; margin-bottom: 6px; }
+.value-card p{ margin:0; font-size: 14px; line-height: 1.6; color: rgba(7,16,36,.74); }
+.value-card.tone-a{ background: linear-gradient(180deg, #f7faff, #ffffff); }
+.value-card.tone-b{ background: linear-gradient(180deg, #f3f7ff, #fbfdff); }
+.value-card.tone-c{ background: linear-gradient(180deg, #fffaf0, #ffffff); }
+.guide-section{ margin-bottom: 18px; }
+.page-guide .band--light .card.guide-section{ padding: 24px; }
+.page-guide .band--light .card.guide-section p{ max-width: 70ch; }
+.page-guide .band--light .card.guide-section ul{ margin: 10px 0 0; }
+.card.tone-a{ background: linear-gradient(180deg, #f8fbff, #ffffff) !important; }
+.card.tone-b{ background: linear-gradient(180deg, #f3f7ff, #ffffff) !important; }
+.card.tone-c{ background: linear-gradient(180deg, #fffaf1, #ffffff) !important; }
+.card.tone-d{ background: linear-gradient(180deg, #f7f7ff, #ffffff) !important; }
+.guide-section__eyebrow{
+  display:block;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(7,16,36,.52);
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.faq-list details{ margin-top: 10px; }
+.footer-links{
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(7,16,36,.03), rgba(7,16,36,.01));
+  border:1px solid rgba(7,16,36,.08);
+}
+.footer-links ul{ margin-bottom: 0; }
+.final-cta{
+  background:
+    radial-gradient(700px 380px at 10% 0%, rgba(42,107,255,.12), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(7,16,36,.05), rgba(7,16,36,.02));
+}
+@media (max-width: 860px){
+  .value-grid{ grid-template-columns: 1fr; }
+}
+@media (max-width: 720px){
+  .guide-hero-card{ padding: 26px 18px 20px; }
+  .hero--guide .lead{ font-size: 17px; }
+  .page-guide .guide-content-band .guide-shell{ padding: 18px 16px 24px; }
+  .page-guide .band--light .card.guide-section{ padding: 18px; }
+}
+
+
+/* === 2026 refinement pass v3: home grid parity, calmer typography, tighter CTA width === */
+.page-guide .bg .grid{
+  opacity:.16 !important;
+  background-size: 48px 48px !important;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,.98) 0%, rgba(0,0,0,.82) 34%, rgba(0,0,0,.22) 70%, rgba(0,0,0,0) 100%) !important;
+}
+.page-guide .bg .dots{
+  opacity:.04 !important;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.38) 56%, rgba(0,0,0,0) 100%) !important;
+}
+.page-guide .hero.hero-photo::after{
+  background:
+    linear-gradient(rgba(255,255,255,.095) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(108deg, rgba(66,203,255,.08) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(1100px 600px at 50% 0%, rgba(255,255,255,.16), rgba(255,255,255,0) 58%),
+    linear-gradient(180deg, rgba(4,7,16,.02), rgba(4,7,16,.46) 54%, rgba(4,7,16,.82));
+  background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%, 100% 100% !important;
+}
+.hero--guide{
+  padding-top: 116px;
+  padding-bottom: 50px;
+}
+.hero--guide .guide-shell{
+  max-width: 1120px;
+}
+.guide-hero-card{
+  max-width: 1120px;
+  padding: 42px 52px 34px;
+  border-radius: 30px;
+}
+.hero--guide .breadcrumbs{
+  margin-bottom: 16px;
+}
+.hero--guide h1{
+  max-width: 16ch;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin-bottom: 18px;
+}
+.page-guide h2,
+.page-guide h3,
+.page-guide .toc-title,
+.page-guide .cta-container.compact h3,
+.page-guide .final-cta h2{
+  text-wrap: balance;
+}
+.page-guide .band--light .guide-shell,
+.page-guide .guide-wrap,
+.page-guide .band--light .card,
+.page-guide .expert-note,
+.page-guide .cta-container.compact,
+.page-guide .footer-links,
+.page-guide .final-cta{
+  box-shadow: 0 18px 46px rgba(6,16,36,.06);
+}
+.page-guide .guide-content-band .guide-shell{
+  max-width: 1040px;
+  padding: 36px 36px 42px;
+}
+.page-guide p,
+.page-guide li,
+.page-guide details p,
+.page-guide .expert-note p,
+.page-guide .cta-container.compact p,
+.page-guide .footer-links p,
+.page-guide .value-card p,
+.page-guide .final-cta p{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.hero--guide .lead,
+.hero--guide .guide-meta__value,
+.hero--guide .pill,
+.hero--guide .breadcrumbs,
+.hero--guide .kicker,
+.hero--guide .guide-meta__label,
+.page-guide .toc a,
+.page-guide .value-card strong,
+.page-guide .guide-section__eyebrow,
+.page-guide .expert-note__eyebrow,
+.page-guide .toc-title,
+.page-guide .final-cta .btn,
+.page-guide .btn,
+.page-guide summary{
+  text-align: initial;
+  hyphens: none;
+}
+.page-guide .band--light .card h2{
+  font-size: clamp(24px, 2.5vw, 30px);
+  line-height: 1.18;
+  margin: 0 0 14px;
+  max-width: 24ch;
+}
+.page-guide .band--light .card p,
+.page-guide .band--light .card li{
+  font-size: 16px;
+  line-height: 1.82;
+}
+.page-guide .band--light .card ul{
+  padding-left: 1.15rem;
+}
+.guide-meta{
+  gap: 16px;
+  max-width: 920px;
+}
+.guide-meta__item{
+  min-height: 112px;
+  padding: 16px 18px;
+}
+.guide-meta__value{
+  font-size: 15px;
+  line-height: 1.5;
+}
+.value-grid{
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.value-card{
+  padding: 20px;
+  border-radius: 22px;
+}
+.value-card strong{
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.value-card.tone-a{
+  background: linear-gradient(180deg, #f7faff, #ffffff 72%);
+}
+.value-card.tone-b{
+  background: linear-gradient(180deg, #f4f8ff, #ffffff 72%);
+}
+.value-card.tone-c{
+  background: linear-gradient(180deg, #fff8ee, #ffffff 72%);
+}
+.card.tone-a{ background: linear-gradient(180deg, #f8fbff, #ffffff 78%) !important; }
+.card.tone-b{ background: linear-gradient(180deg, #f4f8ff, #ffffff 78%) !important; }
+.card.tone-c{ background: linear-gradient(180deg, #fff8ef, #ffffff 78%) !important; }
+.card.tone-d{ background: linear-gradient(180deg, #f7f8ff, #ffffff 78%) !important; }
+.page-guide .guide-wrap a{
+  min-height: 76px;
+  line-height: 1.45;
+}
+.page-guide .guide-content-band .final-cta{
+  max-width: 1040px;
+  margin: 26px auto 0;
+  padding: 28px 30px;
+  border-radius: 28px;
+}
+.page-guide .final-cta{
+  width: 100%;
+  background:
+    radial-gradient(720px 380px at 12% 0%, rgba(42,107,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(7,16,36,.05), rgba(7,16,36,.02));
+}
+.page-guide .final-cta p{
+  max-width: 58ch;
+}
+.page-guide .footer-links ul{
+  padding-left: 1.15rem;
+}
+@media (max-width: 860px){
+  .guide-hero-card{
+    padding: 34px 26px 26px;
+  }
+  .hero--guide h1{
+    max-width: 18ch;
+  }
+  .page-guide .band--light .card h2{
+    max-width: none;
+  }
+}
+@media (max-width: 720px){
+  .page-guide .bg .grid{
+    background-size: 36px 36px !important;
+    opacity: .14 !important;
+  }
+  .page-guide .hero.hero-photo::after{
+    background-size: 36px 36px, 36px 36px, 100% 100%, 100% 100%, 100% 100% !important;
+  }
+  .guide-hero-card{
+    padding: 28px 18px 22px;
+    border-radius: 24px;
+  }
+  .hero--guide h1{
+    line-height: 1.12;
+    max-width: none;
+  }
+  .page-guide p,
+  .page-guide li,
+  .page-guide details p,
+  .page-guide .expert-note p,
+  .page-guide .cta-container.compact p,
+  .page-guide .footer-links p,
+  .page-guide .value-card p,
+  .page-guide .final-cta p{
+    text-align: left;
+    hyphens: none;
+  }
+  .page-guide .guide-content-band .guide-shell,
+  .page-guide .guide-content-band .final-cta{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* === 2026 refinement pass v4: explicit home-like blueprint + modular product-page layout === */
+.page-guide .hero.hero-photo{
+  isolation:isolate;
+}
+.page-guide .hero.hero-photo::after{
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.11) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(108deg, rgba(66,203,255,.095) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(1100px 620px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 58%),
+    linear-gradient(180deg, rgba(4,7,16,.02), rgba(4,7,16,.42) 52%, rgba(4,7,16,.80));
+  background-size: 44px 44px, 44px 44px, 100% 100%, 100% 100%, 100% 100% !important;
+  opacity: .96;
+}
+.page-guide .hero--guide .container{
+  position: relative;
+  z-index: 2;
+}
+.page-guide .hero--guide .container::before{
+  content:"";
+  position:absolute;
+  inset: 22px 10px 10px;
+  border-radius: 34px;
+  pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 1px, transparent 1px 44px);
+  opacity:.36;
+  mix-blend-mode:screen;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.35) 78%, rgba(0,0,0,0));
+}
+.page-guide .bg .grid{
+  opacity:.18 !important;
+  background-size: 44px 44px !important;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,.98) 0%, rgba(0,0,0,.88) 30%, rgba(0,0,0,.30) 68%, rgba(0,0,0,0) 100%) !important;
+}
+.guide-hero-card{
+  max-width: 1080px;
+  padding: 46px 56px 36px;
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.045)),
+    rgba(6,12,28,.40);
+}
+.guide-hero-card::before{
+  background:
+    radial-gradient(680px 260px at 50% 0%, rgba(255,255,255,.16), rgba(255,255,255,0) 72%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.045) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.045) 0 1px, transparent 1px 28px),
+    linear-gradient(120deg, rgba(255,255,255,.05) 0, rgba(255,255,255,0) 46%);
+  opacity:.8;
+}
+.hero--guide h1{
+  max-width: 18ch;
+  font-size: clamp(38px, 4.3vw, 62px);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+  margin-bottom: 14px;
+}
+.hero--guide .lead{
+  max-width: 62ch;
+  font-size: 18px;
+  line-height: 1.72;
+}
+.hero--guide .breadcrumbs{
+  margin-bottom: 18px;
+}
+.guide-meta{
+  max-width: 960px;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+.guide-meta__item{
+  min-height: 122px;
+  border-radius: 20px;
+}
+.guide-meta__value{
+  font-size: 16px;
+}
+.hero--guide .pills--guide{
+  max-width: 920px;
+  gap: 12px;
+}
+.hero--guide .pill{
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.page-guide .guide-content-band .guide-shell{
+  max-width: 1080px;
+  padding: 38px 38px 44px;
+  border-radius: 32px;
+}
+.guide-wrap{
+  display:grid;
+  grid-template-columns: minmax(0,1.02fr) minmax(300px,.98fr);
+  gap: 18px;
+  align-items:start;
+  padding: 22px;
+}
+.guide-wrap .toc{
+  grid-column: 1;
+  margin:0;
+}
+.guide-wrap .value-grid{
+  grid-column: 2;
+  margin:0;
+  grid-template-columns: 1fr;
+}
+.guide-wrap .cta-container.compact{
+  grid-column: 1 / -1;
+  margin: 0;
+  display:grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 18px;
+  align-items:center;
+  padding: 22px 24px;
+}
+.guide-wrap .cta-container.compact h3{
+  font-size: clamp(22px, 2vw, 28px);
+  line-height:1.16;
+  margin:0 0 10px;
+}
+.guide-wrap .cta-container.compact p{
+  max-width: 62ch;
+}
+.guide-wrap .cta-container.compact .note{
+  grid-column:1 / -1;
+}
+.value-card{
+  min-height: 126px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.value-card strong{
+  font-size:18px;
+}
+
+.page-guide .guide-content-band .guide-shell{
+  counter-reset: guide-section;
+}
+.page-guide .band--light .card.guide-section{
+  display:grid;
+  grid-template-columns: minmax(240px, .84fr) minmax(0, 1.16fr);
+  gap: 10px 28px;
+  align-items:start;
+  padding: 26px 28px;
+  counter-increment: guide-section;
+}
+.page-guide .band--light .card.guide-section > .guide-section__eyebrow,
+.page-guide .band--light .card.guide-section > h2{
+  grid-column: 1;
+}
+.page-guide .band--light .card.guide-section > p,
+.page-guide .band--light .card.guide-section > ul,
+.page-guide .band--light .card.guide-section > ol,
+.page-guide .band--light .card.guide-section > .faq-list,
+.page-guide .band--light .card.guide-section > details,
+.page-guide .band--light .card.guide-section > .related{
+  grid-column: 2;
+}
+.page-guide .band--light .card.guide-section > h2{
+  max-width: none;
+  margin: 0;
+  display:flex;
+  align-items:flex-start;
+  gap: 14px;
+}
+.page-guide .band--light .card.guide-section > h2::before{
+  content: counter(guide-section, decimal-leading-zero);
+  flex: 0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(11,74,162,.12), rgba(11,74,162,.06));
+  border: 1px solid rgba(11,74,162,.14);
+  color:#0b4aa2;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+.page-guide .band--light .card.guide-section > p:first-of-type{
+  margin-top: 2px;
+}
+.page-guide .band--light .card.guide-section ul,
+.page-guide .band--light .card.guide-section ol{
+  margin-bottom: 0;
+}
+.page-guide .band--light .card.guide-section li{
+  margin: 12px 0;
+}
+.page-guide .band--light .card.guide-section:nth-of-type(odd){
+  border-color: rgba(11,74,162,.10);
+}
+.page-guide .band--light .card.guide-section:nth-of-type(even){
+  border-color: rgba(212,175,55,.16);
+}
+.page-guide .band--light .card.guide-section:nth-of-type(even)::before{
+  background: linear-gradient(90deg, rgba(212,175,55,.92), rgba(11,74,162,.88));
+}
+.page-guide .band--light .card.guide-section.tone-a{ background: linear-gradient(180deg, #f8fbff 0%, #ffffff 82%) !important; }
+.page-guide .band--light .card.guide-section.tone-b{ background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 82%) !important; }
+.page-guide .band--light .card.guide-section.tone-c{ background: linear-gradient(180deg, #fff9f0 0%, #ffffff 82%) !important; }
+.page-guide .band--light .card.guide-section.tone-d{ background: linear-gradient(180deg, #f7f8ff 0%, #ffffff 82%) !important; }
+
+.faq-list{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+.faq-list details{
+  margin:0 !important;
+  height:100%;
+  box-shadow: 0 10px 26px rgba(10,20,40,.05);
+}
+.footer-links{
+  display:grid;
+  grid-template-columns: minmax(0,1fr);
+  gap: 8px;
+  padding: 22px 24px;
+}
+.footer-links ul{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px 18px;
+}
+.footer-links li{ margin:0; }
+.footer-links a{
+  display:block;
+  text-decoration:none;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(7,16,36,.08);
+}
+.footer-links a:hover{
+  border-color: rgba(42,107,255,.20);
+  transform: translateY(-1px);
+}
+.page-guide .guide-content-band .final-cta{
+  max-width: 980px;
+  min-height: 164px;
+  display:grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  align-items:center;
+  gap: 18px 28px;
+}
+.page-guide .final-cta h2,
+.page-guide .final-cta p{
+  grid-column: 1;
+}
+.page-guide .final-cta .btn{
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self:center;
+}
+
+.page-guide .band--light .card h2,
+.page-guide h2,
+.page-guide h3{
+  text-wrap: pretty;
+}
+.page-guide .band--light .card.guide-section > h2,
+.hero--guide h1{
+  hyphens:none;
+  word-break:normal;
+}
+
+@media (max-width: 980px){
+  .guide-wrap{
+    grid-template-columns: 1fr;
+  }
+  .guide-wrap .toc,
+  .guide-wrap .value-grid{
+    grid-column: 1;
+  }
+  .guide-wrap .value-grid{
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+  .page-guide .band--light .card.guide-section{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .page-guide .band--light .card.guide-section > .guide-section__eyebrow,
+  .page-guide .band--light .card.guide-section > h2,
+  .page-guide .band--light .card.guide-section > p,
+  .page-guide .band--light .card.guide-section > ul,
+  .page-guide .band--light .card.guide-section > ol,
+  .page-guide .band--light .card.guide-section > .faq-list,
+  .page-guide .band--light .card.guide-section > details,
+  .page-guide .band--light .card.guide-section > .related{
+    grid-column: 1;
+  }
+  .faq-list,
+  .footer-links ul{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px){
+  .page-guide .hero.hero-photo::after{
+    background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100% !important;
+  }
+  .page-guide .hero--guide .container::before{
+    inset: 14px 0 6px;
+    border-radius: 24px;
+  }
+  .guide-hero-card{
+    padding: 30px 18px 24px;
+    border-radius: 24px;
+  }
+  .hero--guide h1{
+    font-size: clamp(34px, 9vw, 46px);
+    max-width: none;
+  }
+  .guide-meta{
+    grid-template-columns: 1fr;
+  }
+  .page-guide .guide-content-band .guide-shell{
+    padding: 24px 18px 28px;
+  }
+  .guide-wrap{
+    padding: 16px;
+  }
+  .guide-wrap .value-grid{
+    grid-template-columns: 1fr;
+  }
+  .guide-wrap .cta-container.compact{
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  .page-guide .guide-content-band .final-cta{
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .page-guide .final-cta .btn,
+  .page-guide .final-cta h2,
+  .page-guide .final-cta p{
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* === v5 targeted fixes: exact home hero grid + no boxed overlay + clean single-column sections === */
+/* Make the secondary hero use the same background pattern as the main landing */
+.page-guide .hero.hero-photo{
+  min-height: 100svh;
+  align-items:center;
+}
+.page-guide .hero.hero-photo::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:-10%;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.42), rgba(24,132,255,0) 62%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.26), rgba(212,175,55,0) 62%),
+    radial-gradient(780px 480px at 58% 72%, rgba(66,203,255,.22), rgba(66,203,255,0) 64%),
+    radial-gradient(820px 520px at 30% 78%, rgba(106,92,255,.18), rgba(106,92,255,0) 66%),
+    linear-gradient(180deg, rgba(6,10,24,1) 0%, rgba(7,12,28,1) 42%, rgba(7,13,30,1) 100%);
+  background-size: 120% 120%, 120% 120%, 140% 140%, 140% 140%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, 60% 100%, 20% 100%, 50% 50%;
+  filter: saturate(1.05) contrast(1.03);
+  transform: scale(1.02);
+  will-change: background-position, transform;
+  animation: auroraDrift 12s ease-in-out infinite alternate;
+}
+.page-guide .hero.hero-photo::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.030) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.06) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78));
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100% !important;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50%;
+  pointer-events:none;
+}
+.page-guide .hero-sweep{
+  opacity:.55;
+}
+
+/* Remove the shaded/glass box from the hero so the pattern lives in the global background, like home */
+.hero--guide{
+  padding-top: 116px;
+  padding-bottom: 50px;
+}
+.hero--guide .guide-shell{
+  max-width: 1080px;
+}
+.guide-hero-card{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 0 0;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  overflow: visible !important;
+}
+.guide-hero-card::before,
+.guide-hero-card::after,
+.hero--guide .container::before{
+  display:none !important;
+}
+.hero--guide .breadcrumbs{
+  display:inline-flex;
+  background: rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  padding:8px 14px;
+  margin-bottom: 18px;
+}
+.hero--guide h1{
+  max-width: 12ch;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 18px;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.hero--guide .lead{
+  max-width: 58ch;
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 19px;
+  line-height: 1.7;
+  text-align: center;
+}
+.guide-meta{
+  max-width: 920px;
+  margin: 26px auto 0;
+}
+.guide-meta__item{
+  min-height: 110px;
+  border-radius: 20px;
+}
+
+/* Rebuild the body sections so they read as proper web sections, not narrow text columns */
+.page-guide p,
+.page-guide li,
+.page-guide details p,
+.page-guide .expert-note p,
+.page-guide .cta-container.compact p,
+.page-guide .footer-links p,
+.page-guide .value-card p,
+.page-guide .final-cta p{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none !important;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.page-guide .guide-content-band .guide-shell{
+  max-width: 1040px;
+  padding: 36px 36px 44px;
+}
+.guide-wrap{
+  display:grid;
+  grid-template-columns: minmax(0,1fr) minmax(320px,380px);
+  gap: 18px;
+  align-items:start;
+}
+.guide-wrap .toc{
+  grid-column: 1;
+}
+.guide-wrap .value-grid{
+  grid-column: 2;
+  grid-template-columns: 1fr;
+}
+.guide-wrap .cta-container.compact{
+  grid-column: 1 / -1;
+}
+.page-guide .band--light .card.guide-section{
+  display:block !important;
+  padding: 28px 30px !important;
+}
+.page-guide .band--light .card.guide-section > .guide-section__eyebrow,
+.page-guide .band--light .card.guide-section > h2,
+.page-guide .band--light .card.guide-section > p,
+.page-guide .band--light .card.guide-section > ul,
+.page-guide .band--light .card.guide-section > ol,
+.page-guide .band--light .card.guide-section > .faq-list,
+.page-guide .band--light .card.guide-section > details,
+.page-guide .band--light .card.guide-section > .related{
+  grid-column: auto !important;
+}
+.page-guide .band--light .card.guide-section > h2{
+  display:flex;
+  align-items:flex-start;
+  gap: 14px;
+  max-width: 22ch;
+  margin: 0 0 14px;
+}
+.page-guide .band--light .card.guide-section > h2::before{
+  flex: 0 0 auto;
+}
+.page-guide .band--light .card.guide-section > p,
+.page-guide .band--light .card.guide-section > ul,
+.page-guide .band--light .card.guide-section > ol,
+.page-guide .band--light .card.guide-section > .faq-list,
+.page-guide .band--light .card.guide-section > details,
+.page-guide .band--light .card.guide-section > .related{
+  max-width: 72ch;
+}
+.page-guide .band--light .card.guide-section ul,
+.page-guide .band--light .card.guide-section ol{
+  padding-left: 1.15rem;
+}
+.faq-list{
+  grid-template-columns: 1fr 1fr;
+}
+.page-guide .guide-content-band .final-cta{
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 980px){
+  .guide-wrap{
+    grid-template-columns: 1fr;
+  }
+  .guide-wrap .toc,
+  .guide-wrap .value-grid,
+  .guide-wrap .cta-container.compact{
+    grid-column: 1;
+  }
+  .guide-wrap .value-grid{
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+  .faq-list{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px){
+  .page-guide .hero.hero-photo{
+    min-height: auto;
+  }
+  .page-guide .hero.hero-photo::after{
+    background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100% !important;
+  }
+  .hero--guide{
+    padding-top: 96px;
+    padding-bottom: 36px;
+  }
+  .hero--guide h1{
+    max-width: none;
+    font-size: clamp(34px, 9vw, 46px);
+  }
+  .hero--guide .lead{
+    font-size: 17px;
+  }
+  .guide-meta{
+    grid-template-columns: 1fr;
+  }
+  .page-guide .guide-content-band .guide-shell{
+    padding: 24px 18px 30px;
+  }
+  .page-guide .band--light .card.guide-section{
+    padding: 22px 18px !important;
+  }
+  .guide-wrap .value-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* === v6: exact home hero parity + stacked guide sections === */
+.page-guide .hero.hero-photo{
+  position: relative;
+  min-height: 100svh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  isolation:isolate;
+}
+.page-guide .hero.hero-photo::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:-10%;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.42), rgba(24,132,255,0) 62%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.26), rgba(212,175,55,0) 62%),
+    radial-gradient(780px 480px at 58% 72%, rgba(66,203,255,.22), rgba(66,203,255,0) 64%),
+    radial-gradient(820px 520px at 30% 78%, rgba(106,92,255,.18), rgba(106,92,255,0) 66%),
+    linear-gradient(180deg, rgba(6,10,24,1) 0%, rgba(7,12,28,1) 42%, rgba(7,13,30,1) 100%);
+  background-size: 120% 120%, 120% 120%, 140% 140%, 140% 140%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, 60% 100%, 20% 100%, 50% 50%;
+  filter: saturate(1.05) contrast(1.03);
+  transform: scale(1.02);
+  will-change: background-position, transform;
+  animation: auroraDrift 12s ease-in-out infinite alternate;
+}
+.page-guide .hero.hero-photo::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.065) 0 1px, rgba(0,0,0,0) 1px 26px),
+    radial-gradient(900px 560px at 50% 0%, rgba(255,255,255,.18), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.06), rgba(4,7,16,.56) 52%, rgba(4,7,16,.82));
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50%;
+  pointer-events:none;
+  opacity:1;
+}
+.page-guide .hero--guide .container{
+  position:relative;
+  z-index:2;
+}
+.page-guide .hero--guide .container::before,
+.page-guide .bg .grid,
+.page-guide .bg .dots{
+  display:none !important;
+}
+.hero--guide{
+  padding-top: 116px;
+  padding-bottom: 64px;
+}
+.hero--guide .guide-shell,
+.guide-hero-card{
+  max-width: 980px;
+  margin: 0 auto;
+}
+.guide-hero-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  text-align:center;
+}
+.guide-hero-card::before,
+.guide-hero-card::after{
+  display:none !important;
+}
+.guide-brandmark{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 16px;
+  margin: 0 auto 22px;
+}
+.guide-brandmark img{
+  width: clamp(96px, 10vw, 124px);
+  height: auto;
+  display:block;
+  filter: drop-shadow(0 18px 26px rgba(0,0,0,.38));
+}
+.guide-brandmark .hero-word{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 10px;
+}
+.guide-brandmark .hero-word__text{
+  display:block;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing: -.03em;
+  color: #f6f7fb;
+}
+.guide-brandmark .hero-word__line{
+  display:block;
+  width: clamp(120px, 14vw, 180px);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.96), rgba(212,175,55,0));
+  box-shadow: 0 0 20px rgba(212,175,55,.20);
+}
+.hero--guide .kicker{
+  margin: 0 0 14px;
+  justify-content:center;
+}
+.hero--guide .breadcrumbs{
+  margin: 0 auto 18px;
+}
+.hero--guide h1{
+  max-width: 18ch;
+  margin: 0 auto 18px;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.03;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+  text-align:center;
+}
+.hero--guide .lead{
+  max-width: 62ch;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align:center;
+}
+.guide-meta{
+  max-width: 920px;
+  margin: 28px auto 0;
+}
+.hero--guide .guide-hero-actions{
+  width:100%;
+  justify-content:center;
+}
+.hero--guide .guide-hero-actions .btn.primary{
+  min-width: 290px;
+}
+.hero--guide .pills--guide{
+  justify-content:center;
+}
+
+/* Stack content blocks vertically and remove internal two-column layouts */
+.page-guide .guide-content-band .guide-shell{
+  max-width: 1040px;
+}
+.guide-wrap{
+  display:block !important;
+  padding: 22px;
+}
+.guide-wrap .toc,
+.guide-wrap .value-grid,
+.guide-wrap .cta-container.compact{
+  grid-column:auto !important;
+  margin: 0 0 18px;
+}
+.guide-wrap .value-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+}
+.page-guide .band--light .card.guide-section{
+  display:block !important;
+  padding: 28px 30px !important;
+}
+.page-guide .band--light .card.guide-section > .guide-section__eyebrow,
+.page-guide .band--light .card.guide-section > h2,
+.page-guide .band--light .card.guide-section > p,
+.page-guide .band--light .card.guide-section > ul,
+.page-guide .band--light .card.guide-section > ol,
+.page-guide .band--light .card.guide-section > .faq-list,
+.page-guide .band--light .card.guide-section > details,
+.page-guide .band--light .card.guide-section > .related{
+  grid-column:auto !important;
+  max-width: none;
+}
+.page-guide .band--light .card.guide-section > h2{
+  display:block;
+  max-width: 26ch;
+  margin: 0 0 14px;
+}
+.page-guide .band--light .card.guide-section > h2::before{
+  content: none !important;
+}
+.page-guide .band--light .card h2{
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.14;
+  letter-spacing: -.03em;
+}
+.page-guide .band--light .card p,
+.page-guide .band--light .card li,
+.page-guide .band--light details p{
+  font-size: 16px;
+  line-height: 1.78;
+}
+.page-guide .band--light .card p,
+.page-guide .expert-note p,
+.page-guide .cta-container.compact p,
+.page-guide .footer-links p,
+.page-guide .final-cta p,
+.page-guide .value-card p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+.page-guide .band--light .card li,
+.page-guide .guide-wrap a,
+.page-guide .toc-title,
+.page-guide .guide-section__eyebrow,
+.page-guide summary,
+.page-guide .value-card strong{
+  text-align:left;
+}
+.faq-list,
+.footer-links ul{
+  grid-template-columns: 1fr;
+}
+.page-guide .guide-content-band .final-cta{
+  max-width: 980px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media (max-width: 980px){
+  .guide-wrap .value-grid{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px){
+  .page-guide .hero.hero-photo::after{
+    background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100%;
+  }
+  .hero--guide{
+    padding-top: 98px;
+    padding-bottom: 42px;
+  }
+  .guide-brandmark{
+    margin-bottom: 18px;
+  }
+  .hero--guide h1{
+    max-width: none;
+    font-size: clamp(34px, 9.2vw, 48px);
+  }
+  .hero--guide .lead{
+    font-size: 17px;
+  }
+  .guide-wrap,
+  .page-guide .guide-content-band .guide-shell{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .page-guide .band--light .card.guide-section{
+    padding: 22px 18px !important;
+  }
+}
+
+
+/* === v7: align secondary hero with Home exactly, simplify hero content === */
+.page-guide .hero.hero-photo{
+  position:relative;
+  padding:0;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+}
+.page-guide .hero.hero-photo::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:-10%;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.42), rgba(24,132,255,0) 62%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.26), rgba(212,175,55,0) 62%),
+    radial-gradient(780px 480px at 58% 72%, rgba(66,203,255,.22), rgba(66,203,255,0) 64%),
+    radial-gradient(820px 520px at 30% 78%, rgba(106,92,255,.18), rgba(106,92,255,0) 66%),
+    linear-gradient(180deg, rgba(6,10,24,1) 0%, rgba(7,12,28,1) 42%, rgba(7,13,30,1) 100%);
+  background-size: 120% 120%, 120% 120%, 140% 140%, 140% 140%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, 60% 100%, 20% 100%, 50% 50%;
+  filter: saturate(1.05) contrast(1.03);
+  transform: scale(1.02);
+  will-change: background-position, transform;
+  animation: auroraDrift 18s ease-in-out infinite alternate;
+}
+.page-guide .hero.hero-photo::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.09) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78));
+  background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50%;
+  pointer-events:none;
+}
+.page-guide .bg .grid,
+.page-guide .bg .dots,
+.page-guide .bg::before,
+.page-guide .bg::after,
+.page-guide .hero-sweep{ display:none !important; }
+
+.hero--guide{
+  padding-top: 84px;
+  padding-bottom: 38px;
+  position: relative;
+  overflow: hidden;
+}
+.hero--guide .container{
+  position:relative;
+  z-index:2;
+}
+.hero--guide .guide-shell,
+.hero--guide .guide-hero-card{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+.hero--guide .guide-brandmark{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:0 0 12px;
+}
+.hero--guide .guide-brandmark img{
+  width: clamp(148px, 15vw, 228px) !important;
+  height:auto;
+  display:block;
+  border-radius: 22px;
+  box-shadow:none;
+  filter: drop-shadow(0 18px 42px rgba(0,0,0,.48));
+}
+.hero--guide .hero-word{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.hero--guide .hero-word__text{
+  font-weight:900;
+  letter-spacing:.55px;
+  font-size: clamp(24px, 2.9vw, 38px) !important;
+  color: rgba(246,247,251,.92);
+  text-shadow: 0 10px 30px rgba(0,0,0,.55);
+}
+.hero--guide .hero-word__line{
+  width: clamp(120px, 14vw, 170px);
+  height:2px;
+  border-radius:999px;
+  background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.96), rgba(212,175,55,0));
+  opacity:.95;
+}
+.hero--guide .kicker{margin-top: 8px;}
+.hero--guide .breadcrumbs{margin-top: 14px;}
+.hero--guide h1{
+  max-width: 12ch !important;
+  margin: 22px auto 0 !important;
+  font-size: clamp(38px, 5.2vw, 76px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.03em !important;
+  text-wrap: balance;
+}
+.hero--guide .lead{
+  max-width: 760px;
+  margin: 18px auto 0;
+  font-size: 18px;
+  line-height: 1.68;
+  color: rgba(246,247,251,.84);
+}
+.hero--guide .guide-hero-actions{
+  margin-top: 28px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.hero--guide .guide-hero-actions .btn.primary{
+  min-width: 320px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.hero--guide .guide-meta,
+.hero--guide .pills--guide{ display:none !important; }
+
+.page-guide .band--light .card.guide-section{
+  display:block !important;
+  padding: 32px 34px !important;
+}
+.page-guide .band--light .card.guide-section > h2{
+  max-width: 14ch;
+  margin: 0 0 16px;
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.14;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+.page-guide .band--light .card.guide-section > p,
+.page-guide .band--light .card.guide-section li{
+  text-align: left !important;
+  font-size: 17px;
+  line-height: 1.78;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.page-guide .band--light .card.guide-section ul,
+.page-guide .band--light .card.guide-section ol{
+  padding-left: 22px;
+}
+.page-guide .guide-wrap{
+  padding: 24px;
+}
+.page-guide .guide-content-band .final-cta{
+  max-width: 980px;
+  margin-left:auto;
+  margin-right:auto;
+}
+@media (max-width: 720px){
+  .page-guide .hero.hero-photo{ min-height: 92svh; }
+  .hero--guide{ padding-top: 96px; padding-bottom: 30px; }
+  .hero--guide h1{ max-width: 10ch !important; font-size: clamp(36px, 10.2vw, 54px) !important; }
+  .hero--guide .lead{ font-size:17px; }
+  .hero--guide .guide-hero-actions .btn.primary{ min-width: 280px; }
+  .page-guide .band--light .card.guide-section{ padding: 24px 20px !important; }
+  .page-guide .band--light .card.guide-section > h2{ max-width: none; font-size: clamp(28px, 8.2vw, 40px); }
+}
+
+/* === FINAL OVERRIDES v8: replicate Home hero + fix title wrapping/cards === */
+
+/* 1) Background grid exactly like Home, visible on secondary guides */
+body.page-guide .bg .grid{
+  position:absolute !important;
+  inset:-20px !important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px) !important;
+  background-size: 64px 64px !important;
+  opacity:.09 !important;
+  mask-image: radial-gradient(circle at 50% 12%, rgba(0,0,0,.90), rgba(0,0,0,0) 65%) !important;
+  -webkit-mask-image: radial-gradient(circle at 50% 12%, rgba(0,0,0,.90), rgba(0,0,0,0) 65%) !important;
+}
+body.page-guide .bg .dots{ opacity:.06 !important; }
+
+/* 2) Hero background exactly with Home overlay pattern */
+.page-guide .hero.hero-photo::after{
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.030) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.06) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78)) !important;
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100% !important;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50% !important;
+}
+
+/* 3) Remove boxed hero feel so secondary hero reads like Home */
+.hero--guide .guide-shell{
+  max-width: 1120px !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.hero--guide .guide-hero-card{
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero--guide .guide-hero-card::before,
+.hero--guide .guide-hero-card::after{ display:none !important; }
+
+/* 4) Match Home brandmark sizing */
+.hero--guide .guide-brandmark{
+  gap: 10px !important;
+  margin: 0 auto 8px !important;
+}
+.hero--guide .guide-brandmark img{
+  width: clamp(148px, 15vw, 228px) !important;
+  height: auto !important;
+  border-radius: 22px !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 18px 42px rgba(0,0,0,.48)) !important;
+}
+.hero--guide .hero-word{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  gap: 8px !important;
+}
+.hero--guide .hero-word__text{
+  font-weight: 900 !important;
+  letter-spacing: .55px !important;
+  font-size: clamp(24px, 2.9vw, 38px) !important;
+  color: rgba(246,247,251,.92) !important;
+  text-shadow: 0 10px 30px rgba(0,0,0,.55) !important;
+}
+.hero--guide .hero-word__line{
+  width: clamp(120px, 14vw, 170px) !important;
+  height: 2px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.96), rgba(212,175,55,0)) !important;
+  opacity: .95 !important;
+}
+
+/* 5) Hero title width: no forced narrow wrapping */
+.hero--guide h1{
+  display:block !important;
+  max-width: 16ch !important;
+  width: min(100%, 16ch) !important;
+  margin: 18px auto 12px !important;
+  font-size: clamp(44px, 5.6vw, 72px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+  text-wrap: balance;
+}
+.hero--guide .lead{
+  max-width: 48rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.hero--guide .guide-hero-actions .btn.primary{
+  min-width: 0 !important;
+  padding: 20px 30px !important;
+  border-radius: 20px !important;
+  font-size: 14px !important;
+}
+
+/* 6) Guide sections: stack vertically, title spans full width */
+.page-guide .band--light .card.guide-section{
+  display:block !important;
+  padding: 28px 30px !important;
+}
+.page-guide .band--light .card.guide-section > .guide-section__eyebrow,
+.page-guide .band--light .card.guide-section > h2,
+.page-guide .band--light .card.guide-section > p,
+.page-guide .band--light .card.guide-section > ul,
+.page-guide .band--light .card.guide-section > ol,
+.page-guide .band--light .card.guide-section > .faq-list,
+.page-guide .band--light .card.guide-section > details,
+.page-guide .band--light .card.guide-section > .related{
+  grid-column: auto !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+.page-guide .band--light .card.guide-section > h2{
+  display:flex !important;
+  align-items:flex-start !important;
+  gap: 14px !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 14px !important;
+}
+.page-guide .band--light .card.guide-section > h2::before{
+  flex: 0 0 auto !important;
+}
+.page-guide .band--light .card.guide-section > p,
+.page-guide .band--light .card.guide-section li{
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+@media (max-width: 900px){
+  .hero--guide h1{
+    max-width: 12ch !important;
+    width: min(100%, 12ch) !important;
+    font-size: clamp(38px, 8vw, 56px) !important;
+  }
+}
+@media (max-width: 640px){
+  .hero--guide .guide-hero-card{ padding: 0 16px !important; }
+  .hero--guide h1{
+    max-width: none !important;
+    width: 100% !important;
+    font-size: clamp(34px, 10vw, 48px) !important;
+  }
+  .page-guide .band--light .card.guide-section{
+    padding: 24px 20px !important;
+  }
+  .page-guide .band--light .card.guide-section > h2{
+    font-size: clamp(28px, 8.2vw, 40px) !important;
+  }
+}
+
+
+/* === 2026-03-06 · Secondary pages refinement: stronger home pattern + cleaner order === */
+
+/* Stronger hero background so the home blueprint pattern is clearly visible */
+.page-guide .hero.hero-photo{
+  overflow: clip;
+  min-height: 78svh;
+}
+
+.page-guide .hero.hero-photo::before{
+  inset:-8%;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.38), rgba(24,132,255,0) 60%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.18), rgba(212,175,55,0) 60%),
+    linear-gradient(180deg, rgba(5,10,24,1) 0%, rgba(7,13,30,1) 48%, rgba(6,12,26,1) 100%);
+  animation: auroraDrift 16s ease-in-out infinite alternate;
+}
+
+.page-guide .hero.hero-photo::after{
+  z-index:1;
+  opacity: 1;
+  background:
+    linear-gradient(rgba(255,255,255,.055) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.048) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.095) 0 1px, rgba(0,0,0,0) 1px 34px),
+    linear-gradient(180deg, rgba(3,6,15,.06), rgba(3,6,15,.52) 58%, rgba(3,6,15,.72));
+  background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 50% 50%, 50% 50%;
+}
+
+.page-guide .hero-sweep{
+  inset: -8%;
+  opacity: .8;
+  background: conic-gradient(from 0turn at 50% 52%,
+    rgba(0,0,0,0) 0turn,
+    rgba(0,0,0,0) .76turn,
+    rgba(66,203,255,.24) .82turn,
+    rgba(66,203,255,0) .88turn,
+    rgba(0,0,0,0) 1turn
+  );
+  mask-image: radial-gradient(circle at 50% 52%, rgba(0,0,0,0) 0 22%, rgba(0,0,0,.95) 52%, rgba(0,0,0,0) 78%);
+}
+
+.page-guide .guide-hero-card{
+  position: relative;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(7,14,32,.56), rgba(7,14,32,.38)),
+    linear-gradient(90deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 24px 80px rgba(0,0,0,.40);
+}
+
+.page-guide .guide-hero-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: inherit;
+  background:
+    linear-gradient(rgba(255,255,255,.028) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.024) 1px, rgba(0,0,0,0) 1px);
+  background-size: 22px 22px;
+  opacity:.55;
+  pointer-events:none;
+}
+
+.page-guide .guide-wrap{
+  padding: 22px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(247,249,255,.98), rgba(255,255,255,1));
+  border: 1px solid rgba(11,74,162,.10);
+}
+
+.page-guide .guide-wrap ul{
+  grid-template-columns: 1fr;
+  gap: 12px;
+  counter-reset: toc-step;
+}
+
+.page-guide .guide-wrap li{
+  counter-increment: toc-step;
+}
+
+.page-guide .guide-wrap a{
+  position: relative;
+  min-height: 64px;
+  display:flex;
+  align-items:center;
+  padding: 14px 16px 14px 66px;
+  line-height: 1.45;
+}
+
+.page-guide .guide-wrap a::before{
+  content: counter(toc-step, decimal-leading-zero);
+  position:absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  color: #0b4aa2;
+  background: rgba(11,74,162,.08);
+  border: 1px solid rgba(11,74,162,.14);
+}
+
+.page-guide .guide-wrap a:hover{
+  transform:none;
+  background: linear-gradient(180deg, #ffffff, #f7faff);
+}
+
+.page-guide .expert-note{
+  margin-bottom: 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(11,74,162,.10);
+}
+
+.page-guide .precheck-block{
+  margin: 18px 0 0;
+  padding: 0;
+  border-top: 1px solid rgba(11,74,162,.10);
+  background: transparent;
+}
+
+.page-guide .precheck-block__eyebrow{
+  display:block;
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(7,16,36,.54);
+}
+
+.page-guide .precheck-block h3{
+  margin: 0 0 10px;
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.12;
+  max-width: 18ch;
+  color:#071024;
+}
+
+.page-guide .precheck-block p{
+  margin:0;
+  max-width: 62ch;
+}
+
+.page-guide .precheck-block__note{
+  margin-top: 12px !important;
+  font-size: 13px !important;
+  color: rgba(7,16,36,.58) !important;
+}
+
+/* Remove value cards from secondary pages entirely */
+.page-guide .value-grid{
+  display:none !important;
+}
+
+@media (min-width: 900px){
+  .page-guide .guide-wrap{
+    padding: 24px;
+  }
+}
+
+@media (max-width: 720px){
+  .page-guide .hero.hero-photo{
+    min-height: 66svh;
+  }
+  .page-guide .hero.hero-photo::after{
+    background-size: 28px 28px, 28px 28px, 100% 100%, 100% 100%;
+  }
+  .page-guide .guide-wrap a{
+    min-height: 58px;
+    padding-left: 60px;
+  }
+  .page-guide .precheck-block h3{
+    max-width: none;
+    font-size: clamp(22px, 7vw, 30px);
+  }
+}
+
+
+/* === 2026-03-06 · Definitive secondary pattern system === */
+/* Objective: make every secondary landing open with the same visual DNA as Home:
+   aurora + blueprint grid + lane rails + rotating radar sweep. */
+
+body.page-guide:not(.home) .hero.hero-photo{
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100svh !important;
+  display:flex;
+  align-items:center;
+  padding-top: 118px !important;
+  padding-bottom: 58px !important;
+  background: linear-gradient(180deg, #050914, #070B1A);
+}
+
+body.page-guide:not(.home) .hero.hero-photo::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:-10%;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.42), rgba(24,132,255,0) 62%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.26), rgba(212,175,55,0) 62%),
+    radial-gradient(780px 480px at 58% 72%, rgba(66,203,255,.22), rgba(66,203,255,0) 64%),
+    radial-gradient(820px 520px at 30% 78%, rgba(106,92,255,.18), rgba(106,92,255,0) 66%),
+    linear-gradient(180deg, rgba(6,10,24,1) 0%, rgba(7,12,28,1) 42%, rgba(7,13,30,1) 100%);
+  background-size: 120% 120%, 120% 120%, 140% 140%, 140% 140%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, 60% 100%, 20% 100%, 50% 50%;
+  filter: saturate(1.05) contrast(1.03);
+  transform: scale(1.02);
+  will-change: background-position, transform;
+  animation: auroraDrift 12s ease-in-out infinite alternate;
+}
+
+body.page-guide:not(.home) .hero.hero-photo::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.040) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.032) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.075) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78));
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50%;
+  pointer-events:none;
+}
+
+body.page-guide:not(.home) .hero-sweep{
+  position:absolute;
+  z-index:1;
+  inset:-18%;
+  pointer-events:none;
+  opacity:.70;
+  background: conic-gradient(from 0turn at 50% 50%,
+    rgba(0,0,0,0) 0turn,
+    rgba(66,203,255,0) .68turn,
+    rgba(66,203,255,.22) .71turn,
+    rgba(66,203,255,0) .74turn,
+    rgba(0,0,0,0) 1turn
+  );
+  mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%);
+  filter: blur(.2px);
+  transform-origin: 50% 50%;
+  animation: radarSpin 9s linear infinite;
+  mix-blend-mode: screen;
+}
+
+body.page-guide:not(.home) .hero.hero-photo > .container{
+  position:relative;
+  z-index:2;
+  width:100%;
+}
+
+body.page-guide:not(.home) .hero.hero-photo > .container,
+body.page-guide:not(.home) .hero.hero-photo .hero-grid{
+  min-height: calc(100svh - 176px);
+}
+
+body.page-guide:not(.home) .hero.hero-photo .hero-grid{
+  align-items:center;
+  align-content:center;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .guide-shell,
+body.page-guide:not(.home) .hero.hero-photo .guide-hero-card{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .guide-shell{
+  max-width: 1080px !important;
+  padding: 0 !important;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .guide-hero-card{
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  text-align:center;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .guide-brandmark,
+body.page-guide:not(.home) .hero.hero-photo .hero-brandmark{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  margin: 0 auto 16px;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .guide-brandmark img,
+body.page-guide:not(.home) .hero.hero-photo .hero-brandmark img{
+  width: clamp(148px, 15vw, 228px);
+  height:auto;
+  display:block;
+  box-shadow:none;
+  filter: drop-shadow(0 18px 42px rgba(0,0,0,.48));
+}
+
+body.page-guide:not(.home) .hero.hero-photo h1{
+  color: #f6f7fb !important;
+  max-width: 16ch;
+  margin-left:auto;
+  margin-right:auto;
+  text-wrap: balance;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .lead,
+body.page-guide:not(.home) .hero.hero-photo .subline,
+body.page-guide:not(.home) .hero.hero-photo .hero-micro{
+  color: rgba(255,255,255,.86) !important;
+  max-width: 68ch;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .breadcrumbs,
+body.page-guide:not(.home) .hero.hero-photo .breadcrumbs a,
+body.page-guide:not(.home) .hero.hero-photo .breadcrumbs span,
+body.page-guide:not(.home) .hero.hero-photo .h-kicker,
+body.page-guide:not(.home) .hero.hero-photo .kicker{
+  color: rgba(246,247,251,.76) !important;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .hero-ctas,
+body.page-guide:not(.home) .hero.hero-photo .guide-hero-actions{
+  justify-content:center;
+  align-items:center;
+}
+
+body.page-guide:not(.home) .hero.hero-photo .badge,
+body.page-guide:not(.home) .hero.hero-photo .pill{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.16);
+  color: rgba(246,247,251,.92);
+}
+
+body.page-guide:not(.home) .hero.hero-photo .panel,
+body.page-guide:not(.home) .hero.hero-photo .card,
+body.page-guide:not(.home) .hero.hero-photo .plan{
+  background: rgba(7,14,32,.32);
+  border-color: rgba(255,255,255,.14);
+  box-shadow: 0 18px 46px rgba(0,0,0,.34);
+}
+
+/* Consistent numbering system across secondary pages */
+body.page-guide main{
+  counter-reset: guide-step;
+}
+
+body.page-guide .guide-section{
+  counter-increment: guide-step;
+}
+
+body.page-guide .guide-section > h2:first-of-type{
+  position:relative;
+  padding-left: 82px;
+  min-height: 48px;
+  display:flex;
+  align-items:center;
+}
+
+body.page-guide .guide-section > h2:first-of-type::before{
+  content: counter(guide-step, decimal-leading-zero);
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.10em;
+  color:#0b4aa2;
+  background: rgba(11,74,162,.08);
+  border:1px solid rgba(11,74,162,.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+}
+
+body.page-guide .guide-section__eyebrow{
+  display:block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+/* Generic secondary pages without guide-section markup */
+body.page-guide .grid2,
+body.page-guide .grid3,
+body.page-guide .pricing{
+  counter-reset: card-step;
+}
+
+body.page-guide .grid2 > .card,
+body.page-guide .grid3 > .card,
+body.page-guide .pricing > .plan{
+  counter-increment: card-step;
+  position:relative;
+  padding-top: 58px;
+}
+
+body.page-guide .grid2 > .card::before,
+body.page-guide .grid3 > .card::before,
+body.page-guide .pricing > .plan::before{
+  content: "Paso " counter(card-step, decimal-leading-zero);
+  position:absolute;
+  top: 18px;
+  left: 18px;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing:.10em;
+  text-transform: uppercase;
+  color: rgba(246,247,251,.92);
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+body.page-guide .grid2 > .card .icon,
+body.page-guide .grid3 > .card .icon{
+  display:none !important;
+}
+
+@media (max-width: 860px){
+  body.page-guide:not(.home) .hero.hero-photo{
+    min-height: 100svh !important;
+    padding-top: 106px !important;
+    padding-bottom: 42px !important;
+  }
+  body.page-guide:not(.home) .hero.hero-photo > .container,
+  body.page-guide:not(.home) .hero.hero-photo .hero-grid{
+    min-height: calc(100svh - 148px);
+  }
+  body.page-guide:not(.home) .hero.hero-photo::after{
+    background-size: 28px 28px, 28px 28px, 100% 100%, 100% 100%, 100% 100%;
+  }
+  body.page-guide:not(.home) .hero.hero-photo h1{
+    max-width: none;
+    width:100%;
+  }
+  body.page-guide .guide-section > h2:first-of-type{
+    padding-left: 70px;
+  }
+  body.page-guide .guide-section > h2:first-of-type::before{
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+}
+
+
+/* === 2026 final parity pass: full home hero on all secondary landings === */
+body.page-guide .hero.hero-photo{
+  min-height: 100svh !important;
+  display:flex;
+  align-items:stretch;
+  overflow:hidden;
+  isolation:isolate;
+}
+body.page-guide .hero.hero-photo .container{
+  flex:1;
+  display:flex;
+  align-items:stretch;
+}
+body.page-guide .hero--guide{
+  padding-top: 96px !important;
+  padding-bottom: 54px !important;
+}
+body.page-guide .hero--guide .guide-shell{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+body.page-guide .guide-hero-card{
+  position:relative;
+  z-index:6;
+  width:min(980px, 100%);
+  margin:auto;
+  background: rgba(4,10,24,.18) !important;
+  border: 1px solid rgba(212,175,55,.16) !important;
+  box-shadow: 0 28px 90px rgba(0,0,0,.32);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Dedicated hero layers: aurora + blueprint + lanes + radar */
+body.page-guide .hero.hero-photo::before{
+  inset:-12% !important;
+  background:
+    radial-gradient(920px 540px at 14% 16%, rgba(24,132,255,.48), rgba(24,132,255,0) 60%),
+    radial-gradient(880px 520px at 82% 22%, rgba(212,175,55,.24), rgba(212,175,55,0) 62%),
+    radial-gradient(760px 460px at 60% 78%, rgba(66,203,255,.22), rgba(66,203,255,0) 62%),
+    radial-gradient(780px 460px at 28% 84%, rgba(106,92,255,.18), rgba(106,92,255,0) 64%),
+    linear-gradient(180deg, rgba(5,9,20,1) 0%, rgba(6,11,25,1) 46%, rgba(7,13,30,1) 100%) !important;
+  animation: auroraDrift 12s ease-in-out infinite alternate !important;
+}
+body.page-guide .hero--guide h1,
+body.page-guide .hero--guide .lead,
+body.page-guide .hero--guide .kicker,
+body.page-guide .hero--guide .breadcrumbs,
+body.page-guide .hero--guide .breadcrumbs a,
+body.page-guide .hero--guide .breadcrumbs span{
+  position:relative;
+  z-index:6;
+}
+body.page-guide .guide-content-band{
+  position:relative;
+  margin-top: 0;
+}
+body.page-guide .guide-content-band::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:1px;
+  background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.38), rgba(212,175,55,0));
+}
+
+body.page-guide .guide-wrap > .toc-title,
+body.page-guide .guide-wrap > ul{
+  display:none !important;
+}
+body.page-guide .toc{
+  margin: 0 0 18px !important;
+}
+body.page-guide .toc-title{
+  display:block;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:11px;
+  color: rgba(7,16,36,.56);
+  margin-bottom: 10px;
+}
+body.page-guide .guide-section__eyebrow{
+  display:block !important;
+}
+body.page-guide .guide-section h2{
+  margin-top: 0;
+}
+
+@media (max-width: 860px){
+  body.page-guide .hero--guide{
+    padding-top: 88px !important;
+    padding-bottom: 34px !important;
+  }
+  body.page-guide .hero-blueprint{
+    background-size: 28px 28px, 28px 28px;
+  }
+  body.page-guide .hero-lanes{
+    background:
+      repeating-linear-gradient(110deg,
+        rgba(66,203,255,.18) 0 1px,
+        rgba(66,203,255,0) 1px 26px),
+      repeating-linear-gradient(110deg,
+        rgba(255,255,255,.05) 0 1px,
+        rgba(255,255,255,0) 1px 52px);
+  }
+  body.page-guide .hero-radar{
+    inset: 12% 4% 8% 4%;
+    opacity:.34;
+  }
+  body.page-guide .guide-hero-card{
+    background: rgba(4,10,24,.14) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  body.page-guide .hero-sweep,
+  body.page-guide .hero.hero-photo::before{
+    animation:none !important;
+  }
+}
+
+
+/* === 2026-03-06 · Final polish: rails and radar aligned with Home === */
+/* Goal:
+   - lane rails more subtle, like the home hero
+   - remove circular radar rings from secondary heroes
+   - use a single rotating light beam, same visual logic as Home
+*/
+body.page-guide .hero.hero-photo{
+  isolation:isolate;
+}
+
+body.page-guide .hero.hero-photo::after{
+  /* keep the shared home-like blueprint, but soften the diagonal lanes */
+  background:
+    linear-gradient(rgba(255,255,255,.034) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.028) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.048) 0 1px, rgba(0,0,0,0) 1px 30px),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.13), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78));
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50%;
+}
+
+/* Dedicated helper layers from the HTML markup */
+body.page-guide .hero-blueprint,
+body.page-guide .hero-lanes,
+body.page-guide .hero-radar,
+body.page-guide .hero-sweep{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+
+/* Blueprint grid: subtle, crisp, secondary to the aurora */
+body.page-guide .hero-blueprint{
+  z-index:1;
+  opacity:.20;
+  background:
+    linear-gradient(rgba(255,255,255,.030) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.024) 1px, rgba(0,0,0,0) 1px);
+  background-size: 34px 34px, 34px 34px;
+}
+
+/* Lane rails: much softer than previous versions */
+body.page-guide .hero-lanes{
+  z-index:1;
+  opacity:.30;
+  background:
+    repeating-linear-gradient(110deg,
+      rgba(66,203,255,.050) 0 1px,
+      rgba(0,0,0,0) 1px 30px);
+  mix-blend-mode:screen;
+}
+
+/* Remove the old circular radar treatment */
+body.page-guide .hero-radar{
+  display:none !important;
+}
+
+/* Single rotating light beam, same logic as the home hero */
+body.page-guide .hero-sweep{
+  z-index:1;
+  inset:-18%;
+  opacity:.55;
+  background: conic-gradient(from 0turn at 50% 50%,
+    rgba(0,0,0,0) 0turn,
+    rgba(66,203,255,0) .68turn,
+    rgba(66,203,255,.18) .71turn,
+    rgba(66,203,255,0) .74turn,
+    rgba(0,0,0,0) 1turn
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%);
+  mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%);
+  filter: blur(.2px);
+  transform-origin: 50% 50%;
+  animation: radarSpin 9s linear infinite;
+  mix-blend-mode:screen;
+}
+
+@media (max-width: 720px){
+  body.page-guide .hero-blueprint{ opacity:.16; }
+  body.page-guide .hero-lanes{ opacity:.22; }
+  body.page-guide .hero-sweep{ opacity:.42; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  body.page-guide .hero-sweep{
+    animation:none !important;
+    opacity:.20;
+  }
+}
+
+
+
+/* === 2026-03-06 · Exact Home Hero Copy for secondary landings === */
+/* Copy the home hero background system literally: aurora + blueprint grid + lane rails + radar sweep beam. */
+body.page-guide .hero-blueprint,
+body.page-guide .hero-lanes,
+body.page-guide .hero-radar{
+  display:none !important;
+}
+
+body.page-guide .hero.hero-photo{
+  position:relative !important;
+  overflow:hidden !important;
+  min-height:100svh !important;
+  display:flex !important;
+  align-items:stretch !important;
+  isolation:isolate !important;
+}
+
+body.page-guide .hero.hero-photo .container{
+  flex:1;
+  display:flex;
+  align-items:stretch;
+}
+
+body.page-guide .hero.hero-photo::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:-10% !important;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.42), rgba(24,132,255,0) 62%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.26), rgba(212,175,55,0) 62%),
+    radial-gradient(780px 480px at 58% 72%, rgba(66,203,255,.22), rgba(66,203,255,0) 64%),
+    radial-gradient(820px 520px at 30% 78%, rgba(106,92,255,.18), rgba(106,92,255,0) 66%),
+    linear-gradient(180deg, rgba(6,10,24,1) 0%, rgba(7,12,28,1) 42%, rgba(7,13,30,1) 100%) !important;
+  background-size: 120% 120%, 120% 120%, 140% 140%, 140% 140%, 100% 100% !important;
+  background-position: 0% 0%, 100% 0%, 60% 100%, 20% 100%, 50% 50% !important;
+  filter: saturate(1.05) contrast(1.03) !important;
+  transform: scale(1.02);
+  will-change: background-position, transform;
+  animation: auroraDrift 12s ease-in-out infinite alternate !important;
+}
+
+body.page-guide .hero.hero-photo::after{
+  content:"";
+  position:absolute;
+  z-index:1 !important;
+  inset:0 !important;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.030) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.06) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78)) !important;
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100% !important;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50% !important;
+  pointer-events:none;
+}
+
+body.page-guide .hero-sweep{
+  display:block !important;
+  position:absolute !important;
+  z-index:1 !important;
+  inset:-18% !important;
+  pointer-events:none !important;
+  opacity:.55 !important;
+  background: conic-gradient(from 0turn at 50% 50%,
+    rgba(0,0,0,0) 0turn,
+    rgba(66,203,255,0) .68turn,
+    rgba(66,203,255,.18) .71turn,
+    rgba(66,203,255,0) .74turn,
+    rgba(0,0,0,0) 1turn
+  ) !important;
+  mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%) !important;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%) !important;
+  filter: blur(.2px) !important;
+  transform-origin: 50% 50% !important;
+  animation: radarSpin 9s linear infinite !important;
+  mix-blend-mode: screen !important;
+}
+
+body.page-guide .hero--guide h1,
+body.page-guide .hero--guide .lead,
+body.page-guide .hero--guide .kicker,
+body.page-guide .hero--guide .breadcrumbs,
+body.page-guide .hero--guide .breadcrumbs a,
+body.page-guide .hero--guide .breadcrumbs span,
+body.page-guide .guide-hero-card{
+  position:relative;
+  z-index:2;
+}
+
+@media (prefers-reduced-motion: reduce){
+  body.page-guide .hero.hero-photo::before{ animation:none !important; }
+  body.page-guide .hero-sweep{ animation:none !important; opacity:.22 !important; }
+}
+
+
+/* === 2026-03-06 · Exact home hero port for secondary landings ===
+   Purpose:
+   - use the same rails, tones and radar beam as the home hero
+   - remove any secondary-only radar approximations that were interfering
+*/
+body.page-guide .hero--guide::after,
+body.page-guide .hero-blueprint,
+body.page-guide .hero-lanes,
+body.page-guide .hero-radar{
+  display:none !important;
+}
+
+body.page-guide .hero.hero-photo{
+  position:relative !important;
+  padding:0 !important;
+  min-height:100svh !important;
+  display:flex !important;
+  align-items:center !important;
+  isolation:isolate;
+  overflow:hidden;
+  background:none !important;
+}
+
+body.page-guide .hero.hero-photo::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:-10%;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.42), rgba(24,132,255,0) 62%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.26), rgba(212,175,55,0) 62%),
+    radial-gradient(780px 480px at 58% 72%, rgba(66,203,255,.22), rgba(66,203,255,0) 64%),
+    radial-gradient(820px 520px at 30% 78%, rgba(106,92,255,.18), rgba(106,92,255,0) 66%),
+    linear-gradient(180deg, rgba(6,10,24,1) 0%, rgba(7,12,28,1) 42%, rgba(7,13,30,1) 100%);
+  background-size: 120% 120%, 120% 120%, 140% 140%, 140% 140%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, 60% 100%, 20% 100%, 50% 50%;
+  filter: saturate(1.05) contrast(1.03);
+  transform: scale(1.02);
+  will-change: background-position, transform;
+  animation: auroraDrift 12s ease-in-out infinite alternate;
+}
+
+body.page-guide .hero.hero-photo::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.030) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.06) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78));
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50%;
+  pointer-events:none;
+}
+
+body.page-guide .hero-sweep{
+  position:absolute !important;
+  z-index:1 !important;
+  inset:-18% !important;
+  pointer-events:none !important;
+  opacity:.55 !important;
+  background: conic-gradient(from 0turn at 50% 50%,
+    rgba(0,0,0,0) 0turn,
+    rgba(66,203,255,0) .68turn,
+    rgba(66,203,255,.18) .71turn,
+    rgba(66,203,255,0) .74turn,
+    rgba(0,0,0,0) 1turn
+  ) !important;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%);
+  mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%);
+  filter: blur(.2px) !important;
+  transform-origin: 50% 50% !important;
+  animation: radarSpin 9s linear infinite !important;
+  mix-blend-mode: screen !important;
+  display:block !important;
+}
+
+body.page-guide .guide-hero-card{
+  position:relative;
+  z-index:2;
+  background: rgba(6,12,28,.34) !important;
+  border: 1px solid rgba(212,175,55,.18) !important;
+  box-shadow: 0 22px 70px rgba(0,0,0,.38) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+@media (prefers-reduced-motion: reduce){
+  body.page-guide .hero.hero-photo::before{ animation: none !important; }
+  body.page-guide .hero-sweep{ animation: none !important; opacity: .22 !important; }
+}
+
+
+/* === 2026-03-06 · FINAL FIX: exact home rails + exact home radar on secondary heroes === */
+
+body.page-guide .hero.hero--guide.hero-photo,
+body.page-guide .hero.hero-photo{
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  min-height: 100svh !important;
+  display:flex !important;
+  align-items:stretch !important;
+  background: linear-gradient(180deg, #050914, #070B1A) !important;
+}
+
+body.page-guide .hero.hero--guide.hero-photo::before,
+body.page-guide .hero.hero-photo::before{
+  content:"" !important;
+  position:absolute !important;
+  z-index:0 !important;
+  inset:-10% !important;
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(24,132,255,.42), rgba(24,132,255,0) 62%),
+    radial-gradient(860px 520px at 78% 22%, rgba(212,175,55,.26), rgba(212,175,55,0) 62%),
+    radial-gradient(780px 480px at 58% 72%, rgba(66,203,255,.22), rgba(66,203,255,0) 64%),
+    radial-gradient(820px 520px at 30% 78%, rgba(106,92,255,.18), rgba(106,92,255,0) 66%),
+    linear-gradient(180deg, rgba(6,10,24,1) 0%, rgba(7,12,28,1) 42%, rgba(7,13,30,1) 100%) !important;
+  background-size: 120% 120%, 120% 120%, 140% 140%, 140% 140%, 100% 100% !important;
+  background-position: 0% 0%, 100% 0%, 60% 100%, 20% 100%, 50% 50% !important;
+  filter: saturate(1.05) contrast(1.03) !important;
+  transform: scale(1.02) !important;
+  will-change: background-position, transform !important;
+  animation: auroraDrift 12s ease-in-out infinite alternate !important;
+}
+
+body.page-guide .hero.hero--guide.hero-photo::after,
+body.page-guide .hero.hero-photo::after{
+  content:"" !important;
+  position:absolute !important;
+  z-index:1 !important;
+  inset:0 !important;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, rgba(0,0,0,0) 1px),
+    linear-gradient(90deg, rgba(255,255,255,.030) 1px, rgba(0,0,0,0) 1px),
+    repeating-linear-gradient(110deg, rgba(66,203,255,.06) 0 1px, rgba(0,0,0,0) 1px 28px),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(4,7,16,.10), rgba(4,7,16,.58) 55%, rgba(4,7,16,.78)) !important;
+  background-size: 34px 34px, 34px 34px, 100% 100%, 100% 100%, 100% 100% !important;
+  background-position: 0 0, 0 0, 50% 50%, 50% 0%, 50% 50% !important;
+  pointer-events:none !important;
+}
+
+body.page-guide .hero.hero--guide.hero-photo > .container,
+body.page-guide .hero.hero-photo > .container{
+  position:relative !important;
+  z-index:2 !important;
+  flex:1 !important;
+  display:flex !important;
+  align-items:stretch !important;
+}
+
+body.page-guide .hero.hero--guide.hero-photo .hero-sweep,
+body.page-guide .hero.hero-photo .hero-sweep{
+  display:block !important;
+  position:absolute !important;
+  z-index:1 !important;
+  inset:-18% !important;
+  pointer-events:none !important;
+  opacity:.55 !important;
+  background: conic-gradient(from 0turn at 50% 50%,
+    rgba(0,0,0,0) 0turn,
+    rgba(66,203,255,0) .68turn,
+    rgba(66,203,255,.18) .71turn,
+    rgba(66,203,255,0) .74turn,
+    rgba(0,0,0,0) 1turn
+  ) !important;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%) !important;
+  mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,0) 72%) !important;
+  filter: blur(.2px) !important;
+  transform-origin: 50% 50% !important;
+  animation: radarSpin 9s linear infinite !important;
+  mix-blend-mode: screen !important;
+}
+
+@media (prefers-reduced-motion: reduce){
+  body.page-guide .hero.hero--guide.hero-photo::before,
+  body.page-guide .hero.hero-photo::before{ animation:none !important; }
+  body.page-guide .hero.hero--guide.hero-photo .hero-sweep,
+  body.page-guide .hero.hero-photo .hero-sweep{ animation:none !important; opacity:.22 !important; }
+}
+
+/* Secondary landing hero: mirror Home background/hero structure while preserving guide copy styling */
+body.home.page-guide #hero{
+  padding-top: 110px;
+  padding-bottom: 34px;
+  position: relative;
+  overflow: hidden;
+}
+body.home.page-guide #hero .hero-center{
+  max-width: 980px;
+  margin: 0 auto;
+}
+body.home.page-guide #hero .kicker{
+  color: rgba(246,247,251,.78);
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+body.home.page-guide #hero h1{
+  color: #f6f7fb;
+  margin-top: 10px;
+}
+body.home.page-guide #hero .lead{
+  color: rgba(246,247,251,.75);
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.home.page-guide #hero .breadcrumbs{
+  justify-content: center;
+  margin-top: 10px;
+}
+body.home.page-guide #hero .breadcrumbs a,
+body.home.page-guide #hero .breadcrumbs span{
+  color: rgba(246,247,251,.72);
+}
+body.home.page-guide #hero .breadcrumbs a:hover{
+  color: rgba(246,247,251,.92);
+}
+body.home.page-guide #hero .guide-hero-actions{
+  margin-top: 18px;
+  align-items: center;
+}
+body.home.page-guide #hero .guide-hero-actions > .btn{
+  width: auto;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+body.home.page-guide #hero .pills--guide{
+  justify-content: center;
+}
+@media (max-width: 720px){
+  body.home.page-guide #hero{
+    padding-top: 102px;
+    padding-bottom: 24px;
+  }
+}
+
+/* v4: secondary landing hero layout aligned to Home */
+body.home.page-guide #hero{
+  padding-top: 132px;
+  padding-bottom: 42px;
+}
+body.home.page-guide #hero .hero-center{
+  max-width: 980px;
+  margin: 0 auto;
+  gap: clamp(18px, 2.8vh, 28px);
+  padding-top: clamp(38px, 7vh, 74px);
+  padding-bottom: clamp(52px, 8vh, 96px);
+}
+body.home.page-guide #hero .hero-brandmark{
+  margin: 0;
+}
+body.home.page-guide #hero h1{
+  max-width: 14ch;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body.home.page-guide #hero .lead{
+  max-width: 48ch;
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.65;
+  margin-top: 0;
+}
+body.home.page-guide #hero .guide-hero-actions{
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.home.page-guide #hero .guide-hero-actions > .btn{
+  min-width: 0;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+body.home.page-guide #hero .guide-hero-meta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+body.home.page-guide #hero .guide-hero-meta .kicker{
+  order: 2;
+  margin: 0;
+  color: rgba(246,247,251,.76);
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+body.home.page-guide #hero .guide-hero-meta .breadcrumbs{
+  order: 1;
+  margin: 0;
+  justify-content: center;
+}
+body.home.page-guide #hero .guide-hero-meta .breadcrumbs a,
+body.home.page-guide #hero .guide-hero-meta .breadcrumbs span{
+  color: rgba(246,247,251,.68);
+}
+@media (max-width: 720px){
+  body.home.page-guide #hero{
+    padding-top: 116px;
+    padding-bottom: 28px;
+  }
+  body.home.page-guide #hero .hero-center{
+    padding-top: 28px;
+    padding-bottom: 56px;
+    gap: 16px;
+  }
+  body.home.page-guide #hero h1{
+    max-width: 16ch;
+  }
+  body.home.page-guide #hero .lead{
+    max-width: 34ch;
+    font-size: 17px;
+  }
+  body.home.page-guide #hero .guide-hero-meta{
+    gap: 10px;
+    margin-top: 4px;
+  }
+}
+
+
+/* v5: secondary hero scale matched to Home */
+body.home.page-guide #hero{
+  padding-top: 118px;
+  padding-bottom: 36px;
+}
+body.home.page-guide #hero .hero-center{
+  max-width: 1100px;
+  gap: clamp(16px, 2.6vh, 30px);
+  padding: clamp(24px, 6vh, 62px) 0 clamp(44px, 8vh, 96px);
+}
+body.home.page-guide #hero .hero-brandmark{
+  gap: 10px;
+}
+body.home.page-guide #hero .hero-brandmark img{
+  width: 132px;
+  max-width: min(132px, 34vw);
+  border-radius: 22px;
+}
+body.home.page-guide #hero .hero-word__text{
+  font-size: clamp(24px, 2.9vw, 38px);
+  letter-spacing: .55px;
+}
+body.home.page-guide #hero .hero-word__line{
+  width: clamp(120px, 14vw, 170px);
+}
+body.home.page-guide #hero h1{
+  max-width: 20ch;
+  font-size: clamp(34px, 4.2vw, 58px);
+  line-height: 1.10;
+  letter-spacing: -0.02em;
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+body.home.page-guide #hero .lead{
+  max-width: 68ch;
+  margin: 0;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255,255,255,.90);
+}
+body.home.page-guide #hero .guide-hero-actions{
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+body.home.page-guide #hero .guide-hero-actions > .btn,
+body.home.page-guide #hero .guide-hero-actions > .btn.primary{
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+body.home.page-guide #hero .guide-hero-meta{
+  gap: 10px;
+  margin-top: 2px;
+}
+body.home.page-guide #hero .guide-hero-meta .breadcrumbs{
+  font-size: 14px;
+}
+@media (max-width: 720px){
+  body.home.page-guide #hero{
+    padding-top: 108px;
+    padding-bottom: 26px;
+  }
+  body.home.page-guide #hero .hero-brandmark img{
+    width: min(118px, 34vw);
+  }
+  body.home.page-guide #hero h1{
+    max-width: 13ch;
+  }
+}
+
+
+/* === Final home-match lock for secondary guide heroes === */
+body.home.page-guide .topbar .brand,
+body.home.page-guide .topbar .brand img,
+body.home.page-guide .topbar .brand span{
+  all: unset;
+}
+body.home.page-guide .topbar .brand{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  text-decoration:none !important;
+}
+body.home.page-guide .topbar .brand img{width:30px !important; height:30px !important; display:block !important; filter: drop-shadow(0 14px 20px rgba(0,0,0,.45)) !important;}
+body.home.page-guide .topbar .brand span{font-weight:900 !important; letter-spacing:.35px !important; font-size:14px !important; color:inherit !important;}
+
+body.home.page-guide #hero .hero-center{
+  max-width: none !important;
+  width:100% !important;
+  gap: clamp(16px, 2.6vh, 30px) !important;
+  padding: clamp(24px, 6vh, 62px) 0 clamp(44px, 8vh, 96px) !important;
+  text-align:center !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+}
+body.home.page-guide #hero .hero-brandmark{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  margin:0 !important;
+}
+body.home.page-guide #hero .hero-brandmark img{
+  width: clamp(148px, 15vw, 228px) !important;
+  height:auto !important;
+  display:block !important;
+  border-radius:22px !important;
+  box-shadow:none !important;
+  filter: drop-shadow(0 18px 42px rgba(0,0,0,.48)) !important;
+}
+body.home.page-guide #hero .hero-word{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  gap:8px !important;
+}
+body.home.page-guide #hero .hero-word__text{
+  font-weight:900 !important;
+  letter-spacing:.55px !important;
+  font-size: clamp(24px, 2.9vw, 38px) !important;
+  color: rgba(246,247,251,.92) !important;
+  text-shadow: 0 10px 30px rgba(0,0,0,.55) !important;
+}
+body.home.page-guide #hero .hero-word__line{
+  width: clamp(120px, 14vw, 170px) !important;
+  height:2px !important;
+  border-radius:999px !important;
+  background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.96), rgba(212,175,55,0)) !important;
+  opacity:.95 !important;
+}
+body.home.page-guide #hero .kicker{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  margin:0 0 10px !important;
+  font-size:12px !important;
+  letter-spacing:2.6px !important;
+  text-transform:uppercase !important;
+  color: rgba(246,247,251,.82) !important;
+}
+body.home.page-guide #hero h1{
+  font-size: clamp(34px, 4.2vw, 58px) !important;
+  line-height:1.10 !important;
+  letter-spacing:-0.02em !important;
+  margin:0 !important;
+  margin-top:2px !important;
+  margin-bottom:8px !important;
+  max-width:none !important;
+  color:#f6f7fb !important;
+}
+body.home.page-guide #hero .subline{
+  max-width:68ch !important;
+  margin:0 !important;
+  margin-top:10px !important;
+  font-size:16px !important;
+  line-height:1.65 !important;
+  color: rgba(255,255,255,.90) !important;
+}
+body.home.page-guide #hero .hero-ctas.center{
+  justify-content:center !important;
+  gap:12px !important;
+  margin-top:14px !important;
+}
+body.home.page-guide #hero .hero-ctas.center .btn{
+  padding:18px 26px !important;
+  border-radius:20px !important;
+  font-size:14px !important;
+}
+body.home.page-guide #hero .hero-ctas.center .btn.primary{
+  padding:20px 30px !important;
+  font-size:15px !important;
+}
+body.home.page-guide #hero .hero-breadcrumbs{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  gap:10px !important;
+  font-size:13px !important;
+  color: rgba(246,247,251,.72) !important;
+  margin: 12px 0 0 !important;
+}
+body.home.page-guide #hero .hero-breadcrumbs a,
+body.home.page-guide #hero .hero-breadcrumbs span{color: rgba(246,247,251,.72) !important;}
+body.home.page-guide #hero .hero-breadcrumbs a:hover{color: rgba(246,247,251,.92) !important;}
+
+
+/* HOME-HERO parity overrides for secondary guides */
+
+body.home.page-guide .guide-hero-card{all:unset;}
+body.home.page-guide .hero.hero-photo{min-height:860px;padding-top:72px;}
+body.home.page-guide #hero .container{position:relative;z-index:2;}
+body.home.page-guide #hero .hero-center{max-width:980px;margin:0 auto;text-align:center;align-items:center;}
+body.home.page-guide #hero .hero-brandmark{margin:0 auto 28px;}
+body.home.page-guide #hero .hero-brandmark img{width:419px;max-width:min(78vw,419px);height:auto;}
+body.home.page-guide #hero .hero-word{margin-top:20px;}
+body.home.page-guide #hero .hero-word__text{font-size:68px;letter-spacing:-.04em;}
+body.home.page-guide #hero .hero-word__line{margin-top:14px;}
+body.home.page-guide #hero .kicker{margin:12px 0 18px;text-align:center;}
+body.home.page-guide #hero h1{max-width:1080px;margin:0 auto;font-size:clamp(46px,6.4vw,84px);line-height:.98;letter-spacing:-.04em;font-weight:900;text-align:center;color:#f3f7ff;}
+body.home.page-guide #hero .subline{max-width:930px;margin:26px auto 0;text-align:center;color:rgba(232,240,255,.88);font-size:clamp(18px,2.05vw,22px);line-height:1.6;}
+body.home.page-guide #hero .hero-ctas.center{justify-content:center;margin-top:34px;}
+body.home.page-guide #hero .hero-ctas.center .btn{min-width:226px;padding:17px 30px;font-size:18px;}
+body.home.page-guide #hero .hero-breadcrumbs{justify-content:center;margin-top:26px;text-align:center;}
+body.home.page-guide .bg .grid{opacity:.14!important;}
+body.home.page-guide #jv-particles{display:block!important;opacity:1!important;}
+
+@media (max-width: 900px){
+  body.home.page-guide .hero.hero-photo{min-height:760px;}
+  body.home.page-guide #hero .hero-brandmark img{max-width:min(70vw,320px);}
+  body.home.page-guide #hero .hero-word__text{font-size:56px;}
+  body.home.page-guide #hero h1{font-size:clamp(38px,9vw,62px);}
+  body.home.page-guide #hero .subline{font-size:18px;}
+}
+
+@media (max-width: 640px){
+  body.home.page-guide .hero.hero-photo{min-height:680px;padding-top:48px;}
+  body.home.page-guide #hero .hero-brandmark{margin-bottom:22px;}
+  body.home.page-guide #hero .hero-brandmark img{max-width:min(72vw,260px);}
+  body.home.page-guide #hero .hero-word__text{font-size:46px;}
+  body.home.page-guide #hero .kicker{margin:10px 0 14px;}
+  body.home.page-guide #hero h1{font-size:clamp(34px,11vw,52px);}
+  body.home.page-guide #hero .subline{font-size:17px;line-height:1.55;}
+  body.home.page-guide #hero .hero-ctas.center .btn{width:auto;min-width:210px;}
+}
+
+
+/* v9: navigation, related links and readability fixes */
+.page-guide .related-title{margin:18px 0 10px; color:#071024;}
+.page-guide .related{display:flex; flex-wrap:wrap; gap:12px; margin-top:0;}
+.page-guide .related .pill{
+  position:relative;
+  min-height:auto !important;
+  padding:12px 18px !important;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  line-height:1.4;
+  white-space:normal;
+  background:rgba(11,74,162,.05) !important;
+  border:1px solid rgba(11,74,162,.16) !important;
+  color:#0b4aa2 !important;
+}
+.page-guide .related .pill::before,
+.page-guide .related .pill::after,
+.page-guide .guide-wrap .related a::before,
+.page-guide .guide-wrap .related a::after{content:none !important; display:none !important;}
+.page-guide .band--light .card.guide-section > .related,
+.page-guide .band--light .card.guide-section > .related-title{max-width:none !important; width:100% !important;}
+body.page-guide .guide-wrap a.pill{padding-left:18px !important;}
+body.home.page-guide #guide-list .card h3,
+body.home.page-guide #guide-list .card p,
+body.home.page-guide #guide-list .card .muted2{color:rgba(246,247,251,.92) !important;}
+body.home.page-guide #guide-list .card .muted2{opacity:.9;}
+body.home.page-guide #guide-list .card{border-color:rgba(255,255,255,.16) !important; background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03)) !important;}
+body.home.page-guide .section .section-head .lead,
+body.home.page-guide .section .section-head h2,
+body.home.page-guide .section .section-head .kicker{color:rgba(246,247,251,.94) !important;}
+
+
+/* v11 bullets + cluster focus + hub fixes */
+body.page-guide .band--light .card.guide-section ul{
+  display:block !important;
+  list-style: disc !important;
+  padding-left: 1.35rem !important;
+  margin: 0.35rem 0 0 !important;
+}
+body.page-guide .band--light .card.guide-section ol{
+  display:block !important;
+  list-style: decimal !important;
+  padding-left: 1.4rem !important;
+  margin: 0.35rem 0 0 !important;
+}
+body.page-guide .band--light .card.guide-section li{
+  display:list-item !important;
+  margin: 0.9rem 0 !important;
+  padding-left: 0 !important;
+}
+body.page-guide .band--light .card.guide-section li::marker{
+  color: rgba(11,74,162,.92);
+  font-weight: 800;
+}
+body.page-guide .guide-wrap .toc ul{
+  list-style:none !important;
+  display:grid !important;
+}
+body.page-guide .cluster-focus{
+  margin: 0 0 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(11,74,162,.12);
+  background: linear-gradient(180deg, rgba(248,251,255,1), rgba(255,255,255,1));
+}
+body.page-guide .cluster-focus__eyebrow{
+  margin: 0 0 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: rgba(7,16,36,.56);
+  font-weight: 900;
+}
+body.page-guide .cluster-focus p{
+  margin: 0 0 12px;
+  color: rgba(7,16,36,.78);
+}
+body.page-guide .cluster-focus .btn{
+  width: auto;
+}
+body.home.page-guide .guide-card[href="guias.html"]{
+  cursor: pointer;
+}
+body.home.page-guide #guide-list .card .mini,
+body.home.page-guide #guide-list .guide-card .mini{
+  color: rgba(246,247,251,.92) !important;
+}
+
+
+/* v12 architecture audit */
+body.page-guide .cluster-focus__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;}
+body.page-guide .cluster-focus__actions .btn{min-width:auto;}
+body.page-guide .cards-grid ul{margin:10px 0 0;padding-left:1.1rem;}
+body.page-guide .cards-grid li{margin:.45rem 0;}
+body.page-guide .footer-links .note a{color:inherit;}
+
+
+/* v14 contrast + practical blocks */
+body.page-guide .section-head .eyebrow,
+body.page-guide .section-head .kicker,
+body.page-guide .section-head h2,
+body.page-guide .section-head .lead,
+body.page-guide .section-head .section-sub{
+  color: rgba(245,248,255,.96) !important;
+  text-shadow: 0 1px 12px rgba(0,0,0,.28);
+}
+body.page-guide .section-head .eyebrow,
+body.page-guide .section-head .kicker{ opacity:.88; }
+body.page-guide .cards-grid .card h3,
+body.page-guide .cards-grid .card p,
+body.page-guide .cards-grid .card .readmore,
+body.page-guide .cards-grid .card a{ color: rgba(245,248,255,.96); }
+.practical-box{
+  margin: 18px 0 26px;
+  padding: 20px 22px;
+  border-radius: 24px;
+  border:1px solid rgba(33,77,176,.22);
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(246,248,252,.96));
+  box-shadow: 0 20px 48px rgba(11,18,32,.08);
+  color:#13213c;
+}
+.practical-box h2{ margin:0 0 8px; color:#081634; }
+.practical-box p{ color:#2c3a57; }
+.practical-grid{ display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:16px; margin-top:16px; }
+.practical-item{ background: rgba(255,255,255,.72); border:1px solid rgba(33,77,176,.14); border-radius:18px; padding:16px 16px 14px; }
+.practical-item h3{ margin:0 0 8px; font-size:1rem; color:#081634; }
+.practical-item ul{ margin:0; padding-left: 18px; }
+.practical-item li{ margin: 0 0 6px; color:#20314f; }
+@media (max-width: 900px){ .practical-grid{ grid-template-columns:1fr; } }
+
+
+/* v15: rutas recomendadas y footer */
+.page-guide .footer-links{
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+}
+.page-guide .footer-links ul{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page-guide .footer-links li{
+  list-style: none;
+  margin: 0;
+}
+.page-guide .footer-links .related-title{
+  margin-bottom: 12px;
+}
+.page-guide .footer-links a{
+  min-height: 52px;
+  display:flex;
+  align-items:center;
+}
+@media (max-width: 820px){
+  .page-guide .footer-links ul{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* v16: legal pages contrast and footer consistency */
+body.page-guide .band--light .section-head .eyebrow,
+body.page-guide .band--light .section-head .kicker,
+body.page-guide .band--light .section-head h1,
+body.page-guide .band--light .section-head h2,
+body.page-guide .band--light .section-head .lead,
+body.page-guide .band--light .section-head .section-sub{
+  color:#071024 !important;
+  text-shadow:none !important;
+}
+body.page-guide .band--light .section-head .eyebrow,
+body.page-guide .band--light .section-head .kicker{ opacity:.72; }
+body.page-guide .legal-prose,
+body.page-guide .legal-prose p,
+body.page-guide .legal-prose li,
+body.page-guide .legal-prose a{
+  color:#1d2a45 !important;
+}
+body.page-guide .legal-prose a{ text-decoration: underline; text-underline-offset: 3px; }
+body.page-guide .footer-links > p strong{ color:#071024; }
+body.page-guide .footer-links .note{ color: rgba(7,16,36,.72); }
+body.page-guide .footer-links li::marker{ color:#0b4aa2; }
+body.page-guide .faq-list details p a{ color:#0b4aa2; }
+
+
+/* v17: final audit polish for practical boxes and legal pages */
+body.page-guide main.legal-page .guide-section.legal-prose p,
+body.page-guide main.legal-page .guide-section.legal-prose li,
+body.page-guide main.legal-page .guide-section.legal-prose a{ color:#1f3150 !important; }
+body.page-guide .guide-section + .practical-box{ margin: 0 0 18px; }
+body.page-guide .practical-box{ max-width:none; }
+body.page-guide .practical-box p{ max-width:72ch; }
+body.page-guide .footer-links .related-title strong{ letter-spacing:.01em; }
+body.page-guide .expert-note p{ text-wrap:pretty; }
+
+
+/* v18: premium+ editorial polish for landing pages */
+body.page-guide .guide-content-band .cluster-focus p,
+body.page-guide .guide-content-band .expert-note p,
+body.page-guide .guide-content-band .practical-box p,
+body.page-guide .guide-content-band .practical-box li,
+body.page-guide .guide-content-band .guide-section > p,
+body.page-guide .guide-content-band .guide-section li,
+body.page-guide .guide-content-band .footer-links .note,
+body.page-guide .guide-content-band .editorial-insight p,
+body.page-guide .guide-content-band .editorial-insight li{
+  text-align: justify !important;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+body.page-guide .guide-content-band .cluster-focus__eyebrow,
+body.page-guide .guide-content-band .expert-note__eyebrow,
+body.page-guide .guide-content-band .guide-section__eyebrow,
+body.page-guide .guide-content-band .toc-title,
+body.page-guide .guide-content-band .related-title,
+body.page-guide .guide-content-band .practical-box h2,
+body.page-guide .guide-content-band .practical-item h3,
+body.page-guide .guide-content-band .editorial-insight h2,
+body.page-guide .guide-content-band .editorial-card h3,
+body.page-guide .guide-content-band .editorial-kicker,
+body.page-guide .guide-content-band .microcase-label{
+  text-align: left !important;
+}
+body.page-guide .guide-content-band .practical-item,
+body.page-guide .guide-content-band .editorial-card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body.page-guide .guide-content-band .practical-item ul,
+body.page-guide .guide-content-band .editorial-card ul{
+  margin-top: 6px;
+}
+body.page-guide .guide-content-band .editorial-insight{
+  margin: 0 0 22px;
+  padding: 22px 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(33,77,176,.18);
+  background: linear-gradient(180deg, rgba(249,251,255,.98), rgba(255,255,255,.98));
+  box-shadow: 0 18px 44px rgba(8,22,52,.08);
+}
+body.page-guide .guide-content-band .editorial-kicker{
+  margin: 0 0 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: rgba(7,16,36,.56);
+  font-weight: 900;
+}
+body.page-guide .guide-content-band .editorial-insight > h2{
+  margin: 0 0 10px;
+  color: #081634;
+  font-size: clamp(30px, 3.4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+body.page-guide .guide-content-band .editorial-insight > p{
+  max-width: 76ch;
+  margin: 0 0 16px;
+  color: #233452;
+}
+body.page-guide .guide-content-band .editorial-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+}
+body.page-guide .guide-content-band .editorial-card{
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(33,77,176,.14);
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+}
+body.page-guide .guide-content-band .editorial-card h3{
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  color: #081634;
+}
+body.page-guide .guide-content-band .editorial-card p,
+body.page-guide .guide-content-band .editorial-card li{
+  color: #243654;
+}
+body.page-guide .guide-content-band .editorial-card ul{
+  padding-left: 18px;
+}
+body.page-guide .guide-content-band .microcase-label{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(11,74,162,.08);
+  border: 1px solid rgba(11,74,162,.12);
+  color: #0b4aa2;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+body.page-guide .guide-content-band .editorial-card .microcase-label + p{
+  margin-top: 0;
+}
+body.page-guide .guide-content-band .final-cta h2,
+body.page-guide .guide-content-band .final-cta p{
+  text-align: center !important;
+}
+@media (max-width: 980px){
+  body.page-guide .guide-content-band .editorial-grid{ grid-template-columns: 1fr; }
+}
+@media (max-width: 640px){
+  body.page-guide .guide-content-band .editorial-insight{ padding: 20px 18px; }
+}
+
+
+
+/* v19: landing alignment + overflow consistency pass */
+body.page-guide .guide-content-band .guide-shell{
+  max-width: 1120px !important;
+  padding: clamp(20px, 2.2vw, 30px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 22px !important;
+  box-sizing: border-box !important;
+}
+body.page-guide .guide-content-band .guide-shell > .guide-wrap,
+body.page-guide .guide-content-band .guide-shell > .callout,
+body.page-guide .guide-content-band .guide-shell > .cluster-focus,
+body.page-guide .guide-content-band .guide-shell > .expert-note,
+body.page-guide .guide-content-band .guide-shell > .card,
+body.page-guide .guide-content-band .guide-shell > .practical-box,
+body.page-guide .guide-content-band .guide-shell > .editorial-insight,
+body.page-guide .guide-content-band .guide-shell > .footer-links,
+body.page-guide .guide-content-band .guide-shell > .final-cta{
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+body.page-guide .guide-content-band .guide-shell > .guide-wrap{
+  padding: 0 !important;
+}
+body.page-guide .guide-content-band .guide-shell > .callout,
+body.page-guide .guide-content-band .guide-shell > .cluster-focus,
+body.page-guide .guide-content-band .guide-shell > .expert-note,
+body.page-guide .guide-content-band .guide-shell > .card,
+body.page-guide .guide-content-band .guide-shell > .practical-box,
+body.page-guide .guide-content-band .guide-shell > .editorial-insight,
+body.page-guide .guide-content-band .guide-shell > .footer-links,
+body.page-guide .guide-content-band .guide-shell > .final-cta{
+  align-self: stretch !important;
+}
+body.page-guide .guide-content-band .guide-shell > .footer-links,
+body.page-guide .guide-content-band .guide-shell > .final-cta{
+  padding: 22px 24px !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(33,77,176,.18) !important;
+  background: linear-gradient(180deg, rgba(249,251,255,.98), rgba(255,255,255,.98)) !important;
+  box-shadow: 0 18px 44px rgba(8,22,52,.08) !important;
+}
+body.page-guide .guide-content-band .guide-shell > .final-cta{
+  text-align: center !important;
+}
+body.page-guide .guide-content-band .guide-shell > .footer-links ul{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body.page-guide .guide-content-band .guide-shell > .footer-links a{
+  width: 100%;
+  box-sizing: border-box;
+}
+body.page-guide .guide-content-band .editorial-grid,
+body.page-guide .guide-content-band .practical-grid,
+body.page-guide .guide-content-band .footer-links ul,
+body.page-guide .guide-content-band .related{
+  width: 100%;
+  box-sizing: border-box;
+}
+body.page-guide .guide-content-band .editorial-grid > *,
+body.page-guide .guide-content-band .practical-grid > *,
+body.page-guide .guide-content-band .footer-links ul > *,
+body.page-guide .guide-content-band .related > *{
+  min-width: 0;
+}
+body.page-guide .guide-content-band .editorial-insight > h2,
+body.page-guide .guide-content-band .practical-box > h2,
+body.page-guide .guide-content-band .final-cta > h2{
+  max-width: 22ch;
+}
+body.page-guide .guide-content-band .guide-shell > .editorial-insight > h2,
+body.page-guide .guide-content-band .guide-shell > .practical-box > h2{
+  margin-bottom: 10px;
+}
+body.page-guide .guide-content-band .guide-shell > .final-cta > h2,
+body.page-guide .guide-content-band .guide-shell > .final-cta > p{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+body.page-guide .guide-content-band .guide-shell > .final-cta > p{
+  max-width: 64ch !important;
+}
+body.page-guide .guide-content-band .guide-shell > .footer-links .note{
+  max-width: 74ch;
+}
+@media (max-width: 980px){
+  body.page-guide .guide-content-band .guide-shell{
+    padding: 20px 18px 26px !important;
+    gap: 18px !important;
+  }
+  body.page-guide .guide-content-band .guide-shell > .footer-links,
+  body.page-guide .guide-content-band .guide-shell > .final-cta,
+  body.page-guide .guide-content-band .guide-shell > .editorial-insight,
+  body.page-guide .guide-content-band .guide-shell > .practical-box,
+  body.page-guide .guide-content-band .guide-shell > .card{
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+@media (max-width: 640px){
+  body.page-guide .guide-content-band .guide-shell{
+    padding: 16px 12px 22px !important;
+  }
+  body.page-guide .guide-content-band .guide-shell > .footer-links,
+  body.page-guide .guide-content-band .guide-shell > .final-cta{
+    padding: 18px 16px !important;
+  }
+}
