@@ -1,422 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Guía de presentación — Transportes | Juravia</title>
-  <meta name="description" content="Cómo presentar alegaciones, recursos o justificantes en expedientes sancionadores del Ministerio de Transportes: acceso, anexos, firma y acuse (guía orientativa)."/>
-  <link rel="canonical" href="https://juravia.app/guia_transportes.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Guía de presentación — Transportes | Juravia"/>
-  <meta property="og:description" content="Cómo presentar alegaciones, recursos o justificantes en expedientes sancionadores del Ministerio de Transportes: acceso, anexos, firma y acuse (guía orientativa)."/>
-  <meta property="og:url" content="https://juravia.app/guia_transportes.html"/>
-  <meta property="og:site_name" content="Juravia"/>
-  <style>
-    :root{
-      --ink:#ffffff;
-      --muted: rgba(255,255,255,.86);
-      --bg:#050914;
-      --panel: rgba(255,255,255,.06);
-      --brand:#0b4aa2;
-      --brand2:#083c84;
-      --gold:#d4af37;
-      --shadow: 0 18px 46px rgba(0,0,0,.45);
-      --radius: 22px;
-      --max: 980px;
-      --bg-img: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
-      --bg-pos: 50% 16%;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%; scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color:var(--ink);
-      background: var(--bg);
-      overflow-x:hidden;
-      line-height:1.45;
-    }
-    .bg-wrap{
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: var(--bg-pos);
-      background-repeat: no-repeat;
-      transform: scale(1.02);
-      filter: saturate(1.02) contrast(1.03);
-    }
-    .bg-overlay{
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background:
-        radial-gradient(1100px 520px at 20% 0%, rgba(11,74,162,.42), rgba(5,9,20,.18) 60%),
-        linear-gradient(180deg, rgba(5,9,20,.35), rgba(5,9,20,.92));
-    }
-
-    .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: linear-gradient(180deg, rgba(11,74,162,.92), rgba(8,60,132,.86));
-      border-bottom: 1px solid rgba(212,175,55,.55);
-      backdrop-filter: blur(12px);
-    }
-    .topbar-inner{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 10px 16px;
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-    }
-    .brand{
-      display:flex; align-items:center; gap: 10px;
-      text-decoration:none;
-      color:#fff;
-      min-width: 160px;
-    }
-    .brand img{
-      width: 30px; height: 30px;
-      display:block;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.30));
-    }
-    .brand span{ font-weight: 900; letter-spacing: .4px; font-size: 14px; }
-    .back{
-      color: rgba(255,255,255,.92);
-      text-decoration:none;
-      font-weight: 800;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 999px;
-      padding: 9px 12px;
-      background: rgba(0,0,0,.12);
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-      white-space: nowrap;
-    }
-    .back:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
-
-    .container{width:100%; max-width: var(--max); margin:0 auto; padding: 22px 16px 60px;}
-    .hero{
-      margin-top: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      font-size: 12px;
-      letter-spacing: 2.6px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.84);
-      margin: 0 0 10px;
-    }
-    .kicker::before{
-      content:"";
-      width: 10px; height: 10px;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(212,175,55,.18);
-    }
-    h1{ margin: 0 0 10px; font-size: 34px; line-height: 1.1; }
-    .lead{ color: var(--muted); font-size: 16px; margin: 0 0 14px; }
-    .actions{display:flex; flex-wrap:wrap; gap: 10px; align-items:center; margin-top: 12px;}
-    .btn{
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, var(--brand), var(--brand2));
-      color:#fff;
-      text-decoration:none;
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 14px 18px;
-      border-radius: 18px;
-      font-weight: 950;
-      letter-spacing: .35px;
-      border: 1px solid rgba(212,175,55,.92);
-      box-shadow: 0 18px 40px rgba(0,0,0,.42);
-      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-    .btn:hover{ transform: translateY(-2px); filter: brightness(1.02); box-shadow: 0 24px 46px rgba(0,0,0,.46); }
-    .btn-ghost{
-      text-decoration:none;
-      color: rgba(255,255,255,.92);
-      font-weight: 900;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 18px;
-      padding: 13px 16px;
-      background: rgba(255,255,255,.04);
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-    .btn-ghost:hover{ border-color: rgba(212,175,55,.55); background: rgba(255,255,255,.06); transform: translateY(-1px); }
-
-    .toc{
-      margin-top: 14px;
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px;
-      padding: 14px 16px;
-    }
-    .toc-title{ font-weight: 950; margin: 0 0 8px; letter-spacing:.2px; }
-    .toc a{ color: rgba(255,255,255,.92); text-decoration:none; font-weight: 800; }
-    .toc a:hover{ text-decoration: underline; text-decoration-color: rgba(212,175,55,.8); }
-    .toc ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.86); }
-    .toc li{ margin: 6px 0; }
-
-    section.card{
-      margin-top: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 18px 18px;
-    }
-    h2{ margin: 0 0 10px; font-size: 22px; }
-    h3{ margin: 14px 0 8px; font-size: 18px; }
-    p{ margin: 0 0 10px; color: rgba(255,255,255,.88); }
-    ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.88); }
-    li{ margin: 6px 0; }
-
-    .callout{
-      margin-top: 12px;
-      background: rgba(11,74,162,.16);
-      border: 1px solid rgba(212,175,55,.35);
-      border-radius: 18px;
-      padding: 12px 14px;
-      color: rgba(255,255,255,.92);
-    }
-    details{
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      padding: 12px 14px;
-      margin-top: 10px;
-    }
-    details[open]{ border-color: rgba(212,175,55,.45); background: rgba(255,255,255,.045); }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      font-weight: 950;
-      letter-spacing:.2px;
-      color: rgba(255,255,255,.92);
-    }
-    summary::-webkit-details-marker{display:none}
-    .related{
-      display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px;
-    }
-    .pill{
-      text-decoration:none;
-      display:inline-flex; align-items:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.92);
-      font-weight: 850;
-      font-size: 14px;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-    }
-    .pill:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
-
-    footer{
-      margin-top: 18px;
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-      text-align:center;
-    }
-    footer a{ color: rgba(255,255,255,.82); }
-    
-
-    .note{ margin: 12px 0 0; color: rgba(255,255,255,.74); font-size: 13px; line-height: 1.55; }
-    .muted{ color: rgba(255,255,255,.78); }
-
-
-    /* Footer (igual en landings y guías, excepto home) */
-    .site-footer{
-      margin-top: 18px;
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius);
-      padding: 16px 16px;
-    }
-    .site-footer .foot-inner{
-      display:flex;
-      gap: 14px;
-      align-items:center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .site-footer .foot-brand{
-      display:flex;
-      gap: 12px;
-      align-items:center;
-      min-width: 260px;
-    }
-    .site-footer .foot-brand img{
-      width: 34px;
-      height: 34px;
-      object-fit: contain;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));
-    }
-    .site-footer .foot-brand b{
-      display:block;
-      font-size: 13px;
-      letter-spacing: .6px;
-    }
-    .site-footer .foot-brand p{
-      margin: 6px 0 0;
-      font-size: 13px;
-      color: rgba(255,255,255,.78);
-      line-height: 1.45;
-    }
-    .site-footer .foot-links{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-    .site-footer .foot-links a{
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.10);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.92);
-      font-weight: 850;
-      font-size: 13px;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-    }
-    .site-footer .foot-links a:hover{
-      border-color: rgba(212,175,55,.55);
-      background: rgba(0,0,0,.16);
-      transform: translateY(-1px);
-    }
-
-  </style>
-</head>
-<body>
-  <div class="bg-wrap" aria-hidden="true"></div>
-  <div class="bg-overlay" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="/index.html#inicio" aria-label="Juravia, inicio">
-        <img src="/brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-        <span>JURAVIA</span>
-      </a>
-      <a class="back" href="/index.html#tramitacion">Volver a la pantalla principal</a>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="hero" id="top">
-      <p class="kicker">Guía · Tramitación</p>
-      <h1>Guía de presentación — Transportes</h1>
-      <p class="lead">Guía orientativa para presentar alegaciones, recursos o justificantes en expedientes sancionadores de Transportes (transporte terrestre).</p>
-
-      <div class="actions">
-        <a class="btn" href="https://app.juravia.app/" rel="nofollow" target="_blank">Abrir Juravia</a>
-        <a class="btn-ghost" href="/index.html#guias">Ver guías por tipo de multa</a>
-      </div>
-
-      <div class="toc">
-        <div class="toc-title">Contenido</div>
-        <ul>
-          <li><a href="#requisitos">Requisitos previos</a></li>
-          <li><a href="#acceso">Acceso al trámite</a></li>
-          <li><a href="#cumplimentacion">Cumplimentación</a></li>
-          <li><a href="#anexos">Anexos y formato</a></li>
-          <li><a href="#firma">Firma y presentación</a></li>
-          <li><a href="#acuse">Acuse y conservación</a></li>
-          <li><a href="#incidencias">Incidencias y alternativa</a></li>
-          <li><a href="#enlaces-oficiales">Enlaces oficiales</a></li>
-        </ul>
-      </div>
-
-      <p class="note">Nota: esta guía es orientativa. La notificación (expediente) y la sede del organismo son la referencia válida de plazos, requisitos y efectos del pago con descuento.</p>
-    </div>
-
-    <section class="card" id="enlaces-utiles">
-      <h2>Enlaces útiles (si aplican)</h2>
-      <div class="related">
-          <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a>
-          <a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad</a>
-          <a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción</a>
-      </div>
-      <p class="muted" style="margin-top:10px;">Estos motivos suelen ser transversales y dependen del expediente. Úsalos solo si encajan y puedes acreditarlo.</p>
-    </section>
-
-    <section class="card" id="requisitos">
-      <h2>Requisitos previos</h2>
-      <ul><li>Identifica si tu expediente es de transporte terrestre y qué unidad lo tramita (según la notificación).</li><li>Ten a mano el número de expediente y, si procede, el NIF de la empresa denunciada (cuando el trámite lo exige).</li><li>Si presentas en nombre de una sociedad o tercero, prepara acreditación de representación.</li></ul>
-    </section>
-
-    <section class="card" id="acceso">
-      <h2>Acceso al trámite</h2>
-      <ul><li>Accede a la sede electrónica del Ministerio y localiza el procedimiento sancionador (presentación de alegaciones/recursos/justificantes).</li><li>Identifícate con los medios admitidos (certificado, Cl@ve u otros, según el trámite).</li></ul>
-    </section>
-
-    <section class="card" id="cumplimentacion">
-      <h2>Cumplimentación</h2>
-      <ul><li>Incluye número de expediente y datos de la empresa/interesado según el formulario.</li><li>Describe hechos y motivos con referencia a la documentación aportada, y formula petición concreta (archivo, práctica de prueba, etc.).</li></ul>
-    </section>
-
-    <section class="card" id="anexos">
-      <h2>Anexos y formato</h2>
-      <ul><li>Adjunta documentación relevante según expediente (tacógrafo, autorizaciones, contratos, certificados, albaranes, etc.).</li><li>Usa PDFs ordenados y añade un índice breve si aportas varios documentos.</li></ul>
-    </section>
-
-    <section class="card" id="firma">
-      <h2>Firma y presentación</h2>
-      <ul><li>Finaliza el trámite con firma/registro y verifica que constan los anexos subidos.</li><li>En sociedades, verifica el certificado del representante y la correspondencia con el NIF.</li></ul>
-    </section>
-
-    <section class="card" id="acuse">
-      <h2>Acuse y conservación</h2>
-      <ul><li>Descarga el justificante/acuse (CSV) y archívalo con el escrito y anexos.</li></ul>
-    </section>
-
-    <section class="card" id="incidencias">
-      <h2>Incidencias y alternativa</h2>
-      <ul><li>Si el procedimiento está delegado a una CCAA, puede existir un canal específico. Comprueba el órgano competente en la notificación.</li><li>Cuando proceda, utiliza el Registro Electrónico General como alternativa admitida.</li></ul>
-    </section>
-
-    <section class="card" id="enlaces-oficiales">
-      <h2>Enlaces oficiales</h2>
-      <div class="related">
-          <a class="pill" href="https://sede.transportes.gob.es/" target="_blank" rel="noopener">Sede Transportes · Presentación de alegaciones/recursos/justificantes</a>
-          <a class="pill" href="https://sede.transportes.gob.es/" target="_blank" rel="noopener">Sede Transportes · Procedimientos y servicios electrónicos</a>
-      </div>
-      <div class="callout" style="margin-top:12px;">
-        <b>Consejo:</b> abre el trámite oficial y revisa qué campos y formatos acepta antes de adjuntar documentos. Guarda el justificante final.
-      </div>
-      
-    </section>
-
-    <div class="site-footer" aria-label="Pie de página">
-      <div class="foot-inner">
-        <div class="foot-brand">
-          <img src="/brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-          <div>
-            <b>JURAVIA</b>
-            <p>Plantillas legales para defender tus derechos · <a href="/index.html#inicio">juravia.app</a></p>
-          </div>
-        </div>
-        <div class="foot-links" aria-label="Enlaces del sitio">
-          <a href="/index.html#guias">Guías</a>
-          <a href="/index.html#sobre-juravia">Sobre Juravia</a>
-          <a href="/quienes_somos.html">Quiénes somos</a>
-          <a href="#top">Subir</a>
-        </div>
-      </div>
-    </div>
-  </main>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Cómo presentar alegaciones en sanciones de transportes | Juravia</title><link href="assets/guide.css" rel="stylesheet"/><link href="assets/home.css" rel="stylesheet"/><link href="assets/site.css" rel="stylesheet"/>
+<meta content="Guía práctica para presentar alegaciones en sanciones de transportes: tacógrafo, tiempos, ADR, autorizaciones y documentación sin convertir el escrito en una plantilla." name="description"/>
+<link href="https://juravia.app/guia_transportes.html" rel="canonical"/>
+<link href="favicon.ico" rel="icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Cómo presentar alegaciones en sanciones de transportes | Juravia" property="og:title"/>
+<meta content="Guía práctica para presentar alegaciones en sanciones de transportes: tacógrafo, tiempos, ADR, autorizaciones y documentación sin convertir el escrito en una plantilla." property="og:description"/>
+<meta content="https://juravia.app/guia_transportes.html" property="og:url"/>
+<meta content="https://juravia.app/juravia_banner_road_legaltech_clean_1920x1080.png" property="og:image"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#0b4aa2" name="theme-color"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Juravia", "item": "https://juravia.app/"}, {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://juravia.app/guias.html"}, {"@type": "ListItem", "position": 3, "name": "Guía Transportes", "item": "https://juravia.app/guia_transportes.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Por qué estas sanciones no conviene tratarlas con una plantilla genérica?", "acceptedAnswer": {"@type": "Answer", "text": "Porque suelen depender de un documento técnico o empresarial concreto, del sujeto responsable y del periodo controlado."}}, {"@type": "Question", "name": "¿Qué documentos debo tener delante?", "acceptedAnswer": {"@type": "Answer", "text": "El acta o denuncia, los anexos, la documentación del vehículo o la empresa que resulte relevante y cualquier justificante técnico o de actividad."}}, {"@type": "Question", "name": "¿Qué hago si no entiendo qué obligación me imputan?", "acceptedAnswer": {"@type": "Answer", "text": "Aísla la obligación concreta, pide aclaración si falta detalle y no mezcles defensas incompatibles."}}, {"@type": "Question", "name": "¿Qué guía conviene leer después?", "acceptedAnswer": {"@type": "Answer", "text": "La de tacógrafo, ADR o autorizaciones, según la infracción exacta que figure en el expediente."}}]}</script>
+<link href="favicon.ico" rel="shortcut icon"/></head>
+<body class="home page-guide">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div aria-hidden="true" class="bg">
+<canvas aria-hidden="true" class="particles" id="jv-particles"></canvas>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+<div class="grid"></div>
+<div class="dots"></div>
+<div class="vignette"></div>
+<div aria-hidden="true" class="noise"></div>
+</div><header class="topbar">
+<div class="container">
+<div class="nav">
+<a aria-label="Juravia · Inicio" class="brand" href="index.html">
+<img alt="" decoding="async" height="30" loading="eager" src="brand_icon.png" width="30"/>
+<span>JURAVIA</span>
+</a>
+<nav aria-label="Navegación principal" class="navlinks">
+<a href="index.html#como">Cómo funciona</a>
+<a href="index.html#ejemplos">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#guias">Guías</a>
+</nav>
+<div class="nav-cta">
+<a class="btn secondary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar gratis</a>
+<button aria-expanded="false" aria-label="Abrir menú" class="menu-btn" data-menu-btn="" type="button">
+<svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header><div data-drawer-overlay="" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.38); z-index:79;"></div><div aria-label="Menú móvil" class="drawer" data-drawer="">
+<a href="index.html#como">Cómo funciona</a>
+<a href="index.html#ejemplos">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#guias">Guías</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+<main id="contenido">
+<section class="hero hero-photo" id="hero">
+<div aria-hidden="true" class="hero-sweep"></div>
+<div class="container">
+<div class="hero-center reveal">
+<div aria-label="Juravia" class="hero-brandmark">
+<img alt="Juravia" decoding="async" height="256" loading="eager" src="logo.png" width="419"/>
+<div aria-hidden="true" class="hero-word">
+<span class="hero-word__text">JURAVIA</span>
+<span class="hero-word__line"></span>
+</div>
+</div>
+<p class="kicker">Guía de presentación · Transportes</p>
+<h1>Cómo presentar alegaciones en sanciones de transportes</h1>
+<p class="subline">Guía específica para expedientes de transportes: cómo organizar documentos técnicos, registros y anexos antes de alegar en asuntos de tacógrafo, ADR, estiba o transporte profesional.</p>
+<div class="hero-ctas center"><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a></div>
+<nav aria-label="Migas de pan" class="breadcrumbs hero-breadcrumbs">
+<a href="index.html">Inicio</a><span class="sep">›</span>
+<a href="index.html#guias">Guías</a><span class="sep">›</span>
+<span>Cómo presentar alegaciones en sanciones de transportes</span>
+</nav>
+</div>
+</div>
+</section>
+<section class="band band--light guide-content-band">
+<div class="container">
+<div class="guide-shell"><aside aria-label="Criterio de revisión recomendado" class="expert-note"><div aria-hidden="true" class="expert-note__icon">§</div><div><span class="expert-note__eyebrow">Paso 0 · Qué aporta esta guía</span><p>En expedientes de transportes no basta con un relato general. Suele ser decisivo identificar qué obligación se imputa, a quién se atribuye y qué soporte documental existe: tacógrafo, descarga, ADR, carta de porte, autorización o estiba. Esta guía te ayuda a presentar con orden técnico.</p></div></aside><div class="guide-wrap"><div class="toc"><div class="toc-title">Orden de lectura</div><ul><li><a href="#acta">1) Qué debes leer primero en el acta o denuncia</a></li><li><a href="#sujeto">2) Qué sujeto y qué obligación se discuten</a></li><li><a href="#soporte">3) Qué documentos suelen ser decisivos</a></li><li><a href="#escrito">4) Cómo presentar una alegación útil en transportes</a></li><li><a href="#acuse">5) Presentación y conservación del expediente</a></li><li><a href="#rutas">6) Qué guías de Juravia encajan mejor con tu caso</a></li></ul></div></div><section class="card guide-section tone-a" id="acta"><span class="guide-section__eyebrow">Paso 1 · Qué debes leer primero en el acta o denuncia</span><h2>1) Qué debes leer primero en el acta o denuncia</h2><p>En transportes no basta con leer la infracción resumida. Hay que identificar el <strong>tipo de control</strong>, la obligación discutida y el documento o registro que supuestamente se incumple. Ahí está la diferencia entre una alegación profesional y una plantilla genérica.</p><ul><li>Comprueba si el expediente trata de tacógrafo, tiempos, ADR, tarjeta, autorización o documentación de inspección.</li><li>Separa lo que afecta al conductor, a la empresa o al vehículo.</li><li>Revisa si el acta describe bien fecha, tramo, control y documento revisado.</li></ul></section><section class="practical-box"><h2>Checklist práctica para transporte, tacógrafo y ADR</h2><p>Antes de redactar alegaciones, separa hechos, prueba disponible y documentos que necesitas pedir o conservar.</p><div class="practical-grid"><article class="practical-item"><h3>Qué revisar</h3><ul><li>Qué obligación concreta se denuncia y a quién se imputa.</li><li>Registros, discos, descargas, cartas de porte o anexos citados.</li><li>Si la notificación distingue bien entre conductor, empresa o vehículo.</li></ul></article><article class="practical-item"><h3>Qué pedir</h3><ul><li>Copia íntegra de acta, boletín o anexos técnicos.</li><li>Detalle de la norma o exigencia incumplida si la redacción es genérica.</li><li>Acceso al expediente cuando falten registros o soportes clave.</li></ul></article><article class="practical-item"><h3>Qué guardar</h3><ul><li>Descargas, tickets, hojas de ruta o documentos de transporte.</li><li>Acreditaciones de formación o documentación ADR cuando aplique.</li><li>Copia del escrito, anexos y justificante de presentación.</li></ul></article></div></section><section class="card guide-section tone-b" id="sujeto"><span class="guide-section__eyebrow">Paso 2 · Qué sujeto y qué obligación se discuten</span><h2>2) Qué sujeto y qué obligación se discuten</h2><p>Muchas sanciones de transportes fallan porque se discute una obligación sin fijar bien quién debía cumplirla o qué documento concreto faltaba. Antes de alegar, aclara si el reproche afecta al conductor, al titular, al operador o a la empresa.</p><section class="practical-box"><h2>Checklist práctica para transportes</h2><div class="practical-grid"><article class="practical-item"><h3>Qué revisar</h3><ul><li>Tipo de infracción y sujeto responsable.</li><li>Acta, inspección y documento realmente controlado.</li><li>Fechas, periodos y trazabilidad del incumplimiento.</li></ul></article><article class="practical-item"><h3>Qué pedir</h3><ul><li>Copia legible del acta y anexos.</li><li>Detalle del periodo o registro controvertido.</li><li>Aclaración de la obligación concreta imputada.</li></ul></article><article class="practical-item"><h3>Qué guardar</h3><ul><li>Acta, descargas, justificantes y certificados.</li><li>Documentación de empresa y vehículo relevante.</li><li>Acuse de presentación y copia del escrito.</li></ul></article></div></section></section><section class="card guide-section tone-c" id="soporte"><span class="guide-section__eyebrow">Paso 3 · Qué documentos suelen ser decisivos</span><h2>3) Qué documentos suelen ser decisivos</h2><p>En transportes pesan mucho los justificantes de actividad, las descargas, los resguardos, los certificados y la documentación de empresa. La utilidad de cada anexo depende de la infracción concreta; por eso conviene bajar luego a la guía específica de tacógrafo, ADR o autorización.</p><ul><li>Ordena los anexos por fecha y por función.</li><li>No mezcles documentos del vehículo con obligaciones empresariales si no están conectados.</li><li>Si falta un anexo esencial, solicita acceso o incorporación antes de cerrar la defensa.</li></ul></section><section class="card guide-section tone-d" id="escrito"><span class="guide-section__eyebrow">Paso 4 · Cómo presentar una alegación útil en transportes</span><h2>4) Cómo presentar una alegación útil en transportes</h2><p>Una buena alegación de transportes identifica el documento discutido, explica por qué no sostiene el reproche y enlaza cada anexo con el punto exacto que quiere demostrar. Ese orden transmite profesionalidad y evita el efecto plantilla.</p></section><section class="card guide-section tone-a" id="acuse"><span class="guide-section__eyebrow">Paso 5 · Presentación y conservación del expediente</span><h2>5) Presentación y conservación del expediente</h2><p>Después de presentar, guarda el justificante, el escrito y todos los anexos en una carpeta única. En sanciones técnicas o empresariales es habitual que el seguimiento posterior requiera volver a los documentos iniciales.</p></section><section class="card guide-section tone-b" id="rutas"><span class="guide-section__eyebrow">Paso 6 · Qué guías de Juravia encajan mejor con tu caso</span><h2>6) Qué guías de Juravia encajan mejor con tu caso</h2><p>Si la sanción tiene un componente técnico concreto, continúa por la guía principal de tacógrafo o por la supporting page exacta de ADR, descargas, calibración, justificantes o autorizaciones. Ahí es donde más valor sacas a la especialización del contenido.</p></section><section class="card guide-section tone-d" id="faq"><span class="guide-section__eyebrow">Paso final · Preguntas frecuentes</span><h2>Preguntas frecuentes</h2><div class="faq-list"><details open="open"><summary>¿Por qué estas sanciones no conviene tratarlas con una plantilla genérica?</summary><p>Porque suelen depender de un documento técnico o empresarial concreto, del sujeto responsable y del periodo controlado.</p></details><details><summary>¿Qué documentos debo tener delante?</summary><p>El acta o denuncia, los anexos, la documentación del vehículo o la empresa que resulte relevante y cualquier justificante técnico o de actividad.</p></details><details><summary>¿Qué hago si no entiendo qué obligación me imputan?</summary><p>Aísla la obligación concreta, pide aclaración si falta detalle y no mezcles defensas incompatibles.</p></details><details><summary>¿Qué guía conviene leer después?</summary><p>La de tacógrafo, ADR o autorizaciones, según la infracción exacta que figure en el expediente.</p></details></div></section><div class="footer-links"><p class="related-title"><strong>Rutas recomendadas</strong></p><ul><li><a href="guia_transportes.html">Cómo recurrir una multa por tacógrafo</a></li><li><a href="guia_transportes.html">Cómo recurrir una multa ADR</a></li><li><a href="guia_dgt.html">Guía DGT</a></li><li><a href="guias.html">Ver todas las guías</a></li></ul><p class="note">Consejo práctico: conserva siempre la notificación, el escrito presentado, los anexos y el justificante del trámite.</p></div><div class="final-cta"><h2>Analiza el PDF antes de decidir cómo presentar</h2><p>Juravia te ayuda a ordenar hechos, prueba y anexos antes de enviar tus alegaciones al organismo competente.</p><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a></div></div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">
+<img alt="" decoding="async" height="34" loading="lazy" src="brand_icon.png" width="34"/>
+<div>
+<strong>JURAVIA</strong>
+<p class="muted">Legal-tech para recurrir multas con orden: análisis gratuito, puntos débiles y borrador automatizado.</p>
+</div>
+</div>
+</div>
+<div>
+<div class="footer-title">Producto</div>
+<a href="index.html#como">Cómo funciona</a>
+<a href="ejemplos.html">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Acceso a la app</a>
+</div>
+<div>
+<div class="footer-title">Guías</div>
+<a href="guias.html">Todas las guías</a>
+<a href="guia_dgt.html">Guía DGT</a>
+<a href="guia_municipal.html">Guía municipal</a>
+</div>
+<div>
+<div class="footer-title">Legal</div>
+<a href="quienes_somos.html">Quiénes somos</a>
+<a href="privacidad.html">Privacidad</a>
+<a href="avisos.html">Aviso legal</a>
+<a href="index.html#precios">Condiciones y precios</a>
+</div>
+</div>
+<div class="footer-bottom">© <span id="y"></span> Juravia · España · Informe automatizado, sin garantía de resultados.</div>
+</div>
+</footer>
+<script defer="" src="assets/app-config.js"></script>
+<script defer="" src="assets/site.js"></script>
+<script>
+    document.getElementById('y').textContent = String(new Date().getFullYear());
+  </script>
 </body>
 </html>

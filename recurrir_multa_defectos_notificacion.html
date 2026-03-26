@@ -1,382 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Defectos de notificación | Juravia</title>
-  <meta name="description" content="Guía profesional para preparar alegaciones y anexos en sanciones por defectos de notificación. Estructura, motivos habituales y checklist documental."/>
-  <link rel="canonical" href="https://juravia.app/recurrir_multa_defectos_notificacion.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Defectos de notificación | Juravia"/>
-  <meta property="og:description" content="Guía profesional para preparar alegaciones y anexos en sanciones por defectos de notificación. Estructura, motivos habituales y checklist documental."/>
-  <meta property="og:url" content="https://juravia.app/recurrir_multa_defectos_notificacion.html"/>
-  <meta property="og:image" content="https://juravia.app/juravia_banner_road_legaltech_clean_1920x1080.png"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <style>
-    :root{
-      --ink:#ffffff;
-      --muted: rgba(255,255,255,.86);
-      --bg:#050914;
-      --panel: rgba(255,255,255,.06);
-      --brand:#0b4aa2;
-      --brand2:#083c84;
-      --gold:#d4af37;
-      --shadow: 0 18px 46px rgba(0,0,0,.45);
-      --radius: 22px;
-      --max: 980px;
-      --bg-img: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
-      --bg-pos: 50% 16%;
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Cómo recurrir una multa por defectos de notificación | Fechas y defensa | Juravia</title><link href="assets/guide.css" rel="stylesheet"/><link href="assets/home.css" rel="stylesheet"/><link href="assets/site.css" rel="stylesheet"/>
+<meta content="Guía para revisar defectos de notificación en multas: fechas, recepción, contenido del acto, plazos y documentación del expediente." name="description"/>
+<link href="https://juravia.app/recurrir_multa_defectos_notificacion.html" rel="canonical"/><link href="favicon.ico" rel="icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Cómo revisar defectos de notificación en una multa" property="og:title"/>
+<meta content="Qué comprobar en una multa cuando sospechas un problema de notificación: fechas, recepción, contenido y efectos sobre tu defensa." property="og:description"/>
+<meta content="https://juravia.app/recurrir_multa_defectos_notificacion.html" property="og:url"/>
+<meta content="https://juravia.app/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Defectos de notificación", "url": "https://juravia.app/recurrir_multa_defectos_notificacion.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por defectos de notificación. Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cualquier error de notificación anula la multa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Lo importante es si el defecto afecta de forma real al contenido esencial del acto, a tus plazos o a tu posibilidad de defenderte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué debo guardar si sospecho un problema de notificación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Todo lo relacionado con la recepción: sobres, acuses, capturas electrónicas y una cronología de fechas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Importa si me enteré de la multa por otra vía?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, porque puede afectar a cómo se valora la indefensión o la posibilidad real de reaccionar en plazo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si faltan documentos del intento de notificación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es un punto de revisión relevante. Conviene pedir el expediente y ordenar bien la secuencia antes de alegar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo me ayuda más la app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando necesitas reconstruir fechas, recepción y contenido del acto para ver si hay un defecto útil y no solo una sospecha difusa."
+      }
     }
-    *{box-sizing:border-box}
-    html,body{height:100%; scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color:var(--ink);
-      background: var(--bg);
-      overflow-x:hidden;
-      line-height:1.45;
-    }
-    .bg-wrap{
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: var(--bg-pos);
-      background-repeat: no-repeat;
-      transform: scale(1.02);
-      filter: saturate(1.02) contrast(1.03);
-    }
-    .bg-overlay{
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background:
-        radial-gradient(1100px 520px at 20% 0%, rgba(11,74,162,.42), rgba(5,9,20,.18) 60%),
-        linear-gradient(180deg, rgba(5,9,20,.35), rgba(5,9,20,.92));
-    }
-
-    .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: linear-gradient(180deg, rgba(11,74,162,.92), rgba(8,60,132,.86));
-      border-bottom: 1px solid rgba(212,175,55,.55);
-      backdrop-filter: blur(12px);
-    }
-    .topbar-inner{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 10px 16px;
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-    }
-    .brand{
-      display:flex; align-items:center; gap: 10px;
-      text-decoration:none;
-      color:#fff;
-      min-width: 160px;
-    }
-    .brand img{
-      width: 30px; height: 30px;
-      display:block;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.30));
-    }
-    .brand span{ font-weight: 900; letter-spacing: .4px; font-size: 14px; }
-    .back{
-      color: rgba(255,255,255,.92);
-      text-decoration:none;
-      font-weight: 800;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 999px;
-      padding: 9px 12px;
-      background: rgba(0,0,0,.12);
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-      white-space: nowrap;
-    }
-    .back:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
-
-    .container{width:100%; max-width: var(--max); margin:0 auto; padding: 22px 16px 60px;}
-    .hero{
-      margin-top: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      font-size: 12px;
-      letter-spacing: 2.6px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.84);
-      margin: 0 0 10px;
-    }
-    .kicker::before{
-      content:"";
-      width: 10px; height: 10px;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(212,175,55,.18);
-    }
-    h1{ margin: 0 0 10px; font-size: 34px; line-height: 1.1; }
-    .lead{ color: var(--muted); font-size: 16px; margin: 0 0 14px; }
-    .actions{display:flex; flex-wrap:wrap; gap: 10px; align-items:center; margin-top: 12px;}
-    .btn{
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, var(--brand), var(--brand2));
-      color:#fff;
-      text-decoration:none;
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 14px 18px;
-      border-radius: 18px;
-      font-weight: 950;
-      letter-spacing: .35px;
-      border: 1px solid rgba(212,175,55,.92);
-      box-shadow: 0 18px 40px rgba(0,0,0,.42);
-      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-    .btn:hover{ transform: translateY(-2px); filter: brightness(1.02); box-shadow: 0 24px 46px rgba(0,0,0,.46); }
-    .btn-ghost{
-      text-decoration:none;
-      color: rgba(255,255,255,.92);
-      font-weight: 900;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 18px;
-      padding: 13px 16px;
-      background: rgba(255,255,255,.04);
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-    .btn-ghost:hover{ border-color: rgba(212,175,55,.55); background: rgba(255,255,255,.06); transform: translateY(-1px); }
-
-    .toc{
-      margin-top: 14px;
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px;
-      padding: 14px 16px;
-    }
-    .toc-title{ font-weight: 950; margin: 0 0 8px; letter-spacing:.2px; }
-    .toc a{ color: rgba(255,255,255,.92); text-decoration:none; font-weight: 800; }
-    .toc a:hover{ text-decoration: underline; text-decoration-color: rgba(212,175,55,.8); }
-    .toc ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.86); }
-    .toc li{ margin: 6px 0; }
-
-    section.card{
-      margin-top: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 18px 18px;
-    }
-    h2{ margin: 0 0 10px; font-size: 22px; }
-    h3{ margin: 14px 0 8px; font-size: 18px; }
-    p{ margin: 0 0 10px; color: rgba(255,255,255,.88); }
-    ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.88); }
-    li{ margin: 6px 0; }
-
-    .callout{
-      margin-top: 12px;
-      background: rgba(11,74,162,.16);
-      border: 1px solid rgba(212,175,55,.35);
-      border-radius: 18px;
-      padding: 12px 14px;
-      color: rgba(255,255,255,.92);
-    }
-    details{
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      padding: 12px 14px;
-      margin-top: 10px;
-    }
-    details[open]{ border-color: rgba(212,175,55,.45); background: rgba(255,255,255,.045); }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      font-weight: 950;
-      letter-spacing:.2px;
-      color: rgba(255,255,255,.92);
-    }
-    summary::-webkit-details-marker{display:none}
-    .related{
-      display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px;
-    }
-    .pill{
-      text-decoration:none;
-      display:inline-flex; align-items:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.92);
-      font-weight: 850;
-      font-size: 14px;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-    }
-    .pill:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
-
-    footer{
-      margin-top: 18px;
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-      text-align:center;
-    }
-    footer a{ color: rgba(255,255,255,.82); }
-    
-
-    /* Footer (landings + guías) */
-    .site-footer{
-      margin-top: 22px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,.12);
-      color: rgba(255,255,255,.78);
-      font-size: 14px;
-    }
-    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
-    .site-footer a:hover{text-decoration: underline;}
-    .footer-inner{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-      padding: 10px 0 18px;
-    }
-    .footer-left{display:flex; align-items:center; gap: 10px;}
-    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
-    .footer-name{font-weight: 800; letter-spacing: .08em;}
-    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
-    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
-</style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Defectos de notificación", "url": "https://juravia.app/recurrir_multa_defectos_notificacion.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por defectos de notificación. Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuándo conviene presentar alegaciones en una multa de defectos de notificación?", "acceptedAnswer": {"@type": "Answer", "text": "Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción."}}, {"@type": "Question", "name": "¿Qué documentación mínima debería adjuntar?", "acceptedAnswer": {"@type": "Answer", "text": "Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente."}}, {"@type": "Question", "name": "¿Puedo pedir la prueba completa y el expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen."}}, {"@type": "Question", "name": "¿Qué pasa si presento fuera de plazo?", "acceptedAnswer": {"@type": "Answer", "text": "Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro."}}, {"@type": "Question", "name": "¿Juravia sustituye a un abogado?", "acceptedAnswer": {"@type": "Answer", "text": "Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional."}}]}</script>
-</head>
-<body>
-  <div class="bg-wrap" aria-hidden="true"></div>
-  <div class="bg-overlay" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
-        <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-        <span>JURAVIA</span>
-      </a>
-      <a class="back" href="index.html#guias">Volver al inicio</a>
-    </div>
-  </header>
-
-  <main class="container">
-    
-    <div class="hero" id="top">
-      <p class="kicker">Guía · Plantilla Juravia</p>
-      <h1>Defectos de notificación</h1>
-      <p class="lead">Guía para alegar defectos de notificación. El objetivo es demostrar que la forma/tiempos de notificar no permitieron un conocimiento efectivo del procedimiento, generando indefensión.</p>
-      <div class="actions">
-        <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
-        <a class="btn-ghost" href="#anexos">Ver checklist documental</a>
-      </div>
-      <div class="toc" aria-label="Índice">
-        <div class="toc-title">Contenido de esta guía</div>
-        <ul>
-          <li><a href="#revisar">Qué revisar en la denuncia</a></li>
-          <li><a href="#motivos">Motivos habituales de impugnación</a></li>
-          <li><a href="#anexos">Pruebas y anexos recomendados</a></li>
-          <li><a href="#presentacion">Cómo presentar alegaciones/recurso</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ul>
-      </div>
-      <div class="callout">
+  ]
+}</script>
+<meta content="#0b4aa2" name="theme-color"/><link href="favicon.ico" rel="shortcut icon"/></head>
+<body class="home page-guide">
+<div aria-hidden="true" class="bg">
+<canvas aria-hidden="true" class="particles" id="jv-particles"></canvas>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+<div class="grid"></div>
+<div class="dots"></div>
+<div class="vignette"></div>
+<div aria-hidden="true" class="noise"></div>
+</div><header class="topbar">
+<div class="container">
+<div class="nav">
+<a aria-label="Juravia · Inicio" class="brand" href="index.html">
+<img alt="" decoding="async" height="30" loading="eager" src="brand_icon.png" width="30"/>
+<span>JURAVIA</span>
+</a>
+<nav aria-label="Navegación principal" class="navlinks">
+<a href="index.html#como">Cómo funciona</a>
+<a href="index.html#ejemplos">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#guias">Guías</a>
+</nav>
+<div class="nav-cta">
+<a class="btn secondary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar gratis</a>
+<button aria-expanded="false" aria-label="Abrir menú" class="menu-btn" data-menu-btn="" type="button">
+<svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header><div data-drawer-overlay="" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.38); z-index:79;"></div><div aria-label="Menú móvil" class="drawer" data-drawer="">
+<a href="index.html#como">Cómo funciona</a>
+<a href="index.html#ejemplos">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#guias">Guías</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div><main id="contenido"><section class="hero hero-photo" id="hero">
+<div aria-hidden="true" class="hero-sweep"></div>
+<div class="container">
+<div class="hero-center reveal">
+<div aria-label="Juravia" class="hero-brandmark">
+<img alt="Juravia" decoding="async" height="256" loading="eager" src="logo.png" width="419"/>
+<div aria-hidden="true" class="hero-word">
+<span class="hero-word__text">JURAVIA</span>
+<span class="hero-word__line"></span>
+</div>
+</div>
+<p class="kicker">Guía legal · Juravia</p>
+<h1>Cómo recurrir una multa por defectos de notificación</h1>
+<p class="subline">No toda irregularidad en una notificación sirve para tumbar una multa. Esta guía está pensada precisamente para distinguir entre un fallo que suena bien pero aporta poco y un defecto que de verdad afecta a plazos, conocimiento del expediente o capacidad de defensa.</p>
+<div class="hero-ctas center"><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a></div>
+<nav aria-label="Migas de pan" class="breadcrumbs hero-breadcrumbs"><a href="index.html">Inicio</a><span class="sep">›</span><a href="index.html#guias">Guías</a><span class="sep">›</span><span>Defectos de notificación</span></nav>
+</div>
+</div>
+</section><section class="band band--light guide-content-band"><div class="container"><div class="guide-shell"><div class="guide-wrap"><div class="toc"><div class="toc-title">Orden de lectura</div><ul>
+<li><a href="#revisar">1. Qué revisar en la denuncia</a></li>
+<li><a href="#motivos">2. Motivos habituales de impugnación</a></li>
+<li><a href="#anexos">3. Pruebas y anexos recomendados</a></li>
+<li><a href="#presentacion">4. Cómo presentar alegaciones/recurso</a></li>
+<li><a href="#faq">5. Preguntas frecuentes</a></li>
+</ul></div></div><div class="callout">
         Nota: Esta guía es informativa y está pensada para ayudarte a ordenar hechos y anexos. Verifica siempre el plazo y el órgano indicados en tu notificación.
-      </div>
-    </div>
-
-    <section class="card" id="revisar">
-      <h2>Qué revisar en la denuncia</h2>
-      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Una revisión ordenada evita alegaciones genéricas y mejora la consistencia del escrito.</p>
-      <ul>
-        <li>Canal de notificación (postal, electrónica) y domicilio/dirección utilizados.</li><li>Intentos realizados, fechas y acreditación de los mismos.</li><li>Si existió devolución, error de dirección o ausencia de aviso válido.</li><li>Fecha real de conocimiento y perjuicio causado.</li>
-      </ul>
-    </section>
-
-    <section class="card" id="motivos">
-      <h2>Motivos habituales de impugnación</h2>
-      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. En general, la Administración valora mejor escritos concretos, con hechos y anexos numerados.</p>
-      <ul>
-        <li>Dirección incorrecta o intentos no acreditados/documentados.</li><li>Notificación electrónica sin garantías de acceso efectivo (según el caso).</li><li>Falta de motivación o documentación sobre la notificación.</li><li>Indefensión material por imposibilidad de actuar en plazo.</li>
-      </ul>
-      
-    </section>
-
-    <section class="card" id="anexos">
-      <h2>Pruebas y anexos recomendados</h2>
-      <p>Ordena los anexos con numeración (Anexo 1, Anexo 2…) y referencia cada uno en el texto. Si falta prueba en la notificación, solicita acceso al expediente y pide la incorporación de la prueba completa.</p>
-      <ul>
-        <li>Certificados de empadronamiento o cambios de domicilio (si aplica).</li><li>Pantallazos/justificantes del sistema electrónico (si procede).</li><li>Cronología de hechos y pruebas de conocimiento efectivo.</li><li>Solicitud de copia íntegra del expediente de notificaciones.</li>
-      </ul>
-      <details>
-        <summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
-        <p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
-        <ul>
-          <li>Anexo 1 · Certificados de empadronamiento o cambios de domicilio (si aplica).</li><li>Anexo 2 · Pantallazos/justificantes del sistema electrónico (si procede).</li><li>Anexo 3 · Cronología de hechos y pruebas de conocimiento efectivo.</li><li>Anexo 4 · Solicitud de copia íntegra del expediente de notificaciones.</li>
-        </ul>
-      </details>
-    </section>
-
-    <section class="card" id="presentacion">
-      <h2>Cómo presentar alegaciones/recurso</h2>
-      <p>Presenta por sede electrónica del órgano sancionador o registro habilitado. Conserva el justificante de presentación (acuse) y copia íntegra de lo enviado.</p>
-      <ol>
-        <li>Reúne denuncia completa, identificación y anexos numerados.</li>
-        <li>Redacta un relato de hechos breve y ordenado, y enumera motivos concretos.</li>
-        <li>Adjunta anexos en PDF (si procede) y referencia cada anexo en el texto.</li>
-        <li>Firma y presenta dentro del plazo indicado en la notificación.</li>
-        <li>Guarda el acuse de recibo y el expediente descargado.</li>
-      </ol>
-      <div class="related" aria-label="Refuerza tu recurso con motivos procedimentales">
-        <a class="pill" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Guías relacionadas</h2>
-      <p>Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
-      <div class="related">
-        <a class="pill" href="recurrir_multa_notificacion_direccion_erronea.html">Notificación: dirección errónea o intento defectuoso</a><a class="pill" href="recurrir_multa_notificacion_electronica.html">Notificación electrónica: alta, avisos y acceso</a>
-      </div>
-    </section>
-
-    <section class="card" id="faq">
-      <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Cuándo conviene presentar alegaciones en una multa de defectos de notificación?</summary><p>Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción.</p></details><details><summary>¿Qué documentación mínima debería adjuntar?</summary><p>Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente.</p></details><details><summary>¿Puedo pedir la prueba completa y el expediente?</summary><p>Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen.</p></details><details><summary>¿Qué pasa si presento fuera de plazo?</summary><p>Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro.</p></details><details><summary>¿Juravia sustituye a un abogado?</summary><p>Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional.</p></details>
-    </section>
-    
-    <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-      <div class="footer-meta">
-        <div class="footer-name">JURAVIA</div>
-        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
-      </div>
-    </div>
-    <div class="footer-links" aria-label="Enlaces">
-      <a href="index.html#guias">Guías</a>
-      <a href="index.html#sobre-juravia">Sobre Juravia</a>
-      <a href="quienes_somos.html">Quiénes somos</a>
-      <a href="#top">Subir</a>
-    </div>
-  </div>
+      </div><div class="cluster-focus"><p class="cluster-focus__eyebrow">Qué te ayuda a resolver esta guía</p><p>Te sirve para leer la notificación como una cronología y no como un simple papel: recepción, intentos, fechas, contenido mínimo del acto, forma de comunicación y efecto real del posible defecto.</p><div class="cluster-focus__actions"><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a><a class="btn secondary" href="guia_dgt.html">Ir a la guía DGT</a></div></div><aside aria-label="Cómo aprovechar esta guía" class="expert-note"><div aria-hidden="true" class="expert-note__icon">§</div><div><span class="expert-note__eyebrow">El criterio útil es la indefensión real, no el formalismo vacío</span><p>En notificación, el error importante no es cualquier desajuste. Es el que impide entender el acto, actuar a tiempo o reconstruir con seguridad qué ocurrió en el procedimiento.</p></div></aside><section class="card guide-section" id="revisar"><span class="guide-section__eyebrow">Paso 1 · Qué revisar en la denuncia</span>
+<h2>1) Qué revisar en la denuncia</h2>
+<p class="section-intro">La mejor forma de revisar una notificación es tratarla como una línea temporal. Solo así se ve si el problema es serio o si se trata de un desajuste formal sin verdadero impacto defensivo.</p>
+<ul><li>Fechas clave del procedimiento: denuncia, notificación, requerimiento, respuesta y resolución.</li><li>Qué se te pidió exactamente, con qué plazo y si la comunicación permitía entender y cumplir el trámite.</li><li>Si el expediente incorpora intentos de notificación, acuses, publicaciones o documentos suficientes para sostener la tramitación.</li></ul>
+</section><section class="practical-box"><h2>Cómo detectar si un defecto de notificación tiene valor o es solo ruido</h2><p>La forma más útil de revisar estos casos es reconstruir la secuencia completa: qué se notificó, cuándo, cómo, con qué contenido y qué consecuencia práctica tuvo ese fallo para tu defensa.</p><div class="practical-grid"><article class="practical-item"><h3>Qué debes ordenar primero</h3><ul><li>Fecha del acto, fecha de recepción o conocimiento y forma concreta de notificación.</li><li>Contenido esencial del documento: órgano, hecho imputado, importe, plazos y vías de reacción.</li><li>Si existen sobres, acuses, capturas electrónicas o referencias a intentos previos que convenga situar en una cronología.</li></ul></article><article class="practical-item"><h3>Qué suele convertir un fallo en algo útil</h3><ul><li>Que el defecto afecte de verdad al plazo, al conocimiento del expediente o a la posibilidad de alegar.</li><li>Que haya incoherencias entre fechas, formas de comunicación o piezas del procedimiento.</li><li>Que se mencionen intentos, publicaciones o actuaciones no incorporadas con claridad al expediente.</li></ul></article><article class="practical-item"><h3>Cuándo un argumento de notificación suele ser débil</h3><ul><li>Cuando solo se trata de una irregularidad menor sin efecto práctico sobre tu defensa.</li><li>Cuando conociste el expediente a tiempo y pudiste reaccionar sin un perjuicio concreto apreciable.</li><li>Cuando la crítica se formula en abstracto, sin reconstruir la cronología real del caso.</li></ul></article></div></section><section class="card guide-section" id="motivos"><span class="guide-section__eyebrow">Paso 2 · Qué fallos de notificación sí pueden ser útiles</span>
+<h2>2) Qué fallos de notificación sí pueden ser útiles</h2>
+<p class="section-intro">Una buena alegación en esta materia no grita 'nulidad' desde la primera línea. Primero explica qué no se notificó bien, luego por qué eso importa y por último qué perjuicio concreto produjo.</p>
+<ul><li>Construye una línea temporal corta con las fechas esenciales y el efecto de cada una.</li><li>Explica por qué el defecto detectado limita tu defensa o altera la validez del trámite practicado.</li><li>Pide, si faltan datos, la incorporación del justificante de notificación, requerimiento o actuación administrativa correspondiente.</li></ul>
+</section><section class="card guide-section" id="anexos"><span class="guide-section__eyebrow">Paso 3 · Qué documentos sirven para reconstruir la cronología</span>
+<h2>3) Qué documentos sirven para reconstruir la cronología</h2>
+<p class="section-intro">En estos casos los mejores anexos suelen ser los más prosaicos: sobres, justificantes, capturas, acuses y una cronología clara. Sin esa base, la notificación se discute peor.</p>
+<ul><li>Notificaciones recibidas, sobres, avisos, capturas de DEV o cualquier justificante de comunicaciones relacionadas con el expediente.</li><li>Documentos que acrediten tu respuesta, presentación, cambio de domicilio o situación del vehículo o arrendamiento.</li><li>Solicitud de acceso íntegro al expediente administrativo con especial atención a los hitos de tramitación.</li></ul>
+<details>
+<summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
+<p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
+<ul>
+<li>Anexo 1 · Certificados de empadronamiento o cambios de domicilio (si aplica).</li><li>Anexo 2 · Pantallazos/justificantes del sistema electrónico (si procede).</li><li>Anexo 3 · Cronología de hechos y pruebas de conocimiento efectivo.</li><li>Anexo 4 · Solicitud de copia íntegra del expediente de notificaciones.</li>
+</ul>
+</details>
+</section><section class="card guide-section" id="presentacion"><span class="guide-section__eyebrow">Paso 4 · Cómo alegar sin confundir irregularidad con indefensión</span>
+<h2>4) Cómo alegar sin confundir irregularidad con indefensión</h2>
+<p class="section-intro">Antes de basar toda la estrategia en la notificación, merece la pena preguntarse si el defecto cambia de verdad tu posición o si solo embellece una defensa que es débil por otros lados.</p>
+<ol>
+<li>Reúne denuncia completa, identificación y anexos numerados.</li>
+<li>Redacta un relato de hechos breve y ordenado, y enumera motivos concretos.</li>
+<li>Adjunta anexos en PDF (si procede) y referencia cada anexo en el texto.</li>
+<li>Firma y presenta dentro del plazo indicado en la notificación.</li>
+<li>Guarda el acuse de recibo y el expediente descargado.</li>
+</ol>
+<p class="related-title"><strong>También te puede interesar sobre plazos y procedimiento sancionador</strong></p><div aria-label="Refuerza tu recurso con motivos procedimentales" class="related"><a class="pill" href="recurrir_multa_defectos_notificacion.html">Cómo recurrir una multa por matrícula extranjera: notificación y acreditación del titular</a><a class="pill" href="recurrir_multa_defectos_notificacion.html">Cómo recurrir una multa por notificación electrónica: alta, avisos y acceso</a><a class="pill" href="recurrir_multa_defectos_notificacion.html">Cómo recurrir una multa por notificación: dirección errónea o intento defectuoso</a><a class="pill" href="guia_municipal.html">Cómo recurrir una multa por VMP/patinete: identificación del conductor/usuario</a></div>
+</section><section class="card">
+<h2>Guías relacionadas</h2>
+<p class="section-intro">Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
+<p class="related-title"><strong>También te puede interesar</strong></p><div class="related">
+<a class="pill" href="recurrir_multa_defectos_notificacion.html">Notificación: dirección errónea o intento defectuoso</a><a class="pill" href="recurrir_multa_defectos_notificacion.html">Notificación electrónica: alta, avisos y acceso</a>
+</div>
+</section><section class="card guide-section" id="faq"><span class="guide-section__eyebrow">Paso 5 · Preguntas frecuentes</span>
+<h2>5) Preguntas frecuentes sobre defectos de notificación</h2>
+<div class="faq-list"><details open="open"><summary>¿Cualquier error formal en la notificación sirve para recurrir?</summary><p>No. Lo decisivo es si el defecto afecta de verdad a la comprensión del acto, al plazo o a la posibilidad de defenderte.</p></details><details><summary>¿Qué suele ser lo primero que conviene mirar?</summary><p>La cronología: cuándo se dictó el acto, cuándo lo conociste, cómo se notificó y qué consecuencias tuvo esa secuencia.</p></details><details><summary>¿Importa guardar el sobre o el justificante de recepción?</summary><p>Sí. En muchos casos esos documentos son la pieza más útil para reconstruir cómo y cuándo llegó la comunicación.</p></details><details><summary>¿Una notificación electrónica dudosa puede ser relevante?</summary><p>Puede serlo si genera una duda real sobre recepción, acceso o cómputo de plazos y esa duda se puede documentar.</p></details><details><summary>¿Cuándo suele ser mejor no centrar toda la defensa aquí?</summary><p>Cuando el supuesto defecto no produjo un perjuicio práctico apreciable y el resto del expediente aparece razonablemente claro.</p></details></div></section><section class="editorial-insight"><p class="editorial-kicker">Notificación: aquí manda la cronología, no el eslogan</p><h2>Un defecto de notificación solo vale si puedes explicarlo con fechas y actos</h2><p>Las alegaciones por notificación pierden fuerza cuando se formulan en abstracto. Lo que de verdad importa es reconstruir la secuencia: intento, acceso, edicto, aviso, plazo y efecto práctico sobre tu defensa.</p><div class="editorial-grid"><article class="editorial-card"><h3>Dónde suele estar el punto útil</h3><ul><li>En cronologías mal cerradas o insuficientemente acreditadas.</li><li>En accesos electrónicos, avisos o publicaciones que el expediente menciona sin desplegar bien.</li><li>En notificaciones que no permiten entender desde cuándo corre el plazo o qué acto se comunicó realmente.</li></ul></article><article class="editorial-card"><h3>Qué conviene pedir y ordenar</h3><ul><li>La traza completa de la notificación o del acceso electrónico cuando exista.</li><li>Acuses, constancias, publicaciones o referencias que sostienen la validez del acto.</li><li>Una línea temporal simple con todas las fechas relevantes del expediente.</li></ul></article><article class="editorial-card"><span class="microcase-label">Microcaso frecuente</span><h3>Microcaso frecuente</h3><p>El usuario percibe que “lo notificaron mal”, pero lo decisivo no es esa intuición: es demostrar exactamente qué falta en la secuencia y por qué eso afectó al plazo o a la defensa. Sin esa cronología, la alegación se debilita mucho.</p></article></div></section><div class="footer-links"><p class="related-title"><strong>Guías relacionadas</strong></p><ul><li><a href="guia_dgt.html">Guía DGT: cómo confirmar órgano y plazos</a></li><li><a href="guia_municipal.html">Guía municipal: procedimiento sancionador local</a></li><li><a href="recurrir_multa_radar.html">Cómo recurrir una multa por radar</a></li><li><a href="recurrir_multa_zbe.html">Cómo recurrir una multa por ZBE</a></li><li><a href="como-funciona.html">Cómo funciona Juravia</a></li></ul><p class="note">Te servirá sobre todo si quieres saber si el problema de notificación cambia de verdad el caso o solo aporta una objeción formal de poco recorrido.</p></div><div class="final-cta"><h2>Reconstruye bien la notificación antes de apoyar en ella toda la defensa</h2><p>Sube la multa y ordena fechas, recepción y contenido del acto para distinguir entre un defecto útil y una mera irregularidad con poco peso real.</p><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a></div></div></div></section></main><footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">
+<img alt="" decoding="async" height="34" loading="lazy" src="brand_icon.png" width="34"/>
+<div>
+<strong>JURAVIA</strong>
+<p class="muted">Legal-tech para recurrir multas con orden: análisis gratuito, puntos débiles y borrador automatizado.</p>
+</div>
+</div>
+</div>
+<div>
+<div class="footer-title">Producto</div>
+<a href="index.html#como">Cómo funciona</a>
+<a href="ejemplos.html">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Acceso a la app</a>
+</div>
+<div>
+<div class="footer-title">Guías</div>
+<a href="guias.html">Todas las guías</a>
+<a href="guia_dgt.html">Guía DGT</a>
+<a href="guia_municipal.html">Guía municipal</a>
+</div>
+<div>
+<div class="footer-title">Legal</div>
+<a href="quienes_somos.html">Quiénes somos</a>
+<a href="privacidad.html">Privacidad</a>
+<a href="avisos.html">Aviso legal</a>
+<a href="index.html#precios">Condiciones y precios</a>
+</div>
+</div>
+<div class="footer-bottom">© <span id="y"></span> Juravia · España · Informe automatizado, sin garantía de resultados.</div>
+</div>
 </footer>
-  </main>
+<script defer="" src="assets/app-config.js"></script>
+<script defer="" src="assets/site.js"></script>
+<script>
+    document.getElementById('y').textContent = String(new Date().getFullYear());
+  </script>
 </body>
 </html>

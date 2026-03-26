@@ -1,422 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Guía de presentación — DGT | Juravia</title>
-  <meta name="description" content="Cómo presentar alegaciones o recursos ante la DGT: acceso al trámite, anexos, firma y conservación del acuse de recibo (guía orientativa)."/>
-  <link rel="canonical" href="https://juravia.app/guia_dgt.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Guía de presentación — DGT | Juravia"/>
-  <meta property="og:description" content="Cómo presentar alegaciones o recursos ante la DGT: acceso al trámite, anexos, firma y conservación del acuse de recibo (guía orientativa)."/>
-  <meta property="og:url" content="https://juravia.app/guia_dgt.html"/>
-  <meta property="og:site_name" content="Juravia"/>
-  <style>
-    :root{
-      --ink:#ffffff;
-      --muted: rgba(255,255,255,.86);
-      --bg:#050914;
-      --panel: rgba(255,255,255,.06);
-      --brand:#0b4aa2;
-      --brand2:#083c84;
-      --gold:#d4af37;
-      --shadow: 0 18px 46px rgba(0,0,0,.45);
-      --radius: 22px;
-      --max: 980px;
-      --bg-img: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
-      --bg-pos: 50% 16%;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%; scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color:var(--ink);
-      background: var(--bg);
-      overflow-x:hidden;
-      line-height:1.45;
-    }
-    .bg-wrap{
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: var(--bg-pos);
-      background-repeat: no-repeat;
-      transform: scale(1.02);
-      filter: saturate(1.02) contrast(1.03);
-    }
-    .bg-overlay{
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background:
-        radial-gradient(1100px 520px at 20% 0%, rgba(11,74,162,.42), rgba(5,9,20,.18) 60%),
-        linear-gradient(180deg, rgba(5,9,20,.35), rgba(5,9,20,.92));
-    }
-
-    .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: linear-gradient(180deg, rgba(11,74,162,.92), rgba(8,60,132,.86));
-      border-bottom: 1px solid rgba(212,175,55,.55);
-      backdrop-filter: blur(12px);
-    }
-    .topbar-inner{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 10px 16px;
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-    }
-    .brand{
-      display:flex; align-items:center; gap: 10px;
-      text-decoration:none;
-      color:#fff;
-      min-width: 160px;
-    }
-    .brand img{
-      width: 30px; height: 30px;
-      display:block;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.30));
-    }
-    .brand span{ font-weight: 900; letter-spacing: .4px; font-size: 14px; }
-    .back{
-      color: rgba(255,255,255,.92);
-      text-decoration:none;
-      font-weight: 800;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 999px;
-      padding: 9px 12px;
-      background: rgba(0,0,0,.12);
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-      white-space: nowrap;
-    }
-    .back:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
-
-    .container{width:100%; max-width: var(--max); margin:0 auto; padding: 22px 16px 60px;}
-    .hero{
-      margin-top: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      font-size: 12px;
-      letter-spacing: 2.6px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.84);
-      margin: 0 0 10px;
-    }
-    .kicker::before{
-      content:"";
-      width: 10px; height: 10px;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(212,175,55,.18);
-    }
-    h1{ margin: 0 0 10px; font-size: 34px; line-height: 1.1; }
-    .lead{ color: var(--muted); font-size: 16px; margin: 0 0 14px; }
-    .actions{display:flex; flex-wrap:wrap; gap: 10px; align-items:center; margin-top: 12px;}
-    .btn{
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, var(--brand), var(--brand2));
-      color:#fff;
-      text-decoration:none;
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 14px 18px;
-      border-radius: 18px;
-      font-weight: 950;
-      letter-spacing: .35px;
-      border: 1px solid rgba(212,175,55,.92);
-      box-shadow: 0 18px 40px rgba(0,0,0,.42);
-      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-    .btn:hover{ transform: translateY(-2px); filter: brightness(1.02); box-shadow: 0 24px 46px rgba(0,0,0,.46); }
-    .btn-ghost{
-      text-decoration:none;
-      color: rgba(255,255,255,.92);
-      font-weight: 900;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 18px;
-      padding: 13px 16px;
-      background: rgba(255,255,255,.04);
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-    .btn-ghost:hover{ border-color: rgba(212,175,55,.55); background: rgba(255,255,255,.06); transform: translateY(-1px); }
-
-    .toc{
-      margin-top: 14px;
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px;
-      padding: 14px 16px;
-    }
-    .toc-title{ font-weight: 950; margin: 0 0 8px; letter-spacing:.2px; }
-    .toc a{ color: rgba(255,255,255,.92); text-decoration:none; font-weight: 800; }
-    .toc a:hover{ text-decoration: underline; text-decoration-color: rgba(212,175,55,.8); }
-    .toc ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.86); }
-    .toc li{ margin: 6px 0; }
-
-    section.card{
-      margin-top: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 18px 18px;
-    }
-    h2{ margin: 0 0 10px; font-size: 22px; }
-    h3{ margin: 14px 0 8px; font-size: 18px; }
-    p{ margin: 0 0 10px; color: rgba(255,255,255,.88); }
-    ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.88); }
-    li{ margin: 6px 0; }
-
-    .callout{
-      margin-top: 12px;
-      background: rgba(11,74,162,.16);
-      border: 1px solid rgba(212,175,55,.35);
-      border-radius: 18px;
-      padding: 12px 14px;
-      color: rgba(255,255,255,.92);
-    }
-    details{
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      padding: 12px 14px;
-      margin-top: 10px;
-    }
-    details[open]{ border-color: rgba(212,175,55,.45); background: rgba(255,255,255,.045); }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      font-weight: 950;
-      letter-spacing:.2px;
-      color: rgba(255,255,255,.92);
-    }
-    summary::-webkit-details-marker{display:none}
-    .related{
-      display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px;
-    }
-    .pill{
-      text-decoration:none;
-      display:inline-flex; align-items:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.92);
-      font-weight: 850;
-      font-size: 14px;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-    }
-    .pill:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
-
-    footer{
-      margin-top: 18px;
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-      text-align:center;
-    }
-    footer a{ color: rgba(255,255,255,.82); }
-    
-
-    .note{ margin: 12px 0 0; color: rgba(255,255,255,.74); font-size: 13px; line-height: 1.55; }
-    .muted{ color: rgba(255,255,255,.78); }
-
-
-    /* Footer (igual en landings y guías, excepto home) */
-    .site-footer{
-      margin-top: 18px;
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius);
-      padding: 16px 16px;
-    }
-    .site-footer .foot-inner{
-      display:flex;
-      gap: 14px;
-      align-items:center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .site-footer .foot-brand{
-      display:flex;
-      gap: 12px;
-      align-items:center;
-      min-width: 260px;
-    }
-    .site-footer .foot-brand img{
-      width: 34px;
-      height: 34px;
-      object-fit: contain;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));
-    }
-    .site-footer .foot-brand b{
-      display:block;
-      font-size: 13px;
-      letter-spacing: .6px;
-    }
-    .site-footer .foot-brand p{
-      margin: 6px 0 0;
-      font-size: 13px;
-      color: rgba(255,255,255,.78);
-      line-height: 1.45;
-    }
-    .site-footer .foot-links{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-    .site-footer .foot-links a{
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.10);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.92);
-      font-weight: 850;
-      font-size: 13px;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-    }
-    .site-footer .foot-links a:hover{
-      border-color: rgba(212,175,55,.55);
-      background: rgba(0,0,0,.16);
-      transform: translateY(-1px);
-    }
-
-  </style>
-</head>
-<body>
-  <div class="bg-wrap" aria-hidden="true"></div>
-  <div class="bg-overlay" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="/index.html#inicio" aria-label="Juravia, inicio">
-        <img src="/brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-        <span>JURAVIA</span>
-      </a>
-      <a class="back" href="/index.html#tramitacion">Volver a la pantalla principal</a>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="hero" id="top">
-      <p class="kicker">Guía · Tramitación</p>
-      <h1>Guía de presentación — DGT</h1>
-      <p class="lead">Instrucciones orientativas para presentar alegaciones o recursos en expedientes de la DGT: canales disponibles, anexos y conservación del acuse.</p>
-
-      <div class="actions">
-        <a class="btn" href="https://app.juravia.app/" rel="nofollow" target="_blank">Abrir Juravia</a>
-        <a class="btn-ghost" href="/index.html#guias">Ver guías por tipo de multa</a>
-      </div>
-
-      <div class="toc">
-        <div class="toc-title">Contenido</div>
-        <ul>
-          <li><a href="#requisitos">Requisitos previos</a></li>
-          <li><a href="#acceso">Acceso al trámite</a></li>
-          <li><a href="#cumplimentacion">Cumplimentación</a></li>
-          <li><a href="#anexos">Anexos y formato</a></li>
-          <li><a href="#firma">Firma y presentación</a></li>
-          <li><a href="#acuse">Acuse y conservación</a></li>
-          <li><a href="#incidencias">Incidencias y alternativa</a></li>
-          <li><a href="#enlaces-oficiales">Enlaces oficiales</a></li>
-        </ul>
-      </div>
-
-      <p class="note">Nota: esta guía es orientativa. La notificación (expediente) y la sede del organismo son la referencia válida de plazos, requisitos y efectos del pago con descuento.</p>
-    </div>
-
-    <section class="card" id="enlaces-utiles">
-      <h2>Enlaces útiles (si aplican)</h2>
-      <div class="related">
-          <a class="pill" href="/recurrir_multa_defectos_notificacion.html">Defectos de notificación</a>
-          <a class="pill" href="/recurrir_multa_caducidad_procedimiento.html">Caducidad</a>
-          <a class="pill" href="/recurrir_multa_prescripcion_infraccion.html">Prescripción</a>
-      </div>
-      <p class="muted" style="margin-top:10px;">Estos motivos suelen ser transversales y dependen del expediente. Úsalos solo si encajan y puedes acreditarlo.</p>
-    </section>
-
-    <section class="card" id="requisitos">
-      <h2>Requisitos previos</h2>
-      <ul><li>Plazo: en alegaciones, lo habitual es 20 días naturales desde el día siguiente a la notificación; en recursos frente a resolución, el plazo habitual es 1 mes (ver tu notificación).</li><li>Identificación: número de expediente y tus datos de interesado.</li><li>Representación: si actúa otra persona, prepara autorización/apoderamiento cuando el canal lo exija.</li><li>Importante: en DGT, si pagas con reducción normalmente se entiende que renuncias a alegar; si alegas, pierdes el descuento (según información del expediente).</li></ul>
-    </section>
-
-    <section class="card" id="acceso">
-      <h2>Acceso al trámite</h2>
-      <ul><li>Online: sede electrónica (Cl@ve / certificado / DNIe) o canal/app oficial si está disponible para tu caso.</li><li>Presencial: para particulares, oficinas/jefaturas cuando el canal lo permita (según disponibilidad).</li><li>Alternativa: Registro Electrónico General (AGE) cuando proceda y sea admisible.</li></ul>
-    </section>
-
-    <section class="card" id="cumplimentacion">
-      <h2>Cumplimentación del formulario / escrito</h2>
-      <ul><li>Identifica expediente, interesado y domicilio a efectos de notificaciones.</li><li>Expón hechos de forma cronológica (lugar, fecha, hora) y el defecto/error concreto que alegas.</li><li>Formula una petición expresa: archivo, nulidad, práctica de prueba, acceso a expediente, etc.</li></ul><p>Evita alegaciones genéricas. Si un motivo depende de prueba (p. ej., señalización), indícalo y aporta la evidencia.</p>
-    </section>
-
-    <section class="card" id="anexos">
-      <h2>Anexos y formato</h2>
-      <ul><li>Adjunta documentos en formatos habituales (PDF/JPG) y nómbralos con claridad: “Anexo 1 — Foto señal”, “Anexo 2 — Ticket ORA”…</li><li>Incluye un índice breve de anexos dentro del escrito.</li><li>Si aportas representación, adjunta la autorización/apoderamiento correspondiente.</li></ul>
-    </section>
-
-    <section class="card" id="firma">
-      <h2>Firma y presentación</h2>
-      <ul><li>Si presentas online, completa la firma/registro final del sistema.</li><li>Si presentas por registro/correo, firma el escrito y conserva el justificante de envío/registro.</li></ul>
-    </section>
-
-    <section class="card" id="acuse">
-      <h2>Acuse de recibo y conservación</h2>
-      <ul><li>Descarga y guarda el resguardo (PDF/CSV) con fecha y hora.</li><li>Guarda copia del escrito y anexos tal y como los presentaste.</li></ul>
-    </section>
-
-    <section class="card" id="incidencias">
-      <h2>Incidencias y alternativa (Registro)</h2>
-      <ul><li>Si el trámite online falla, utiliza el Registro Electrónico General cuando sea admisible o presenta por registro presencial.</li><li>Si el expediente es de otro organismo (ayuntamiento/CCAA), presenta en su sede correspondiente.</li></ul>
-    </section>
-
-    <section class="card" id="enlaces-oficiales">
-      <h2>Enlaces oficiales</h2>
-      <div class="related">
-          <a class="pill" href="https://sede.dgt.gob.es/" target="_blank" rel="noopener">Sede DGT · Presentación de alegación o recurso</a>
-          <a class="pill" href="https://www.dgt.es/" target="_blank" rel="noopener">DGT · Trámites de multas</a>
-      </div>
-      <div class="callout" style="margin-top:12px;">
-        <b>Consejo:</b> abre el trámite oficial y revisa qué campos y formatos acepta antes de adjuntar documentos. Guarda el justificante final.
-      </div>
-      
-    </section>
-
-    <div class="site-footer" aria-label="Pie de página">
-      <div class="foot-inner">
-        <div class="foot-brand">
-          <img src="/brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-          <div>
-            <b>JURAVIA</b>
-            <p>Plantillas legales para defender tus derechos · <a href="/index.html#inicio">juravia.app</a></p>
-          </div>
-        </div>
-        <div class="foot-links" aria-label="Enlaces del sitio">
-          <a href="/index.html#guias">Guías</a>
-          <a href="/index.html#sobre-juravia">Sobre Juravia</a>
-          <a href="/quienes_somos.html">Quiénes somos</a>
-          <a href="#top">Subir</a>
-        </div>
-      </div>
-    </div>
-  </main>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Cómo presentar alegaciones ante la DGT | Juravia</title><link href="assets/guide.css" rel="stylesheet"/><link href="assets/home.css" rel="stylesheet"/><link href="assets/site.css" rel="stylesheet"/>
+<meta content="Guía práctica para presentar alegaciones ante la DGT: localizar el trámite, ordenar anexos, guardar justificante y revisar errores frecuentes antes de enviar." name="description"/>
+<link href="https://juravia.app/guia_dgt.html" rel="canonical"/>
+<link href="favicon.ico" rel="icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Cómo presentar alegaciones ante la DGT | Juravia" property="og:title"/>
+<meta content="Guía práctica para presentar alegaciones ante la DGT: localizar el trámite, ordenar anexos, guardar justificante y revisar errores frecuentes antes de enviar." property="og:description"/>
+<meta content="https://juravia.app/guia_dgt.html" property="og:url"/>
+<meta content="https://juravia.app/juravia_banner_road_legaltech_clean_1920x1080.png" property="og:image"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#0b4aa2" name="theme-color"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Juravia", "item": "https://juravia.app/"}, {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://juravia.app/guias.html"}, {"@type": "ListItem", "position": 3, "name": "Guía DGT", "item": "https://juravia.app/guia_dgt.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué conviene confirmar primero en una multa DGT?", "acceptedAnswer": {"@type": "Answer", "text": "Que el expediente pertenece realmente a la DGT, que la referencia y la matrícula son correctas y que sabes cuál es el canal exacto de presentación."}}, {"@type": "Question", "name": "¿Tiene sentido adjuntar todo lo que tengo?", "acceptedAnswer": {"@type": "Answer", "text": "No. En DGT suele rendir mejor una selección corta y ordenada de anexos claramente vinculados al defecto que alegas."}}, {"@type": "Question", "name": "¿Qué hago si falta una imagen o un anexo importante?", "acceptedAnswer": {"@type": "Answer", "text": "Pide su incorporación o acceso al expediente y deja constancia de que la prueba remitida no permite revisar bien la sanción."}}, {"@type": "Question", "name": "¿Qué debo guardar siempre después de presentar?", "acceptedAnswer": {"@type": "Answer", "text": "El justificante, el escrito final y todos los anexos enviados, además de cualquier comunicación posterior del expediente."}}]}</script>
+<link href="favicon.ico" rel="shortcut icon"/></head>
+<body class="home page-guide">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div aria-hidden="true" class="bg">
+<canvas aria-hidden="true" class="particles" id="jv-particles"></canvas>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+<div class="grid"></div>
+<div class="dots"></div>
+<div class="vignette"></div>
+<div aria-hidden="true" class="noise"></div>
+</div><header class="topbar">
+<div class="container">
+<div class="nav">
+<a aria-label="Juravia · Inicio" class="brand" href="index.html">
+<img alt="" decoding="async" height="30" loading="eager" src="brand_icon.png" width="30"/>
+<span>JURAVIA</span>
+</a>
+<nav aria-label="Navegación principal" class="navlinks">
+<a href="index.html#como">Cómo funciona</a>
+<a href="index.html#ejemplos">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#guias">Guías</a>
+</nav>
+<div class="nav-cta">
+<a class="btn secondary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar gratis</a>
+<button aria-expanded="false" aria-label="Abrir menú" class="menu-btn" data-menu-btn="" type="button">
+<svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header><div data-drawer-overlay="" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.38); z-index:79;"></div><div aria-label="Menú móvil" class="drawer" data-drawer="">
+<a href="index.html#como">Cómo funciona</a>
+<a href="index.html#ejemplos">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#guias">Guías</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+<main id="contenido">
+<section class="hero hero-photo" id="hero">
+<div aria-hidden="true" class="hero-sweep"></div>
+<div class="container">
+<div class="hero-center reveal">
+<div aria-label="Juravia" class="hero-brandmark">
+<img alt="Juravia" decoding="async" height="256" loading="eager" src="logo.png" width="419"/>
+<div aria-hidden="true" class="hero-word">
+<span class="hero-word__text">JURAVIA</span>
+<span class="hero-word__line"></span>
+</div>
+</div>
+<p class="kicker">Guía de presentación · DGT</p>
+<h1>Cómo presentar alegaciones ante la DGT</h1>
+<p class="subline">Guía específica para expedientes tramitados por la Dirección General de Tráfico: cómo confirmar que el expediente es estatal, qué anexos suelen ser útiles y qué conviene guardar después de presentar.</p>
+<div class="hero-ctas center"><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a></div>
+<nav aria-label="Migas de pan" class="breadcrumbs hero-breadcrumbs">
+<a href="index.html">Inicio</a><span class="sep">›</span>
+<a href="index.html#guias">Guías</a><span class="sep">›</span>
+<span>Cómo presentar alegaciones ante la DGT</span>
+</nav>
+</div>
+</div>
+</section>
+<section class="band band--light guide-content-band">
+<div class="container">
+<div class="guide-shell"><aside aria-label="Criterio de revisión recomendado" class="expert-note"><div aria-hidden="true" class="expert-note__icon">§</div><div><span class="expert-note__eyebrow">Paso 0 · Qué aporta esta guía</span><p>En expedientes DGT suele funcionar mejor un escrito muy limpio, centrado en el defecto concreto y acompañado solo de anexos con valor probatorio real. Esta guía está pensada para denuncias estatales típicas: velocidad, móvil, cinturón, notificaciones o identificación del conductor.</p></div></aside><div class="guide-wrap"><div class="toc"><div class="toc-title">Orden de lectura</div><ul><li><a href="#previos">1) Cómo confirmar que la multa la tramita la DGT</a></li><li><a href="#expediente">2) Qué datos del expediente debes tener delante</a></li><li><a href="#escrito">3) Cómo redactar unas alegaciones útiles</a></li><li><a href="#anexos">4) Qué anexos encajan mejor en DGT</a></li><li><a href="#envio">5) Qué revisar antes de enviar y qué guardar</a></li><li><a href="#seguimiento">6) Qué hacer después de presentar</a></li></ul></div></div><section class="card guide-section tone-a" id="previos"><span class="guide-section__eyebrow">Paso 1 · Cómo confirmar que la multa la tramita la DGT</span><h2>1) Cómo confirmar que la multa la tramita la DGT</h2><p>No todas las multas de tráfico llegan por la misma vía. Antes de redactar nada, comprueba que en la notificación conste la <strong>Dirección General de Tráfico</strong> como órgano instructor o sancionador y que el expediente no pertenezca en realidad a un ayuntamiento, a un organismo autonómico o a transportes.</p><ul><li>Revisa el encabezado de la notificación, la referencia del expediente y el organismo que indica dónde alegar o pagar.</li><li>Comprueba si la infracción es estatal típica de DGT: velocidad, móvil, cinturón, notificación o identificación, entre otras.</li><li>Si la denuncia viene de radar o de vigilancia automática, guarda la primera notificación completa y cualquier ampliación de imagen.</li></ul></section><section class="practical-box"><h2>Checklist práctica para plazos, notificaciones y procedimiento</h2><p>Antes de redactar alegaciones, separa hechos, prueba disponible y documentos que necesitas pedir o conservar.</p><div class="practical-grid"><article class="practical-item"><h3>Qué revisar</h3><ul><li>Fecha de denuncia, notificación, requerimientos y resolución.</li><li>Si el canal usado y los intentos de notificación están bien descritos.</li><li>Coherencia entre plazos, interrupciones y documentos del expediente.</li></ul></article><article class="practical-item"><h3>Qué pedir</h3><ul><li>Histórico de notificaciones o actos del procedimiento.</li><li>Copia de resoluciones o intentos de entrega si faltan.</li><li>Acceso al expediente completo para reconstruir la secuencia.</li></ul></article><article class="practical-item"><h3>Qué guardar</h3><ul><li>Capturas, sobres, avisos o resguardos de notificación.</li><li>Cronología propia con fechas y documentos.</li><li>Justificante del escrito y anexos enviados.</li></ul></article></div></section><section class="card guide-section tone-b" id="expediente"><span class="guide-section__eyebrow">Paso 2 · Qué datos del expediente debes tener delante</span><h2>2) Qué datos del expediente debes tener delante</h2><p>En expedientes DGT conviene trabajar con una ficha básica delante: matrícula, fecha de denuncia, fecha de notificación, lugar, tipo de infracción y referencia de expediente. Eso evita confundir hechos con impresiones.</p><section class="practical-box"><h2>Checklist práctica para expedientes DGT</h2><div class="practical-grid"><article class="practical-item"><h3>Qué revisar</h3><ul><li>Datos del vehículo, lugar, fecha y hora.</li><li>Descripción de hechos y prueba incorporada.</li><li>Si la notificación permite entender la base real de la sanción.</li></ul></article><article class="practical-item"><h3>Qué pedir</h3><ul><li>Copia legible de imágenes, secuencias o anexos.</li><li>Acceso al expediente si faltan documentos clave.</li><li>Aclaración del punto o tramo cuando sea difuso.</li></ul></article><article class="practical-item"><h3>Qué guardar</h3><ul><li>PDF íntegro de la notificación.</li><li>Capturas de errores de sede si los hubiera.</li><li>Acuse de presentación y copia final del escrito.</li></ul></article></div></section><p>Si vas a usar Juravia, sube siempre el PDF completo y no solo la primera página. En DGT muchas diferencias útiles aparecen en anexos, pies de imagen o páginas finales.</p></section><section class="card guide-section tone-c" id="escrito"><span class="guide-section__eyebrow">Paso 3 · Cómo redactar unas alegaciones útiles</span><h2>3) Cómo redactar unas alegaciones útiles</h2><p>Ante la DGT funciona mejor un escrito sobrio y muy concreto que un texto largo lleno de frases genéricas. Empieza identificando expediente y matrícula, resume el defecto que aprecias y vincúlalo con el documento o imagen que lo demuestra.</p><ul><li>Separa <strong>hechos</strong>, <strong>defecto detectado</strong> y <strong>solicitud</strong>.</li><li>No mezcles en el mismo párrafo plazos, prueba, señalización e identificación si no están conectados entre sí.</li><li>Si no tienes el expediente completo, pide su incorporación o acceso antes de sostener una crítica demasiado cerrada.</li></ul></section><section class="card guide-section tone-d" id="anexos"><span class="guide-section__eyebrow">Paso 4 · Qué anexos encajan mejor en DGT</span><h2>4) Qué anexos encajan mejor en DGT</h2><p>Adjunta solo lo que tenga valor probatorio o explicativo real. En expedientes DGT suelen ser útiles las fotos del tramo o contexto, justificantes temporales, documentos de titularidad o escritos que aclaren una situación concreta.</p><ul><li>Anexo 1: notificación completa.</li><li>Anexo 2: documento o imagen principal que apoya tu alegación.</li><li>Anexo 3: capturas, certificados o justificantes complementarios bien nombrados.</li></ul><p>Evita subir archivos duplicados o sin relación directa con el motivo de tu alegación. Restan claridad y no suelen ayudarte.</p></section><section class="card guide-section tone-a" id="envio"><span class="guide-section__eyebrow">Paso 5 · Qué revisar antes de enviar y qué guardar</span><h2>5) Qué revisar antes de enviar y qué guardar</h2><p>Antes de presentar, confirma que el escrito menciona bien el expediente, que los anexos se abren y que la petición final es clara. Después, guarda el justificante con fecha y hora: es la prueba de que has actuado dentro de plazo.</p><ul><li>Revisa firma, identidad y legibilidad del PDF final.</li><li>No presentes dos versiones distintas del mismo escrito sin explicarlo.</li><li>Guarda también los anexos en la misma carpeta que el justificante.</li></ul></section><section class="card guide-section tone-b" id="seguimiento"><span class="guide-section__eyebrow">Paso 6 · Qué hacer después de presentar</span><h2>6) Qué hacer después de presentar</h2><p>Una vez enviado el escrito, conserva el acuse y sigue cualquier comunicación posterior del expediente. Si recibes requerimientos o una resolución, compáralos con lo que realmente alegaste y con los documentos que aportaste.</p><p>La lógica aquí es sencilla: presentar bien, guardar mejor y no perder el hilo del expediente.</p></section><section class="card guide-section tone-d" id="faq"><span class="guide-section__eyebrow">Paso final · Preguntas frecuentes</span><h2>Preguntas frecuentes</h2><div class="faq-list"><details open="open"><summary>¿Qué conviene confirmar primero en una multa DGT?</summary><p>Que el expediente pertenece realmente a la DGT, que la referencia y la matrícula son correctas y que sabes cuál es el canal exacto de presentación.</p></details><details><summary>¿Tiene sentido adjuntar todo lo que tengo?</summary><p>No. En DGT suele rendir mejor una selección corta y ordenada de anexos claramente vinculados al defecto que alegas.</p></details><details><summary>¿Qué hago si falta una imagen o un anexo importante?</summary><p>Pide su incorporación o acceso al expediente y deja constancia de que la prueba remitida no permite revisar bien la sanción.</p></details><details><summary>¿Qué debo guardar siempre después de presentar?</summary><p>El justificante, el escrito final y todos los anexos enviados, además de cualquier comunicación posterior del expediente.</p></details></div></section><div class="footer-links"><p class="related-title"><strong>Rutas recomendadas</strong></p><ul><li><a href="guia_municipal.html">Guía de presentación municipal</a></li><li><a href="recurrir_multa_defectos_notificacion.html">Cómo recurrir una multa por defectos de notificación</a></li><li><a href="recurrir_multa_radar.html">Cómo recurrir una multa por radar</a></li><li><a href="guias.html">Ver todas las guías</a></li></ul><p class="note">Consejo práctico: conserva siempre la notificación, el escrito presentado, los anexos y el justificante del trámite.</p></div><div class="final-cta"><h2>Analiza el PDF antes de decidir cómo presentar</h2><p>Juravia te ayuda a ordenar hechos, prueba y anexos antes de enviar tus alegaciones al organismo competente.</p><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a></div></div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">
+<img alt="" decoding="async" height="34" loading="lazy" src="brand_icon.png" width="34"/>
+<div>
+<strong>JURAVIA</strong>
+<p class="muted">Legal-tech para recurrir multas con orden: análisis gratuito, puntos débiles y borrador automatizado.</p>
+</div>
+</div>
+</div>
+<div>
+<div class="footer-title">Producto</div>
+<a href="index.html#como">Cómo funciona</a>
+<a href="ejemplos.html">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Acceso a la app</a>
+</div>
+<div>
+<div class="footer-title">Guías</div>
+<a href="guias.html">Todas las guías</a>
+<a href="guia_dgt.html">Guía DGT</a>
+<a href="guia_municipal.html">Guía municipal</a>
+</div>
+<div>
+<div class="footer-title">Legal</div>
+<a href="quienes_somos.html">Quiénes somos</a>
+<a href="privacidad.html">Privacidad</a>
+<a href="avisos.html">Aviso legal</a>
+<a href="index.html#precios">Condiciones y precios</a>
+</div>
+</div>
+<div class="footer-bottom">© <span id="y"></span> Juravia · España · Informe automatizado, sin garantía de resultados.</div>
+</div>
+</footer>
+<script defer="" src="assets/app-config.js"></script>
+<script defer="" src="assets/site.js"></script>
+<script>
+    document.getElementById('y').textContent = String(new Date().getFullYear());
+  </script>
 </body>
 </html>

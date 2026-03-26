@@ -1,382 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Seguro obligatorio | Juravia</title>
-  <meta name="description" content="Guía profesional para preparar alegaciones y anexos en sanciones por seguro obligatorio. Estructura, motivos habituales y checklist documental."/>
-  <link rel="canonical" href="https://juravia.app/recurrir_multa_seguro_obligatorio.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Seguro obligatorio | Juravia"/>
-  <meta property="og:description" content="Guía profesional para preparar alegaciones y anexos en sanciones por seguro obligatorio. Estructura, motivos habituales y checklist documental."/>
-  <meta property="og:url" content="https://juravia.app/recurrir_multa_seguro_obligatorio.html"/>
-  <meta property="og:image" content="https://juravia.app/juravia_banner_road_legaltech_clean_1920x1080.png"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <style>
-    :root{
-      --ink:#ffffff;
-      --muted: rgba(255,255,255,.86);
-      --bg:#050914;
-      --panel: rgba(255,255,255,.06);
-      --brand:#0b4aa2;
-      --brand2:#083c84;
-      --gold:#d4af37;
-      --shadow: 0 18px 46px rgba(0,0,0,.45);
-      --radius: 22px;
-      --max: 980px;
-      --bg-img: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
-      --bg-pos: 50% 16%;
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Cómo recurrir una multa por seguro obligatorio | Vigencia y prueba | Juravia</title><link href="assets/guide.css" rel="stylesheet"/><link href="assets/home.css" rel="stylesheet"/><link href="assets/site.css" rel="stylesheet"/>
+<meta content="Guía para revisar una multa por falta de seguro: vigencia de póliza, identificación del vehículo, base de datos y documentos del expediente." name="description"/>
+<link href="https://juravia.app/recurrir_multa_seguro_obligatorio.html" rel="canonical"/><link href="favicon.ico" rel="icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Cómo revisar una multa por seguro obligatorio" property="og:title"/>
+<meta content="Qué comprobar en una sanción por seguro: vigencia real de la póliza, matrícula, consulta administrativa y prueba del expediente." property="og:description"/>
+<meta content="https://juravia.app/recurrir_multa_seguro_obligatorio.html" property="og:url"/>
+<meta content="https://juravia.app/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Seguro obligatorio", "url": "https://juravia.app/recurrir_multa_seguro_obligatorio.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por seguro obligatorio. Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Basta con enseñar la póliza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ayuda, pero lo importante es que permita acreditar la vigencia real en la fecha exacta de la denuncia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Un error de base de datos puede generar una multa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, y por eso conviene ordenar muy bien los documentos de aseguramiento antes de alegar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Importa el titular del vehículo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, pero también importa que la matrícula y la cobertura correspondan al vehículo sancionado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si el seguro se contrató muy cerca de la fecha de denuncia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entonces la cronología y la efectividad de la cobertura son especialmente importantes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo tiene sentido usar la app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando quieres cruzar la notificación con póliza, fechas y documentación para ver si hay una defensa razonable."
+      }
     }
-    *{box-sizing:border-box}
-    html,body{height:100%; scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color:var(--ink);
-      background: var(--bg);
-      overflow-x:hidden;
-      line-height:1.45;
-    }
-    .bg-wrap{
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: var(--bg-pos);
-      background-repeat: no-repeat;
-      transform: scale(1.02);
-      filter: saturate(1.02) contrast(1.03);
-    }
-    .bg-overlay{
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background:
-        radial-gradient(1100px 520px at 20% 0%, rgba(11,74,162,.42), rgba(5,9,20,.18) 60%),
-        linear-gradient(180deg, rgba(5,9,20,.35), rgba(5,9,20,.92));
-    }
-
-    .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: linear-gradient(180deg, rgba(11,74,162,.92), rgba(8,60,132,.86));
-      border-bottom: 1px solid rgba(212,175,55,.55);
-      backdrop-filter: blur(12px);
-    }
-    .topbar-inner{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 10px 16px;
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-    }
-    .brand{
-      display:flex; align-items:center; gap: 10px;
-      text-decoration:none;
-      color:#fff;
-      min-width: 160px;
-    }
-    .brand img{
-      width: 30px; height: 30px;
-      display:block;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.30));
-    }
-    .brand span{ font-weight: 900; letter-spacing: .4px; font-size: 14px; }
-    .back{
-      color: rgba(255,255,255,.92);
-      text-decoration:none;
-      font-weight: 800;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 999px;
-      padding: 9px 12px;
-      background: rgba(0,0,0,.12);
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-      white-space: nowrap;
-    }
-    .back:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
-
-    .container{width:100%; max-width: var(--max); margin:0 auto; padding: 22px 16px 60px;}
-    .hero{
-      margin-top: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      font-size: 12px;
-      letter-spacing: 2.6px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.84);
-      margin: 0 0 10px;
-    }
-    .kicker::before{
-      content:"";
-      width: 10px; height: 10px;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(212,175,55,.18);
-    }
-    h1{ margin: 0 0 10px; font-size: 34px; line-height: 1.1; }
-    .lead{ color: var(--muted); font-size: 16px; margin: 0 0 14px; }
-    .actions{display:flex; flex-wrap:wrap; gap: 10px; align-items:center; margin-top: 12px;}
-    .btn{
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, var(--brand), var(--brand2));
-      color:#fff;
-      text-decoration:none;
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 14px 18px;
-      border-radius: 18px;
-      font-weight: 950;
-      letter-spacing: .35px;
-      border: 1px solid rgba(212,175,55,.92);
-      box-shadow: 0 18px 40px rgba(0,0,0,.42);
-      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-    .btn:hover{ transform: translateY(-2px); filter: brightness(1.02); box-shadow: 0 24px 46px rgba(0,0,0,.46); }
-    .btn-ghost{
-      text-decoration:none;
-      color: rgba(255,255,255,.92);
-      font-weight: 900;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 18px;
-      padding: 13px 16px;
-      background: rgba(255,255,255,.04);
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-    .btn-ghost:hover{ border-color: rgba(212,175,55,.55); background: rgba(255,255,255,.06); transform: translateY(-1px); }
-
-    .toc{
-      margin-top: 14px;
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px;
-      padding: 14px 16px;
-    }
-    .toc-title{ font-weight: 950; margin: 0 0 8px; letter-spacing:.2px; }
-    .toc a{ color: rgba(255,255,255,.92); text-decoration:none; font-weight: 800; }
-    .toc a:hover{ text-decoration: underline; text-decoration-color: rgba(212,175,55,.8); }
-    .toc ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.86); }
-    .toc li{ margin: 6px 0; }
-
-    section.card{
-      margin-top: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 18px 18px;
-    }
-    h2{ margin: 0 0 10px; font-size: 22px; }
-    h3{ margin: 14px 0 8px; font-size: 18px; }
-    p{ margin: 0 0 10px; color: rgba(255,255,255,.88); }
-    ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.88); }
-    li{ margin: 6px 0; }
-
-    .callout{
-      margin-top: 12px;
-      background: rgba(11,74,162,.16);
-      border: 1px solid rgba(212,175,55,.35);
-      border-radius: 18px;
-      padding: 12px 14px;
-      color: rgba(255,255,255,.92);
-    }
-    details{
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      padding: 12px 14px;
-      margin-top: 10px;
-    }
-    details[open]{ border-color: rgba(212,175,55,.45); background: rgba(255,255,255,.045); }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      font-weight: 950;
-      letter-spacing:.2px;
-      color: rgba(255,255,255,.92);
-    }
-    summary::-webkit-details-marker{display:none}
-    .related{
-      display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px;
-    }
-    .pill{
-      text-decoration:none;
-      display:inline-flex; align-items:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.92);
-      font-weight: 850;
-      font-size: 14px;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-    }
-    .pill:hover{ border-color: rgba(212,175,55,.55); background: rgba(0,0,0,.18); transform: translateY(-1px); }
-
-    footer{
-      margin-top: 18px;
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-      text-align:center;
-    }
-    footer a{ color: rgba(255,255,255,.82); }
-    
-
-    /* Footer (landings + guías) */
-    .site-footer{
-      margin-top: 22px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,.12);
-      color: rgba(255,255,255,.78);
-      font-size: 14px;
-    }
-    .site-footer a{color: rgba(255,255,255,.86); text-decoration: none;}
-    .site-footer a:hover{text-decoration: underline;}
-    .footer-inner{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-      padding: 10px 0 18px;
-    }
-    .footer-left{display:flex; align-items:center; gap: 10px;}
-    .footer-logo{width: 28px; height: 28px; border-radius: 10px; display:block;}
-    .footer-name{font-weight: 800; letter-spacing: .08em;}
-    .footer-tag{color: rgba(255,255,255,.70); margin-top: 2px; line-height: 1.35;}
-    .footer-links{display:flex; gap: 12px; flex-wrap: wrap;}
-</style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Juravia", "url": "https://juravia.app/", "logo": "https://juravia.app/brand_icon.png"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Seguro obligatorio", "url": "https://juravia.app/recurrir_multa_seguro_obligatorio.html", "description": "Guía profesional para preparar alegaciones y anexos en sanciones por seguro obligatorio. Estructura, motivos habituales y checklist documental.", "isPartOf": {"@type": "WebSite", "name": "Juravia", "url": "https://juravia.app/"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuándo conviene presentar alegaciones en una multa de seguro obligatorio?", "acceptedAnswer": {"@type": "Answer", "text": "Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción."}}, {"@type": "Question", "name": "¿Qué documentación mínima debería adjuntar?", "acceptedAnswer": {"@type": "Answer", "text": "Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente."}}, {"@type": "Question", "name": "¿Puedo pedir la prueba completa y el expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen."}}, {"@type": "Question", "name": "¿Qué pasa si presento fuera de plazo?", "acceptedAnswer": {"@type": "Answer", "text": "Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro."}}, {"@type": "Question", "name": "¿Juravia sustituye a un abogado?", "acceptedAnswer": {"@type": "Answer", "text": "Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional."}}]}</script>
-</head>
-<body>
-  <div class="bg-wrap" aria-hidden="true"></div>
-  <div class="bg-overlay" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="index.html#inicio" aria-label="Juravia, inicio">
-        <img src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-        <span>JURAVIA</span>
-      </a>
-      <a class="back" href="index.html#guias">Volver al inicio</a>
-    </div>
-  </header>
-
-  <main class="container">
-    
-    <div class="hero" id="top">
-      <p class="kicker">Guía · Plantilla Juravia</p>
-      <h1>Seguro obligatorio</h1>
-      <p class="lead">Guía para alegar sanciones por falta de seguro obligatorio. En muchos casos la defensa pasa por acreditar póliza en vigor o corregir errores de registro.</p>
-      <div class="actions">
-        <a class="btn" href="https://app.juravia.app/" rel="nofollow">Generar escrito con Juravia</a>
-        <a class="btn-ghost" href="#anexos">Ver checklist documental</a>
-      </div>
-      <div class="toc" aria-label="Índice">
-        <div class="toc-title">Contenido de esta guía</div>
-        <ul>
-          <li><a href="#revisar">Qué revisar en la denuncia</a></li>
-          <li><a href="#motivos">Motivos habituales de impugnación</a></li>
-          <li><a href="#anexos">Pruebas y anexos recomendados</a></li>
-          <li><a href="#presentacion">Cómo presentar alegaciones/recurso</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ul>
-      </div>
-      <div class="callout">
+  ]
+}</script>
+<meta content="#0b4aa2" name="theme-color"/><link href="favicon.ico" rel="shortcut icon"/></head>
+<body class="home page-guide">
+<div aria-hidden="true" class="bg">
+<canvas aria-hidden="true" class="particles" id="jv-particles"></canvas>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+<div class="grid"></div>
+<div class="dots"></div>
+<div class="vignette"></div>
+<div aria-hidden="true" class="noise"></div>
+</div><header class="topbar">
+<div class="container">
+<div class="nav">
+<a aria-label="Juravia · Inicio" class="brand" href="index.html">
+<img alt="" decoding="async" height="30" loading="eager" src="brand_icon.png" width="30"/>
+<span>JURAVIA</span>
+</a>
+<nav aria-label="Navegación principal" class="navlinks">
+<a href="index.html#como">Cómo funciona</a>
+<a href="index.html#ejemplos">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#guias">Guías</a>
+</nav>
+<div class="nav-cta">
+<a class="btn secondary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar gratis</a>
+<button aria-expanded="false" aria-label="Abrir menú" class="menu-btn" data-menu-btn="" type="button">
+<svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header><div data-drawer-overlay="" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.38); z-index:79;"></div><div aria-label="Menú móvil" class="drawer" data-drawer="">
+<a href="index.html#como">Cómo funciona</a>
+<a href="index.html#ejemplos">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#guias">Guías</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div><main id="contenido"><section class="hero hero-photo" id="hero">
+<div aria-hidden="true" class="hero-sweep"></div>
+<div class="container">
+<div class="hero-center reveal">
+<div aria-label="Juravia" class="hero-brandmark">
+<img alt="Juravia" decoding="async" height="256" loading="eager" src="logo.png" width="419"/>
+<div aria-hidden="true" class="hero-word">
+<span class="hero-word__text">JURAVIA</span>
+<span class="hero-word__line"></span>
+</div>
+</div>
+<p class="kicker">Guía legal · Juravia</p>
+<h1>Cómo recurrir una multa por seguro obligatorio</h1>
+<p class="subline">Las multas por seguro obligatorio suelen parecer binarias: había póliza o no la había. En la práctica, muchos casos dependen de algo más fino: vigencia exacta, error de cruce de datos, cobertura en la fecha denunciada o documentación insuficiente del expediente.</p>
+<div class="hero-ctas center"><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a></div>
+<nav aria-label="Migas de pan" class="breadcrumbs hero-breadcrumbs"><a href="index.html">Inicio</a><span class="sep">›</span><a href="index.html#guias">Guías</a><span class="sep">›</span><span>Seguro obligatorio</span></nav>
+</div>
+</div>
+</section><section class="band band--light guide-content-band"><div class="container"><div class="guide-shell"><div class="guide-wrap"><div class="toc"><div class="toc-title">Orden de lectura</div><ul>
+<li><a href="#revisar">1. Qué revisar en la denuncia</a></li>
+<li><a href="#motivos">2. Motivos habituales de impugnación</a></li>
+<li><a href="#anexos">3. Pruebas y anexos recomendados</a></li>
+<li><a href="#presentacion">4. Cómo presentar alegaciones/recurso</a></li>
+<li><a href="#faq">5. Preguntas frecuentes</a></li>
+</ul></div></div><div class="callout">
         Nota: Esta guía es informativa y está pensada para ayudarte a ordenar hechos y anexos. Verifica siempre el plazo y el órgano indicados en tu notificación.
-      </div>
-    </div>
-
-    <section class="card" id="revisar">
-      <h2>Qué revisar en la denuncia</h2>
-      <p>Antes de redactar, confirma que los datos esenciales son correctos y que la denuncia está suficientemente motivada. Una revisión ordenada evita alegaciones genéricas y mejora la consistencia del escrito.</p>
-      <ul>
-        <li>Identificación del vehículo y fecha del control/denuncia.</li><li>Si la póliza estaba activa ese día (tomador, matrícula, vigencia).</li><li>Posibles incidencias de registro/actualización en bases de datos.</li><li>Prueba/documento en el expediente y motivación.</li>
-      </ul>
-    </section>
-
-    <section class="card" id="motivos">
-      <h2>Motivos habituales de impugnación</h2>
-      <p>Selecciona únicamente los motivos que encajen con tu caso y acompáñalos con prueba. En general, la Administración valora mejor escritos concretos, con hechos y anexos numerados.</p>
-      <ul>
-        <li>Póliza en vigor y error de base de datos o de consulta.</li><li>Error material en matrícula/vehículo o en la fecha del control.</li><li>Falta de motivación o documentación suficiente en el expediente.</li><li>Defectos procedimentales (notificación).</li>
-      </ul>
-      
-    </section>
-
-    <section class="card" id="anexos">
-      <h2>Pruebas y anexos recomendados</h2>
-      <p>Ordena los anexos con numeración (Anexo 1, Anexo 2…) y referencia cada uno en el texto. Si falta prueba en la notificación, solicita acceso al expediente y pide la incorporación de la prueba completa.</p>
-      <ul>
-        <li>Certificado de seguro/póliza y recibo de pago del periodo.</li><li>Carta de la aseguradora acreditando cobertura en la fecha.</li><li>Documentación del vehículo (ficha técnica) si hay errores.</li><li>Solicitud de acceso al expediente completo.</li>
-      </ul>
-      <details>
-        <summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
-        <p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
-        <ul>
-          <li>Anexo 1 · Certificado de seguro/póliza y recibo de pago del periodo.</li><li>Anexo 2 · Carta de la aseguradora acreditando cobertura en la fecha.</li><li>Anexo 3 · Documentación del vehículo (ficha técnica) si hay errores.</li><li>Anexo 4 · Solicitud de acceso al expediente completo.</li>
-        </ul>
-      </details>
-    </section>
-
-    <section class="card" id="presentacion">
-      <h2>Cómo presentar alegaciones/recurso</h2>
-      <p>Presenta por sede electrónica del órgano sancionador o registro habilitado. Conserva el justificante de presentación (acuse) y copia íntegra de lo enviado.</p>
-      <ol>
-        <li>Reúne denuncia completa, identificación y anexos numerados.</li>
-        <li>Redacta un relato de hechos breve y ordenado, y enumera motivos concretos.</li>
-        <li>Adjunta anexos en PDF (si procede) y referencia cada anexo en el texto.</li>
-        <li>Firma y presenta dentro del plazo indicado en la notificación.</li>
-        <li>Guarda el acuse de recibo y el expediente descargado.</li>
-      </ol>
-      <div class="related" aria-label="Refuerza tu recurso con motivos procedimentales">
-        <a class="pill" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Guías relacionadas</h2>
-      <p>Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
-      <div class="related">
-        <a class="pill" href="recurrir_multa_seguro_poliza_en_vigor.html">Seguro obligatorio: póliza en vigor y error de base de datos</a><a class="pill" href="recurrir_multa_seguro_recibo_pago.html">Seguro obligatorio: recibo y justificantes de pago</a>
-      </div>
-    </section>
-
-    <section class="card" id="faq">
-      <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Cuándo conviene presentar alegaciones en una multa de seguro obligatorio?</summary><p>Cuando existan dudas razonables sobre los hechos, la prueba o el procedimiento, y puedas aportar documentación que refuerce tu versión. Si el expediente es claro y la sanción tiene reducción por pronto pago, valora el coste/beneficio antes de renunciar a la reducción.</p></details><details><summary>¿Qué documentación mínima debería adjuntar?</summary><p>Como mínimo, la denuncia completa y cualquier prueba disponible. Si discutes señalización o circunstancias, añade fotografías del lugar. Si discutes autorización o situación administrativa, adjunta el justificante correspondiente.</p></details><details><summary>¿Puedo pedir la prueba completa y el expediente?</summary><p>Sí. Es habitual solicitar acceso al expediente para revisar imágenes, actas y documentos que sustentan la denuncia, especialmente cuando solo se aporta un recorte o un resumen.</p></details><details><summary>¿Qué pasa si presento fuera de plazo?</summary><p>Lo habitual es que la Administración no entre a valorar el fondo. Por eso conviene presentar dentro del plazo indicado en la notificación y conservar el justificante de registro.</p></details><details><summary>¿Juravia sustituye a un abogado?</summary><p>Juravia te ayuda a estructurar y presentar un escrito sólido y ordenado, pero no es asesoramiento jurídico personalizado. En asuntos complejos o de alto impacto (p. ej., posible ámbito penal), es recomendable consulta profesional.</p></details>
-    </section>
-    
-    <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <img class="footer-logo" src="brand_icon.png" alt="Juravia" onerror="this.onerror=null;this.src='brand_icon.png';"/>
-      <div class="footer-meta">
-        <div class="footer-name">JURAVIA</div>
-        <div class="footer-tag">Plantillas legales para defender tus derechos · <a href="index.html#inicio">juravia.app</a></div>
-      </div>
-    </div>
-    <div class="footer-links" aria-label="Enlaces">
-      <a href="index.html#guias">Guías</a>
-      <a href="index.html#sobre-juravia">Sobre Juravia</a>
-      <a href="quienes_somos.html">Quiénes somos</a>
-      <a href="#top">Subir</a>
-    </div>
-  </div>
+      </div><div class="cluster-focus"><p class="cluster-focus__eyebrow">Qué te ayuda a aclarar esta guía</p><p>Sirve para ordenar un expediente por falta de seguro sin simplificarlo demasiado: póliza vigente o no, fecha del hecho, vehículo asegurado, tomador, error administrativo o falta de incorporación documental suficiente.</p><div class="cluster-focus__actions"><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a><a class="btn secondary" href="recurrir_multa_itv.html">Ir a la guía ITV</a></div></div><aside aria-label="Cómo aprovechar esta guía" class="expert-note"><div aria-hidden="true" class="expert-note__icon">§</div><div><span class="expert-note__eyebrow">Aquí manda la fecha exacta y la trazabilidad documental</span><p>En seguro obligatorio casi todo gira en torno a una pregunta: qué ocurría con la cobertura en el momento exacto denunciado y cómo se acredita eso de forma limpia.</p></div></aside><section class="card guide-section" id="revisar"><span class="guide-section__eyebrow">Paso 1 · Qué revisar en la denuncia</span>
+<h2>1) Qué revisar en la denuncia</h2>
+<p class="section-intro">Lo primero es comprobar si el expediente está hablando de la ausencia total de seguro o de un problema de acreditación o cruce de datos. Son supuestos parecidos en apariencia, pero muy distintos al alegar.</p>
+<ul><li>Fecha exacta de la denuncia y situación documental del vehículo o del conductor en ese momento.</li><li>Si existía cita previa, justificante, póliza en vigor, reparación, avería sobrevenida o documento oficial relacionado con el supuesto.</li><li>Cómo se describe el hecho en la denuncia y si encaja con la situación real que puedes acreditar.</li></ul>
+</section><section class="practical-box"><h2>Cómo detectar si una multa por seguro está bien apoyada</h2><p>La revisión más útil no parte de una frase genérica del tipo 'sí tenía seguro', sino de una comprobación metódica: vehículo, póliza, vigencia, fecha del hecho y documentos que conecten esas piezas.</p><div class="practical-grid"><article class="practical-item"><h3>Qué fijar primero</h3><ul><li>Fecha y hora del hecho denunciado, matrícula y motivo exacto que se imputa.</li><li>Póliza aplicable, periodo de vigencia y relación entre vehículo asegurado y documento aportado.</li><li>Si la notificación explica de dónde sale la falta de seguro o solo la afirma de forma automática.</li></ul></article><article class="practical-item"><h3>Qué suele hacer discutible el caso</h3><ul><li>Desajustes entre la fecha del hecho y la fecha real de vigencia o alta de la póliza.</li><li>Errores de matrícula, de vehículo o de cruce administrativo de datos.</li><li>Expedientes que presuponen la falta de cobertura sin mostrar con claridad su base documental.</li></ul></article><article class="practical-item"><h3>Cuándo conviene no forzar la alegación</h3><ul><li>Cuando la ausencia de cobertura está clara y no hay documento serio que la contradiga.</li><li>Cuando la póliza existe, pero no se refiere con nitidez al vehículo o al momento denunciado.</li><li>Cuando el argumento se basa solo en una expectativa de renovación o de contratación sin efecto real en la fecha del hecho.</li></ul></article></div></section><section class="card guide-section" id="motivos"><span class="guide-section__eyebrow">Paso 2 · Qué comprobar antes de discutir la falta de seguro</span>
+<h2>2) Qué comprobar antes de discutir la falta de seguro</h2>
+<p class="section-intro">Una buena alegación por seguro obligatorio suele apoyarse en pocos documentos, pero muy claros. La fuerza está en demostrar con precisión temporal qué cobertura existía o por qué el expediente no lo acredita bien.</p>
+<ul><li>Ordena cronológicamente los documentos para que se entienda qué situación existía el día de la denuncia.</li><li>Explica con precisión si el problema es de vigencia, subsanación, imposibilidad material o simple error de apreciación.</li><li>Adjunta solo documentos útiles y legibles, señalando a qué hecho responde cada uno.</li></ul>
+</section><section class="card guide-section" id="anexos"><span class="guide-section__eyebrow">Paso 3 · Documentos que mejor sostienen la alegación</span>
+<h2>3) Documentos que mejor sostienen la alegación</h2>
+<p class="section-intro">Lo que más ayuda suele ser la póliza, el recibo, el certificado de cobertura o cualquier documento capaz de fijar vigencia, vehículo y fecha de forma inequívoca.</p>
+<ul><li>Justificante oficial, cita, póliza, permiso, informe de taller o documento directamente relacionado con el motivo de la denuncia.</li><li>Copia íntegra de la denuncia y, si procede, fotos del vehículo o del elemento afectado.</li><li>Solicitud de revisión o de acceso a expediente cuando falten documentos básicos o la descripción sea insuficiente.</li></ul>
+<details>
+<summary>Texto listo para pegar en tu escrito (bloque de anexos)</summary>
+<p>Se aportan los siguientes documentos, a efectos probatorios y de mejor resolución del expediente:</p>
+<ul>
+<li>Anexo 1 · Certificado de seguro/póliza y recibo de pago del periodo.</li><li>Anexo 2 · Carta de la aseguradora acreditando cobertura en la fecha.</li><li>Anexo 3 · Documentación del vehículo (ficha técnica) si hay errores.</li><li>Anexo 4 · Solicitud de acceso al expediente completo.</li>
+</ul>
+</details>
+</section><section class="card guide-section" id="presentacion"><span class="guide-section__eyebrow">Paso 4 · Cómo plantear la alegación con fechas y póliza</span>
+<h2>4) Cómo plantear la alegación con fechas y póliza</h2>
+<p class="section-intro">Antes de recurrir, conviene comprobar si tu caso es un error administrativo discutible o una ausencia real de cobertura. Mezclar ambos planos perjudica mucho la estrategia.</p>
+<ol>
+<li>Reúne denuncia completa, identificación y anexos numerados.</li>
+<li>Redacta un relato de hechos breve y ordenado, y enumera motivos concretos.</li>
+<li>Adjunta anexos en PDF (si procede) y referencia cada anexo en el texto.</li>
+<li>Firma y presenta dentro del plazo indicado en la notificación.</li>
+<li>Guarda el acuse de recibo y el expediente descargado.</li>
+</ol>
+<p class="related-title"><strong>También te puede interesar sobre ITV, seguro y documentación</strong></p><div aria-label="Refuerza tu recurso con motivos procedimentales" class="related"><a class="pill" href="recurrir_multa_itv.html">Cómo recurrir una multa por relacionada con la ITV</a><a class="pill" href="recurrir_multa_seguro_obligatorio.html">Cómo recurrir una multa por seguro caducado o no acreditado</a><a class="pill" href="recurrir_multa_seguro_obligatorio.html">Cómo recurrir una multa por seguro obligatorio: póliza en vigor y error de base de datos</a><a class="pill" href="recurrir_multa_seguro_obligatorio.html">Cómo recurrir una multa por seguro obligatorio: recibo y justificantes de pago</a></div>
+</section><section class="card">
+<h2>Guías relacionadas sobre seguro y documentación del vehículo</h2>
+<p class="section-intro">Si tu caso encaja con alguno de estos supuestos, puedes usar estas guías específicas para reforzar tu argumentación.</p>
+<p class="related-title"><strong>También te puede interesar</strong></p><div class="related">
+<a class="pill" href="recurrir_multa_seguro_obligatorio.html">Seguro obligatorio: póliza en vigor y error de base de datos</a><a class="pill" href="recurrir_multa_seguro_obligatorio.html">Seguro obligatorio: recibo y justificantes de pago</a>
+</div>
+</section><section class="card guide-section" id="faq"><span class="guide-section__eyebrow">Paso 5 · Preguntas frecuentes</span>
+<h2>5) Preguntas frecuentes sobre multas por seguro obligatorio</h2>
+<div class="faq-list"><details open="open"><summary>¿Qué pesa más en una multa por seguro?</summary><p>La fecha exacta del hecho y la capacidad de acreditar que la cobertura existía para ese vehículo en ese momento.</p></details><details><summary>¿Sirve una póliza contratada poco antes o poco después?</summary><p>Solo si cubría realmente la fecha denunciada. La proximidad temporal por sí sola no basta.</p></details><details><summary>¿Qué pasa si el error es de matrícula o de cruce de datos?</summary><p>Ese puede ser un escenario útil de revisión, siempre que puedas mostrar documentos claros que identifiquen bien el vehículo asegurado.</p></details><details><summary>¿Basta con decir que el coche estaba asegurado?</summary><p>No. Hace falta demostrarlo con documentos que conecten cobertura, vehículo y fecha.</p></details><details><summary>¿Cuándo suele ser débil el recurso?</summary><p>Cuando no hay documento limpio que acredite cobertura y el expediente no deja dudas concretas sobre identificación o fechas.</p></details></div></section><section class="editorial-insight"><p class="editorial-kicker">Seguro: la base de datos no siempre cuenta toda la historia</p><h2>Cuando hay póliza en vigor, la discusión debe bajar al soporte exacto</h2><p>En seguro obligatorio, el expediente muchas veces nace de un desajuste entre la situación aseguradora real y lo que figura en la consulta administrativa. Ahí lo importante no es protestar: es demostrar bien la vigencia.</p><div class="editorial-grid"><article class="editorial-card"><h3>Dónde suele estar la grieta</h3><ul><li>En coberturas realmente activas que no aparecen bien reflejadas en la consulta que origina la denuncia.</li><li>En periodos muy próximos al alta, renovación o cambio de póliza.</li><li>En resoluciones que no explican bien qué base o qué dato se tomó como referencia.</li></ul></article><article class="editorial-card"><h3>Qué prueba vale más</h3><ul><li>Póliza, recibo, certificado o acreditación de vigencia emitida por la aseguradora.</li><li>Cualquier documento que fije fecha y hora de cobertura cuando el caso esté en frontera.</li><li>La referencia administrativa usada para sostener la denuncia si no se entiende bien el origen del reproche.</li></ul></article><article class="editorial-card"><span class="microcase-label">Microcaso frecuente</span><h3>Microcaso frecuente</h3><p>Vehículo asegurado, pero expediente apoyado en una consulta desactualizada o insuficientemente explicada. Cuando la cobertura puede acreditarse con precisión, ese suele ser el eje correcto del recurso.</p></article></div></section><div class="footer-links"><p class="related-title"><strong>Guías relacionadas sobre seguro y documentación del vehículo</strong></p><ul><li><a href="recurrir_multa_itv.html">Cómo recurrir una multa de ITV</a></li><li><a href="recurrir_multa_defectos_notificacion.html">Cómo recurrir una multa por defectos de notificación</a></li><li><a href="guia_dgt.html">Guía DGT: cómo alegar y seguir el expediente</a></li><li><a href="guias.html">Ver todas las guías</a></li><li><a href="como-funciona.html">Cómo funciona Juravia</a></li></ul><p class="note">Te servirá sobre todo si la duda está en la vigencia de la póliza, la matrícula, el cruce de datos o la acreditación de la cobertura en la fecha exacta.</p></div><div class="final-cta"><h2>Comprueba la cobertura real antes de recurrir la multa por seguro</h2><p>Sube la sanción y ordena póliza, fecha y vehículo para ver si hay un error de acreditación aprovechable o si la falta de cobertura aparece demasiado clara.</p><a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a></div></div></div></section></main><footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">
+<img alt="" decoding="async" height="34" loading="lazy" src="brand_icon.png" width="34"/>
+<div>
+<strong>JURAVIA</strong>
+<p class="muted">Legal-tech para recurrir multas con orden: análisis gratuito, puntos débiles y borrador automatizado.</p>
+</div>
+</div>
+</div>
+<div>
+<div class="footer-title">Producto</div>
+<a href="index.html#como">Cómo funciona</a>
+<a href="ejemplos.html">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Acceso a la app</a>
+</div>
+<div>
+<div class="footer-title">Guías</div>
+<a href="guias.html">Todas las guías</a>
+<a href="guia_dgt.html">Guía DGT</a>
+<a href="guia_municipal.html">Guía municipal</a>
+</div>
+<div>
+<div class="footer-title">Legal</div>
+<a href="quienes_somos.html">Quiénes somos</a>
+<a href="privacidad.html">Privacidad</a>
+<a href="avisos.html">Aviso legal</a>
+<a href="index.html#precios">Condiciones y precios</a>
+</div>
+</div>
+<div class="footer-bottom">© <span id="y"></span> Juravia · España · Informe automatizado, sin garantía de resultados.</div>
+</div>
 </footer>
-  </main>
+<script defer="" src="assets/app-config.js"></script>
+<script defer="" src="assets/site.js"></script>
+<script>
+    document.getElementById('y').textContent = String(new Date().getFullYear());
+  </script>
 </body>
 </html>

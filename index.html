@@ -1,1251 +1,906 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
-  <script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M9PX0ZVVF2"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-M9PX0ZVVF2');
   </script>
-
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-  <title>Juravia | Alegaciones y recursos de multas de tráfico</title>
-  <meta name="description" content="Genera alegaciones y recursos de multas de tráfico en minutos: PDF profesional, guía de presentación y recordatorio .ics de plazos." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Juravia | Defensa legal en carretera" />
-  <meta property="og:description" content="Genera alegaciones y recursos de multas de tráfico en minutos: PDF pro, guía y recordatorio .ics." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/juravia_banner_road_legaltech_clean_1920x1080.png" />
-  <meta property="og:locale" content="es_ES" />
-
-  <meta name="theme-color" content="#0b4aa2" />
-
-  <style>
-    :root{
-      --ink:#ffffff;
-      --muted: rgba(255,255,255,.86);
-
-      --bg:#050914;
-      --panel: rgba(255,255,255,.06);
-
-      --brand:#0b4aa2;
-      --brand2:#083c84;
-      --gold:#d4af37;
-
-      --shadow: 0 18px 46px rgba(0,0,0,.45);
-      --radius: 22px;
-      --max: 1140px;
-
-      --bg-img: url("/juravia_banner_road_legaltech_clean_1920x1080.png");
-      --bg-pos: 50% 16%;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%; scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color:var(--ink);
-      background: var(--bg);
-      overflow-x:hidden;
-    }
-
-    /* Banner visible en toda la web */
-    .bg-wrap{
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: var(--bg-pos);
-      background-repeat: no-repeat;
-      transform: scale(1.02);
-      filter: saturate(1.02) contrast(1.03);
-    }
-    .bg-overlay{
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      /* Más luz en cabecera (hero) sin perder contraste en el resto */
-      background:
-        
-        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.24), rgba(255,255,255,0) 58%),
-        radial-gradient(ellipse at 30% 0%, rgba(11,74,162,.18), rgba(0,0,0,0) 64%),
-        radial-gradient(ellipse at 76% 10%, rgba(212,175,55,.16), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(5,9,20,0), rgba(5,9,20,.56) 52%, rgba(5,9,20,.88))
-    ;
-    }
-
-    a{color:inherit}
-    .container{width:100%; max-width: var(--max); margin:0 auto; padding:0 18px;}
-
-    .sep{
-      height:1px;
-      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(212,175,55,.65), rgba(255,255,255,0));
-      margin: 34px 0;
-      opacity:.65;
-    }
-
-    /* Topbar AZUL + dorado */
-    .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: linear-gradient(180deg, rgba(11,74,162,.92), rgba(8,60,132,.86));
-      border-bottom: 1px solid rgba(212,175,55,.55);
-      backdrop-filter: blur(12px);
-    }
-    .topbar::after{
-      content:"";
-      position:absolute; left:0; right:0; bottom:-1px; height:1px;
-      background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.9), rgba(212,175,55,0));
-      opacity:.9;
-      pointer-events:none;
-    }
-    .topbar-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 12px 0;
-      gap: 12px;
-    }
-    .brand{
-      display:flex; align-items:center; gap: 10px;
-      text-decoration:none;
-      min-width: 160px;
-    }
-    .brand img{
-      width: 30px; height: 30px;
-      display:block;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.30));
-    }
-    .brand span{
-      font-weight: 900;
-      letter-spacing: .4px;
-      font-size: 14px;
-    }
-
-    nav{display:flex; gap: 14px; align-items:center;}
-    .navlink{
-      text-decoration:none;
-      font-size: 13px;
-      color: rgba(255,255,255,.92);
-      padding: 9px 10px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      transition: background .18s ease, border-color .18s ease;
-      white-space: nowrap;
-    }
-    .navlink:hover{
-      background: rgba(255,255,255,.08);
-      border-color: rgba(212,175,55,.35);
-    }
-
-    /* Mobile menu */
-    .menu-btn{
-      display:none;
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(212,175,55,.30);
-      border-radius: 14px;
-      padding: 10px 12px;
-      color:#fff;
-      cursor:pointer;
-      line-height: 0;
-    }
-    .menu-btn svg{display:block}
-
-    .mobile-drawer{
-      display:none;
-      position: fixed;
-      top: 64px;
-      left: 18px;
-      right: 18px;
-      z-index: 60;
-      background: rgba(5,9,20,.92);
-      border: 1px solid rgba(212,175,55,.25);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-      padding: 10px;
-    }
-    .mobile-drawer a{
-      display:block;
-      text-decoration:none;
-      padding: 12px 12px;
-      border-radius: 14px;
-      color: rgba(255,255,255,.88);
-      border: 1px solid transparent;
-    }
-    .mobile-drawer a:hover{
-      background: rgba(255,255,255,.06);
-      border-color: rgba(212,175,55,.30);
-    }
-
-    /* CTA principal (más grande, engagement) */
-    .btn{
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, var(--brand), var(--brand2));
-      color:#fff;
-      text-decoration:none;
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 18px 28px;
-      border-radius: 20px;
-      font-weight: 950;
-      letter-spacing: .45px;
-      border: 1px solid rgba(212,175,55,.92);
-      box-shadow:
-        0 18px 40px rgba(0,0,0,.42),
-        0 0 0 1px rgba(212,175,55,.18),
-        0 0 30px rgba(212,175,55,.22);
-      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
-      white-space: nowrap;
-      font-size: 16px;
-    }
-    .btn::before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:-140%;
-      width:140%;
-      height:100%;
-      background: linear-gradient(120deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,.40) 45%,
-        rgba(255,255,255,0) 80%);
-      transform: skewX(-18deg);
-      opacity: .95;
-      pointer-events:none;
-      animation: shine 2.8s ease-in-out infinite;
-    }
-    @keyframes shine{
-      0%   { left:-140%; }
-      55%  { left:120%; }
-      100% { left:120%; }
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      filter: brightness(1.05);
-      box-shadow:
-        0 24px 54px rgba(0,0,0,.46),
-        0 0 0 1px rgba(212,175,55,.28),
-        0 0 42px rgba(212,175,55,.30);
-    }
-
-/* HERO: todo sobre el banner (sin tarjetas / sin recuadros) */
-    .hero{
-      padding: 22px 0 8px;
-      min-height: 60vh;
-      display:flex;
-      align-items:flex-start;
-      position: relative;
-      overflow: hidden;
-    }
-    /* Lavado de luz solo en cabecera (evita “bruma” oscura en la zona de marca) */
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset: -8px 0 auto 0;
-      height: 340px;
-      background:
-        
-        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.26), rgba(255,255,255,0) 64%),
-        radial-gradient(ellipse at 30% 0%, rgba(11,74,162,.16), rgba(0,0,0,0) 62%),
-        radial-gradient(ellipse at 75% 0%, rgba(212,175,55,.12), rgba(0,0,0,0) 60%)
-    ;
-      opacity: 0.92;
-      pointer-events:none;
-      z-index: 0;
-    }
-    .hero-content{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      gap: 14px;
-      padding: 6px 8px;
-      margin-top: -18px;
-      position: relative;
-      z-index: 1;
-    }
-
-    
-
-    /* Animación sutil de entrada (cabecera) */
-    .hero-content{
-      animation: heroEnter .72s cubic-bezier(.2,.8,.2,1) both;
-      will-change: transform, opacity;
-    }
-    @keyframes heroEnter{
-      from{ opacity: 0; transform: translateY(10px); }
-      to  { opacity: 1; transform: translateY(0); }
-    }
-
-/* Logo principal: más sutil (evita “pegatina” / sobre-dominancia) */
-    .hero-logo{
-      width: min(240px, 52vw);
-      height: auto;
-      display:block;
-      transform: translateY(-10px);
-      filter: drop-shadow(0 24px 34px rgba(0,0,0,.55));
-    }
-
-    .gold-underline{
-      width: min(520px, 70vw);
-      height: 3px;
-      background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.98), rgba(212,175,55,0));
-      border-radius: 999px;
-      opacity:.95;
-      margin-top: 2px;
-    }
-    .slogan{
-      margin: 4px 0 0;
-      font-size: 16.8px;
-      line-height: 1.65;
-      color: var(--muted);
-      max-width: 86ch;
-      text-shadow: 0 10px 22px rgba(0,0,0,.48);
-    }
-    .hero-cta{
-      margin-top: 10px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-
-    .mini-trust{
-      margin-top: 12px;
-      display:flex; gap: 10px; flex-wrap: wrap; justify-content:center;
-    }
-    .pill{
-      display:inline-flex; align-items:center; gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(212,175,55,.22);
-      font-size: 12px;
-      font-weight: 850;
-      color: rgba(255,255,255,.92);
-      backdrop-filter: blur(10px);
-    }
-    .dot{
-      width:8px; height:8px; border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 4px rgba(212,175,55,.18);
-    }
-.hero-fine{
-      margin-top: 8px;
-      color: rgba(255,255,255,.64);
-      font-size: 12.5px;
-      line-height: 1.55;
-      max-width: 92ch;
-      text-shadow: 0 10px 22px rgba(0,0,0,.40);
-    }
-
-
-
-    /* Secciones alternadas */
-    section{padding: 34px 0;}
-    /* Reduce el espacio entre el HERO y el primer bloque */
-    #como-funciona{padding-top: 18px;}
-    #como-funciona .section-head{margin-top: 0;}
-    .section{ background: rgba(5,9,20,.16); }
-    .section.alt{ background: rgba(255,255,255,.03); }
-
-    .section-head{margin-bottom: 18px;}
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      font-size: 12px;
-      letter-spacing: 2.6px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.84);
-      margin: 0 0 10px;
-    }
-    .kicker::before{
-      content:"";
-      width: 10px; height: 10px;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(212,175,55,.14);
-    }
-    h2{ margin: 0; font-size: 24px; letter-spacing: -0.2px; }
-    .lead{
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 14.5px;
-      line-height: 1.6;
-      max-width: 78ch;
-    }
-
-    .panel{
-      background: var(--panel);
-      border: 1px solid rgba(212,175,55,.18);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 22px;
-      backdrop-filter: blur(12px);
-    }
-
-    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px;}
-    .includes{display:grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; margin-top: 10px;}
-
-    .cardx{
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      padding: 18px;
-      transition: transform .18s ease, border-color .18s ease, background .18s ease;
-    }
-    .cardx:hover{
-      transform: translateY(-2px);
-      border-color: rgba(212,175,55,.45);
-      background: rgba(255,255,255,.055);
-    }
-    .icon{
-      width: 44px; height: 44px;
-      border-radius: 16px;
-      display:flex; align-items:center; justify-content:center;
-      background: rgba(212,175,55,.10);
-      border: 1px solid rgba(212,175,55,.25);
-      margin-bottom: 12px;
-    }
-    .cardx h3{ margin: 0 0 8px; font-size: 16px; letter-spacing: -0.2px; }
-    .cardx p{ margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
-
-    /* Badge de precio (solo en comparativa) */
-    .price-row{ margin-top: 10px; display:flex; gap:10px; flex-wrap:wrap; }
-    .price-badge{
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(212,175,55,.12);
-      border: 1px solid rgba(212,175,55,.38);
-      color: rgba(255,255,255,.95);
-      font-weight: 950;
-      font-size: 12.5px;
-      letter-spacing: .2px;
-    }
-    .price-badge span{
-      opacity:.9;
-      font-weight: 900;
-    }
-
-    /* Listas cortas (para comparativa) */
-    .ulx{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 13.2px;
-      line-height: 1.55;
-    }
-    .ulx li{ margin: 6px 0; }
-
-    .check{
-      display:flex; gap: 10px; align-items:flex-start;
-      padding: 10px 12px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-    }
-    .check svg{flex: 0 0 auto; margin-top: 2px;}
-    .check b{display:block; font-size: 13.5px;}
-    .check span{display:block; font-size: 12.5px; color: var(--muted); margin-top: 3px; line-height: 1.45;}
-
-    /* Guides */
-    .guide{
-      text-decoration:none; display:block;
-      background: rgba(0,0,0,.10);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px;
-      padding: 16px;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-    }
-    .guide:hover{
-      border-color: rgba(212,175,55,.55);
-      background: rgba(0,0,0,.16);
-      transform: translateY(-2px);
-    }
-    .tag{
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(212,175,55,.12);
-      border: 1px solid rgba(212,175,55,.28);
-      font-size: 11px;
-      font-weight: 950;
-      letter-spacing: .4px;
-      display:inline-block;
-      color: rgba(255,255,255,.95);
-    }
-    .guide-title{ font-weight: 950; font-size: 14px; margin: 10px 0 6px; }
-    .guide p{ margin:0; font-size: 12.5px; color: var(--muted); line-height: 1.55; }
-
-    /* FAQ */
-    .faq{display:grid; gap: 12px;}
-    details{
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      padding: 14px 16px;
-      transition: border-color .18s ease, background .18s ease;
-    }
-    details[open]{ border-color: rgba(212,175,55,.45); background: rgba(255,255,255,.055); }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      font-weight: 950;
-      font-size: 14px;
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-    }
-    summary::-webkit-details-marker{display:none;}
-    .chev{
-      width: 18px; height: 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(212,175,55,.35);
-      display:flex; align-items:center; justify-content:center;
-      color: rgba(255,255,255,.90);
-      flex: 0 0 auto;
-    }
-    details p{ margin: 10px 0 0; color: var(--muted); font-size: 13.5px; line-height: 1.6; max-width: 90ch; }
-
-    /* Footer */
-    footer{
-      padding: 44px 0 24px;
-      margin-top: 16px;
-      border-top: 1px solid rgba(212,175,55,.22);
-      background: rgba(5,9,20,.78);
-      backdrop-filter: blur(14px);
-    }
-    .foot-top{
-      display:flex;
-      gap: 18px;
-      align-items:flex-start;
-      justify-content:space-between;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-    .foot-brand{
-      display:flex;
-      gap: 12px;
-      align-items:flex-start;
-      max-width: 520px;
-    }
-    .foot-brand img{
-      width: 42px; height: 42px;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));
-    }
-    .foot-brand b{ display:block; font-size: 14px; letter-spacing: .5px; }
-    .foot-brand p{ margin: 8px 0 0; font-size: 13px; color: rgba(255,255,255,.72); line-height: 1.55; }
-
-    .foot-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 14px;
-      width: 100%;
-      max-width: 560px;
-    }
-    .foot h4{
-      margin:0 0 10px;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: rgba(212,175,55,.92);
-    }
-    .foot ul{list-style:none; padding:0; margin:0; display:grid; gap: 10px;}
-    .foot a{
-      color:#fff;
-      text-decoration:none;
-      opacity:.88;
-      font-size: 13px;
-    }
-    .foot a:hover{opacity:1; color: var(--gold);}
-
-    .fineprint{
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,.10);
-      font-size: 11.5px;
-      color: rgba(255,255,255,.52);
-      line-height: 1.55;
-      text-align:center;
-    }
-
-    /* Accessibility */
-    .skip{
-      position:absolute;
-      left:-999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
-    }
-    .skip:focus{
-      left: 18px;
-      top: 12px;
-      width:auto;
-      height:auto;
-      padding: 10px 12px;
-      background: rgba(0,0,0,.55);
-      border: 1px solid rgba(212,175,55,.35);
-      border-radius: 14px;
-      z-index: 100;
-    }
-    :focus-visible{ outline: 3px solid rgba(212,175,55,.60); outline-offset: 3px; border-radius: 12px; }
-
-    
-
-    /* Accesibilidad: foco visible consistente (teclado) */
-    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
-      outline: 3px solid rgba(212,175,55,.78);
-      outline-offset: 3px;
-      border-radius: 14px;
-    }
-    .btn:focus-visible{
-      outline: 3px solid rgba(212,175,55,.88);
-      outline-offset: 4px;
-      box-shadow:
-        0 0 0 6px rgba(212,175,55,.16),
-        0 24px 54px rgba(0,0,0,.46),
-        0 0 42px rgba(212,175,55,.30);
-    }
-    details:focus-within{
-      border-color: rgba(212,175,55,.55);
-      box-shadow: 0 0 0 5px rgba(212,175,55,.12);
-    }
-    summary{ border-radius: 14px; padding: 6px 4px; }
-
-@media (max-width: 980px){
-      nav{display:none;}
-      .menu-btn{display:inline-flex;}
-      .grid-3{grid-template-columns: 1fr;}
-      .includes{grid-template-columns: 1fr;}
-      .foot-grid{grid-template-columns: 1fr;}
-      .hero{min-height: 64vh; padding: 26px 0 12px;}
-      .hero-logo{width: min(220px, 72vw); transform: translateY(-8px);}
-      .hero-content{margin-top: 0;}
-    }
-  
-    @media (prefers-reduced-motion: reduce){
-      html, body{ scroll-behavior: auto; }
-      .hero-content{ animation: none !important; }
-      .btn::before{ animation: none !important; }
-      *{ transition: none !important; }
-    }
-
-
-    /* Guías (acordeones por tipología) */
-    .guides-accordion{display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px;}
-    @media (max-width: 860px){ .guides-accordion{grid-template-columns: 1fr;} }
-
-    .guide-acc{ padding: 14px 16px; }
-    .guide-pills{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 12px; }
-    .pill-link{
-      text-decoration:none;
-      display:inline-flex; align-items:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.10);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.92);
-      font-weight: 900;
-      font-size: 14px;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
-    }
-    .pill-link:hover{
-      border-color: rgba(212,175,55,.55);
-      background: rgba(0,0,0,.16);
-      transform: translateY(-1px);
-    }
-
-
-    .sum-label{display:inline-flex; align-items:center; gap:10px;}
-    .sum-ico{display:inline-flex; align-items:center; justify-content:center;}
-    .sum-ico svg{width:18px; height:18px; display:block;}
-    .guide-acc summary{padding: 6px 4px;}
-    
-
-
-
-
-    /* About (home) */
-    .about-grid{margin-top: 14px;}
-    .about-card h3{margin:0 0 8px; font-size: 18px; letter-spacing: .02em;}
-    .about-card p{margin:0; color: var(--muted); line-height: 1.7; max-width: 62ch;}
-    .about-note{margin-top: 14px;}
-
-</style>
-</head>
-
-<body>
-  <div class="bg-wrap" aria-hidden="true"></div>
-  <div class="bg-overlay" aria-hidden="true"></div>
-
-  <a class="skip" href="#contenido">Saltar al contenido</a>
-
-  <header class="topbar" aria-label="Barra superior">
-    <div class="container">
-      <div class="topbar-inner">
-        <!-- Menú: icono SOLO -->
-        <a class="brand" href="#inicio" aria-label="Juravia, inicio">
-          <img src="brand_icon.png" onerror="this.onerror=null;this.style.display='none';" alt="Juravia"/>
-          <span>JURAVIA</span>
-        </a>
-
-        <nav aria-label="Navegación principal">
-          <a class="navlink" href="#como-funciona">Cómo funciona</a>
-          <a class="navlink" href="#que-incluye">Qué incluye</a>
-          <a class="navlink" href="#guias">Guías</a>
-          <a class="navlink" href="#tramitacion">Tramitación</a>
-          <a class="navlink" href="#faq">FAQ</a>
-          <a class="navlink" href="#legal">Legal</a>
-        </nav>
-
-        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".95"/>
-          </svg>
-        </button>
-      </div>
-
-      <div class="mobile-drawer" id="mobileMenu" role="dialog" aria-label="Menú móvil">
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#que-incluye">Qué incluye</a>
-        <a href="#guias">Guías</a>
-        <a href="#tramitacion">Tramitación</a>
-        <a href="#faq">FAQ</a>
-        <a href="#legal">Legal</a>
-        <div class="sep" style="margin:10px 0;"></div>
-        <a href="https://app.juravia.app/">Acceso a la app</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="contenido">
-    <!-- HERO: todo el branding sobre el banner (sin recuadros) -->
-    <section class="hero" id="inicio">
-      <div class="container">
-        <div class="hero-content">
-          <img class="hero-logo" src="logo.png" onerror="this.onerror=null;this.src='logo.png';" alt="Juravia"/>
-          <div class="gold-underline" aria-hidden="true"></div>
-
-          <p class="slogan">
-            Defensa legal en carretera. Genera alegaciones y recursos en minutos: incorpora documentación probatoria y descarga un PDF profesional listo para su presentación.
-          </p>
-
-          <div class="hero-cta">
-            <a class="btn" href="https://app.juravia.app/" id="cta-hero">Generar mi alegación</a>
-          </div>
-
-          <div class="mini-trust" aria-label="Entregables">
-            <span class="pill"><span class="dot" aria-hidden="true"></span>PDF profesional</span>
-            <span class="pill"><span class="dot" aria-hidden="true"></span>Guía de presentación</span>
-            <span class="pill"><span class="dot" aria-hidden="true"></span>Recordatorio .ics</span>
-          </div>
-<p class="hero-fine">
-            Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados. Verifica siempre el órgano competente, la vía de presentación y el cómputo de plazos indicado en tu notificación.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CÓMO FUNCIONA -->
-    <section class="section" id="como-funciona">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Experiencia</p>
-          <h2>Cómo funciona en 3 pasos</h2>
-          <p class="lead">Proceso guiado para preparar el escrito y dejar la presentación lista, con anexos y entregables finales.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M6 3h12v18H6V3Z" stroke="white" stroke-width="2" opacity=".9"/>
-                <path d="M9 7h6M9 11h6M9 15h4" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-              </svg>
-            </div>
-            <h3>Paso 1 · Elige plantilla</h3>
-            <p>Selecciona el tipo de infracción y el órgano. Datos esenciales, sin ruido.</p>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z" stroke="white" stroke-width="2" stroke-linejoin="round" opacity=".9"/>
-                <path d="M12 20h9" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-              </svg>
-            </div>
-            <h3>Paso 2 · Personaliza</h3>
-            <p>Edita hechos, añade anexos y firma si quieres. Resultado con tono profesional.</p>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-                <path d="M7 10l5 5 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-                <path d="M12 15V3" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-              </svg>
-            </div>
-            <h3>Paso 3 · Descarga y presenta</h3>
-            <p>PDF + guía + .ics. Presenta y guarda el acuse de recibo.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUÉ INCLUYE -->
-    <section class="section alt" id="que-incluye">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Producto</p>
-          <h2>Todo lo que necesitas para presentar bien</h2>
-          <p class="lead">Pack final pensado para tramitar con orden, adjuntar pruebas y conservar justificantes.</p>
-        </div>
-
-        <div class="panel">
-          <div class="includes">
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>PDF listo para presentar</b>
-                <span>Estructura formal: hechos, fundamentos y solicitud.</span>
-              </div>
-            </div>
-
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>Sello / 1ª página</b>
-                <span>Área preparada para sellado o acuse (según vía).</span>
-              </div>
-            </div>
-
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>Guía de presentación</b>
-                <span>Pasos claros para sede electrónica o registro.</span>
-              </div>
-            </div>
-
-            <div class="check">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-              </svg>
-              <div>
-                <b>Recordatorio .ics</b>
-                <span>Evento de calendario para no apurar plazos.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="sep" style="margin:22px 0;"></div>
-
-          <div class="grid-3">
-            <div class="cardx">
-              <div class="icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="white" stroke-width="2" opacity=".9"/>
-                </svg>
-              </div>
-              <h3>Privacidad</h3>
-              <p>Tus documentos y anexos son tuyos. Control orientado a minimizar datos.</p>
-            </div>
-
-            <div class="cardx">
-              <div class="icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 3v18" stroke="white" stroke-width="2" opacity=".9"/>
-                  <path d="M7 7h10" stroke="white" stroke-width="2" opacity=".9"/>
-                  <path d="M6 21h12" stroke="white" stroke-width="2" opacity=".9"/>
-                </svg>
-              </div>
-              <h3>Transparencia</h3>
-              <p>Sin promesas de éxito. Plazos, vías de presentación y acuse: claro.</p>
-            </div>
-
-            <div class="cardx">
-              <div class="icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7l3-7Z" stroke="white" stroke-width="2" opacity=".9"/>
-                </svg>
-              </div>
-              <h3>Calidad del escrito</h3>
-              <p>Formato de despacho: orden, claridad y coherencia.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    
-    <!-- COMPARATIVA -->
-    <!-- COMPARATIVA -->
-    <section class="section alt" id="comparativa">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Comparativa</p>
-          <h2>Juravia vs despacho/gestoría vs hacerlo por tu cuenta</h2>
-          <p class="lead">Comparación orientativa centrada en coste, tiempo y entregables. Los precios de terceros pueden variar según complejidad, provincia y actuaciones.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7l3-7Z" stroke="white" stroke-width="2" opacity=".9"/>
-              </svg>
-            </div>
-            <h3>Juravia</h3>
-            <p>Preparación documental rápida con formato profesional y entregables de presentación.</p>
-
-            <div class="price-row" aria-label="Precios Juravia">
-              <span class="price-badge"><span>Escrito</span> 6,99 €</span>
-              <span class="price-badge"><span>Mensual</span> 19 €</span>
-            </div>
-
-            <ul class="ulx">
-              <li>Escrito estructurado (hechos, fundamentos y solicitud).</li>
-              <li>Pack final: PDF + guía de presentación + recordatorio .ics.</li>
-              <li>Anexos ordenados para adjuntar y conservar acuse.</li>
-            </ul>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 21V7l8-4 8 4v14" stroke="white" stroke-width="2" opacity=".9"/>
-                <path d="M9 21v-8h6v8" stroke="white" stroke-width="2" opacity=".9"/>
-              </svg>
-            </div>
-            <h3>Despacho / gestoría</h3>
-            <p>Asistencia personalizada y, en su caso, representación. Coste normalmente variable.</p>
-
-            <div class="price-row" aria-label="Coste despacho orientativo">
-              <span class="price-badge"><span>Coste</span> elevado y variable</span>
-            </div>
-
-            <ul class="ulx">
-              <li>Presupuesto a medida según actuaciones y complejidad.</li>
-              <li>Recomendable en expedientes complejos o de alta cuantía.</li>
-              <li>Mayor coordinación y tiempos de tramitación.</li>
-            </ul>
-          </div>
-
-          <div class="cardx">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 20h9" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Hacerlo por tu cuenta</h3>
-            <p>Si conoces el procedimiento y sabes qué anexos aportar y cómo ordenarlos.</p>
-
-            <div class="price-row" aria-label="Coste por tu cuenta">
-              <span class="price-badge"><span>Coste</span> bajo</span>
-            </div>
-
-            <ul class="ulx">
-              <li>Más tiempo: redacción, sede/registro y anexos.</li>
-              <li>Riesgo de errores formales o documentación incompleta.</li>
-              <li>Depende de tu experiencia y del órgano competente.</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="hero-fine" style="margin-top:14px;">
-          Nota: comparativa informativa. Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados.
-        </p>
-      </div>
-    </section>
-
-    <!-- SOBRE JURAVIA -->
-    <section class="section" id="sobre-juravia">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Sobre Juravia</p>
-          <h2>Documentación clara para defender tu caso</h2>
-          <p class="lead">Juravia te ayuda a preparar el escrito, organizar anexos y presentar con orden. Misma estructura profesional en cada plantilla, con lenguaje claro y enfoque probatorio.</p>
-        </div>
-
-        <div class="grid-3 about-grid">
-          <div class="cardx about-card">
-            <h3>Estructura formal, sin ruido</h3>
-            <p>Estructura clara: hechos, motivos y petición en orden, con un lenguaje directo y formal.</p>
-          </div>
-          <div class="cardx about-card">
-            <h3>Anexos y checklist de presentación</h3>
-            <p>Checklist de anexos: qué aportar, cómo referenciarlo y cómo conservar el acuse de presentación.</p>
-          </div>
-          <div class="cardx about-card">
-            <h3>Preparado para tramitar</h3>
-            <p>Presentación por organismo: sede/registro, formato y confirmación del registro para tu expediente.</p>
-          </div>
-        </div>
-
-        <div class="panel about-note">
-          <p class="lead" style="margin:0; max-width: 92ch;">
-            Importante: Juravia no sustituye el asesoramiento jurídico personalizado ni garantiza resultados. La referencia válida de plazos y requisitos es siempre la notificación y la sede/registro del órgano competente.
-          </p>
-          <div class="actions" style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn-ghost" href="quienes_somos.html">Quiénes somos</a>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Juravia | Analiza tu multa gratis y genera alegaciones</title>
+<meta content="Sube tu multa (PDF). Informe gratis con puntos débiles (lo que consta/no consta) y borrador de alegación. Preview con marca de agua. Paga solo al descargar." name="description"/>
+<link href="https://juravia.app/" rel="canonical"/>
+<link href="favicon.ico" rel="icon"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Juravia | Analiza tu multa gratis" property="og:title"/>
+<meta content="Informe gratis con puntos débiles (lo que consta/no consta) y borrador de alegación. Preview con marca de agua. Paga solo al descargar." property="og:description"/>
+<meta content="https://juravia.app/" property="og:url"/>
+<meta content="https://juravia.app/juravia_banner_road_legaltech_clean_1920x1080.png" property="og:image"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#0b4aa2" name="theme-color"/>
+<link as="image" href="logo.png" rel="preload"/>
+<link as="image" href="assets/img/shot_informe_tablet.webp" rel="preload"/>
+<link as="image" href="assets/img/shot_escrito_preview.webp" rel="preload"/>
+<link href="assets/site.css" rel="stylesheet"/>
+<link href="assets/home.css" rel="stylesheet"/>
+<script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Juravia",
+      "url":"https://juravia.app/",
+      "logo":"https://juravia.app/logo.png"
+    }
+  </script>
+<script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"Juravia",
+      "url":"https://juravia.app/"
+    }
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye el análisis gratuito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un informe automatizado con puntos débiles (procedimiento, prueba, plazos/notificación) y lectura “lo que consta / no consta” para saber qué falta y qué conviene solicitar o adjuntar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda el análisis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Normalmente minutos, según tamaño del PDF y si necesita OCR. Si el documento está escaneado o con imágenes, puede tardar más."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo se usa OCR y por qué?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si el PDF viene escaneado (sin texto seleccionable), aplicamos OCR selectivo para mejorar la extracción y reducir errores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El análisis está hecho con IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Usamos IA para analizar el PDF (y OCR cuando hace falta) y señalar posibles puntos débiles en función de lo que consta y lo que no consta. Recomendamos revisar el expediente antes de presentar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sirve para multas de DGT y ayuntamientos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, siempre que subas el documento notificado (DGT, ayuntamiento, etc.). El análisis se ajusta a lo que consta en tu PDF y las guías orientan el trámite por organismo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si el PDF es una foto o está escaneado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aplicamos OCR cuando hace falta. Si la calidad es baja o faltan páginas, lo indicamos para evitar conclusiones incorrectas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué puntos débiles suele detectar Juravia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Motivación insuficiente, prueba incompleta, anexos que no constan, incoherencias internas, defectos de notificación y cuestiones de plazos. Depende del documento aportado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El borrador inventa hechos o rellena datos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Se apoya en el PDF. Si falta un dato clave, se marca como no consta y se sugiere qué pedir o adjuntar antes de afirmarlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo editar el escrito antes de presentarlo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Recibes un texto con estructura profesional para revisar y ajustar (hechos, fechas, anexos, matices) antes de presentar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué debo pedir en el expediente si el informe dice “no consta”?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suele ser útil solicitar copia íntegra del expediente y pruebas (boletín completo, identificación del agente, fotos/medios probatorios, certificados/calibración si aplica). El informe sugiere qué pedir según el caso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué casos puede no merecer la pena alegar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si el expediente está completo y la prueba es sólida, puede no ser rentable. El análisis ayuda a decidir con prudencia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Juravia garantiza que el recurso prospere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. No garantizamos resultados. El éxito depende del expediente, la prueba y el criterio del órgano competente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Guardáis mi PDF o mis datos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El PDF se procesa para generar el informe y la preview. El objetivo es conservar lo mínimo imprescindible. Consulta la política de privacidad y solicita borrado si lo necesitas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye el pago de 6,99€?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Desbloquea 1 descarga del escrito final sin marca de agua. El análisis y la preview son gratuitos; pagas solo si decides descargar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo compensa la suscripción de 19€/mes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si prevés descargar varios escritos al mes (por ejemplo 3 o más), suele salir mejor que pagar por escrito."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo presento las alegaciones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del organismo (DGT, ayuntamiento, etc.). Consulta guías y, si falta documentación, pide el expediente antes de afirmar extremos clave."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué casos recomendáis revisión profesional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En sanciones con pérdida de puntos, alcoholemia, transporte o posible ámbito penal, o si el expediente es complejo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aviso legal",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Juravia genera un informe automatizado y un borrador para ayudarte a presentar con orden. No es asesoramiento jurídico personalizado ni garantiza resultados."
+      }
+    }
+  ]
+}
+  </script>
+<link href="favicon.ico" rel="shortcut icon"/></head>
+<body class="home">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<!-- Subtle global background -->
+<div aria-hidden="true" class="bg">
+<canvas aria-hidden="true" class="particles" id="jv-particles"></canvas>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+<div class="grid"></div>
+<div class="dots"></div>
+<div class="vignette"></div>
+<div aria-hidden="true" class="noise"></div>
 </div>
-        </div>
-      </div>
-    </section>
-
-<!-- GUÍAS -->
-    <section class="section" id="guias">
-  <div class="container">
-    <div class="section-head">
-      <p class="kicker">Guías</p>
-      <h2>Guías por tipo de multa (plantillas de Juravia)</h2>
-      <p class="lead">Selecciona una tipología para ver sus plantillas. Cada guía incluye estructura, motivos habituales y checklist de anexos para preparar el escrito con criterio profesional.</p>
-    </div>
-
-    
-    <div class="guides-accordion">
-      
-        <details class="guide-acc">
-          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0-18Z" stroke="white" stroke-width="2" opacity=".9"/>
-  <path d="M12 6v5m0 0l4 2m-4-2l-4 2" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></span>Conducción y señalización</span><span class="chev" aria-hidden="true">+</span></summary>
-          <div class="guide-pills">
-            <a class="pill-link" href="recurrir_multa_velocidad.html">Exceso de velocidad (radar fijo y tramo)</a><a class="pill-link" href="recurrir_multa_semaforo_fotorrojo.html">Semáforo en rojo (fotorrojo)</a><a class="pill-link" href="recurrir_multa_stop_ceda.html">STOP / ceda el paso</a><a class="pill-link" href="recurrir_multa_giro_prohibido.html">Giro prohibido</a><a class="pill-link" href="recurrir_multa_adelantamiento_linea_continua.html">Adelantamiento prohibido / línea continua</a><a class="pill-link" href="recurrir_multa_distancia_seguridad.html">Distancia de seguridad</a><a class="pill-link" href="recurrir_multa_luces_iluminacion.html">Luces e iluminación obligatoria</a><a class="pill-link" href="recurrir_multa_carril_bus_bao.html">Carril bus / BAO / bus-taxi</a><a class="pill-link" href="recurrir_multa_senalizacion_obras.html">Señalización temporal de obras</a>
-          </div>
-        </details>
-        
-        <details class="guide-acc">
-          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <path d="M5 4h14v16H5V4Z" stroke="white" stroke-width="2" opacity=".9"/>
-  <path d="M9 17V7h4a3 3 0 0 1 0 6H9" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></span>Estacionamiento y accesos</span><span class="chev" aria-hidden="true">+</span></summary>
-          <div class="guide-pills">
-            <a class="pill-link" href="recurrir_multa_estacionamiento_indebido.html">Estacionamiento indebido</a><a class="pill-link" href="recurrir_multa_zona_residentes.html">Zona de residentes</a><a class="pill-link" href="recurrir_multa_carga_descarga.html">Carga y descarga</a><a class="pill-link" href="recurrir_multa_parada_doble_fila.html">Parada / doble fila</a><a class="pill-link" href="recurrir_multa_plaza_pmr.html">Plaza PMR sin autorización</a><a class="pill-link" href="recurrir_multa_vado_garaje.html">Vado / acceso a garaje</a><a class="pill-link" href="recurrir_multa_retirada_deposito_municipal.html">Retirada y depósito municipal</a>
-          </div>
-        </details>
-        
-        <details class="guide-acc">
-          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <path d="M12 2s7 3 7 6v5c0 5-7 9-7 9s-7-4-7-9V8c0-3 7-6 7-6Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
-  <path d="M9 12l2 2 4-5" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></span>Tecnología y seguridad</span><span class="chev" aria-hidden="true">+</span></summary>
-          <div class="guide-pills">
-            <a class="pill-link" href="recurrir_multa_movil.html">Uso de teléfono móvil</a><a class="pill-link" href="recurrir_multa_auriculares_audio.html">Auriculares / dispositivos de audio</a><a class="pill-link" href="recurrir_multa_cinturon_sri.html">Cinturón de seguridad / SRI</a><a class="pill-link" href="recurrir_multa_alcohol_drogas.html">Alcohol / drogas (posible ámbito penal)</a><a class="pill-link" href="recurrir_multa_baliza_v16.html">Baliza V16 conectada</a>
-          </div>
-        </details>
-        
-        <details class="guide-acc">
-          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <path d="M12 21s7-4.5 7-10a7 7 0 1 0-14 0c0 5.5 7 10 7 10Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
-  <path d="M12 11.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5Z" stroke="white" stroke-width="2" opacity=".9"/>
-</svg></span>Movilidad y restricciones</span><span class="chev" aria-hidden="true">+</span></summary>
-          <div class="guide-pills">
-            <a class="pill-link" href="recurrir_multa_zbe.html">ZBE (Zona de Bajas Emisiones)</a><a class="pill-link" href="recurrir_multa_vmp_patinete.html">VMP / patinete eléctrico</a><a class="pill-link" href="recurrir_multa_acceso_restringido_temporal.html">Acceso restringido temporal</a><a class="pill-link" href="recurrir_multa_matricula_extranjera.html">Matrícula extranjera</a>
-          </div>
-        </details>
-        
-        <details class="guide-acc">
-          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <path d="M7 3h7l3 3v15H7V3Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
-  <path d="M14 3v4h4" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-  <path d="M9 12h6M9 16h6" stroke="white" stroke-width="2" opacity=".9" stroke-linecap="round"/>
-</svg></span>Documentación y procedimiento</span><span class="chev" aria-hidden="true">+</span></summary>
-          <div class="guide-pills">
-            <a class="pill-link" href="recurrir_multa_itv_caducada.html">ITV caducada</a><a class="pill-link" href="recurrir_multa_itv_desfavorable_subsanacion.html">ITV desfavorable: subsanación en plazo</a><a class="pill-link" href="recurrir_multa_seguro_obligatorio.html">Seguro obligatorio</a><a class="pill-link" href="recurrir_multa_permiso_conducir_caducado.html">Permiso de conducir caducado</a><a class="pill-link" href="recurrir_multa_defectos_notificacion.html">Defectos de notificación</a><a class="pill-link" href="recurrir_multa_caducidad_procedimiento.html">Caducidad del procedimiento</a><a class="pill-link" href="recurrir_multa_prescripcion_infraccion.html">Prescripción de la infracción</a><a class="pill-link" href="recurrir_multa_identificacion_conductor_empresas.html">Identificación del conductor (empresas / flotas)</a><a class="pill-link" href="recurrir_multa_taller_arrendamiento.html">Taller / arrendamiento (cesión del vehículo)</a>
-          </div>
-        </details>
-        
-        <details class="guide-acc">
-          <summary><span class="sum-label"><span class="sum-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <path d="M3 7h11v10H3V7Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
-  <path d="M14 10h4l3 3v4h-7v-7Z" stroke="white" stroke-width="2" opacity=".9" stroke-linejoin="round"/>
-  <path d="M7 17a2 2 0 1 0 0 4a2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z" stroke="white" stroke-width="2" opacity=".9"/>
-</svg></span>Transporte profesional</span><span class="chev" aria-hidden="true">+</span></summary>
-          <div class="guide-pills">
-            <a class="pill-link" href="recurrir_multa_carga_estiba.html">Carga y estiba</a><a class="pill-link" href="recurrir_multa_tacografo.html">Tacógrafo / tiempos de conducción y descanso</a><a class="pill-link" href="recurrir_multa_transporte_autorizaciones.html">Transporte: autorizaciones / tarjeta</a><a class="pill-link" href="recurrir_multa_adr_mercancias_peligrosas.html">ADR / mercancías peligrosas</a>
-          </div>
-        </details>
-        
-    </div>
-  </div>
+<header class="topbar">
+<div class="container">
+<div class="nav">
+<a aria-label="Juravia · Inicio" class="brand" href="index.html">
+<img alt="" decoding="async" height="30" loading="eager" src="brand_icon.png" width="30"/>
+<span>JURAVIA</span>
+</a>
+<nav aria-label="Navegación principal" class="navlinks">
+<a href="#como">Cómo funciona</a>
+<a href="#ejemplos">Ejemplos</a>
+<a href="#precios">Precios</a>
+<a href="#guias">Guías</a>
+</nav>
+<div class="nav-cta">
+<a class="btn secondary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar gratis</a>
+<button aria-expanded="false" aria-label="Abrir menú" class="menu-btn" data-menu-btn="" type="button">
+<svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<div data-drawer-overlay="" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.38); z-index:79;"></div>
+<div aria-label="Menú móvil" class="drawer" data-drawer="">
+<a href="#como">Cómo funciona</a>
+<a href="#ejemplos">Ejemplos</a>
+<a href="#precios">Precios</a>
+<a href="#guias">Guías</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+<main id="contenido">
+<!-- HERO (limpio: logo principal + CTA centrado + preview útil) -->
+<section class="hero hero-photo" id="hero">
+<div aria-hidden="true" class="hero-sweep"></div>
+<div class="container">
+<div class="hero-center reveal">
+<div aria-label="Juravia" class="hero-brandmark">
+<img alt="Juravia" decoding="async" height="256" loading="eager" src="logo.png" width="419"/>
+<div aria-hidden="true" class="hero-word">
+<span class="hero-word__text">JURAVIA</span>
+<span class="hero-word__line"></span>
+</div>
+</div>
+<h1>Analiza tu multa gratis.<br/>Detecta puntos débiles y genera alegaciones automáticas.</h1>
+<p class="subline">Sube el PDF. Te devolvemos un <b>diagnóstico prudente</b>: <b>lo que consta</b> / <b>no consta</b> y qué revisar. Si quieres, te ayudamos a generar una alegación <b>profesional y personalizada</b> en cuestión de minutos.</p>
+<div class="hero-ctas center">
+<a class="btn primary" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+<!-- Moving pills (subtle marquee). Second group is aria-hidden to avoid duplicate reading. -->
+<div aria-label="Ventajas" class="pill-marquee hero-badges" role="list">
+<div aria-hidden="false" class="pill-track">
+<div class="pill-group" role="list">
+<span class="badge" role="listitem"><span aria-hidden="true" class="dot"></span>Análisis con IA (basado en tu PDF)</span>
+<span class="badge" role="listitem"><span aria-hidden="true" class="dot"></span>Analizamos puntos débiles</span>
+<span class="badge" role="listitem"><span aria-hidden="true" class="dot"></span>Preview con marca de agua</span>
+<span class="badge" role="listitem"><span aria-hidden="true" class="dot"></span>Pago solo por descarga</span>
+</div>
+<div aria-hidden="true" class="pill-group">
+<span class="badge"><span aria-hidden="true" class="dot"></span>Análisis con IA (basado en tu PDF)</span>
+<span class="badge"><span aria-hidden="true" class="dot"></span>Analizamos puntos débiles</span>
+<span class="badge"><span aria-hidden="true" class="dot"></span>Preview con marca de agua</span>
+<span class="badge"><span aria-hidden="true" class="dot"></span>Pago solo por descarga</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-
-<section class="section alt" id="tramitacion">
-  <div class="container">
-    <div class="section-head">
-      <p class="kicker">Tramitación</p>
-      <h2>Guías de presentación por organismo</h2>
-      <p class="lead">Procedimiento orientativo de presentación (sede/registro, anexos y acuse) según el órgano competente. La guía por tipo de multa sigue siendo la misma; aquí tienes el “cómo presentarlo”.</p>
-    </div>
-
-    <div class="panel">
-      <div class="guide-pills">
-        <a class="pill-link" href="guia_dgt.html">DGT</a>
-        <a class="pill-link" href="guia_sct.html">Servei Català de Trànsit (SCT)</a>
-        <a class="pill-link" href="guia_trafikoa.html">Trafikoa (Gobierno Vasco)</a>
-        <a class="pill-link" href="guia_transportes.html">Ministerio de Transportes</a>
-        <a class="pill-link" href="guia_municipal.html">Municipal / Registro</a>
-      </div>
-    </div>
-  </div>
+<!-- BAND 1 (light) — Cómo funciona -->
+<section class="band band--light" id="como">
+<div class="container">
+<div class="section-head reveal">
+<p class="kicker">Cómo funciona</p>
+<h2>Un flujo simple: análisis gratis → borrador → preview → pago por descarga</h2>
+<p class="lead">Transparente y sin humo: primero detectamos debilidades reales del expediente; después, si quieres, generas el escrito. Usamos IA para leer el PDF (y OCR cuando hace falta) y ayudarte a revisar lo importante.</p>
+</div>
+<div class="split" data-reveal-group="">
+<div class="copy reveal">
+<div class="chip">1) Sube la multa (PDF)</div>
+<p>Extraemos texto y aplicamos OCR selectivo cuando hace falta.</p>
+<div style="height:10px"></div>
+<div class="chip">2) Informe de puntos débiles</div>
+<p>Motivación, prueba/expediente, plazos/notificación y coherencias internas.</p>
+<div style="height:10px"></div>
+<div class="chip">3) Genera alegación automática</div>
+<p>Redacción ordenada (estilo despacho) basada en lo que consta/no consta.</p>
+<div style="height:10px"></div>
+<div class="chip">4) Preview con marca de agua</div>
+<p>Revisas y descargas sin marca de agua (pago por escrito o plan ilimitado).</p>
+<div class="hero-ctas" style="margin-top:18px;">
+</div>
+</div>
+<div aria-label="Ejemplo visual del proceso" class="illus reveal">
+<div class="illus-media">
+<img alt="Persona revisando el informe en pantalla (ejemplo)" decoding="async" height="933" loading="lazy" src="assets/img/shot_person_desk.webp" width="1400"/>
+</div>
+<div class="illus-inner">
+<div class="illus-grid">
+<div class="panel-card">
+<h4>Extracción fiable</h4>
+<p>Menos errores de lectura → mejor análisis.</p>
+</div>
+<div class="panel-card">
+<h4>Checklist accionable</h4>
+<p>Te decimos qué pedir y qué revisar.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-
-
-
-    <!-- FAQ -->
-    <section class="section alt" id="faq">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">FAQ</p>
-          <h2>Preguntas frecuentes</h2>
-          <p class="lead">Información general para tramitar alegaciones y recursos con seguridad documental.</p>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>¿Es válido presentar el escrito generado por Juravia? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>
-              Juravia genera un escrito con estructura administrativa estándar (identificación, hechos, fundamentos y petición) orientado a su presentación ante el órgano competente.
-              La estimación depende del expediente sancionador, de la prueba disponible y de la tramitación del procedimiento.
-            </p>
-          </details>
-
-          <details>
-            <summary>¿Qué documentación debo aportar como anexos? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>
-              Con carácter general: notificación/boletín, fotografías del lugar (señalización, vía, condiciones), documentación técnica relevante (p. ej. certificados, ITV),
-              justificantes (tickets, autorizaciones) y, cuando proceda, solicitudes de acceso a información del expediente. Un anexo bien ordenado mejora la trazabilidad.
-            </p>
-          </details>
-
-          <details>
-            <summary>¿Puedo presentar sin certificado digital? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>
-              Depende del órgano y de la vía habilitada. En algunos casos se admite presentación con sistemas alternativos; en otros será necesario registro presencial o representante.
-              Por eso Juravia incluye una guía de presentación y recomendaciones para conservar el justificante de registro.
-            </p>
-          </details>
-
-          <details>
-            <summary>¿Qué es el acuse de recibo y por qué es clave? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>
-              Es el justificante de registro (telemático o presencial) que acredita fecha y hora de presentación y el número de asiento/registro.
-              Debe conservarse junto con el escrito y anexos: es la prueba de presentación dentro de plazo ante la Administración.
-            </p>
-          </details>
-
-          <details>
-            <summary>¿Cómo controlo los plazos del procedimiento? <span class="chev" aria-hidden="true">+</span></summary>
-            <p>
-              El cómputo puede variar según la notificación y la vía. Revisa la fecha de notificación y el plazo indicado; Juravia genera un recordatorio .ics para control interno,
-              pero la referencia válida es siempre la notificación oficial.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer id="legal">
-    <div class="container">
-      <div class="foot-top" style="display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between;">
-        <div class="foot-brand" style="display:flex; gap:12px; max-width:520px;">
-          <img src="brand_icon.png" onerror="this.onerror=null;this.src='brand_icon.png';" alt="Juravia" style="width:42px; height:42px; filter: drop-shadow(0 10px 16px rgba(0,0,0,.35));"/>
-          <div>
-            <b style="display:block; font-size:14px; letter-spacing:.5px;">JURAVIA</b>
-            <p style="margin:8px 0 0; font-size:13px; color: rgba(255,255,255,.72); line-height:1.55;">
-              Plantillas y herramientas para ayudarte a presentar alegaciones y recursos de forma clara, ordenada y profesional.
-            </p>
-          </div>
-        </div>
-
-        <div class="foot-grid">
-          <div class="foot">
-            <h4>Producto</h4>
-            <ul>
-              <li><a href="#como-funciona">Cómo funciona</a></li>
-              <li><a href="#que-incluye">Qué incluye</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="https://app.juravia.app/">Acceso a la app</a></li>
-            </ul>
-          </div>
-          <div class="foot">
-            <h4>Guías destacadas</h4>
-            <ul>
-              <li><a href="recurrir_multa_baliza_v16.html">Baliza V16</a></li>
-              <li><a href="recurrir_multa_itv_caducada.html">ITV caducada</a></li>
-              <li><a href="recurrir_multa_velocidad.html">Velocidad</a></li>
-            </ul>
-          </div>
-          <div class="foot">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="/legal.html">Aviso legal</a></li>
-              <li><a href="/privacidad.html">Privacidad</a></li>
-              <li><a href="/cookies.html">Cookies</a></li>
-              <li><a href="mailto:soporte@juravia.app">soporte@juravia.app</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="fineprint">
-        © 2025 Juravia. Juravia no presta asesoramiento jurídico individualizado ni garantiza resultados.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-  (function() {
-    // FAQ +/- (simple)
-    document.querySelectorAll('details').forEach(d => {
-      const chev = d.querySelector('.chev');
-      if(!chev) return;
-      const sync = () => { chev.textContent = d.open ? "–" : "+"; };
-      sync();
-      d.addEventListener('toggle', sync);
-    });
-
-    // Menú móvil
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
-    if(btn && menu){
-      const close = () => { menu.style.display = 'none'; btn.setAttribute('aria-expanded', 'false'); };
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        if(open){ close(); return; }
-        menu.style.display = 'block';
-        btn.setAttribute('aria-expanded', 'true');
-      });
-      document.addEventListener('click', (e) => {
-        if(!btn.contains(e.target) && !menu.contains(e.target)) close();
-      });
-      document.addEventListener('keydown', (e) => { if(e.key === 'Escape') close(); });
-    }
-  })();
+<!-- BAND 2 (dark) — Qué detectamos -->
+<section class="band band--dark" id="ejemplos">
+<div class="container">
+<div class="section-head reveal">
+<p class="kicker">Qué detectamos</p>
+<h2>Debilidades frecuentes (y cómo convertirlas en alegaciones)</h2>
+<p class="lead">No es una “plantilla”. Es un análisis del documento que subes y una redacción que se ajusta a lo que consta.</p>
+</div>
+<div class="grid2" data-reveal-group="">
+<div class="card reveal">
+<div class="card-h"><span aria-hidden="true" class="card-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<path d="M12 22a2.2 2.2 0 0 0 2.2-2.2H9.8A2.2 2.2 0 0 0 12 22Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M18 16.8H6c1.2-1.2 2-2.5 2-5.2 0-3.7 1.9-6 4-6s4 2.3 4 6c0 2.7.8 4 2 5.2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg></span><h3>Procedimiento y notificación</h3></div>
+<p>Defectos de notificación, cómputo de plazos, motivación no individualizada, respuestas genéricas.</p>
+</div>
+<div class="card reveal">
+<div class="card-h"><span aria-hidden="true" class="card-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7l-5-5Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M14 2v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M9 11h6" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M9 15h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M16.2 15.8l2.6 2.6" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<circle cx="15.3" cy="14.9" r="2.4" stroke="currentColor" stroke-width="1.8"></circle>
+</svg></span><h3>Prueba y expediente</h3></div>
+<p>Ausencia de anexos clave, trazabilidad dudosa, incoherencias entre denuncia y documentación.</p>
+</div>
+<div class="card reveal">
+<div class="card-h"><span aria-hidden="true" class="card-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<path d="M5.5 17.5a8.5 8.5 0 1 1 13 0" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M12 13l3.2-3.2" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M8.2 17.5H15.8" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg></span><h3>Radar / velocidad</h3></div>
+<p>Verificación/calibración, margen de error, señalización, identificación en la prueba.</p>
+</div>
+<div class="card reveal">
+<div class="card-h"><span aria-hidden="true" class="card-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+</svg></span><h3>ZBE / acceso restringido</h3></div>
+<p>Señalización, exenciones, matrícula/horario, prueba de acceso.</p>
+</div>
+<div class="card reveal">
+<div class="card-h"><span aria-hidden="true" class="card-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<rect height="17" rx="3" stroke="currentColor" stroke-width="1.8" width="16" x="4" y="3.5"></rect>
+<path d="M10 17V7h3.5a3 3 0 0 1 0 6H10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg></span><h3>ORA / estacionamiento</h3></div>
+<p>Señalización y tipificación, fotos/lectura, denuncia incompleta, grúa/retirada y tiempos.</p>
+</div>
+<div class="card reveal">
+<div class="card-h"><span aria-hidden="true" class="card-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<rect height="18.4" rx="2.4" stroke="currentColor" stroke-width="1.8" width="10" x="7" y="2.8"></rect>
+<path d="M10 18.2h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg></span><h3>Móvil, cinturón, semáforo…</h3></div>
+<p>Identificación del conductor, prueba suficiente, coherencia del relato y anexos.</p>
+</div>
+</div>
+<p class="note reveal" style="max-width: 980px; margin: 14px auto 0; text-align:center;">
+          También analizamos: <b>alcoholemia</b>, <b>ITV/seguro</b>, <b>stop</b>, <b>documentación</b>, <b>transporte</b> y más.
+        </p>
+<div aria-label="Galería de ejemplos" class="example-gallery reveal" data-reveal-group="">
+<a class="eg" href="#ejemplos">
+<div class="eg-head">Generación de informe gratis</div>
+<img alt="Informe gratuito de puntos débiles y checklist (datos ocultos)" decoding="async" height="933" loading="lazy" src="assets/img/shot_informe_tablet.webp" width="1400"/>
+</a>
+<a class="eg" href="#ejemplos">
+<div class="eg-head">Preview de escrito de alegaciones gratis</div>
+<img alt="Preview del escrito de alegaciones con marca de agua (datos ocultos)" decoding="async" height="1066" loading="lazy" src="assets/img/shot_escrito_preview.webp" width="1600"/>
+</a>
+</div>
+<div class="hero-ctas reveal" style="justify-content:center; margin-top:18px;">
+<a class="btn" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+</div>
+</section>
+<!-- BAND 3 (light) — Valor + estilo despacho -->
+<section class="band band--light" id="valor">
+<div class="container">
+<div class="section-head reveal">
+<p class="kicker">Borrador</p>
+<h2>Escrito de alegaciones con estructura de despacho (editable)</h2>
+<p class="lead">Basado en lo que consta/no consta en tu PDF. Tú revisas hechos, anexos y matices antes de presentar.</p>
+</div>
+<div class="split" data-reveal-group="">
+<div class="copy reveal">
+<div class="chip">Sin inventar hechos</div>
+<p>El borrador se construye desde el PDF que aportas y lo que se desprende del expediente.</p>
+<div style="height:10px"></div>
+<div class="chip">Con “lista de la compra”</div>
+<p>Si falta documentación (prueba, boletín completo, anexos), te sugerimos qué pedir y cómo.</p>
+<div style="height:10px"></div>
+<div class="chip">Revisión antes de presentar</div>
+<p>La preview con marca de agua te obliga a revisar: hechos, fechas, anexos y matices.</p>
+<div class="hero-ctas" style="margin-top:18px;">
+<a class="btn" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+</div>
+<div aria-label="Persona revisando y redactando alegaciones" class="illus reveal">
+<div class="illus-media">
+<img alt="Ejemplo de borrador de alegaciones (datos ocultos)" decoding="async" height="961" loading="lazy" src="assets/img/mock_borrador.webp" width="685"/>
+</div>
+</div>
+</div>
+<div class="grid3" data-reveal-group="" style="margin-top: 26px;">
+<div class="card reveal">
+<div aria-hidden="true" class="icon">
+<svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+<path d="M14 2v6h6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+<path d="M8 13h8" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M8 17h8" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M8 9h3" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
+</svg>
+</div>
+<h3>Estructura profesional</h3>
+<p>Encabezado, hechos, fundamentos y solicitud final, con anexos propuestos.</p>
+</div>
+<div class="card reveal">
+<div aria-hidden="true" class="icon">
+<svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2 20 6v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+<path d="m9 12 2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</div>
+<h3>Transparencia</h3>
+<p>Si algo no está en el documento, no se inventa: se deja indicado.</p>
+</div>
+<div class="card reveal">
+<div aria-hidden="true" class="icon">
+<svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 2 3 14h7l-1 8 10-12h-7z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</div>
+<h3>De minutos, no días</h3>
+<p>De la notificación a un borrador listo para revisar y presentar.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- BAND 4 (tint) — Guías -->
+<section class="band band--tint" id="guias">
+<div class="container">
+<div class="section-head reveal">
+<p class="kicker">Guías por tipo de multa</p>
+<h2>Radar, ZBE, ORA, móvil, cinturón, alcoholemia…</h2>
+<p class="lead">Consulta una guía rápida y termina en el análisis gratuito para tu caso concreto.</p>
+</div>
+<div class="guides-grid reveal">
+<a class="guide-card" href="recurrir_multa_radar.html"><div class="t"><span aria-hidden="true" class="g-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.5 14.5a7.5 7.5 0 1 1 15 0" stroke="currentColor" stroke-linecap="round"></path>
+<path d="M12 12l4-4" stroke="currentColor" stroke-linecap="round"></path>
+<path d="M7 18h10" stroke="currentColor" stroke-linecap="round"></path>
+</svg></span><strong>Radar / velocidad</strong><span class="mini">→</span></div><span>Cómo recurrir, qué revisar y documentos típicos.</span></a>
+<a class="guide-card" href="recurrir_multa_zbe.html"><div class="t"><span aria-hidden="true" class="g-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+</svg></span><strong>ZBE / acceso</strong><span class="mini">→</span></div><span>Señalización, exenciones y prueba de acceso.</span></a>
+<a class="guide-card" href="recurrir_multa_ora.html"><div class="t"><span aria-hidden="true" class="g-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="16" rx="3" stroke="currentColor" width="16" x="4" y="4"></rect>
+<path d="M10 17V7h4a3 3 0 1 1 0 6h-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></span><strong>ORA / estacionamiento</strong><span class="mini">→</span></div><span>Ticket, señalización, fotos y notificación.</span></a>
+<a class="guide-card" href="recurrir_multa_movil.html"><div class="t"><span aria-hidden="true" class="g-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<rect height="18.4" rx="2.4" stroke="currentColor" stroke-width="1.8" width="10" x="7" y="2.8"></rect>
+<path d="M10 18.2h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg></span><strong>Móvil / distracciones</strong><span class="mini">→</span></div><span>Prueba, circunstancias de observación y contradicción.</span></a>
+<a class="guide-card" href="recurrir_multa_cinturon.html"><div class="t"><span aria-hidden="true" class="g-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 7l10 10" stroke="currentColor" stroke-linecap="round"></path>
+<path d="M9 5.8c2.9 0 5.2 2.3 5.2 5.2" stroke="currentColor" stroke-linecap="round"></path>
+<rect height="4.6" rx="1.2" stroke="currentColor" width="4.6" x="14.2" y="14.2"></rect>
+</svg></span><strong>Cinturón</strong><span class="mini">→</span></div><span>Elementos mínimos que deben constar en el expediente.</span></a>
+<a class="guide-card" href="recurrir_multa_alcoholemia.html"><div class="t"><span aria-hidden="true" class="g-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<path d="M10 2.8h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M10 2.8v5.5l-4.6 7.4A4.2 4.2 0 0 0 9 22h6a4.2 4.2 0 0 0 3.6-6.3L14 8.3V2.8" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M8.4 14.2h7.2" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg></span><strong>Alcoholemia</strong><span class="mini">→</span></div><span>Casos complejos: revisa expediente completo.</span></a>
+<a class="guide-card" href="recurrir_multa_itv.html"><div class="t"><span aria-hidden="true" class="g-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2 20 6v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6z" stroke="currentColor" stroke-linejoin="round"></path>
+<path d="m9.4 12.1 1.9 1.9 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></span><strong>ITV / seguro</strong><span class="mini">→</span></div><span>Documentación y subsanaciones habituales.</span></a>
+<a class="guide-card" href="guias.html"><div class="t"><span aria-hidden="true" class="g-ico"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<rect height="7" rx="2" stroke="currentColor" stroke-width="1.8" width="7" x="4" y="4"></rect>
+<rect height="7" rx="2" stroke="currentColor" stroke-width="1.8" width="7" x="13" y="4"></rect>
+<rect height="7" rx="2" stroke="currentColor" stroke-width="1.8" width="7" x="4" y="13"></rect>
+<rect height="7" rx="2" stroke="currentColor" stroke-width="1.8" width="7" x="13" y="13"></rect>
+</svg></span><strong>Ver todas</strong><span class="mini">→</span></div><span>Accede al hub con buscador y categorías.</span></a>
+</div>
+<div class="hero-ctas reveal" style="justify-content:center; margin-top:22px;">
+<a class="btn" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+</div>
+</section>
+<!-- BAND 4.5 (light) — Opiniones -->
+<section class="band band--light" id="opiniones">
+<div class="container">
+<div class="section-head reveal">
+<p class="kicker">Confianza</p>
+<h2>Lo que nos comentan usuarios</h2>
+<p class="lead">Comentarios que solemos recibir tras usar el análisis y la preview.</p>
+</div>
+<div class="reviews reveal" data-reviews="">
+<button aria-label="Anterior" class="rev-nav prev" data-rev-prev="" type="button">‹</button>
+<div class="reviews-track" data-rev-track="">
+<article class="review-card">
+<div aria-hidden="true" class="stars">★★★★★</div>
+<h3>“Me aclaró qué faltaba”</h3>
+<div class='\"rev-tags\"'><span class="tag">Expediente</span><span class="tag">Anexos</span></div>
+<p>“Subí el PDF y me señaló lo que no aparecía en el expediente. Con eso ya sabes qué pedir y por dónde tirar.”</p>
+<div class="who">Particular · Valencia</div>
+</article>
+<article class="review-card">
+<div aria-hidden="true" class="stars">★★★★★</div>
+<h3>“El escrito venía bastante hecho”</h3>
+<div class='\"rev-tags\"'><span class="tag">Preview</span><span class="tag">Alegaciones</span></div>
+<p>“La estructura está muy bien. Yo solo cambié 2 cosas y añadí un anexo. La preview con marca de agua ayuda mucho.”</p>
+<div class="who">Autónomo · Barcelona</div>
+</article>
+<article class="review-card">
+<div aria-hidden="true" class="stars">★★★★★</div>
+<h3>“Te lo dice claro”</h3>
+<div class='\"rev-tags\"'><span class="tag">Consta/no consta</span><span class="tag">Checklist</span></div>
+<p>“No te vende humo: te marca lo que se ve y lo que no se ve. Si falta algo, te lo pone como no consta.”</p>
+<div class="who">Particular · Madrid</div>
+</article>
+<article class="review-card">
+<div aria-hidden="true" class="stars">★★★★★</div>
+<h3>“Detectó un fallo en la notificación”</h3>
+<div class='\"rev-tags\"'><span class="tag">Notificación</span><span class="tag">Plazos</span></div>
+<p>“Yo no había visto un fallo en la notificación (plazo/forma). El informe me lo marcó y entendí qué pedir en el expediente.”</p>
+<div class="who">Particular · Sevilla</div>
+</article>
+<article class="review-card">
+<div aria-hidden="true" class="stars">★★★★★</div>
+<h3>“Si tienes varias, sale a cuenta”</h3>
+<div class='\"rev-tags\"'><span class="tag">Suscripción</span><span class="tag">Autónomos</span></div>
+<p>“Tuve 3 multas ese mes y con la suscripción me compensó. Lo uso para tenerlo todo ordenado.”</p>
+<div class="who">Autónomo · Zaragoza</div>
+</article>
+</div>
+<button aria-label="Siguiente" class="rev-nav next" data-rev-next="" type="button">›</button>
+</div>
+</div>
+</section>
+<!-- BAND 4.6 (dark) — Comparativa -->
+<section class="band band--dark" id="comparativa">
+<div class="container">
+<div class="compare-head">
+<div class="section-head reveal">
+<p class="kicker">Comparativa</p>
+<h2>Juravia vs plantilla genérica vs despacho</h2>
+<p class="lead">Tres enfoques habituales. Elige el que encaje con tu caso, tiempo y presupuesto.</p>
+</div>
+</div>
+<div class="compare-grid" data-reveal-group="">
+<div class="compare-card featured reveal" data-tilt="">
+<div class="compare-top">
+<div class="compare-left">
+<div aria-hidden="true" class="compare-icon compare-icon--jv"><svg aria-hidden="true" class="cmp-card-ico" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 3v18"></path><path d="M6 7h12"></path><path d="M7 7l-3 6h6l-3-6z"></path><path d="M17 7l-3 6h6l-3-6z"></path><path d="M6 21h12"></path></svg></div>
+<div class="compare-title">
+<strong>Juravia</strong>
+<span class="compare-sub">Análisis + borrador editable</span>
+</div>
+</div>
+<span class="compare-tag">Recomendado</span>
+</div>
+<ul class="compare-points">
+<li>Diagnóstico del PDF (consta / no consta)</li>
+<li>Checklist de expediente, plazos y prueba</li>
+<li>Borrador editable estilo despacho</li>
+<li>Preview + pago solo al descargar</li>
+</ul>
+<p class="compare-ideal"><b>Ideal si</b>: quieres rapidez y una base sólida sin encargo completo.</p>
+</div>
+<div class="compare-card reveal" data-tilt="">
+<div class="compare-top">
+<div class="compare-left">
+<div aria-hidden="true" class="compare-icon compare-icon--tpl"><svg aria-hidden="true" class="cmp-card-ico" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h8"></path><path d="M8 17h8"></path></svg></div>
+<div class="compare-title">
+<strong>Plantilla genérica</strong>
+<span class="compare-sub">Texto estándar</span>
+</div>
+</div>
+</div>
+<ul class="compare-points">
+<li>Texto estándar (sin diagnóstico)</li>
+<li>Adaptación manual de hechos y anexos</li>
+<li>Sin checklist de expediente</li>
+<li>Útil como formato básico</li>
+</ul>
+<p class="compare-ideal"><b>Ideal si</b>: ya sabes qué alegar y solo necesitas un modelo.</p>
+</div>
+<div class="compare-card reveal" data-tilt="">
+<div class="compare-top">
+<div class="compare-left">
+<div aria-hidden="true" class="compare-icon compare-icon--law"><svg aria-hidden="true" class="cmp-card-ico" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M10 3h4a2 2 0 0 1 2 2v2H8V5a2 2 0 0 1 2-2z"></path><path d="M4 7h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"></path><path d="M2 13h20"></path></svg></div>
+<div class="compare-title">
+<strong>Despacho</strong>
+<span class="compare-sub">Revisión profesional</span>
+</div>
+</div>
+</div>
+<ul class="compare-points">
+<li>Revisión profesional y estrategia</li>
+<li>Gestión del expediente (según encargo)</li>
+<li>Escritos y presentación (si aplica)</li>
+<li>Más tiempo y coste</li>
+</ul>
+<p class="compare-ideal"><b>Ideal si</b>: el caso es complejo o hay riesgo alto (puntos, alcoholemia…).</p>
+</div>
+</div>
+<div class="section-cta reveal">
+<a class="btn" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+</div>
+</section>
+<!-- BAND 4.7 (tint) — Seguridad y privacidad -->
+<section class="band band--tint" id="seguridad">
+<div class="container">
+<div class="security-split">
+<div class="security-copy">
+<div class="section-head reveal">
+<p class="kicker">Seguridad y privacidad</p>
+<h2>Tus datos, con minimización y control</h2>
+<p class="lead">Tu multa contiene datos personales. Juravia está diseñado para tratarlos con prudencia: procesamos lo necesario y evitamos conservar el documento más allá de lo imprescindible.</p>
+</div>
+<div class="security-grid" data-reveal-group="">
+<div class="security-card reveal">
+<h3>Privacidad del documento</h3>
+<ul>
+<li>El PDF se usa para extraer el texto y generar el informe y la preview.</li>
+<li>Minimización y retención limitada: evitamos conservar el documento más allá de lo imprescindible para prestar el servicio.</li>
+<li>Puedes solicitar borrado y ejercer tus derechos; consulta finalidades y base legal en la política.</li>
+</ul>
+</div>
+<div class="security-card reveal">
+<h3>Uso de datos y avisos</h3>
+<ul>
+<li>No utilizamos tu documento para publicidad ni lo cedemos o vendemos a terceros.</li>
+<li>Medidas razonables de seguridad: HTTPS, control de acceso y buenas prácticas operativas.</li>
+<li>Herramienta automatizada: no es asesoramiento jurídico ni garantiza resultados.</li>
+</ul>
+<div class="security-links">
+<a class="link-pill" href="privacidad.html">Política de privacidad</a>
+<a class="link-pill" href="avisos.html">Aviso legal</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="Personas usando Juravia en móvil (imagen ilustrativa)" class="security-media reveal" data-parallax="">
+<img alt="Personas usando la app en el móvil (imagen ilustrativa)" decoding="async" height="900" loading="lazy" src="assets/img/security_privacy.webp" width="1600"/>
+</div>
+</div>
+</div>
+</section>
+<!-- BAND 4.8 (light) — Transparencia -->
+<!-- BAND 4.8 (light) — Ámbito (organismos) -->
+<section class="band band--light" id="transparencia">
+<div class="container">
+<div class="section-head reveal">
+<p class="kicker">Ámbito</p>
+<h2>Cobertura por organismo en España</h2>
+</div>
+<div aria-label="Organismos cubiertos" class="coverage-strip" data-reveal-group="">
+<div class="cov-stat reveal">
+<div aria-hidden="true" class="cov-ico">
+<svg fill="none" viewbox="0 0 24 24">
+<path d="M4 19h16" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M6 19V9l6-4 6 4v10" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M9 11h6" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div class="cov-value">DGT</div>
+<div class="cov-note">Tráfico estatal</div>
+</div>
+<div class="cov-stat reveal">
+<div aria-hidden="true" class="cov-ico">
+<svg fill="none" viewbox="0 0 24 24">
+<path d="M4 21V9l8-6 8 6v12" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M9 21v-7h6v7" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div class="cov-value">Municipios</div>
+<div class="cov-note">Ayuntamientos</div>
+</div>
+<div class="cov-stat reveal">
+<div aria-hidden="true" class="cov-ico">
+<svg fill="none" viewbox="0 0 24 24">
+<path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M9.8 10.2 12 8l2.2 2.2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div class="cov-value">SCT</div>
+<div class="cov-note">Cataluña</div>
+</div>
+<div class="cov-stat reveal">
+<div aria-hidden="true" class="cov-ico">
+<svg fill="none" viewbox="0 0 24 24">
+<path d="M3 17c3.5-6 7-10 9-10s5.5 4 9 10" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M6 17c2.5-3.8 4.5-6 6-6s3.5 2.2 6 6" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div class="cov-value">Trafikoa</div>
+<div class="cov-note">País Vasco</div>
+</div>
+</div>
+<p class="cov-foot reveal">Según el documento aportado. La cobertura depende del organismo emisor y de lo que conste en el expediente.</p>
+</div>
+</section>
+<!-- BAND 5 (dark) — Pricing + CTA final -->
+<section class="band band--dark" id="precios">
+<div class="container">
+<div class="section-head reveal">
+<p class="kicker">Precios</p>
+<h2>Análisis gratis. Pagas solo si descargas el escrito final.</h2>
+<p class="lead">Una vez tienes la preview con marca de agua, decides si desbloquear la descarga.</p>
+</div>
+<div class="pricing" data-reveal-group="">
+<div class="plan reveal">
+<h3>Pago por escrito</h3>
+<div class="price">6,99€</div>
+<ul>
+<li>1 descarga sin marca de agua</li>
+<li>Incluye informe + borrador</li>
+<li>Ideal para casos puntuales</li>
+</ul>
+<p class="small">El análisis previo es gratuito. El pago se aplica solo al desbloqueo.</p>
+</div>
+<div class="plan featured reveal">
+<h3>Suscripción ilimitada</h3>
+<div class="price">19€<span>/mes</span></div>
+<ul>
+<li>Descargas ilimitadas sin marca de agua</li>
+<li>Para particulares con varias multas y autónomos</li>
+<li>Amortiza desde ~3 escritos/mes</li>
+</ul>
+<p class="small">Sin permanencia (según condiciones en checkout).</p>
+</div>
+</div>
+<div aria-label="Ejemplo de desbloqueo y descarga" class="pricing-illus reveal">
+<img alt="Ejemplo de análisis gratuito y decisión de desbloqueo (imagen ilustrativa)" decoding="async" height="1066" loading="lazy" src="assets/img/shot_pricing.webp" width="1600"/>
+</div>
+<div class="faq reveal" style="margin-top: 22px;">
+<h3 class="faq-title">Preguntas frecuentes</h3>
+<div class="faq-groups">
+<div class="faq-group">
+<h4 class="faq-group-title">Sobre el análisis</h4>
+<details>
+<summary>¿Qué incluye el análisis gratuito?</summary>
+<p>Un informe automatizado con <b>puntos débiles</b> (procedimiento, prueba, plazos/notificación) y una lectura “<b>lo que consta</b> / <b>no consta</b>” para saber qué falta y qué conviene solicitar o adjuntar.</p>
+</details>
+<details>
+<summary>¿Cuánto tarda el análisis?</summary>
+<p>Normalmente son minutos, según el tamaño del PDF y si necesita OCR. Si el documento está escaneado o con imágenes, el procesamiento puede tardar más.</p>
+</details>
+<details>
+<summary>¿Cuándo se usa OCR y por qué?</summary>
+<p>Si el PDF viene escaneado (sin texto seleccionable), aplicamos OCR selectivo para mejorar la extracción. Así reducimos errores y el informe es más fiable.</p>
+</details>
+<details>
+<summary>¿El análisis está hecho con IA?</summary>
+<p>Sí. Usamos IA para analizar el PDF y señalar posibles puntos débiles en función de lo que <b>consta</b> y lo que <b>no consta</b>. Recomendamos revisar el expediente antes de presentar.</p>
+</details>
+<details>
+<summary>¿Sirve para multas de DGT y ayuntamientos?</summary>
+<p>Sí, siempre que subas el documento que te han notificado (DGT, ayuntamiento, etc.). El análisis se ajusta a lo que consta en tu PDF y nuestras guías te orientan sobre el trámite de cada organismo.</p>
+</details>
+<details>
+<summary>¿Qué pasa si el PDF es una foto o está escaneado?</summary>
+<p>Aplicamos OCR cuando hace falta. Si la calidad es baja o faltan páginas, lo indicamos para evitar conclusiones incorrectas.</p>
+</details>
+<details>
+<summary>¿Qué puntos débiles suele detectar Juravia?</summary>
+<p>Por ejemplo: <b>motivación insuficiente</b>, <b>prueba incompleta</b>, anexos que <b>no constan</b>, incoherencias internas, defectos de notificación y cuestiones de plazos. El resultado depende de lo que aporte tu documento.</p>
+</details>
+</div>
+<div class="faq-group">
+<h4 class="faq-group-title">Sobre el borrador</h4>
+<details>
+<summary>¿El borrador inventa hechos o rellena datos?</summary>
+<p>No. El borrador se apoya en el PDF y en lo que se desprende del expediente. Si falta un dato clave, se marca como <i>no consta</i> y se sugiere qué pedir o adjuntar antes de afirmarlo.</p>
+</details>
+<details>
+<summary>¿Puedo editar el escrito antes de presentarlo?</summary>
+<p>Sí. Tendrás un texto con estructura profesional para <b>revisar y ajustar</b> (hechos, fechas, anexos, matices). Te recomendamos comprobar siempre el contenido antes de presentar.</p>
+</details>
+<details>
+<summary>¿Qué debo pedir en el expediente si el informe dice “no consta”?</summary>
+<p>Suele ser útil solicitar copia íntegra del expediente y pruebas: boletín completo, identificación del agente, fotos/medios probatorios, certificados/calibración (si aplica) y actuaciones. Juravia te sugiere qué pedir según el caso.</p>
+</details>
+<details>
+<summary>¿En qué casos puede no merecer la pena alegar?</summary>
+<p>Si el expediente está completo y la prueba es sólida, puede no ser rentable. El análisis te ayuda a decidir con prudencia y a priorizar esfuerzos.</p>
+</details>
+<details>
+<summary>¿Juravia garantiza que el recurso prospere?</summary>
+<p>No. Juravia no puede garantizar resultados. Sirve para ordenar el caso, detectar carencias y redactar un escrito coherente. El éxito depende del expediente, la prueba y el criterio del órgano competente.</p>
+</details>
+</div>
+<div class="faq-group">
+<h4 class="faq-group-title">Privacidad, pagos y presentación</h4>
+<details>
+<summary>¿Guardáis mi PDF o mis datos?</summary>
+<p>El PDF se procesa para generar el informe y la preview. Aplicamos minimización y retención limitada: el objetivo es <b>conservar lo mínimo imprescindible</b>. Consulta la <a href="privacidad.html">política de privacidad</a> y, si lo necesitas, solicita borrado.</p>
+</details>
+<details>
+<summary>¿Qué incluye el pago de 6,99€?</summary>
+<p>Desbloquea <b>1 descarga</b> del escrito final <b>sin marca de agua</b>. El análisis y la preview son gratuitos; pagas solo si decides descargar.</p>
+</details>
+<details>
+<summary>¿Cuándo compensa la suscripción de 19€/mes?</summary>
+<p>Si prevés descargar varios escritos al mes (por ejemplo, 3 o más), suele salir mejor que pagar por escrito. Está pensada para particulares con varias multas y autónomos.</p>
+</details>
+<details>
+<summary>¿Cómo presento las alegaciones?</summary>
+<p>Depende del organismo (DGT, ayuntamiento, etc.). Consulta nuestras guías y, si falta documentación, pide el expediente antes de afirmar extremos clave.</p>
+</details>
+<details>
+<summary>¿Para qué casos recomendáis revisión profesional?</summary>
+<p>Especialmente en sanciones con <b>pérdida de puntos</b>, <b>alcoholemia</b>, <b>transporte</b> o posible ámbito penal, y cuando el expediente sea complejo o haya riesgo elevado.</p>
+</details>
+<details>
+<summary>Aviso legal</summary>
+<p>Juravia genera un <b>informe automatizado</b> y un borrador para ayudarte a presentar con orden. No es asesoramiento jurídico personalizado ni garantiza resultados. Consulta el <a href="avisos.html">aviso legal</a>.</p>
+</details>
+</div>
+</div>
+</div>
+<div class="hero-ctas reveal" style="justify-content:center; margin-top:22px;">
+<a class="btn" data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Analizar multa gratis</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">
+<img alt="" decoding="async" height="34" loading="lazy" src="brand_icon.png" width="34"/>
+<div>
+<strong>JURAVIA</strong>
+<p class="muted">Legal-tech para recurrir multas con orden: análisis gratuito, puntos débiles y borrador automatizado.</p>
+</div>
+</div>
+</div>
+<div>
+<div class="footer-title">Producto</div>
+<a href="#como">Cómo funciona</a>
+<a href="ejemplos.html">Ejemplos</a>
+<a href="index.html#precios">Precios</a>
+<a data-jv-app-link="" href="https://app.juravia.app/" rel="nofollow">Acceso a la app</a>
+</div>
+<div>
+<div class="footer-title">Guías</div>
+<a href="guias.html">Todas las guías</a>
+<a href="guia_dgt.html">Guía DGT</a>
+<a href="guia_municipal.html">Guía municipal</a>
+</div>
+<div>
+<div class="footer-title">Legal</div>
+<a href="quienes_somos.html">Quiénes somos</a>
+<a href="privacidad.html">Privacidad</a>
+<a href="avisos.html">Aviso legal</a>
+<a href="index.html#precios">Condiciones y precios</a>
+</div>
+</div>
+<div class="footer-bottom">© <span id="y"></span> Juravia · España · Informe automatizado, sin garantía de resultados.</div>
+</div>
+</footer>
+<script defer="" src="assets/app-config.js"></script>
+<script defer="" src="assets/site.js"></script>
+<script>
+    document.getElementById('y').textContent = String(new Date().getFullYear());
   </script>
 </body>
 </html>
