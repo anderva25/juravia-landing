@@ -4209,14 +4209,3 @@ body.page-guide .guide-content-band .btn{
 }
 
 
-/* v14 · mobile guide hero: only h1 + subline aligned left */
-@media (max-width: 980px){
-  body.page-guide #hero h1,
-  body.page-guide #hero .subline{
-    text-align:left !important;
-  }
-  body.page-guide #hero .subline{
-    margin-left:0 !important;
-    margin-right:auto !important;
-  }
-}
