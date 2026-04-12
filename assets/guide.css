@@ -4197,3 +4197,29 @@ body.page-guide .guide-content-band .btn{
     justify-content: center;
   }
 }
+
+
+
+/* v10 · mobile guide hardening */
+@media (max-width: 900px), (hover: none) and (pointer: coarse){
+  body.jv-stable-mobile.page-guide .topbar .brand img,
+  body.jv-stable-mobile.page-guide #hero .hero-brandmark img{
+    filter:none !important;
+    box-shadow:none !important;
+  }
+  body.jv-stable-mobile.page-guide .hero.hero-photo,
+  body.jv-stable-mobile.page-guide #hero{
+    min-height:auto !important;
+    padding-top: 96px !important;
+    padding-bottom: 24px !important;
+  }
+  html body.jv-stable-mobile.page-guide #jv-particles{
+    display:none !important;
+    opacity:0 !important;
+  }
+  body.jv-stable-mobile.page-guide .bg,
+  body.jv-stable-mobile.page-guide .bg::before,
+  body.jv-stable-mobile.page-guide .bg::after{
+    display:none !important;
+  }
+}
