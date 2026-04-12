@@ -1,9 +1,8 @@
 (() => {
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isAndroid = /Android/i.test((navigator && navigator.userAgent) || '');
-  const coarsePointer = window.matchMedia ? window.matchMedia('(hover: none), (pointer: coarse)').matches : (window.innerWidth <= 980);
-  const smallViewport = Math.min(window.innerWidth || 0, screen && screen.width ? screen.width : 9999) <= 980;
-  const stableMobile = !!(isAndroid || coarsePointer || smallViewport);
+  const coarsePointer = window.matchMedia ? window.matchMedia('(hover: none), (pointer: coarse)').matches : (window.innerWidth <= 900);
+  const stableMobile = !!(isAndroid || coarsePointer);
   const DEFAULT_APP_URL = 'https://app.juravia.app/';
   const DEFAULT_GA4_ID = (window.JV_GA4_ID || window.JURAVIA_GA4_ID || 'G-M9PX0ZVVF2');
   const appUrl = (window.JV_APP_URL || window.JURAVIA_APP_URL || DEFAULT_APP_URL);
@@ -89,7 +88,6 @@
 
   window.jvTrack = track;
   const attrib = persistAttrib(parseQuery());
-  if (stableMobile) document.body.classList.add('jv-stable-mobile');
   track('landing_view', { source_surface: 'site' });
 
   function inferPosition(el) {
@@ -290,22 +288,25 @@
 
 
   function createStickyCTA() {
-    if (!stableMobile) return;
+    const mobileEligible = !!(window.matchMedia ? window.matchMedia('(max-width: 980px)').matches : (window.innerWidth <= 980)) || stableMobile;
+    if (!mobileEligible) return;
     if (document.querySelector('.mobile-sticky-cta')) return;
 
     const hero = document.getElementById('hero');
-    const heroSource = hero ? hero.querySelector('.hero-ctas .btn.primary[data-jv-app-link], .hero-ctas [data-jv-app-link].btn.primary, .hero-ctas [data-jv-app-link]') : null;
-    const pagePrimary = document.querySelector('.btn.primary[data-jv-app-link], [data-jv-app-link].btn.primary');
-    const fallback = document.querySelector('[data-jv-app-link]');
-    const source = heroSource || pagePrimary || fallback;
-    if (!source) return;
+    const primarySource = hero ? hero.querySelector('.hero-ctas .btn.primary, .hero-ctas .btn, .hero-ctas [data-jv-app-link], .btn.primary[data-jv-app-link]') : null;
+    const fallback = document.querySelector('[data-jv-app-link].btn, [data-jv-app-link]');
+    const source = primarySource || fallback;
+    if (!source || !document.body) return;
 
     const href = source.getAttribute('href') || appUrl;
     const wrapper = document.createElement('div');
     wrapper.className = 'mobile-sticky-cta';
-    wrapper.setAttribute('aria-label', 'Acceso rápido al análisis');
     wrapper.innerHTML = `
-      <a class="btn primary" data-jv-app-link href="${href}" rel="nofollow">Analizar multa gratis</a>
+      <div class="mobile-sticky-cta__copy">
+        <span class="mobile-sticky-cta__eyebrow">Juravia</span>
+        <span class="mobile-sticky-cta__title">Analiza tu multa gratis antes de pagarla</span>
+      </div>
+      <a class="btn primary" data-jv-app-link href="${href}" rel="nofollow">Analizar gratis</a>
     `;
     document.body.appendChild(wrapper);
     document.body.classList.add('has-mobile-sticky-cta');
@@ -321,8 +322,6 @@
 
     let visible = false;
     let tickingSticky = false;
-    const heroHeight = hero ? Math.max(hero.offsetHeight || 0, 320) : 420;
-    const showAfter = Math.max(140, Math.min(Math.round(heroHeight * 0.33), 320));
     const footer = document.querySelector('footer');
 
     const setStickyVisible = (next) => {
@@ -331,17 +330,20 @@
       wrapper.classList.toggle('is-visible', visible);
     };
 
+    const isMobileViewport = () => {
+      return window.matchMedia ? window.matchMedia('(max-width: 980px)').matches : (window.innerWidth <= 980);
+    };
+
     const shouldHideNearFooter = () => {
       if (!footer) return false;
       const rect = footer.getBoundingClientRect();
-      return rect.top < (window.innerHeight || 0) - 90;
+      return rect.top < (window.innerHeight || 0) - 88;
     };
 
     const updateSticky = () => {
       tickingSticky = false;
       const y = window.scrollY || window.pageYOffset || 0;
-      const mobileViewport = Math.min(window.innerWidth || 0, screen && screen.width ? screen.width : 9999) <= 980;
-      const nextVisible = !!(mobileViewport && y >= showAfter && !shouldHideNearFooter());
+      const nextVisible = !!(isMobileViewport() && y > 260 && !shouldHideNearFooter());
       setStickyVisible(nextVisible);
     };
 
@@ -356,7 +358,8 @@
     window.addEventListener('resize', onStickyScroll, { passive: true });
     window.addEventListener('orientationchange', onStickyScroll, { passive: true });
     window.addEventListener('pageshow', onStickyScroll, { passive: true });
-    window.setTimeout(updateSticky, 180);
+    window.addEventListener('load', onStickyScroll, { passive: true });
+    window.setTimeout(updateSticky, 220);
   }
 
   createStickyCTA();
