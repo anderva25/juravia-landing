@@ -313,23 +313,38 @@
       stickyLink.addEventListener('click', () => track('cta_click', { cta_name: 'sticky_mobile', cta_position: 'sticky', cta_page: pageMeta().page_name }), { passive: true });
     }
 
-    const revealSticky = (show) => {
-      wrapper.classList.toggle('is-visible', !!show);
+    let visible = false;
+    let tickingSticky = false;
+    const heroHeight = hero ? Math.max(hero.offsetHeight || 0, 320) : 420;
+    const showAfter = Math.max(180, Math.min(Math.round(heroHeight * 0.42), 420));
+    const hideBefore = 96;
+
+    const setStickyVisible = (next) => {
+      if (next === visible) return;
+      visible = next;
+      wrapper.classList.toggle('is-visible', visible);
     };
 
-    if (hero && 'IntersectionObserver' in window) {
-      const ioSticky = new IntersectionObserver(
-        (entries) => {
-          const entry = entries[0];
-          revealSticky(!(entry && entry.isIntersecting && entry.intersectionRatio > 0.35));
-        },
-        { root: null, threshold: [0, 0.2, 0.35, 0.6] }
-      );
-      ioSticky.observe(hero);
-    } else {
-      revealSticky((window.scrollY || 0) > 280);
-      window.addEventListener('scroll', () => revealSticky((window.scrollY || 0) > 280), { passive: true });
-    }
+    const updateSticky = () => {
+      tickingSticky = false;
+      const y = window.scrollY || window.pageYOffset || 0;
+      if (visible) {
+        if (y <= hideBefore) setStickyVisible(false);
+      } else if (y >= showAfter) {
+        setStickyVisible(true);
+      }
+    };
+
+    const onStickyScroll = () => {
+      if (tickingSticky) return;
+      tickingSticky = true;
+      requestAnimationFrame(updateSticky);
+    };
+
+    updateSticky();
+    window.addEventListener('scroll', onStickyScroll, { passive: true });
+    window.addEventListener('resize', onStickyScroll, { passive: true });
+    window.addEventListener('orientationchange', onStickyScroll, { passive: true });
   }
 
   createStickyCTA();

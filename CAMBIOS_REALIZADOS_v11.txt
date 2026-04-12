@@ -1,0 +1,12 @@
+v11 · Corrección urgente de la regresión móvil introducida en v10
+
+Base:
+- Se ha rehecho la versión móvil partiendo de v9 (última base estable), no de v10.
+
+Cambios aplicados:
+- Revertido el hardening agresivo de v10 que bloqueaba el scroll vertical.
+- CTA flotante móvil: lógica rehecha sin IntersectionObserver para evitar parpadeo/aparecer-desaparecer.
+- Logo Juravia: sin drop-shadow en móvil.
+- CTA principal: gradiente azul forzado en móvil y brillo animado desactivado en móvil.
+- Contención de overflow horizontal con reglas mínimas sobre html/body y contenedores clave.
+- Analytics: sin cambios en el tracking existente.

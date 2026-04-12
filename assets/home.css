@@ -1187,3 +1187,15 @@ body.home h1{
 }
 
 
+
+
+/* v11 · mobile home corrective patch */
+@media (max-width: 900px), (hover: none) and (pointer: coarse){
+  body.jv-stable-mobile .hero-brandmark img{
+    filter: none !important;
+    box-shadow: none !important;
+  }
+  body.jv-stable-mobile .hero-word__text{
+    text-shadow:none !important;
+  }
+}

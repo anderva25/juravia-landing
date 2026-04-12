@@ -955,3 +955,67 @@ body.jv-stable-mobile{
     padding-top: 40px;
   }
 }
+
+
+/* v11 · mobile-only corrective patch (based on v9) */
+@media (max-width: 900px), (hover: none) and (pointer: coarse){
+  html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body{
+    width: 100%;
+  }
+
+  body.jv-stable-mobile .topbar .brand img,
+  body.jv-stable-mobile .hero-brandmark img,
+  body.jv-stable-mobile .footer-brand img{
+    filter: none !important;
+    box-shadow: none !important;
+  }
+
+  body.jv-stable-mobile .btn.primary,
+  body.jv-stable-mobile a.btn.primary,
+  body.jv-stable-mobile .mobile-sticky-cta .btn{
+    color:#fff !important;
+    background-color:#2A6BFF !important;
+    background-image: linear-gradient(180deg, rgba(42,107,255,1), rgba(11,74,162,1)) !important;
+    border-color: rgba(212,175,55,.72) !important;
+  }
+
+  body.jv-stable-mobile .btn.primary::before,
+  body.jv-stable-mobile .mobile-sticky-cta .btn::before{
+    display:none !important;
+  }
+
+  body.jv-stable-mobile main,
+  body.jv-stable-mobile .hero-center,
+  body.jv-stable-mobile .hero-ctas,
+  body.jv-stable-mobile .cards-grid,
+  body.jv-stable-mobile .pricing,
+  body.jv-stable-mobile .help-grid,
+  body.jv-stable-mobile .guides-grid,
+  body.jv-stable-mobile .footer-grid,
+  body.jv-stable-mobile .guide-wrap,
+  body.jv-stable-mobile .guide-content-band .guide-shell{
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  body.jv-stable-mobile img,
+  body.jv-stable-mobile svg,
+  body.jv-stable-mobile canvas,
+  body.jv-stable-mobile iframe,
+  body.jv-stable-mobile video{
+    max-width: 100%;
+    height: auto;
+  }
+
+  body.jv-stable-mobile .pill-marquee,
+  body.jv-stable-mobile .reviews-wrap,
+  body.jv-stable-mobile .reviews-track{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}

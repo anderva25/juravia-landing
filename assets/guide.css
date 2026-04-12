@@ -4197,3 +4197,13 @@ body.page-guide .guide-content-band .btn{
     justify-content: center;
   }
 }
+
+
+/* v11 · mobile guide corrective patch */
+@media (max-width: 900px), (hover: none) and (pointer: coarse){
+  body.jv-stable-mobile.page-guide .topbar .brand img,
+  body.jv-stable-mobile.page-guide #hero .hero-brandmark img{
+    filter:none !important;
+    box-shadow:none !important;
+  }
+}
