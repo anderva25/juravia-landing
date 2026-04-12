@@ -288,23 +288,20 @@
 
 
   function createStickyCTA() {
-    const mobileEligible = !!(window.matchMedia ? window.matchMedia('(max-width: 980px)').matches : (window.innerWidth <= 980)) || stableMobile;
-    if (!mobileEligible) return;
+    if (!stableMobile) return;
     if (document.querySelector('.mobile-sticky-cta')) return;
-
     const hero = document.getElementById('hero');
-    const primarySource = hero ? hero.querySelector('.hero-ctas .btn.primary, .hero-ctas .btn, .hero-ctas [data-jv-app-link], .btn.primary[data-jv-app-link]') : null;
-    const fallback = document.querySelector('[data-jv-app-link].btn, [data-jv-app-link]');
+    const primarySource = hero ? hero.querySelector('.hero-ctas .btn.primary, .hero-ctas [data-jv-app-link], .btn.primary[data-jv-app-link]') : null;
+    const fallback = document.querySelector('[data-jv-app-link]');
     const source = primarySource || fallback;
-    if (!source || !document.body) return;
-
+    if (!source) return;
     const href = source.getAttribute('href') || appUrl;
     const wrapper = document.createElement('div');
     wrapper.className = 'mobile-sticky-cta';
     wrapper.innerHTML = `
       <div class="mobile-sticky-cta__copy">
         <span class="mobile-sticky-cta__eyebrow">Juravia</span>
-        <span class="mobile-sticky-cta__title">Analiza tu multa gratis antes de pagarla</span>
+        <span class="mobile-sticky-cta__title">Análisis gratis · escrito desde 6,99 € solo si descargas</span>
       </div>
       <a class="btn primary" data-jv-app-link href="${href}" rel="nofollow">Analizar gratis</a>
     `;
@@ -313,53 +310,26 @@
 
     const stickyLink = wrapper.querySelector('[data-jv-app-link]');
     if (stickyLink) {
-      stickyLink.addEventListener('click', () => track('cta_click', {
-        cta_name: 'sticky_mobile',
-        cta_position: 'sticky',
-        cta_page: pageMeta().page_name
-      }), { passive: true });
+      stickyLink.addEventListener('click', () => track('cta_click', { cta_name: 'sticky_mobile', cta_position: 'sticky', cta_page: pageMeta().page_name }), { passive: true });
     }
 
-    let visible = false;
-    let tickingSticky = false;
-    const footer = document.querySelector('footer');
-
-    const setStickyVisible = (next) => {
-      if (next === visible) return;
-      visible = next;
-      wrapper.classList.toggle('is-visible', visible);
+    const revealSticky = (show) => {
+      wrapper.classList.toggle('is-visible', !!show);
     };
 
-    const isMobileViewport = () => {
-      return window.matchMedia ? window.matchMedia('(max-width: 980px)').matches : (window.innerWidth <= 980);
-    };
-
-    const shouldHideNearFooter = () => {
-      if (!footer) return false;
-      const rect = footer.getBoundingClientRect();
-      return rect.top < (window.innerHeight || 0) - 88;
-    };
-
-    const updateSticky = () => {
-      tickingSticky = false;
-      const y = window.scrollY || window.pageYOffset || 0;
-      const nextVisible = !!(isMobileViewport() && y > 260 && !shouldHideNearFooter());
-      setStickyVisible(nextVisible);
-    };
-
-    const onStickyScroll = () => {
-      if (tickingSticky) return;
-      tickingSticky = true;
-      requestAnimationFrame(updateSticky);
-    };
-
-    updateSticky();
-    window.addEventListener('scroll', onStickyScroll, { passive: true });
-    window.addEventListener('resize', onStickyScroll, { passive: true });
-    window.addEventListener('orientationchange', onStickyScroll, { passive: true });
-    window.addEventListener('pageshow', onStickyScroll, { passive: true });
-    window.addEventListener('load', onStickyScroll, { passive: true });
-    window.setTimeout(updateSticky, 220);
+    if (hero && 'IntersectionObserver' in window) {
+      const ioSticky = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+          revealSticky(!(entry && entry.isIntersecting && entry.intersectionRatio > 0.35));
+        },
+        { root: null, threshold: [0, 0.2, 0.35, 0.6] }
+      );
+      ioSticky.observe(hero);
+    } else {
+      revealSticky((window.scrollY || 0) > 280);
+      window.addEventListener('scroll', () => revealSticky((window.scrollY || 0) > 280), { passive: true });
+    }
   }
 
   createStickyCTA();

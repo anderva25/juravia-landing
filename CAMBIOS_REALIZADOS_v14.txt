@@ -1,0 +1,6 @@
+v14
+- CTA flotante móvil restaurado con la lógica exacta de la v9.
+- Se mantienen intactos analytics y tracking.
+- Se revierte la alineación extra en landings secundarias.
+- En móvil, solo h1 y subline del hero en page-guide van alineados a la izquierda.
+- No se toca pricing desktop ni copy general.
