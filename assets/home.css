@@ -1187,20 +1187,3 @@ body.home h1{
 }
 
 
-
-/* v10 · mobile home hardening */
-@media (max-width: 900px), (hover: none) and (pointer: coarse){
-  body.jv-stable-mobile .hero-brandmark img{
-    filter:none !important;
-    box-shadow:none !important;
-  }
-  body.jv-stable-mobile .hero-word__text{
-    text-shadow:none !important;
-  }
-  body.jv-stable-mobile .hero.hero-photo{
-    min-height:auto !important;
-  }
-  body.jv-stable-mobile .hero-sweep{
-    display:none !important;
-  }
-}

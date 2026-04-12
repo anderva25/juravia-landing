@@ -3,9 +3,6 @@
   const isAndroid = /Android/i.test((navigator && navigator.userAgent) || '');
   const coarsePointer = window.matchMedia ? window.matchMedia('(hover: none), (pointer: coarse)').matches : (window.innerWidth <= 900);
   const stableMobile = !!(isAndroid || coarsePointer);
-  if (stableMobile) {
-    document.documentElement.classList.add('jv-stable-mobile-root');
-  }
   const DEFAULT_APP_URL = 'https://app.juravia.app/';
   const DEFAULT_GA4_ID = (window.JV_GA4_ID || window.JURAVIA_GA4_ID || 'G-M9PX0ZVVF2');
   const appUrl = (window.JV_APP_URL || window.JURAVIA_APP_URL || DEFAULT_APP_URL);
@@ -91,11 +88,6 @@
 
   window.jvTrack = track;
   const attrib = persistAttrib(parseQuery());
-  if (stableMobile && document.body) {
-    document.body.classList.add('jv-stable-mobile');
-  } else {
-    window.addEventListener('DOMContentLoaded', () => { if (stableMobile) document.body.classList.add('jv-stable-mobile'); }, { once: true });
-  }
   track('landing_view', { source_surface: 'site' });
 
   function inferPosition(el) {
@@ -299,8 +291,8 @@
     if (!stableMobile) return;
     if (document.querySelector('.mobile-sticky-cta')) return;
     const hero = document.getElementById('hero');
-    const primarySource = hero ? hero.querySelector('.hero-ctas .btn.primary, .hero-ctas .btn, .hero-ctas [data-jv-app-link], .btn.primary[data-jv-app-link]') : null;
-    const fallback = document.querySelector('[data-jv-app-link].btn, [data-jv-app-link]');
+    const primarySource = hero ? hero.querySelector('.hero-ctas .btn.primary, .hero-ctas [data-jv-app-link], .btn.primary[data-jv-app-link]') : null;
+    const fallback = document.querySelector('[data-jv-app-link]');
     const source = primarySource || fallback;
     if (!source) return;
     const href = source.getAttribute('href') || appUrl;
@@ -321,38 +313,23 @@
       stickyLink.addEventListener('click', () => track('cta_click', { cta_name: 'sticky_mobile', cta_position: 'sticky', cta_page: pageMeta().page_name }), { passive: true });
     }
 
-    let visible = false;
-    let ticking = false;
-    const heroHeight = hero ? Math.max(hero.offsetHeight || 0, 320) : 420;
-    const showAfter = Math.max(180, Math.min(Math.round(heroHeight * 0.42), 420));
-    const hideBefore = 88;
-
-    const setVisible = (next) => {
-      if (next === visible) return;
-      visible = next;
-      wrapper.classList.toggle('is-visible', visible);
+    const revealSticky = (show) => {
+      wrapper.classList.toggle('is-visible', !!show);
     };
 
-    const updateSticky = () => {
-      ticking = false;
-      const y = window.scrollY || window.pageYOffset || 0;
-      if (visible) {
-        if (y <= hideBefore) setVisible(false);
-      } else if (y >= showAfter) {
-        setVisible(true);
-      }
-    };
-
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(updateSticky);
-    };
-
-    updateSticky();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll, { passive: true });
-    window.addEventListener('orientationchange', onScroll, { passive: true });
+    if (hero && 'IntersectionObserver' in window) {
+      const ioSticky = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+          revealSticky(!(entry && entry.isIntersecting && entry.intersectionRatio > 0.35));
+        },
+        { root: null, threshold: [0, 0.2, 0.35, 0.6] }
+      );
+      ioSticky.observe(hero);
+    } else {
+      revealSticky((window.scrollY || 0) > 280);
+      window.addEventListener('scroll', () => revealSticky((window.scrollY || 0) > 280), { passive: true });
+    }
   }
 
   createStickyCTA();
