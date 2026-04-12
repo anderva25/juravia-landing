@@ -1,5 +1,8 @@
 (() => {
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isAndroid = /Android/i.test((navigator && navigator.userAgent) || '');
+  const coarsePointer = window.matchMedia ? window.matchMedia('(hover: none), (pointer: coarse)').matches : (window.innerWidth <= 900);
+  const stableMobile = !!(isAndroid || coarsePointer);
   const DEFAULT_APP_URL = 'https://app.juravia.app/';
   const DEFAULT_GA4_ID = (window.JV_GA4_ID || window.JURAVIA_GA4_ID || 'G-M9PX0ZVVF2');
   const appUrl = (window.JV_APP_URL || window.JURAVIA_APP_URL || DEFAULT_APP_URL);
@@ -167,7 +170,7 @@
       el.style.setProperty('--d', `${Math.min(i * 70, 420)}ms`);
     });
   });
-  if ('IntersectionObserver' in window && els.length) {
+  if ('IntersectionObserver' in window && els.length && !stableMobile) {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((en) => {
@@ -259,7 +262,7 @@
   }
 
   const parallaxEls = Array.from(document.querySelectorAll('[data-parallax]'));
-  if (parallaxEls.length && !reduceMotion) {
+  if (parallaxEls.length && !reduceMotion && !stableMobile) {
     let ticking = false;
     const update = () => {
       ticking = false;
@@ -282,11 +285,60 @@
     onScroll();
   }
 
+
+
+  function createStickyCTA() {
+    if (!stableMobile) return;
+    if (document.querySelector('.mobile-sticky-cta')) return;
+    const hero = document.getElementById('hero');
+    const primarySource = hero ? hero.querySelector('.hero-ctas .btn.primary, .hero-ctas [data-jv-app-link], .btn.primary[data-jv-app-link]') : null;
+    const fallback = document.querySelector('[data-jv-app-link]');
+    const source = primarySource || fallback;
+    if (!source) return;
+    const href = source.getAttribute('href') || appUrl;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'mobile-sticky-cta';
+    wrapper.innerHTML = `
+      <div class="mobile-sticky-cta__copy">
+        <span class="mobile-sticky-cta__eyebrow">Juravia</span>
+        <span class="mobile-sticky-cta__title">Análisis gratis · escrito desde 6,99 € solo si descargas</span>
+      </div>
+      <a class="btn primary" data-jv-app-link href="${href}" rel="nofollow">Analizar gratis</a>
+    `;
+    document.body.appendChild(wrapper);
+    document.body.classList.add('has-mobile-sticky-cta');
+
+    const stickyLink = wrapper.querySelector('[data-jv-app-link]');
+    if (stickyLink) {
+      stickyLink.addEventListener('click', () => track('cta_click', { cta_name: 'sticky_mobile', cta_position: 'sticky', cta_page: pageMeta().page_name }), { passive: true });
+    }
+
+    const revealSticky = (show) => {
+      wrapper.classList.toggle('is-visible', !!show);
+    };
+
+    if (hero && 'IntersectionObserver' in window) {
+      const ioSticky = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+          revealSticky(!(entry && entry.isIntersecting && entry.intersectionRatio > 0.35));
+        },
+        { root: null, threshold: [0, 0.2, 0.35, 0.6] }
+      );
+      ioSticky.observe(hero);
+    } else {
+      revealSticky((window.scrollY || 0) > 280);
+      window.addEventListener('scroll', () => revealSticky((window.scrollY || 0) > 280), { passive: true });
+    }
+  }
+
+  createStickyCTA();
+
   const canvas = document.getElementById('jv-particles');
   const preferSaveData = (navigator && navigator.connection && navigator.connection.saveData) ? true : false;
   const strongDevice = (navigator && navigator.hardwareConcurrency) ? navigator.hardwareConcurrency >= 4 : true;
   const bigScreen = window.matchMedia ? window.matchMedia('(min-width: 900px)').matches : (window.innerWidth >= 900);
-  const enableParticles = !preferSaveData && strongDevice && bigScreen;
+  const enableParticles = !preferSaveData && strongDevice && bigScreen && !stableMobile;
 
   if (canvas && (!enableParticles || reduceMotion)) { canvas.style.display = 'none'; }
 

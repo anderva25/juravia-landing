@@ -1,0 +1,67 @@
+Juravia landings · ajustes SEO + conversión + estabilidad mobile
+
+Cambios principales aplicados
+1. Scroll / mobile
+- Desacopladas las páginas secundarias de home.css.
+- Eliminada la dependencia de body.home en páginas secundarias.
+- Añadido modo estable móvil en CSS/JS para Android / puntero táctil:
+  - sin smooth scroll
+  - sin parallax
+  - sin partículas
+  - sin reveal animado
+  - topbar no sticky en modo estable móvil
+  - sticky CTA inferior mobile
+- CTA sticky mobile generado vía JS y ocultado al estar el hero visible.
+
+2. Arquitectura CSS
+- Las páginas no-home ya no cargan assets/home.css.
+- guide.css ahora gobierna las páginas secundarias de forma autónoma.
+
+3. SEO interno
+- Limpieza de self-links en navegación secundaria, footer y bloques relacionados.
+- Navegación interna de páginas secundarias apuntando a URLs reales:
+  como-funciona.html, ejemplos.html, precios.html, guias.html
+- Robots revisados:
+  - index,follow: como-funciona, ejemplos, precios
+  - noindex,follow: privacidad, avisos
+- Titles acortados y homogeneizados.
+- Schema consistente:
+  - Home: Organization + WebSite + SoftwareApplication + FAQPage
+  - Guías/landings: Article + BreadcrumbList + FAQPage
+  - Soporte: WebPage + BreadcrumbList (+ FAQPage si aplica)
+  - Guías hub: CollectionPage + BreadcrumbList
+- sitemap actualizado con como-funciona, ejemplos y precios.
+
+4. Conversión
+- Hero home reforzado con propuesta de valor más directa.
+- Bloque de pricing en home reordenado para destacar pago por escrito.
+- Precios reforzado con anclaje: análisis gratis + pago único más visible.
+- Nuevas secciones compactas en:
+  - como-funciona.html
+  - ejemplos.html
+  - precios.html
+- CTA sticky mobile añadido sin saturar el diseño.
+
+Revisión técnica realizada
+- Validación sintáctica de assets/site.js con node --check.
+- Verificación de enlaces locales sin rotos.
+- Comprobación de titles sin longitudes excesivas.
+- Comprobación de eliminación de home.css en páginas secundarias.
+
+4. Ajuste fino home (v5)
+- Recuperado el efecto marquee de los pills en escritorio.
+- Mantenidos estáticos en móvil para preservar legibilidad y estabilidad.
+- Reforzado el headline principal con un mensaje más directo orientado a engagement y revisión antes de pagar.
+
+
+v6
+- Home: headline principal rehecho con foco en 'gratis' y valor de revisión antes de pagar.
+- Home: meta title/description y og actualizados para reflejar el nuevo posicionamiento.
+- Secundarias: subfrases del hero sintetizadas para evitar bloques largos y wraps poco elegantes.
+- CSS: subline de heroes secundarios recentrada y limitada de ancho para corregir el descuadre visual.
+
+
+v7
+- Home: headline principal reforzado con foco en fallos de la multa + análisis gratis.
+- Home: meta title, description y Open Graph alineados con el nuevo posicionamiento.
+- Guías/landings secundarias: mejora de contraste en botones sobre superficies claras para evitar CTAs poco visibles.

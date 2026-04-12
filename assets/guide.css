@@ -3206,107 +3206,107 @@ body.page-guide .hero.hero-photo .hero-sweep{
 }
 
 /* Secondary landing hero: mirror Home background/hero structure while preserving guide copy styling */
-body.home.page-guide #hero{
+body.page-guide #hero{
   padding-top: 110px;
   padding-bottom: 34px;
   position: relative;
   overflow: hidden;
 }
-body.home.page-guide #hero .hero-center{
+body.page-guide #hero .hero-center{
   max-width: 980px;
   margin: 0 auto;
 }
-body.home.page-guide #hero .kicker{
+body.page-guide #hero .kicker{
   color: rgba(246,247,251,.78);
   letter-spacing: .24em;
   text-transform: uppercase;
   font-size: 12px;
 }
-body.home.page-guide #hero h1{
+body.page-guide #hero h1{
   color: #f6f7fb;
   margin-top: 10px;
 }
-body.home.page-guide #hero .lead{
+body.page-guide #hero .lead{
   color: rgba(246,247,251,.75);
   max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
 }
-body.home.page-guide #hero .breadcrumbs{
+body.page-guide #hero .breadcrumbs{
   justify-content: center;
   margin-top: 10px;
 }
-body.home.page-guide #hero .breadcrumbs a,
-body.home.page-guide #hero .breadcrumbs span{
+body.page-guide #hero .breadcrumbs a,
+body.page-guide #hero .breadcrumbs span{
   color: rgba(246,247,251,.72);
 }
-body.home.page-guide #hero .breadcrumbs a:hover{
+body.page-guide #hero .breadcrumbs a:hover{
   color: rgba(246,247,251,.92);
 }
-body.home.page-guide #hero .guide-hero-actions{
+body.page-guide #hero .guide-hero-actions{
   margin-top: 18px;
   align-items: center;
 }
-body.home.page-guide #hero .guide-hero-actions > .btn{
+body.page-guide #hero .guide-hero-actions > .btn{
   width: auto;
   padding-left: 26px;
   padding-right: 26px;
 }
-body.home.page-guide #hero .pills--guide{
+body.page-guide #hero .pills--guide{
   justify-content: center;
 }
 @media (max-width: 720px){
-  body.home.page-guide #hero{
+  body.page-guide #hero{
     padding-top: 102px;
     padding-bottom: 24px;
   }
 }
 
 /* v4: secondary landing hero layout aligned to Home */
-body.home.page-guide #hero{
+body.page-guide #hero{
   padding-top: 132px;
   padding-bottom: 42px;
 }
-body.home.page-guide #hero .hero-center{
+body.page-guide #hero .hero-center{
   max-width: 980px;
   margin: 0 auto;
   gap: clamp(18px, 2.8vh, 28px);
   padding-top: clamp(38px, 7vh, 74px);
   padding-bottom: clamp(52px, 8vh, 96px);
 }
-body.home.page-guide #hero .hero-brandmark{
+body.page-guide #hero .hero-brandmark{
   margin: 0;
 }
-body.home.page-guide #hero h1{
+body.page-guide #hero h1{
   max-width: 14ch;
   margin-top: 0;
   margin-bottom: 0;
 }
-body.home.page-guide #hero .lead{
+body.page-guide #hero .lead{
   max-width: 48ch;
   font-size: clamp(18px, 1.5vw, 22px);
   line-height: 1.65;
   margin-top: 0;
 }
-body.home.page-guide #hero .guide-hero-actions{
+body.page-guide #hero .guide-hero-actions{
   margin-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body.home.page-guide #hero .guide-hero-actions > .btn{
+body.page-guide #hero .guide-hero-actions > .btn{
   min-width: 0;
   padding-left: 26px;
   padding-right: 26px;
 }
-body.home.page-guide #hero .guide-hero-meta{
+body.page-guide #hero .guide-hero-meta{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   margin-top: 8px;
 }
-body.home.page-guide #hero .guide-hero-meta .kicker{
+body.page-guide #hero .guide-hero-meta .kicker{
   order: 2;
   margin: 0;
   color: rgba(246,247,251,.76);
@@ -3314,33 +3314,33 @@ body.home.page-guide #hero .guide-hero-meta .kicker{
   text-transform: uppercase;
   font-size: 12px;
 }
-body.home.page-guide #hero .guide-hero-meta .breadcrumbs{
+body.page-guide #hero .guide-hero-meta .breadcrumbs{
   order: 1;
   margin: 0;
   justify-content: center;
 }
-body.home.page-guide #hero .guide-hero-meta .breadcrumbs a,
-body.home.page-guide #hero .guide-hero-meta .breadcrumbs span{
+body.page-guide #hero .guide-hero-meta .breadcrumbs a,
+body.page-guide #hero .guide-hero-meta .breadcrumbs span{
   color: rgba(246,247,251,.68);
 }
 @media (max-width: 720px){
-  body.home.page-guide #hero{
+  body.page-guide #hero{
     padding-top: 116px;
     padding-bottom: 28px;
   }
-  body.home.page-guide #hero .hero-center{
+  body.page-guide #hero .hero-center{
     padding-top: 28px;
     padding-bottom: 56px;
     gap: 16px;
   }
-  body.home.page-guide #hero h1{
+  body.page-guide #hero h1{
     max-width: 16ch;
   }
-  body.home.page-guide #hero .lead{
+  body.page-guide #hero .lead{
     max-width: 34ch;
     font-size: 17px;
   }
-  body.home.page-guide #hero .guide-hero-meta{
+  body.page-guide #hero .guide-hero-meta{
     gap: 10px;
     margin-top: 4px;
   }
@@ -3348,31 +3348,31 @@ body.home.page-guide #hero .guide-hero-meta .breadcrumbs span{
 
 
 /* v5: secondary hero scale matched to Home */
-body.home.page-guide #hero{
+body.page-guide #hero{
   padding-top: 118px;
   padding-bottom: 36px;
 }
-body.home.page-guide #hero .hero-center{
+body.page-guide #hero .hero-center{
   max-width: 1100px;
   gap: clamp(16px, 2.6vh, 30px);
   padding: clamp(24px, 6vh, 62px) 0 clamp(44px, 8vh, 96px);
 }
-body.home.page-guide #hero .hero-brandmark{
+body.page-guide #hero .hero-brandmark{
   gap: 10px;
 }
-body.home.page-guide #hero .hero-brandmark img{
+body.page-guide #hero .hero-brandmark img{
   width: 132px;
   max-width: min(132px, 34vw);
   border-radius: 22px;
 }
-body.home.page-guide #hero .hero-word__text{
+body.page-guide #hero .hero-word__text{
   font-size: clamp(24px, 2.9vw, 38px);
   letter-spacing: .55px;
 }
-body.home.page-guide #hero .hero-word__line{
+body.page-guide #hero .hero-word__line{
   width: clamp(120px, 14vw, 170px);
 }
-body.home.page-guide #hero h1{
+body.page-guide #hero h1{
   max-width: 20ch;
   font-size: clamp(34px, 4.2vw, 58px);
   line-height: 1.10;
@@ -3381,7 +3381,7 @@ body.home.page-guide #hero h1{
   margin-top: 2px;
   margin-bottom: 8px;
 }
-body.home.page-guide #hero .lead{
+body.page-guide #hero .lead{
   max-width: 68ch;
   margin: 0;
   margin-top: 10px;
@@ -3389,54 +3389,54 @@ body.home.page-guide #hero .lead{
   line-height: 1.65;
   color: rgba(255,255,255,.90);
 }
-body.home.page-guide #hero .guide-hero-actions{
+body.page-guide #hero .guide-hero-actions{
   justify-content: center;
   gap: 12px;
   margin-top: 14px;
 }
-body.home.page-guide #hero .guide-hero-actions > .btn,
-body.home.page-guide #hero .guide-hero-actions > .btn.primary{
+body.page-guide #hero .guide-hero-actions > .btn,
+body.page-guide #hero .guide-hero-actions > .btn.primary{
   padding: 20px 30px;
   border-radius: 20px;
   font-size: 15px;
 }
-body.home.page-guide #hero .guide-hero-meta{
+body.page-guide #hero .guide-hero-meta{
   gap: 10px;
   margin-top: 2px;
 }
-body.home.page-guide #hero .guide-hero-meta .breadcrumbs{
+body.page-guide #hero .guide-hero-meta .breadcrumbs{
   font-size: 14px;
 }
 @media (max-width: 720px){
-  body.home.page-guide #hero{
+  body.page-guide #hero{
     padding-top: 108px;
     padding-bottom: 26px;
   }
-  body.home.page-guide #hero .hero-brandmark img{
+  body.page-guide #hero .hero-brandmark img{
     width: min(118px, 34vw);
   }
-  body.home.page-guide #hero h1{
+  body.page-guide #hero h1{
     max-width: 13ch;
   }
 }
 
 
 /* === Final home-match lock for secondary guide heroes === */
-body.home.page-guide .topbar .brand,
-body.home.page-guide .topbar .brand img,
-body.home.page-guide .topbar .brand span{
+body.page-guide .topbar .brand,
+body.page-guide .topbar .brand img,
+body.page-guide .topbar .brand span{
   all: unset;
 }
-body.home.page-guide .topbar .brand{
+body.page-guide .topbar .brand{
   display:flex !important;
   align-items:center !important;
   gap:10px !important;
   text-decoration:none !important;
 }
-body.home.page-guide .topbar .brand img{width:30px !important; height:30px !important; display:block !important; filter: drop-shadow(0 14px 20px rgba(0,0,0,.45)) !important;}
-body.home.page-guide .topbar .brand span{font-weight:900 !important; letter-spacing:.35px !important; font-size:14px !important; color:inherit !important;}
+body.page-guide .topbar .brand img{width:30px !important; height:30px !important; display:block !important; filter: drop-shadow(0 14px 20px rgba(0,0,0,.45)) !important;}
+body.page-guide .topbar .brand span{font-weight:900 !important; letter-spacing:.35px !important; font-size:14px !important; color:inherit !important;}
 
-body.home.page-guide #hero .hero-center{
+body.page-guide #hero .hero-center{
   max-width: none !important;
   width:100% !important;
   gap: clamp(16px, 2.6vh, 30px) !important;
@@ -3445,7 +3445,7 @@ body.home.page-guide #hero .hero-center{
   align-items:center !important;
   justify-content:flex-start !important;
 }
-body.home.page-guide #hero .hero-brandmark{
+body.page-guide #hero .hero-brandmark{
   display:flex !important;
   flex-direction:column !important;
   align-items:center !important;
@@ -3453,7 +3453,7 @@ body.home.page-guide #hero .hero-brandmark{
   gap:10px !important;
   margin:0 !important;
 }
-body.home.page-guide #hero .hero-brandmark img{
+body.page-guide #hero .hero-brandmark img{
   width: clamp(148px, 15vw, 228px) !important;
   height:auto !important;
   display:block !important;
@@ -3461,27 +3461,27 @@ body.home.page-guide #hero .hero-brandmark img{
   box-shadow:none !important;
   filter: drop-shadow(0 18px 42px rgba(0,0,0,.48)) !important;
 }
-body.home.page-guide #hero .hero-word{
+body.page-guide #hero .hero-word{
   display:flex !important;
   flex-direction:column !important;
   align-items:center !important;
   gap:8px !important;
 }
-body.home.page-guide #hero .hero-word__text{
+body.page-guide #hero .hero-word__text{
   font-weight:900 !important;
   letter-spacing:.55px !important;
   font-size: clamp(24px, 2.9vw, 38px) !important;
   color: rgba(246,247,251,.92) !important;
   text-shadow: 0 10px 30px rgba(0,0,0,.55) !important;
 }
-body.home.page-guide #hero .hero-word__line{
+body.page-guide #hero .hero-word__line{
   width: clamp(120px, 14vw, 170px) !important;
   height:2px !important;
   border-radius:999px !important;
   background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.96), rgba(212,175,55,0)) !important;
   opacity:.95 !important;
 }
-body.home.page-guide #hero .kicker{
+body.page-guide #hero .kicker{
   display:inline-flex !important;
   align-items:center !important;
   gap:10px !important;
@@ -3491,7 +3491,7 @@ body.home.page-guide #hero .kicker{
   text-transform:uppercase !important;
   color: rgba(246,247,251,.82) !important;
 }
-body.home.page-guide #hero h1{
+body.page-guide #hero h1{
   font-size: clamp(34px, 4.2vw, 58px) !important;
   line-height:1.10 !important;
   letter-spacing:-0.02em !important;
@@ -3501,29 +3501,32 @@ body.home.page-guide #hero h1{
   max-width:none !important;
   color:#f6f7fb !important;
 }
-body.home.page-guide #hero .subline{
-  max-width:68ch !important;
-  margin:0 !important;
-  margin-top:10px !important;
+body.page-guide #hero .subline{
+  max-width:60ch !important;
+  margin:10px auto 0 !important;
   font-size:16px !important;
-  line-height:1.65 !important;
+  line-height:1.62 !important;
   color: rgba(255,255,255,.90) !important;
+  text-wrap: pretty;
 }
-body.home.page-guide #hero .hero-ctas.center{
+body.page-guide #hero h1{
+  text-wrap: balance;
+}
+body.page-guide #hero .hero-ctas.center{
   justify-content:center !important;
   gap:12px !important;
   margin-top:14px !important;
 }
-body.home.page-guide #hero .hero-ctas.center .btn{
+body.page-guide #hero .hero-ctas.center .btn{
   padding:18px 26px !important;
   border-radius:20px !important;
   font-size:14px !important;
 }
-body.home.page-guide #hero .hero-ctas.center .btn.primary{
+body.page-guide #hero .hero-ctas.center .btn.primary{
   padding:20px 30px !important;
   font-size:15px !important;
 }
-body.home.page-guide #hero .hero-breadcrumbs{
+body.page-guide #hero .hero-breadcrumbs{
   display:flex !important;
   flex-wrap:wrap !important;
   justify-content:center !important;
@@ -3532,48 +3535,48 @@ body.home.page-guide #hero .hero-breadcrumbs{
   color: rgba(246,247,251,.72) !important;
   margin: 12px 0 0 !important;
 }
-body.home.page-guide #hero .hero-breadcrumbs a,
-body.home.page-guide #hero .hero-breadcrumbs span{color: rgba(246,247,251,.72) !important;}
-body.home.page-guide #hero .hero-breadcrumbs a:hover{color: rgba(246,247,251,.92) !important;}
+body.page-guide #hero .hero-breadcrumbs a,
+body.page-guide #hero .hero-breadcrumbs span{color: rgba(246,247,251,.72) !important;}
+body.page-guide #hero .hero-breadcrumbs a:hover{color: rgba(246,247,251,.92) !important;}
 
 
 /* HOME-HERO parity overrides for secondary guides */
 
-body.home.page-guide .guide-hero-card{all:unset;}
-body.home.page-guide .hero.hero-photo{min-height:860px;padding-top:72px;}
-body.home.page-guide #hero .container{position:relative;z-index:2;}
-body.home.page-guide #hero .hero-center{max-width:980px;margin:0 auto;text-align:center;align-items:center;}
-body.home.page-guide #hero .hero-brandmark{margin:0 auto 28px;}
-body.home.page-guide #hero .hero-brandmark img{width:419px;max-width:min(78vw,419px);height:auto;}
-body.home.page-guide #hero .hero-word{margin-top:20px;}
-body.home.page-guide #hero .hero-word__text{font-size:68px;letter-spacing:-.04em;}
-body.home.page-guide #hero .hero-word__line{margin-top:14px;}
-body.home.page-guide #hero .kicker{margin:12px 0 18px;text-align:center;}
-body.home.page-guide #hero h1{max-width:1080px;margin:0 auto;font-size:clamp(46px,6.4vw,84px);line-height:.98;letter-spacing:-.04em;font-weight:900;text-align:center;color:#f3f7ff;}
-body.home.page-guide #hero .subline{max-width:930px;margin:26px auto 0;text-align:center;color:rgba(232,240,255,.88);font-size:clamp(18px,2.05vw,22px);line-height:1.6;}
-body.home.page-guide #hero .hero-ctas.center{justify-content:center;margin-top:34px;}
-body.home.page-guide #hero .hero-ctas.center .btn{min-width:226px;padding:17px 30px;font-size:18px;}
-body.home.page-guide #hero .hero-breadcrumbs{justify-content:center;margin-top:26px;text-align:center;}
-body.home.page-guide .bg .grid{opacity:.14!important;}
-body.home.page-guide #jv-particles{display:block!important;opacity:1!important;}
+body.page-guide .guide-hero-card{all:unset;}
+body.page-guide .hero.hero-photo{min-height:860px;padding-top:72px;}
+body.page-guide #hero .container{position:relative;z-index:2;}
+body.page-guide #hero .hero-center{max-width:980px;margin:0 auto;text-align:center;align-items:center;}
+body.page-guide #hero .hero-brandmark{margin:0 auto 28px;}
+body.page-guide #hero .hero-brandmark img{width:419px;max-width:min(78vw,419px);height:auto;}
+body.page-guide #hero .hero-word{margin-top:20px;}
+body.page-guide #hero .hero-word__text{font-size:68px;letter-spacing:-.04em;}
+body.page-guide #hero .hero-word__line{margin-top:14px;}
+body.page-guide #hero .kicker{margin:12px 0 18px;text-align:center;}
+body.page-guide #hero h1{max-width:1080px;margin:0 auto;font-size:clamp(46px,6.4vw,84px);line-height:.98;letter-spacing:-.04em;font-weight:900;text-align:center;color:#f3f7ff;}
+body.page-guide #hero .subline{max-width:930px;margin:26px auto 0;text-align:center;color:rgba(232,240,255,.88);font-size:clamp(18px,2.05vw,22px);line-height:1.6;}
+body.page-guide #hero .hero-ctas.center{justify-content:center;margin-top:34px;}
+body.page-guide #hero .hero-ctas.center .btn{min-width:226px;padding:17px 30px;font-size:18px;}
+body.page-guide #hero .hero-breadcrumbs{justify-content:center;margin-top:26px;text-align:center;}
+body.page-guide .bg .grid{opacity:.14!important;}
+body.page-guide #jv-particles{display:block!important;opacity:1!important;}
 
 @media (max-width: 900px){
-  body.home.page-guide .hero.hero-photo{min-height:760px;}
-  body.home.page-guide #hero .hero-brandmark img{max-width:min(70vw,320px);}
-  body.home.page-guide #hero .hero-word__text{font-size:56px;}
-  body.home.page-guide #hero h1{font-size:clamp(38px,9vw,62px);}
-  body.home.page-guide #hero .subline{font-size:18px;}
+  body.page-guide .hero.hero-photo{min-height:760px;}
+  body.page-guide #hero .hero-brandmark img{max-width:min(70vw,320px);}
+  body.page-guide #hero .hero-word__text{font-size:56px;}
+  body.page-guide #hero h1{font-size:clamp(38px,9vw,62px);}
+  body.page-guide #hero .subline{font-size:18px;}
 }
 
 @media (max-width: 640px){
-  body.home.page-guide .hero.hero-photo{min-height:680px;padding-top:48px;}
-  body.home.page-guide #hero .hero-brandmark{margin-bottom:22px;}
-  body.home.page-guide #hero .hero-brandmark img{max-width:min(72vw,260px);}
-  body.home.page-guide #hero .hero-word__text{font-size:46px;}
-  body.home.page-guide #hero .kicker{margin:10px 0 14px;}
-  body.home.page-guide #hero h1{font-size:clamp(34px,11vw,52px);}
-  body.home.page-guide #hero .subline{font-size:17px;line-height:1.55;}
-  body.home.page-guide #hero .hero-ctas.center .btn{width:auto;min-width:210px;}
+  body.page-guide .hero.hero-photo{min-height:680px;padding-top:48px;}
+  body.page-guide #hero .hero-brandmark{margin-bottom:22px;}
+  body.page-guide #hero .hero-brandmark img{max-width:min(72vw,260px);}
+  body.page-guide #hero .hero-word__text{font-size:46px;}
+  body.page-guide #hero .kicker{margin:10px 0 14px;}
+  body.page-guide #hero h1{font-size:clamp(34px,11vw,52px);}
+  body.page-guide #hero .subline{font-size:17px;line-height:1.55;}
+  body.page-guide #hero .hero-ctas.center .btn{width:auto;min-width:210px;}
 }
 
 
@@ -3600,14 +3603,14 @@ body.home.page-guide #jv-particles{display:block!important;opacity:1!important;}
 .page-guide .band--light .card.guide-section > .related,
 .page-guide .band--light .card.guide-section > .related-title{max-width:none !important; width:100% !important;}
 body.page-guide .guide-wrap a.pill{padding-left:18px !important;}
-body.home.page-guide #guide-list .card h3,
-body.home.page-guide #guide-list .card p,
-body.home.page-guide #guide-list .card .muted2{color:rgba(246,247,251,.92) !important;}
-body.home.page-guide #guide-list .card .muted2{opacity:.9;}
-body.home.page-guide #guide-list .card{border-color:rgba(255,255,255,.16) !important; background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03)) !important;}
-body.home.page-guide .section .section-head .lead,
-body.home.page-guide .section .section-head h2,
-body.home.page-guide .section .section-head .kicker{color:rgba(246,247,251,.94) !important;}
+body.page-guide #guide-list .card h3,
+body.page-guide #guide-list .card p,
+body.page-guide #guide-list .card .muted2{color:rgba(246,247,251,.92) !important;}
+body.page-guide #guide-list .card .muted2{opacity:.9;}
+body.page-guide #guide-list .card{border-color:rgba(255,255,255,.16) !important; background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03)) !important;}
+body.page-guide .section .section-head .lead,
+body.page-guide .section .section-head h2,
+body.page-guide .section .section-head .kicker{color:rgba(246,247,251,.94) !important;}
 
 
 /* v11 bullets + cluster focus + hub fixes */
@@ -3658,11 +3661,11 @@ body.page-guide .cluster-focus p{
 body.page-guide .cluster-focus .btn{
   width: auto;
 }
-body.home.page-guide .guide-card[href="guias.html"]{
+body.page-guide .guide-card[href="guias.html"]{
   cursor: pointer;
 }
-body.home.page-guide #guide-list .card .mini,
-body.home.page-guide #guide-list .guide-card .mini{
+body.page-guide #guide-list .card .mini,
+body.page-guide #guide-list .guide-card .mini{
   color: rgba(246,247,251,.92) !important;
 }
 
@@ -4008,5 +4011,189 @@ body.page-guide .guide-content-band .guide-shell > .footer-links .note{
   body.page-guide .guide-content-band .guide-shell > .footer-links,
   body.page-guide .guide-content-band .guide-shell > .final-cta{
     padding: 18px 16px !important;
+  }
+}
+
+
+/* Juravia stable mobile + SEO/current-link helpers */
+.page-guide .guide-wrap .is-current-link{
+  display:block;
+  padding: 12px 14px;
+  border-radius: 16px;
+  color:#071024;
+  background: linear-gradient(180deg, rgba(42,107,255,.08), rgba(42,107,255,.04));
+  border: 1px solid rgba(42,107,255,.18);
+  font-weight: 800;
+}
+.page-guide .pill.is-current-link{
+  color:#071024;
+  background: linear-gradient(180deg, rgba(42,107,255,.10), rgba(42,107,255,.04));
+  border-color: rgba(42,107,255,.18);
+}
+.page-guide .hero-kicker{
+  margin-bottom: 10px;
+}
+.page-guide .hero-proof{
+  margin: 10px auto 0;
+  color: rgba(246,247,251,.82);
+}
+.page-guide .hero-proof strong{
+  color:#fff;
+}
+.page-guide .mini-proof{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-top: 14px;
+}
+.page-guide .mini-proof span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(246,247,251,.88);
+  font-size: 12.5px;
+}
+.page-guide .mini-proof .dot{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background: rgba(212,175,55,.96);
+  box-shadow: 0 0 0 3px rgba(212,175,55,.18);
+}
+
+
+
+/* v7 contrast fix for secondary CTAs on light surfaces */
+body.page-guide .band--light .btn.secondary,
+body.page-guide .tone-a .btn.secondary,
+body.page-guide .tone-b .btn.secondary,
+body.page-guide .card .btn.secondary,
+body.page-guide .cluster-focus .btn.secondary{
+  color:#0b4aa2 !important;
+  background: rgba(11,74,162,.08) !important;
+  border: 1px solid rgba(11,74,162,.20) !important;
+  box-shadow: none !important;
+}
+body.page-guide .band--light .btn.secondary:hover,
+body.page-guide .tone-a .btn.secondary:hover,
+body.page-guide .tone-b .btn.secondary:hover,
+body.page-guide .card .btn.secondary:hover,
+body.page-guide .cluster-focus .btn.secondary:hover{
+  color:#093a80 !important;
+  background: rgba(11,74,162,.12) !important;
+  border-color: rgba(11,74,162,.28) !important;
+}
+body.page-guide .band--light .btn.secondary:visited,
+body.page-guide .tone-a .btn.secondary:visited,
+body.page-guide .tone-b .btn.secondary:visited,
+body.page-guide .card .btn.secondary:visited,
+body.page-guide .cluster-focus .btn.secondary:visited{
+  color:#0b4aa2 !important;
+}
+body.page-guide .band--light .btn.primary,
+body.page-guide .tone-a .btn.primary,
+body.page-guide .tone-b .btn.primary,
+body.page-guide .card .btn.primary,
+body.page-guide .cluster-focus .btn.primary{
+  color:#ffffff !important;
+}
+
+
+/* v19: contrast + spacing hardening for examples/pricing landing pages */
+body.page-guide .guide-content-band .pricing,
+body.page-guide .guide-content-band .cards-grid{
+  margin-top: 22px;
+  gap: 18px;
+}
+body.page-guide .guide-content-band .guide-wrap{
+  margin-bottom: 22px;
+}
+body.page-guide .guide-content-band .callout{
+  margin-bottom: 22px;
+}
+body.page-guide .guide-content-band .cluster-focus__actions{
+  margin-top: 18px;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+body.page-guide .guide-content-band .faq-list{
+  margin-top: 18px;
+}
+body.page-guide .guide-content-band .faq-list details{
+  margin-top: 12px;
+}
+body.page-guide .guide-content-band .card,
+body.page-guide .guide-content-band .plan{
+  box-shadow: 0 16px 40px rgba(7,16,36,.08);
+}
+body.page-guide .guide-content-band .cards-grid .card,
+body.page-guide .guide-content-band .pricing .plan{
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,250,255,.98)) !important;
+  border-color: rgba(12,18,28,.10) !important;
+}
+body.page-guide .guide-content-band .cards-grid .card h3,
+body.page-guide .guide-content-band .cards-grid .card p,
+body.page-guide .guide-content-band .cards-grid .card li,
+body.page-guide .guide-content-band .cards-grid .card a{
+  color: #13213c !important;
+  text-shadow: none !important;
+}
+body.page-guide .guide-content-band .pricing .plan h3,
+body.page-guide .guide-content-band .pricing .plan .price,
+body.page-guide .guide-content-band .pricing .plan .price span,
+body.page-guide .guide-content-band .pricing .plan ul,
+body.page-guide .guide-content-band .pricing .plan li,
+body.page-guide .guide-content-band .pricing .plan .plan-note{
+  color: #13213c !important;
+}
+body.page-guide .guide-content-band .pricing .plan .price span{
+  color: rgba(19,33,60,.58) !important;
+}
+body.page-guide .guide-content-band .pricing .plan ul{
+  padding-left: 1.1rem;
+}
+body.page-guide .guide-content-band .pricing .plan .plan-note{
+  border-top-color: rgba(12,18,28,.10) !important;
+}
+body.page-guide .guide-content-band .pricing .plan .tag,
+body.page-guide .guide-content-band .cards-grid .card::before,
+body.page-guide .guide-content-band .pricing .plan::before{
+  color: #0b4aa2 !important;
+  background: rgba(11,74,162,.07) !important;
+  border-color: rgba(11,74,162,.16) !important;
+  text-shadow: none !important;
+}
+body.page-guide .guide-content-band .pricing .plan.featured{
+  border-color: rgba(212,175,55,.28) !important;
+  background: linear-gradient(180deg, rgba(255,250,241,.98), rgba(255,255,255,.98)) !important;
+}
+body.page-guide .guide-content-band .pricing .plan.featured .tag{
+  background: rgba(212,175,55,.12) !important;
+  border-color: rgba(212,175,55,.24) !important;
+  color: #7a5b10 !important;
+}
+body.page-guide .guide-content-band details summary{
+  color:#081634 !important;
+}
+body.page-guide .guide-content-band details p,
+body.page-guide .guide-content-band details li{
+  color:#233452 !important;
+}
+body.page-guide .guide-content-band .btn{
+  margin-top: 0;
+}
+@media (max-width: 720px){
+  body.page-guide .guide-content-band .cluster-focus__actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  body.page-guide .guide-content-band .cluster-focus__actions .btn{
+    width: 100%;
+    justify-content: center;
   }
 }

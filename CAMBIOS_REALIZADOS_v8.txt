@@ -1,0 +1,33 @@
+JURAVIA LANDINGS · v8
+Cambios aplicados:
+1) Home
+- Headline principal reforzado: “Analiza gratis tu multa y detecta fallos antes de pagarla.”
+- Subline reescrita para enfatizar fallos, notificación y decisión antes de pagar.
+- Hero-proof simplificado.
+- Añadida prueba social compacta en hero (2 testimonios cortos).
+- Añadido bloque “Antes de pagar” en pricing para reforzar el valor previo al pago.
+- Corregidas clases malformed de tags en reviews.
+- Meta title / description / OG de home alineados con el nuevo posicionamiento.
+
+2) Precios y Ejemplos
+- Corregido contraste de textos en cards y pricing dentro de light bands.
+- Corregido contraste de etiquetas “Paso XX” y tags.
+- Mejorado espaciado entre bloques, botones y FAQ.
+- Ajustado copy de hero/lead en precios y ejemplos de forma quirúrgica.
+
+3) CSS
+- guide.css: nuevo bloque v19 para hardening de contraste y spacing en examples/pricing.
+- home.css: nuevo bloque v7 para hero social proof y refuerzo previo al pago.
+
+Puntos del informe mejorados:
+- Headline más orientado a detección de fallos + análisis gratis.
+- CTA sticky mobile.
+- Pricing más claro.
+- SEO interno básico y estructura secundaria más limpia.
+- Más foco en el momento previo al pago.
+
+Pendiente recomendado:
+- social proof verificable con casos reales/permisos o métricas reales,
+- garantía / razón de pago ahora,
+- continuidad visual con la app,
+- fase 2 de protección del premium y performance fina.
