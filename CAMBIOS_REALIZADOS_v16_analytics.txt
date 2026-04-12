@@ -1,0 +1,31 @@
+Juravia · Instrumentación analytics v16
+
+Cambios aplicados sin tocar el flujo funcional:
+
+LANDINGS
+- Se añaden y propagan a la app:
+  - sanction_family
+  - authority_detected
+  - partner_id
+- Se infieren automáticamente desde la URL de la landing cuando procede.
+- partner_id cae por defecto en "direct" si no viene informado.
+- Los eventos landing_view, landing_cta_click y outbound_to_app ya salen con este contexto.
+
+APP STREAMLIT
+- Se amplía la captura de query params con:
+  - sanction_family
+  - authority_detected
+  - partner_id
+- modules/analytics.py infiere contexto de negocio desde:
+  - landing_page
+  - juravia_analysis_report
+  - technical_sheet.autoridad
+  - classification/template
+  - plantilla seleccionada en el builder
+- fire_event añade ese contexto a todos los eventos clave.
+- purchase queda unificado alrededor de _jv_fire_purchase_event para evitar duplicidad entre purchase "simple" y purchase "server-side".
+- analysis_completed envía además señales directas de plantilla/autoridad.
+
+Pendiente fuera de código:
+- construir dashboard en GA4 / Looker Studio con:
+  landing -> app -> upload -> analysis_completed -> purchase -> revenue
