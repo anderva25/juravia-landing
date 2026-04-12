@@ -146,7 +146,7 @@ body.page-guide .bg .dots{ opacity:.05; }
       box-shadow: 0 22px 70px rgba(0,0,0,.42);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      text-align: center;
+      text-align: left;
     }
     .hero--guide .kicker{
       color: rgba(246,247,251,.78);
@@ -161,11 +161,11 @@ body.page-guide .bg .dots{ opacity:.05; }
     .hero--guide .lead{
       color: rgba(246,247,251,.75);
       max-width: 70ch;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 0;
+      margin-right: 0;
     }
     .hero--guide .breadcrumbs{
-      justify-content:center;
+      justify-content:flex-start;
       margin-top: 10px;
     }
     .hero--guide .breadcrumbs a,
@@ -176,7 +176,7 @@ body.page-guide .bg .dots{ opacity:.05; }
 
     .hero--guide .guide-hero-actions{
       margin-top: 18px;
-      align-items:center;
+      align-items:flex-start;
     }
     .hero--guide .guide-hero-actions > .btn{
       width:auto;
@@ -184,7 +184,7 @@ body.page-guide .bg .dots{ opacity:.05; }
       padding-right: 26px;
     }
     .hero--guide .pills--guide{
-      justify-content:center;
+      justify-content:flex-start;
     }
 
     /* Content band spacing */

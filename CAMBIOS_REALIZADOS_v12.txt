@@ -1,0 +1,5 @@
+v12
+- Recuperado CTA flotante móvil en iPhone y Android con lógica más simple y estable.
+- CTA flotante visible al hacer scroll y oculto al acercarse al footer.
+- Títulos, lead, breadcrumbs y acciones del hero de landings secundarias alineados a la izquierda.
+- Sin tocar Analytics ni el tracking existente.
