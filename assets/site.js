@@ -6,7 +6,7 @@
   const DEFAULT_APP_URL = 'https://app.juravia.app/';
   const DEFAULT_GA4_ID = (window.JV_GA4_ID || window.JURAVIA_GA4_ID || 'G-M9PX0ZVVF2');
   const appUrl = (window.JV_APP_URL || window.JURAVIA_APP_URL || DEFAULT_APP_URL);
-  const ATTR_KEYS = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'landing_page', 'landing_title', 'sanction_family', 'authority_detected', 'partner_id'];
+  const ATTR_KEYS = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'landing_page', 'landing_title'];
 
   function storage() {
     try { return window.sessionStorage; } catch (e) { return null; }
@@ -26,86 +26,6 @@
       page_path: path,
       page_title: document.title || ''
     };
-  }
-
-  function normalizeToken(value) {
-    return String(value || '')
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^a-z0-9]+/g, '_')
-      .replace(/^_+|_+$/g, '');
-  }
-
-  const FAMILY_BY_SLUG = {
-    recurrir_multa_radar: 'radar',
-    recurrir_multa_velocidad: 'velocidad',
-    recurrir_multa_ora: 'ora',
-    recurrir_multa_zbe: 'zbe',
-    recurrir_multa_itv: 'itv',
-    recurrir_multa_movil: 'movil',
-    recurrir_multa_semaforo_rojo: 'semaforo_rojo',
-    recurrir_multa_alcoholemia: 'alcoholemia',
-    recurrir_multa_cinturon: 'cinturon',
-    recurrir_multa_seguro_obligatorio: 'seguro_obligatorio',
-    recurrir_multa_defectos_notificacion: 'defectos_notificacion',
-    radar: 'radar',
-    velocidad: 'velocidad',
-    ora: 'ora',
-    zbe: 'zbe',
-    itv: 'itv',
-    movil: 'movil',
-    semaforo_rojo: 'semaforo_rojo',
-    alcoholemia: 'alcoholemia',
-    cinturon: 'cinturon',
-    seguro_obligatorio: 'seguro_obligatorio',
-    defectos_notificacion: 'defectos_notificacion'
-  };
-
-  const AUTHORITY_BY_SLUG = {
-    guia_dgt: 'dgt',
-    guia_sct: 'sct',
-    guia_trafikoa: 'trafikoa',
-    guia_transportes: 'transportes',
-    guia_municipal: 'municipal'
-  };
-
-  function inferBusinessContext(seed) {
-    const base = Object.assign({}, seed || {});
-    const meta = pageMeta();
-    const slug = normalizeToken(meta.page_name || '');
-    const landingPath = String(base.landing_page || meta.page_path || '').toLowerCase();
-
-    let family = normalizeToken(base.sanction_family || '');
-    if (!family) {
-      if (slug.startsWith('recurrir_multa_')) family = slug.replace(/^recurrir_multa_/, '');
-      else if (/recurrir_multa_/.test(landingPath)) {
-        family = normalizeToken((landingPath.split('/').pop() || '').replace(/\.html$/i, '').replace(/^recurrir_multa_/, ''));
-      }
-    }
-    family = FAMILY_BY_SLUG[family] || FAMILY_BY_SLUG[slug] || family;
-
-    let authority = normalizeToken(base.authority_detected || '');
-    if (!authority) {
-      authority = AUTHORITY_BY_SLUG[slug] || '';
-      if (!authority && /guia_(dgt|sct|trafikoa|transportes|municipal)\.html$/i.test(landingPath)) {
-        authority = normalizeToken(RegExp.$1);
-      }
-    }
-
-    let partner = normalizeToken(base.partner_id || '');
-    if (!partner) {
-      const medium = normalizeToken(base.utm_medium || '');
-      const source = normalizeToken(base.utm_source || '');
-      if (medium === 'partner' && source) partner = source;
-      else partner = 'direct';
-    }
-
-    const out = {};
-    if (family) out.sanction_family = family;
-    if (authority) out.authority_detected = authority;
-    if (partner) out.partner_id = partner;
-    return out;
   }
 
   function parseQuery() {
@@ -133,7 +53,6 @@
     const merged = Object.assign({}, storedAttrib(), extra || {});
     merged.landing_page = pageMeta().page_path;
     merged.landing_title = pageMeta().page_title;
-    Object.assign(merged, inferBusinessContext(merged));
     try {
       if (storage()) storage().setItem('jv_attrib', JSON.stringify(merged));
     } catch (e) {}
