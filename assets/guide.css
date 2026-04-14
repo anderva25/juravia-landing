@@ -4209,3 +4209,29 @@ body.page-guide .guide-content-band .btn{
 }
 
 
+
+
+/* v17 SEO differentiation + internal links */
+body.page-guide .guide-fit{
+  margin-bottom: 18px;
+}
+body.page-guide .guide-fit__links{
+  margin-top: 14px;
+  display:grid;
+  gap:8px;
+}
+body.page-guide .guide-fit__links p{
+  margin:0;
+  color: rgba(7,16,36,.74);
+}
+body.page-guide .guide-fit__links a{
+  font-weight:800;
+  text-decoration:none;
+}
+body.page-guide .related .pill{
+  text-decoration:none;
+}
+body.page-guide .related .pill:hover{
+  border-color: rgba(11,74,162,.24);
+  transform: translateY(-1px);
+}

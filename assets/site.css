@@ -1034,3 +1034,48 @@ body.jv-stable-mobile{
     overflow-x: hidden;
   }
 }
+
+
+/* v17 SEO indexation support */
+.guide-shortcuts{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin:16px 0 0;
+}
+.guide-shortcuts__label{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:900;
+  color:rgba(246,247,251,.72);
+}
+.guide-shortcuts a{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 12px;
+  border-radius:999px;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.05);
+  color:rgba(246,247,251,.96);
+  font-weight:700;
+}
+.guide-shortcuts a:hover{
+  border-color:rgba(212,175,55,.42);
+  transform:translateY(-1px);
+}
+body.page-guide .guide-shortcuts--hub .guide-shortcuts__label{
+  color:rgba(246,247,251,.78);
+}
+@media (max-width: 720px){
+  .guide-shortcuts{
+    justify-content:center;
+  }
+  .guide-shortcuts__label{
+    flex-basis:100%;
+    text-align:center;
+  }
+}

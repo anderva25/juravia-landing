@@ -1,0 +1,47 @@
+JURAVIA · Cambios v19 SEO indexación diferencial
+
+Objetivo
+- Reforzar la diferenciación semántica de 6 landings prioritarias sin tocar el diseño general ni la funcionalidad.
+
+Landings trabajadas
+- recurrir_multa_radar.html
+- recurrir_multa_velocidad.html
+- recurrir_multa_ora.html
+- recurrir_multa_zbe.html
+- recurrir_multa_movil.html
+- recurrir_multa_defectos_notificacion.html
+
+Cambios aplicados
+1) Intro principal
+- Reescritura de la subline bajo el H1 para que cada página arranque con un ángulo propio.
+
+2) Enfoque editorial superior
+- Revisión del bloque "cluster-focus" para diferenciar el caso real que resuelve cada landing.
+- Ajuste de CTA secundario cuando el destino relacionado era mejorable.
+
+3) Encaje del caso
+- Reescritura completa del bloque "Encaje del caso" en las 6 landings.
+- Nuevo título, nueva intro, bullets propios y enlaces relacionados más precisos.
+
+4) FAQs exclusivas
+- Reemplazo de preguntas y respuestas por FAQs específicas de cada tipología.
+- Actualización del schema FAQPage para que coincida con el contenido visible.
+
+5) Relacionado interno
+- Afinado de secciones o footer-links relacionados con un criterio más semántico.
+- Mejor separación entre radar / velocidad / ORA / ZBE / móvil / notificación.
+
+6) Microsección única
+- Reescritura completa del bloque editorial final en cada landing.
+- Nuevo kicker, H2, párrafo y tarjetas con puntos propios de cada casuística.
+
+7) Sitemap
+- Se mantiene actualizado con lastmod 2026-04-13 para las URLs prioritarias.
+
+No se ha tocado
+- Home
+- UX general
+- CTA principal
+- lógica funcional
+- analytics
+- CSS / comportamiento móvil

@@ -1,0 +1,65 @@
+JURAVIA · CAMBIOS_REALIZADOS_v17_SEO_INDEXACION
+
+Objetivo
+- Reforzar indexación de landings clave sin romper funcionalidad ni UX.
+
+Archivos tocados
+- index.html
+- guias.html
+- recurrir_multa_radar.html
+- recurrir_multa_velocidad.html
+- recurrir_multa_ora.html
+- recurrir_multa_zbe.html
+- recurrir_multa_movil.html
+- recurrir_multa_defectos_notificacion.html
+- assets/site.css
+- assets/guide.css
+- sitemap.xml
+
+Cambios principales
+1) Enlazado interno reforzado
+- Home: añadida banda de “Guías prioritarias” con enlaces directos a radar, velocidad, ORA, ZBE, móvil y defectos de notificación.
+- Hub de guías: añadida banda de “Rutas más buscadas” con enlaces directos a las 6 landings prioritarias.
+- Hub de guías: los tres primeros cards se han reorientado a páginas exactas y diferenciadas:
+  - Radar: foto y control técnico
+  - Velocidad: límite y tramo
+  - Notificación: fechas y plazos
+
+2) Diferenciación semántica de las 6 landings prioritarias
+- Añadido bloque nuevo “Encaje del caso” en cada landing prioritaria.
+- Cada bloque explica cuándo encaja esa guía y enlaza a guías relacionadas más específicas.
+- En varias landings se han convertido pills estáticos en enlaces reales.
+
+3) Metadatos SEO afinados
+- Títulos y meta descriptions reescritos para hacer más distinta cada landing prioritaria.
+- og:title y og:description ajustados en esas mismas páginas.
+- Schema Article actualizado con dateModified y descripción más precisa.
+
+4) Hub y schemas
+- guias.html: actualizado title/meta y CollectionPage.
+- index.html y guias.html: añadido ItemList schema con las guías prioritarias.
+
+5) Sitemap
+- sitemap.xml regenerado en formato limpio.
+- lastmod actualizado a 2026-04-13 en home, hub de guías y 6 landings prioritarias.
+- prioridades ajustadas para resaltar home, hub y landings clave.
+
+Qué no se ha tocado
+- Flujo del CTA principal
+- Lógica JavaScript funcional
+- Tracking/GA
+- Estabilidad móvil
+- Diseño estructural de las landings
+
+Pasos recomendados tras publicar
+1. Subir todos los archivos.
+2. Comprobar que https://juravia.app/sitemap.xml devuelve la nueva versión.
+3. Reenviar el sitemap en Search Console.
+4. Solicitar indexación solo de estas 6 URLs:
+   - recurrir_multa_radar.html
+   - recurrir_multa_velocidad.html
+   - recurrir_multa_ora.html
+   - recurrir_multa_zbe.html
+   - recurrir_multa_movil.html
+   - recurrir_multa_defectos_notificacion.html
+5. Esperar varios días antes de volver a validar.
