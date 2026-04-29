@@ -1,0 +1,55 @@
+Cambios v20 · Poda de indexación + refuerzo editorial
+
+Objetivo:
+- concentrar señales de indexación en páginas prioritarias
+- sacar del índice la capa secundaria/utility que estaba diluyendo el conjunto
+- reescribir guias.html para que suene a página útil para personas y no a arquitectura SEO
+
+Cambios aplicados:
+1. Meta robots noindex,follow en 124 páginas secundarias o utility:
+   - todas las guías supporting / long-tail fuera del set prioritario
+   - guías por organismo
+   - páginas legales / corporativas no prioritarias
+
+2. Se mantienen indexables:
+   - /
+   - guias.html
+   - como-funciona.html
+   - ejemplos.html
+   - precios.html
+   - recurrir_multa_radar.html
+   - recurrir_multa_velocidad.html
+   - recurrir_multa_ora.html
+   - recurrir_multa_zbe.html
+   - recurrir_multa_movil.html
+   - recurrir_multa_defectos_notificacion.html
+   - recurrir_multa_cinturon.html
+   - recurrir_multa_alcoholemia.html
+   - recurrir_multa_itv.html
+   - recurrir_multa_seguro_obligatorio.html
+   - recurrir_multa_semaforo_rojo.html
+
+3. guias.html:
+   - title, meta description y OG más orientados a usuario
+   - hero y cabeceras reescritos
+   - eliminación del lenguaje “SEO / supporting / prioridad de negocio”
+   - la sección central ahora explica cómo elegir la guía correcta
+
+4. sitemap.xml regenerado:
+   - solo incluye URLs indexables
+   - guias.html con lastmod actualizado a 2026-04-29
+
+Qué no se ha tocado:
+- CTA y flujo hacia app
+- analytics
+- estructura funcional de las landings
+- versión móvil
+
+Siguiente paso:
+- subir a producción
+- abrir /sitemap.xml
+- reenviar sitemap en Search Console
+- solicitar indexación de:
+  guias.html, recurrir_multa_radar.html, recurrir_multa_velocidad.html,
+  recurrir_multa_ora.html, recurrir_multa_zbe.html, recurrir_multa_movil.html,
+  recurrir_multa_defectos_notificacion.html
