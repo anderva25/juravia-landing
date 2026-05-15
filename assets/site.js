@@ -6,7 +6,7 @@
   const DEFAULT_APP_URL = 'https://app.juravia.app/';
   const DEFAULT_GA4_ID = (window.JV_GA4_ID || window.JURAVIA_GA4_ID || 'G-M9PX0ZVVF2');
   const appUrl = (window.JV_APP_URL || window.JURAVIA_APP_URL || DEFAULT_APP_URL);
-  const ATTR_KEYS = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'landing_page', 'landing_title'];
+  const ATTR_KEYS = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'landing_page', 'landing_title', 'case_type'];
 
   function storage() {
     try { return window.sessionStorage; } catch (e) { return null; }
@@ -26,6 +26,21 @@
       page_path: path,
       page_title: document.title || ''
     };
+  }
+
+  function inferCaseType(meta) {
+    const name = ((meta && meta.page_name) || '').toLowerCase();
+    const map = [
+      ['recurrir_multa_radar', 'radar'],
+      ['recurrir_multa_velocidad', 'velocidad'],
+      ['recurrir_multa_zbe', 'zbe'],
+      ['recurrir_multa_ora', 'ora'],
+      ['recurrir_multa_movil', 'movil']
+    ];
+    for (const [needle, value] of map) {
+      if (name === needle || name.includes(needle)) return value;
+    }
+    return '';
   }
 
   function parseQuery() {
@@ -51,8 +66,11 @@
 
   function persistAttrib(extra) {
     const merged = Object.assign({}, storedAttrib(), extra || {});
-    merged.landing_page = pageMeta().page_path;
-    merged.landing_title = pageMeta().page_title;
+    const meta = pageMeta();
+    const inferredCase = inferCaseType(meta);
+    merged.landing_page = meta.page_path;
+    merged.landing_title = meta.page_title;
+    if (!merged.case_type && inferredCase) merged.case_type = inferredCase;
     try {
       if (storage()) storage().setItem('jv_attrib', JSON.stringify(merged));
     } catch (e) {}
@@ -111,8 +129,11 @@
       Object.entries(attrib).forEach(([k, v]) => {
         if (v && !url.searchParams.get(k)) url.searchParams.set(k, v);
       });
-      url.searchParams.set('landing_page', pageMeta().page_path);
-      url.searchParams.set('landing_title', pageMeta().page_title);
+      const meta = pageMeta();
+      const caseType = a.dataset.caseType || attrib.case_type || inferCaseType(meta);
+      url.searchParams.set('landing_page', meta.page_path);
+      url.searchParams.set('landing_title', meta.page_title);
+      if (caseType) url.searchParams.set('case_type', caseType);
       a.setAttribute('href', url.toString());
     } catch (e) {
       a.setAttribute('href', appUrl);
@@ -122,11 +143,13 @@
       track('landing_cta_click', {
         cta_position: position,
         cta_text: (a.textContent || '').trim().slice(0, 120),
-        target_surface: 'app'
+        target_surface: 'app',
+        case_type: a.dataset.caseType || attrib.case_type || inferCaseType(pageMeta())
       });
       track('outbound_to_app', {
         cta_position: position,
-        target_surface: 'app'
+        target_surface: 'app',
+        case_type: a.dataset.caseType || attrib.case_type || inferCaseType(pageMeta())
       });
     }, { passive: true });
   });
@@ -303,7 +326,7 @@
         <span class="mobile-sticky-cta__eyebrow">Juravia</span>
         <span class="mobile-sticky-cta__title">Análisis gratis · escrito desde 6,99 € solo si descargas</span>
       </div>
-      <a class="btn primary" data-jv-app-link href="${href}" rel="nofollow">Analizar gratis</a>
+      <a class="btn primary" data-jv-app-link href="${href}" rel="nofollow">${((source.textContent || '').trim() || 'Analizar gratis')}</a>
     `;
     document.body.appendChild(wrapper);
     document.body.classList.add('has-mobile-sticky-cta');
